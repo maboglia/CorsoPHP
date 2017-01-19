@@ -23,7 +23,7 @@
 
 
 #Corso PHP
-###dettaglio
+##dettaglio
 ###Introduzione
 ###PHP Overview
 	Cos'è PHP
