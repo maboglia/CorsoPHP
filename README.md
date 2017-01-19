@@ -1,25 +1,25 @@
 # ITS2017
 #Corso PHP
 ##argomenti
-Introduzione
-PHP Overview
-Installazione
-Primi passi
-Exploring Data Types
-Strutture di controllo - Espressioni Logiche
-Strutture di controllo - Loops
-Funzioni definite dagli utenti
-Debugging
-Pagine web dnamiche con PHP
-Lavorarare con Forms e Form Data
-Persistenza con Cookies e Sessions
-Recap MySQL Base
-Usare PHP per accedere a MySQL
-Creare un Content Management System (CMS)
-Using Site Navigation to Choose Content
-Application CRUD
-Building the Public Area
-Regulating Page Access
+	Introduzione
+	PHP Overview
+	Installazione
+	Primi passi
+	Exploring Data Types
+	Strutture di controllo - Espressioni Logiche
+	Strutture di controllo - Loops
+	Funzioni definite dagli utenti
+	Debugging
+	Pagine web dnamiche con PHP
+	Lavorarare con Forms e Form Data
+	Persistenza con Cookies e Sessions
+	Recap MySQL Base
+	Usare PHP per accedere a MySQL
+	Creare un Content Management System (CMS)
+	Using Site Navigation to Choose Content
+	Application CRUD
+	Building the Public Area
+	Regulating Page Access
 
 
 #Corso PHP
