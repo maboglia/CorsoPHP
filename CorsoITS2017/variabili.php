@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Variabili</title>
+	<title></title>
 </head>
 <body>
 
@@ -30,7 +30,7 @@
 
 	$frase1 = "   sempre caro mi fu       ";
 
-	$frase2 = "    ei fu siccome immobile, dato il mortal sospiro   ";
+	$frase2 = "    ei fu siccome immobile dato il mortal sospiro   ";
 	$frase3 =  trim($frase1);
 	echo "la frase 1 conta "  .  strlen($frase1) . " caratteri";
 	echo "<br/>";
