@@ -31,7 +31,6 @@
 	echo count($numeri);
 	echo min($numeri);
 	echo max($numeri);
-	
 
  ?>
 
