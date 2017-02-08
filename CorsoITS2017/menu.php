@@ -1,7 +1,22 @@
-	<a href="?">Home Page</a> 
-	<a href="?pagina=uno">PhpInfo</a> 
-	<a href="?pagina=due">Corso Php è bellissimo</a> 
-	<a href="?pagina=tre">Studenti</a> 
-	<a href="?pagina=giochi">Giochi</a> 
-	<!-- link assoluto  -->
-	<a href="http://www.php.net" target="_blank">Php.net</a> 
+<?php 
+
+	$menu_orizzontale = [
+		''	=> 'Home Page',
+		'uno' =>'PhpInfo',
+		'due' =>'Corso Php',
+		'tre' =>'Studenti',
+		'giochi' =>'Giochi',
+		'http://www.php.net' => 'Php.net',
+		'http://github.com/maboglia/ITS2017' => 'github',
+
+	];
+	foreach ($menu_orizzontale as $key => $value) {
+		if (substr($key, 0,4) == 'http')
+		echo "<a href=\"{$key}\" target='_blank' >{$value}</a>     ";
+		else
+		echo "<a href=\"?pagina={$key}\" >{$value}</a>     ";
+	}
+
+
+
+ ?>	

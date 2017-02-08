@@ -14,54 +14,107 @@ error_reporting(0);
 	//$a = $_GET['pagina'];
 
 
-	$studenti = array(
-		"stefano",
-		"simone",
-		"lorenzo",	
-		"rosa",	
-		"danilo",	
-	);	
+	$studenti = [
+				"studente1" =>	[	"nome" => "stefano", 
+							"cognome" => "adamo"],
+					[	"nome" => "simone", 
+							"cognome" => "adamo"],
+					[	"nome" => "stefano", 
+							"cognome" => "adamo"],
+					[	"nome" => "stefano", 
+							"cognome" => "adamo"],
+					[	"nome" => "stefano", 
+							"cognome" => "adamo"],
+					[	"nome" => "stefano", 
+							"cognome" => "adamo"],
+					[	"nome" => "stefano", 
+							"cognome" => "adamo"],
+				];	
 
 
 	//qui ricevo la variabile passata via GET
-	if($_GET['pagina']){
+	switch($_GET['pagina']){
 
-		if ($_GET['pagina'] == "uno"){
-			phpinfo();		
-		}
-		else if ($_GET['pagina'] == "due"){
-			echo "<h1>benvenuto nel corso php</h1>";
+		 case "uno":
+			//phpinfo();
+			echo $_SERVER['SCRIPT_FILENAME'];
+			echo '<br>';
+			echo $_SERVER['REMOTE_HOST'];
+			echo '<br>';
+			echo $_SERVER['REMOTE_USER'];
 
-			creaHeader("hello world");
+			$lunghezza = count($_SERVER);
+
+			foreach ($_SERVER as $key => $value) {
+				echo $key
+					." "
+					.$value
+					."<br>";
+
+
+			}
+
+
+			for ($i=9; $i >= 0; $i--) { 
+				echo $studenti[$i]."<br>";
+			}
+
+			foreach ($studenti as $studenteChiave => $studenteValore ) {
+				echo $studenteChiave.": ".$studenteValore['nome']."<br>";
+			}
+
+
+
+		break;
+
+		case "due":
+			echo "<h1>Corso php</h1>";
+			echo "<h2>Elementi del linguaggio</h2>";
+
+			
+			$pagine = array(
+				'variabili' => 'variabili.php',
+				'cicli' => 'cicliWhile.php',
+				'array' => 'array.php',
+				'array associativi' => 'array_associativi.php',
+				'condizioni' => 'condizioni.php',
+
+			 );
+
+
 
 			echo "<ul>";
-			echo "<li><a href='variabili.php'>variabili</a></li>";	
-			echo "<li><a href=\"array.php\">array</a></li>";	
+
+			foreach ($pagine as $key => $value) {
+				echo "<li><a href=\"$value\">$key</a></li>";
+			}
+
 			echo "</ul>";	
-		}
-		elseif ($_GET['pagina'] == "tre") {
+		break;
+		
+		case "tre":
 			
-			shuffle($studenti);
+			//shuffle($studenti);
 
 			for ($i=0; $i < count($studenti) ; $i++) { 
-				echo $studenti[$i]."<br>";
+				echo $studenti[$i][0]."<br>";
 			}
 
 			/*echo $studenti[0].
 					$studenti[1].
 					$studenti[2];*/
-		}
-		else if($_GET['pagina'] == "giochi"){
+		break;
+		
+		case "giochi":
 
 			//include "giochi_lanciaDadi.php";
 			include "giochi_lanciaDadiPost.php";
-		}
-		else{
-			echo "mi dispiace non posso mostrarti queste informazioni segretissime";
-		}
+		break;
 
+		default:
+			echo "mi dispiace non posso mostrarti queste informazioni segretissime";
+			echo "ti trovi nella home";
 	}
-	else echo "ti trovi nella home";
 
 
  ?>
