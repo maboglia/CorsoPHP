@@ -14,22 +14,6 @@ error_reporting(0);
 	//$a = $_GET['pagina'];
 
 
-	$studenti = [
-				"studente1" =>	[	"nome" => "stefano", 
-							"cognome" => "adamo"],
-					[	"nome" => "simone", 
-							"cognome" => "adamo"],
-					[	"nome" => "stefano", 
-							"cognome" => "adamo"],
-					[	"nome" => "stefano", 
-							"cognome" => "adamo"],
-					[	"nome" => "stefano", 
-							"cognome" => "adamo"],
-					[	"nome" => "stefano", 
-							"cognome" => "adamo"],
-					[	"nome" => "stefano", 
-							"cognome" => "adamo"],
-				];	
 
 
 	//qui ricevo la variabile passata via GET
@@ -71,25 +55,13 @@ error_reporting(0);
 			echo "<h1>Corso php</h1>";
 			echo "<h2>Elementi del linguaggio</h2>";
 
-			
-			$pagine = array(
-				'variabili' => 'variabili.php',
-				'cicli' => 'cicliWhile.php',
-				'array' => 'array.php',
-				'array associativi' => 'array_associativi.php',
-				'condizioni' => 'condizioni.php',
-
-			 );
+				if ($_GET['argomento'] == 'variabili' ) include 'variabili.php';
+				if ($_GET['argomento'] == 'cicli') include 'cicliWhile.php';
+				if ($_GET['argomento'] == 'array') include 'array.php';
+				if ($_GET['argomento'] ==  'array_associativi') include 'array_associativi.php';
+				if ($_GET['argomento'] == 'condizioni') include 'condizioni.php';
 
 
-
-			echo "<ul>";
-
-			foreach ($pagine as $key => $value) {
-				echo "<li><a href=\"$value\">$key</a></li>";
-			}
-
-			echo "</ul>";	
 		break;
 		
 		case "tre":

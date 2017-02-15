@@ -1,17 +1,10 @@
-<?php $title = "Corso Backend ITS 2017 Php Programming"; ?>
+<?php include 'inc/config.php' ?>
 
-<?php  
-function creaHeader($parola='')
-{
-	for ($i = 1 ; $i < 7 ; $i++){
-		echo "<h".$i.">$parola</h".$i.">";           
 
-	}
-}; 
-?>
 
-<?php include 'header.php' ?>
-
+<div id="header">
+	<?php include 'header.php' ?>
+</div>
 
 <div id="testata">
 	<h1><?php echo $title; ?></h1>
@@ -23,8 +16,16 @@ function creaHeader($parola='')
 
 <div id="container">
 	
-	<?php include 'content.php' ?>
+	<div id="sidebar">
+		<?php include 'sidebar.php' ?>		
+	</div>
+
+	<div id="content">
+		<?php include 'content.php' ?>
+	</div>
 
 </div>
 
-<?php include 'footer.php' ?>
+<div id="footer">
+	<?php include 'footer.php' ?>
+</div>
