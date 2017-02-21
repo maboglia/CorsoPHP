@@ -7,9 +7,9 @@
   
   [Che cosa può fare PHP?](http://php.net/manual/it/intro-whatcando.php)
   
-  [La prima pagina PHP](php.net/manual/it/tutorial.firstpage.php)
+  [La prima pagina PHP](http://php.net/manual/it/tutorial.firstpage.php)
   
-  [Funzioni definite dall'utente](php.net/manual/it/functions.user-defined.php)
+  [Funzioni definite dall'utente](http://php.net/manual/it/functions.user-defined.php)
 
 ###altre risorse online
 
