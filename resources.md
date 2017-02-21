@@ -6,6 +6,8 @@
   [Una semplice introduzione](http://php.net/manual/it/tutorial.php)
   
   [Che cosa può fare PHP?](http://php.net/manual/it/intro-whatcando.php)
+  
+  [La prima pagina PHP](php.net/manual/it/tutorial.firstpage.php)
 
 ###altre risorse online
 
