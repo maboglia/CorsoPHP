@@ -7,9 +7,13 @@
   
   [Che cosa può fare PHP?](http://php.net/manual/it/intro-whatcando.php)
 
+###altre risorse online
+
+
   [phptherightway](http://www.phptherightway.com)
 
-###w3schools.com (php5)
-  [PHP 5 Tutorial](https://www.w3schools.com/php/)
+  [html.it](http://www.html.it/guide/guida-php-di-base/)
+
+  [w3schools.com (php5) PHP 5 Tutorial](https://www.w3schools.com/php/)
 
   [wikiversity](https://it.wikiversity.org/wiki/PHP#Introduzione)
