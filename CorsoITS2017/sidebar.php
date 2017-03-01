@@ -2,7 +2,12 @@
 
 <?php 
 
-	switch ($_GET['pagina']) {
+	if (         isset($_GET['pagina'])           ) 
+		$miaPagina = $_GET['pagina'];
+	else
+		$miaPagina = "home";
+
+	switch ($miaPagina) {
 		case 'studenti':
 			//echo "qui metto elenco studenti";
 
@@ -27,11 +32,12 @@
 				echo "<li><a href=\"$value\">$key</a></li>";
 			}
 			echo "</ul>";	
-		break;			
 			break;
 		
 		default:
-			# code...
+			echo 'valore di default per la variabile $miaPagina';
+			echo "<br>";
+			echo "valore di default per la variabile $miaPagina";
 			break;
 	}
 
