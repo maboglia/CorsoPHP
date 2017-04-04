@@ -1,5 +1,8 @@
 # ITS2017
-#Corso PHP
+
+		Defining functions
+##Corso PHP
+
 ##argomenti
 	Introduzione
 	PHP Overview
@@ -22,14 +25,15 @@
 	Regulating Page Access
 
 
-#Corso PHP
-##dettaglio
-###Introduzione
-###PHP Overview
+
+### Introduzione
+
+### PHP Overview
 	Cos'è PHP
 	La storia PHP
 	Perchè scegliere PHP
-###Installazione
+
+### Installazione
 	Lavorare con Apache Web Server
 	Modificare la document root
 	Abilitare PHP
@@ -42,12 +46,14 @@
 	Installing MampServer
 	Installing WampServer
 	Finding the document root
-###Primi passi
+
+### Primi passi
 	Incorporare codice PHP code una pagina
 	Outputting dynamic text
 	Gli operatori principali
 	Inserire commenti al codice
-###Exploring Data Types
+
+### Exploring Data Types
 	Variables
 	Strings
 	String functions
@@ -60,26 +66,29 @@
 	NULL and empty
 	Type juggling and casting
 	Constants
-###Strutture di controllo - Espressioni Logiche
+
+### Strutture di controllo - Espressioni Logiche
 	If statements
 	Else and elseif statements
 	Logical operators
 	Switch statements
-###Strutture di controllo - Loops
+
+### Strutture di controllo - Loops
 	While loops
 	For loops
 	Foreach loops
 	Continue
 	Break
 	Understanding array pointers
-###Funzioni definite dagli utenti
-	Defining functions
+
+### Funzioni definite dagli utenti
 	Function arguments
 	Returning values from a function
 	Multiple return values
 	Scope and global variables
 	Setting default argument values
-###Debugging
+
+### Debugging
 	Common problems
 	Warnings and errors
 	Debugging and troubleshooting
