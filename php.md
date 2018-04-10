@@ -2,7 +2,6 @@
 
 ## argomenti
 
-
 ## PHP: un linguaggio interpretato
 
 ## Cos'è una pagina dinamica
