@@ -1,6 +1,6 @@
-#Link
+# Documentazione e risorse on line
 
-###php.net
+### su php.net
   [Che cos'è il PHP?](http://php.net/manual/it/intro-whatis.php)
   
   [Una semplice introduzione](http://php.net/manual/it/tutorial.php)
@@ -11,10 +11,10 @@
   
   [Funzioni definite dall'utente](http://php.net/manual/it/functions.user-defined.php)
 
-###altre risorse online
+### altre risorse online
 
 
-  [phptherightway](http://www.phptherightway.com)
+  [phptherightway](http://it.phptherightway.com)
 
   [html.it](http://www.html.it/guide/guida-php-di-base/)
 
