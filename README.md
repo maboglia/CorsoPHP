@@ -1,9 +1,7 @@
-# ITS2017
+# Php Programming
+__Corso ITS Integrated Backend Services 2018__
 
-		Defining functions
-##Corso PHP
-
-##argomenti
+## argomenti
 	Introduzione
 	PHP Overview
 	Installazione
@@ -23,7 +21,6 @@
 	Application CRUD
 	Building the Public Area
 	Regulating Page Access
-
 
 
 ### Introduzione
