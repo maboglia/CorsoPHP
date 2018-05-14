@@ -19,6 +19,7 @@
 		echo "bella scelta \n";
 	}
 	//return $value;
+
 }
 
 function somma($a, $b,$operazione){
