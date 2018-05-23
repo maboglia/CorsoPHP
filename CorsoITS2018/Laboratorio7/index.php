@@ -58,13 +58,6 @@ switch ($pagina) {
 		# code...
 		break;
 }
-
-
-
- ?>
-
-
-
+?>
 </body>
 </html>
-
