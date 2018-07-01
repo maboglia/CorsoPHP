@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.0
+-- version 4.7.7
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Giu 27, 2018 alle 14:58
--- Versione del server: 10.1.25-MariaDB
--- Versione PHP: 5.6.31
+-- Creato il: Giu 27, 2018 alle 21:43
+-- Versione del server: 10.1.30-MariaDB
+-- Versione PHP: 7.2.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -80,7 +80,14 @@ INSERT INTO `studenti` (`idStudente`, `nome`, `password`) VALUES
 (5, 'riccardo', 'riccardo'),
 (6, 'jean', 'jean'),
 (7, 'davide', 'davide'),
-(8, 'giulio', 'giulio');
+(8, 'giulio', 'giulio'),
+(9, 'edoardo', 'edoardo'),
+(10, 'simone', 'simone'),
+(11, 'lorenzo', 'lorenzo'),
+(12, 'claudio', 'claudio'),
+(13, 'gabriel', 'gabriel'),
+(14, 'alessandro', 'alessandro'),
+(16, 'patrizia', 'patrizia');
 
 -- --------------------------------------------------------
 
@@ -99,7 +106,38 @@ CREATE TABLE `voti` (
 --
 
 INSERT INTO `voti` (`idStud`, `idSquad`, `posizione`) VALUES
-(1, 14, 1);
+(1, 3, 2),
+(1, 5, 4),
+(1, 9, 1),
+(1, 14, 3),
+(3, 6, 2),
+(3, 7, 4),
+(3, 13, 3),
+(3, 15, 1),
+(4, 9, 1),
+(4, 12, 2),
+(4, 15, 4),
+(4, 16, 3),
+(6, 8, 2),
+(6, 9, 1),
+(6, 10, 3),
+(6, 15, 4),
+(8, 5, 4),
+(8, 11, 3),
+(8, 13, 2),
+(8, 14, 1),
+(13, 4, 2),
+(13, 5, 1),
+(13, 12, 3),
+(13, 14, 4),
+(14, 5, 2),
+(14, 9, 1),
+(14, 12, 3),
+(14, 15, 4),
+(16, 2, 3),
+(16, 8, 2),
+(16, 9, 1),
+(16, 15, 4);
 
 --
 -- Indici per le tabelle scaricate
@@ -121,7 +159,7 @@ ALTER TABLE `studenti`
 -- Indici per le tabelle `voti`
 --
 ALTER TABLE `voti`
-  ADD PRIMARY KEY (`idStud`,`idSquad`),
+  ADD PRIMARY KEY (`idStud`,`idSquad`,`posizione`),
   ADD KEY `idSquad` (`idSquad`);
 
 --
@@ -133,11 +171,13 @@ ALTER TABLE `voti`
 --
 ALTER TABLE `squadre`
   MODIFY `idSquadra` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+
 --
 -- AUTO_INCREMENT per la tabella `studenti`
 --
 ALTER TABLE `studenti`
-  MODIFY `idStudente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `idStudente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+
 --
 -- Limiti per le tabelle scaricate
 --
@@ -146,8 +186,8 @@ ALTER TABLE `studenti`
 -- Limiti per la tabella `voti`
 --
 ALTER TABLE `voti`
-  ADD CONSTRAINT `voti_ibfk_2` FOREIGN KEY (`idStud`) REFERENCES `studenti` (`idStudente`),
-  ADD CONSTRAINT `voti_ibfk_3` FOREIGN KEY (`idSquad`) REFERENCES `squadre` (`idSquadra`);
+  ADD CONSTRAINT `voti_ibfk_1` FOREIGN KEY (`idStud`) REFERENCES `studenti` (`idStudente`),
+  ADD CONSTRAINT `voti_ibfk_2` FOREIGN KEY (`idSquad`) REFERENCES `squadre` (`idSquadra`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
