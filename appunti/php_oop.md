@@ -130,8 +130,6 @@ avanti parlando della Ereditarietà.
 
 ## Ereditarietà
 
-### Oggetti e Membri statici
-
 Prima di introdurre il concetto dei membri statici, 
 è necessario sapere che per utilizzare un membro di una classe, un attributo o un
 metodo, è obbligatorio creare un'istanza di tale classe attraverso la parola chiave
