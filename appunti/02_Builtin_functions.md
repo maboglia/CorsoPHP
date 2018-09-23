@@ -1,78 +1,9 @@
 # PHP
-<!-- TOC -->
-
-- [PHP](#php)
-        - [Funzioni per array](#funzioni-per-array)
-            - [array_chunk()](#arraychunk)
-            - [array_count_values()](#arraycountvalues)
-            - [array array ( [mixed ...] )](#array-array--mixed)
-            - [esempio](#esempio)
-            - [bool asort ( array array [, int sort_flags] )](#bool-asort--array-array--int-sortflags)
-            - [bool arsort ( array array [, int sort_flags] )](#bool-arsort--array-array--int-sortflags)
-            - [int count ( mixed var [, int mode] )](#int-count--mixed-var--int-mode)
-            - [array each ( array array )](#array-each--array-array)
-            - [Attraversamento di un array con each()](#attraversamento-di-un-array-con-each)
-            - [mixed current ( array array )](#mixed-current--array-array)
-            - [mixed reset ( array array )](#mixed-reset--array-array)
-            - [mixed next ( array array )](#mixed-next--array-array)
-            - [mixed prev ( array array )](#mixed-prev--array-array)
-            - [mixed end ( array array )](#mixed-end--array-array)
-            - [](#)
-        - [FUNZIONI DI DATA E ORA](#funzioni-di-data-e-ora)
-            - [string date ( string formato [, int timestamp] )](#string-date--string-formato--int-timestamp)
-            - [string setlocale ( mixed category, array locale )](#string-setlocale--mixed-category-array-locale)
-            - [int mktime ( int hour, int minute, int second, int month, int day, int year [, int is_dst])](#int-mktime--int-hour-int-minute-int-second-int-month-int-day-int-year--int-isdst)
-            - [string strftime ( string format [, int timestamp] )](#string-strftime--string-format--int-timestamp)
-        - [FUNZIONI PER LA GESTIONE DI FILE E DEL FILESYSTEM](#funzioni-per-la-gestione-di-file-e-del-filesystem)
-            - [bool fclose ( resource handle )](#bool-fclose--resource-handle)
-            - [bool feof ( resource handle )](#bool-feof--resource-handle)
-            - [string fgetc ( resource handle )](#string-fgetc--resource-handle)
-            - [string fgets ( resource handle, int length )](#string-fgets--resource-handle-int-length)
-            - [bool file_exists ( string filename )](#bool-fileexists--string-filename)
-            - [array file ( string filename [, int use_include_path [, resource context]] )](#array-file--string-filename--int-useincludepath--resource-context)
-            - [int fwrite ( resource handle, string string [, int length] )](#int-fwrite--resource-handle-string-string--int-length)
-        - [FUNZIONI MATEMATICHE](#funzioni-matematiche)
-            - [number abs ( mixed numero )](#number-abs--mixed-numero)
-            - [mixed max ( number arg1, number arg2 [, number ...] )](#mixed-max--number-arg1-number-arg2--number)
-            - [mixed max ( array numbers [, array ...] )](#mixed-max--array-numbers--array)
-            - [max() restituisce il numericamente più grande dei valori dati come parametro.](#max-restituisce-il-numericamente-pi%C3%B9-grande-dei-valori-dati-come-parametro)
-            - [mixed min ( number arg1, number arg2 [, number ...] )](#mixed-min--number-arg1-number-arg2--number)
-            - [mixed min ( array numbers [, array ...] )](#mixed-min--array-numbers--array)
-            - [min() restituisce il numericamente più piccolo dei valori dati come parametro.](#min-restituisce-il-numericamente-pi%C3%B9-piccolo-dei-valori-dati-come-parametro)
-            - [float pow ( float base, float esp )](#float-pow--float-base-float-esp)
-            - [int rand ( [int min, int max] )](#int-rand--int-min-int-max)
-            - [double round ( double val [, int precisione] )](#double-round--double-val--int-precisione)
-        - [FUNZIONI PER LE STRINGHE](#funzioni-per-le-stringhe)
-            - [string rtrim ( string str [, string charlist] )](#string-rtrim--string-str--string-charlist)
-            - [string chr ( int ascii )](#string-chr--int-ascii)
-            - [array explode ( string separator, string string [, int limit] )](#array-explode--string-separator-string-string--int-limit)
-            - [int fprintf ( resource handle, string format [, mixed args [, mixed ...]] )](#int-fprintf--resource-handle-string-format--mixed-args--mixed)
-            - [string implode ( string glue, array pieces )](#string-implode--string-glue-array-pieces)
-            - [string ltrim ( string str [, string charlist] )](#string-ltrim--string-str--string-charlist)
-            - [int ord ( string string )](#int-ord--string-string)
-            - [int strcmp ( string str1, string str2 )](#int-strcmp--string-str1-string-str2)
-            - [int strcasecmp ( string str1, string str2 )](#int-strcasecmp--string-str1-string-str2)
-            - [int strlen ( string string )](#int-strlen--string-string)
-            - [string strstr ( string haystack, string needle )](#string-strstr--string-haystack-string-needle)
-            - [string strtolower ( string str )](#string-strtolower--string-str)
-            - [string strtoupper ( string string )](#string-strtoupper--string-string)
-            - [mixed str_replace ( mixed search, mixed replace, mixed subject [, int &count] )](#mixed-strreplace--mixed-search-mixed-replace-mixed-subject--int-count)
-            - [string substr ( string string, int start [, int length] )](#string-substr--string-string-int-start--int-length)
-            - [string trim ( string str [, string charlist] )](#string-trim--string-str--string-charlist)
-        - [FUNZIONI DI VARIABILI](#funzioni-di-variabili)
-            - [bool empty ( mixed var )](#bool-empty--mixed-var)
-            - [float floatval ( mixed var )](#float-floatval--mixed-var)
-            - [int intval ( mixed var [, int base] )](#int-intval--mixed-var--int-base)
-            - [bool is_array ( mixed var )](#bool-isarray--mixed-var)
-            - [bool isset ( mixed variabile [, ...] )](#bool-isset--mixed-variabile)
-            - [void unset ( mixed var [, mixed var [, mixed ...]] )](#void-unset--mixed-var--mixed-var--mixed)
-
-<!-- /TOC -->
 
 
-### Funzioni per array
+## Funzioni per array
 
-#### array_chunk()
+### array_chunk()
 array array_chunk ( array input, int dimensione [, bool mantieni_chiavi] )
 
 <?php
@@ -81,7 +12,7 @@ print_r(array_chunk($input_array, 2));
 print_r(array_chunk($input_array, 2, true));
 ?>
 
-#### array_count_values()
+### array_count_values()
 array array_count_values ( array input )
 array_count_values() restituisce un array che ha i valori dell'array input per chiavi e la loro
 frequenza in input come valori.
@@ -91,7 +22,7 @@ $array = array(1, "hello", 1, "world", "hello");
 print_r(array_count_values($array));
 ?>
 
-#### array array ( [mixed ...] )
+### array array ( [mixed ...] )
 Restituisce un array contenente i parametri. Ai parametri si può dare un indice con l'operatore =>.
 Leggere la sezione relativa ai tipi per ulteriori informazioni sugli array.
 <?php
@@ -99,26 +30,26 @@ $array = array(1, 1, 1, 1, 1, 8 => 1, 4 => 1, 19, 3 => 13);
 print_r($array);
 ?>
 
-#### esempio
+### esempio
 <?php
 $primotrimestre = array(1 => 'Gennaio', 'Febbraio', 'Marzo');
 print_r($primotrimestre);
 ?>
 
 
-#### bool asort ( array array [, int sort_flags] )
+### bool asort ( array array [, int sort_flags] )
 Questa funzione ordina un array in modo tale che i suoi indici mantengano la loro correlazione con
 gli elementi ai quali sono associati. Viene usata principalmente nell'ordinamento degli array
 associativi, quando la disposizione originaria degli elementi è importante.
 
-#### bool arsort ( array array [, int sort_flags] )
+### bool arsort ( array array [, int sort_flags] )
 Ordina un array in ordine decrescente e mantiene le associazioni degli indici
 
-#### int count ( mixed var [, int mode] )
+### int count ( mixed var [, int mode] )
 Restituisce il numero di elementi in var, la quale è di norma un array, dal momento che qualsiasi
 altro oggetto avrà un elemento.
 
-#### array each ( array array )
+### array each ( array array )
 Restituisce la corrente coppia chiave/valore corrente di array e incrementa il puntatore interno
 dell'array. Questa coppia è restituita in un array di quattro elementi, con le chiavi 0, 1, key, and
 value. Gli elementi 0 e key contengono il nome della chiave dell'elemento dell'array, mentre 1 e
@@ -131,7 +62,7 @@ print_r($bar);
 
 Array ([1] => bob [value] => bob
 [0] => 0 [key] => 0)
-#### Attraversamento di un array con each()
+### Attraversamento di un array con each()
 <?php
 $frutta = array('a' => 'mela', 'b' => 'pera', 'c' => 'banana');
 reset($frutta);
@@ -140,29 +71,29 @@ echo "$chiave => $valore\n";
 }
 ?>
 
-#### mixed current ( array array )
+### mixed current ( array array )
 Restituisce l'elemento corrente di un array
 Ogni array ha un puntatore interno all'elemento "corrente", che è inizializzato al primo elemento
 inserito nell'array. La funzione current() restituisce il valore dell'elemento che è attualmente
 puntato dal puntatore interno. In ogni caso non muove il puntatore. Se il puntatore interno punta
 oltre la fine della lista di elementi, current() restituisce FALSE.
 
-#### mixed reset ( array array )
+### mixed reset ( array array )
 reset() riporta il puntatore di array sul primo elemento e ne restituisce il valore.
 
-#### mixed next ( array array )
+### mixed next ( array array )
 Restituisce l'elemento dell'array che sta nella posizione successiva a quella attuale indicata dal
 puntatore interno, oppure FALSE se non ci sono altri elementi.
 
-#### mixed prev ( array array )
+### mixed prev ( array array )
 Restituisce l'elemento dell'array che sta nella posizione precedente a quella attuale indicata dal
 puntatore interno, oppure FALSE se non ci sono altri elementi.
 
-#### mixed end ( array array )
+### mixed end ( array array )
 end() fa avanzare il puntatore di array all'ultimo elemento, e restituisce il suo valore.
 
 
-#### 
+### 
 bool in_array ( mixed ago, array pagliaio [, bool strict] )
 Cerca in pagliaio per trovare ago e restituisce TRUE se viene trovato nell'array, FALSE altrimenti.
 ```php
@@ -177,9 +108,9 @@ echo "Trovato macos";
 
 **NB: La seconda condizione fallisce perché in_array() è case sensitive**
 
-### FUNZIONI DI DATA E ORA
+## FUNZIONI DI DATA E ORA
 
-#### string date ( string formato [, int timestamp] )
+### string date ( string formato [, int timestamp] )
 
 Restituisce una stringa formattata in accordo con il formato della stringa usato nell' intero
 timestamp o nell'attuale orario locale se timestamp non è assegnato.
@@ -234,7 +165,7 @@ $today = date("H:i:s");
 //17:16:17
 ```
 
-#### string setlocale ( mixed category, array locale )
+### string setlocale ( mixed category, array locale )
 
 ```php
 <?php
@@ -250,11 +181,11 @@ echo strftime("%A %d %B %Y", mktime(0, 0, 0, 12, 22, 1978));
 ```
 
 
-#### int mktime ( int hour, int minute, int second, int month, int day, int year [, int is_dst])
+### int mktime ( int hour, int minute, int second, int month, int day, int year [, int is_dst])
 
 Restituisce la UNIX timestamp per una data
 
-#### string strftime ( string format [, int timestamp] )
+### string strftime ( string format [, int timestamp] )
 Le seguenti sequenze di caratteri sono utilizzate nella stringa del formato:
     %a - Nome del giorno della settimana abbreviato in accordo con i parametri locali lun
     %A - Nome completo del giorno della settimana in accordo con i parametri locali lunedì
@@ -291,78 +222,78 @@ Questo numero è utilizzabile anche come indice di un array di nomi di giorni ov
 Array ([0] => Lunedì, [1] => Martedì, … [6] = Domenica)
 
 
-### FUNZIONI PER LA GESTIONE DI FILE E DEL FILESYSTEM
+## FUNZIONI PER LA GESTIONE DI FILE E DEL FILESYSTEM
 
 resource fopen ( string filename, string mode [, bool use_include_path [, resource zcontext]] )
 La funzione fopen() apre un collegamneto tra una risorsa, indicata dal parametro filename, ed un
 flusso.
 
-#### bool fclose ( resource handle )
+### bool fclose ( resource handle )
 Chiude il file puntato da handle.
 
-#### bool feof ( resource handle )
+### bool feof ( resource handle )
 Restituisce TRUE se il puntatore al file ha raggiunto la fine del file (EOF) o si è verificato un errore
 (anche in caso di timeout del socket); altrimenti restituisce FALSE.
 
-#### string fgetc ( resource handle )
+### string fgetc ( resource handle )
 Restituisce una stringa contenente un singolo carattere letto dal file puntato da handle. Restituisce
 FALSE alla fine del file (EOF).
 
-#### string fgets ( resource handle, int length )
+### string fgets ( resource handle, int length )
 Restituisce una stringa di length - 1 byte letti dal file puntato da handle. La lettura termina quando
 sono stati letti length - 1 byte, oppure si incontra il carattere di newline (che viene incluso nel valore
 restituito), oppure alla fine del file (EOF) qualora giunga prima. Se non si specifica length, si
 assume come default 1k, o 1024 byte.
 
-#### bool file_exists ( string filename )
+### bool file_exists ( string filename )
 Restituisce TRUE se il file o la directory specificata da filename esiste; FALSE altrimenti.
 
-#### array file ( string filename [, int use_include_path [, resource context]] )
+### array file ( string filename [, int use_include_path [, resource context]] )
 Identica a readfile(), eccetto per il fatto che file() restituisce il file in un vettore. Ogni elemento del
 vettore corrisponde ad una riga del file, con il carattere di newline ancora inserito. Se la funzione
 non riesce restituisce FALSE. (nota di Simone: apre e chiude il file automaticamente)
 
-#### int fwrite ( resource handle, string string [, int length] )
+### int fwrite ( resource handle, string string [, int length] )
 fwrite() scrive il contenuto di string nel flusso del file puntato da handle. Se l'argomento length è
 specificato la scrittura si arresterà dopo aver scritto length byte o alla fine di string se si verificasse
 prima. fwrite() returns the number of bytes written, or FALSE on error.
 
 
-### FUNZIONI MATEMATICHE
+## FUNZIONI MATEMATICHE
 
-#### number abs ( mixed numero )
+### number abs ( mixed numero )
 Restituisce il valore assoluto di un numero.
 
-#### mixed max ( number arg1, number arg2 [, number ...] )
+### mixed max ( number arg1, number arg2 [, number ...] )
 
-#### mixed max ( array numbers [, array ...] )
+### mixed max ( array numbers [, array ...] )
 
-#### max() restituisce il numericamente più grande dei valori dati come parametro.
+### max() restituisce il numericamente più grande dei valori dati come parametro.
 
-#### mixed min ( number arg1, number arg2 [, number ...] )
+### mixed min ( number arg1, number arg2 [, number ...] )
 
-#### mixed min ( array numbers [, array ...] )
+### mixed min ( array numbers [, array ...] )
 
-#### min() restituisce il numericamente più piccolo dei valori dati come parametro.
+### min() restituisce il numericamente più piccolo dei valori dati come parametro.
 
-#### float pow ( float base, float esp )
+### float pow ( float base, float esp )
 
 Restituisce base elevato alla potenza di esp. Se possibile, questa funzione restituisce un integer.
 Nota: Il PHP non può gestire valori negativi per bases.
 
-#### int rand ( [int min, int max] )
+### int rand ( [int min, int max] )
 
 Se chiamata senza i parametri opzionali min, max, rand() restituisce un valore pseudo casuale
 compreso fra 0 e RAND_MAX. Se ad esempio si desidera un numero casuale compreso fra 5 e 15
 (inclusi) usare rand (5, 15).
 
-#### double round ( double val [, int precisione] )
+### double round ( double val [, int precisione] )
 Restituisce il valore arrotondato di val con la precisione specificata (numero di cifre dopo il punto
 decimale). precisione può anche essere negativa o zero (predefinito).
 
-### FUNZIONI PER LE STRINGHE
+## FUNZIONI PER LE STRINGHE
 
-#### string rtrim ( string str [, string charlist] )
+### string rtrim ( string str [, string charlist] )
 Questa funzione restituisce la stringa str a cui sono stati rimossi gli spazi finali. Senza la specifica
 del secondo parametro rtrim() rimuoverà i seguenti caratteri:
 " " (ASCII 32 (0x20)), spazio ordinario.
@@ -373,94 +304,94 @@ del secondo parametro rtrim() rimuoverà i seguenti caratteri:
 "\x0B" (ASCII 11 (0x0B)), il tab verticale.
 
 
-#### string chr ( int ascii )
+### string chr ( int ascii )
 La funzione restituisce una stringa di un carattere contenente il carattere indicato come codifica
 ASCII nel parametro ascii. La funzione è complementare di ord().
 
-#### array explode ( string separator, string string [, int limit] )
+### array explode ( string separator, string string [, int limit] )
 Questa funzione restituisce una matrice di stringhe, ciascuna delle quali è una parte di string
 ottenuta dividendo la stringa originale utilizzando separator come separatore di stringa. Se si
 imposta limit la matrice restituita conterrà al massimo limit elementi di cui l'ultimo conterrà la parte
 restante di string.
 
-#### int fprintf ( resource handle, string format [, mixed args [, mixed ...]] )
+### int fprintf ( resource handle, string format [, mixed args [, mixed ...]] )
 La funzione scrive una stringa formattata in base al parametro format nello stream indicato dal
 parametro handle. I valori per il parametro format sono descritti nella documentazione della
 funzione sprintf().
 
-#### string implode ( string glue, array pieces )
+### string implode ( string glue, array pieces )
 Restituisce una stringa contenente tutti gli elementi di una matrice nel medesimo ordine, inserendo
 il parametro glue tra un elemento e l'altro.
 
-#### string ltrim ( string str [, string charlist] )
+### string ltrim ( string str [, string charlist] )
 Come rtrim, ma lavora dall’inizio della stringa str.
 
-#### int ord ( string string )
+### int ord ( string string )
 Restituisce il valore ASCII del primo carattere di string. È complementare di chr().
 
-#### int strcmp ( string str1, string str2 )
+### int strcmp ( string str1, string str2 )
 Restituisce < 0 se str1 è minore di str2; > 0 se str1 è maggiore di str2, e 0 se sono uguali.
 Attenzione: il confronto tiene conto delle lettere maiuscole e minuscole.
 
-#### int strcasecmp ( string str1, string str2 )
+### int strcasecmp ( string str1, string str2 )
 Restituisce < 0 se str1 è minore di str2; > 0 se str1 è maggiore di str2, e 0 se sono uguali. Confronto
 non sensibile alle maiuscole e sicuro con i dati binari.
 
-#### int strlen ( string string )
+### int strlen ( string string )
 
 Restituisce la lunghezza della stringa string.
 
-#### string strstr ( string haystack, string needle )
+### string strstr ( string haystack, string needle )
 Restituisce la parte della stringa haystack dalla prima occorrenza di needle fino alla fine di
 
 haystack. Se non si trova needle, restituisce FALSE.
 
-#### string strtolower ( string str )
+### string strtolower ( string str )
 
 La funzione restituisce la stringa string con tutti i caratteri alfabetici convertiti in minuscolo.
 
-#### string strtoupper ( string string )
+### string strtoupper ( string string )
 
 Restituisce la stringa string con i caratteri alfabetici convertiti in maiuscolo.
 
-#### mixed str_replace ( mixed search, mixed replace, mixed subject [, int &count] )
+### mixed str_replace ( mixed search, mixed replace, mixed subject [, int &count] )
 
 Questa funzione restituisce una stringa, od una matrice, con tutte le occorrenze di search nella
 stringa subject sostituite con il valore del parametro replace.
 
-#### string substr ( string string, int start [, int length] )
+### string substr ( string string, int start [, int length] )
 
 La funzione substr() restituisce la porzione di string indicata dai parametri start e length. Se start
 non è negativo, la stringa restituita inizierà dalla posizione start di string, partendo da zero.
 
-#### string trim ( string str [, string charlist] )
+### string trim ( string str [, string charlist] )
 
 Questa funzione restituisce il parametro str privo degli spazi iniziali e finali.
 
-### FUNZIONI DI VARIABILI
+## FUNZIONI DI VARIABILI
 
-#### bool empty ( mixed var )
+### bool empty ( mixed var )
 
 Determina se una variabile è da considerare vuota. empty() è l'opposto di (boolean) var, tranne che
 non viene dato alcun warning quando la variabile non è valorizzata. Nota: empty() agisce solo su
 variabili, qualsiasi altra cosa genera un errore di parsing. In altre parole, il seguente comando non
 funziona: empty(trim($name)).
 
-#### float floatval ( mixed var )
+### float floatval ( mixed var )
 
 La funzione restituisce il valore di tipo float di var.
 
-#### int intval ( mixed var [, int base] )
+### int intval ( mixed var [, int base] )
 
 Estrae il valore intero di var, utilizzando la base definita a parametro per la conversione. (La base
 vale 10 di default).
 
-#### bool is_array ( mixed var )
+### bool is_array ( mixed var )
 
 Verifica se il valore dato è un array.
 Inoltre, si hanno anche, is_bool, is_float, is_int, is_null, is_numeric, is_string con analoga funzione.
 
-#### bool isset ( mixed variabile [, ...] )
+### bool isset ( mixed variabile [, ...] )
 
 Restituisce TRUE se la variabile esiste; FALSE in caso contrario.
 Se una variabile è stata cancellata con unset(), non potrà essere impostata. La funzione isset()
@@ -468,7 +399,7 @@ restituirà FALSE se viene utilizzata per testare una variabile valorizzata a NU
 
 notare che il byte NULL ("\0") non equivale alla costante PHP NULL.
 
-#### void unset ( mixed var [, mixed var [, mixed ...]] )
+### void unset ( mixed var [, mixed var [, mixed ...]] )
 unset() distrugge la variabile specificata. Occorre notare che in PHP 3 la funzione unset() restituiva
 sempre TRUE (in realtà era il valore 1). In PHP 4, invece, la funzione unset() non è più una vera
 funzione, ora è una istruzione. In questa veste non ritorna alcun valore, e cercare di ottenere un
