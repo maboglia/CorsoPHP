@@ -27,6 +27,7 @@ Gli operatori di confronto sono spesso un aspetto trascurato di PHP, il che può
         // codice...
     }
 
+*   [Operatori](http://www.php.net/manual/en/language.operators.php)
 *   [Operatori di confronto](http://php.net/language.operators.comparison)
 *   [Tabella di confronto tra tipi](http://php.net/types.comparisons)
 *   [Prontuario del confronto](http://phpcheatsheets.com/index.php?page=compare)

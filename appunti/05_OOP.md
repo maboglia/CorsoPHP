@@ -1,5 +1,24 @@
 # PHP: OOP
 
+## cosa sono gli oggetti
+
+codice raggruppato che fa riferimento ad un unico tema
+
+* astrazione delle strutture di codice
+  * funzioni
+  * attributi
+
+ad un livello base, con poche informazioni utilizziamo gli array per aggregare le nostre informazioni
+
+gli oggetti servono per organizzare e mantenere il codice
+
+* aggiungono chiarezza, riducendo la complessità
+* regole semplici e interazione complessa
+* lasciano maggior spazio ai dati
+* permettono la modularizzazione e la riusabilità del codice
+
+![class_methods](img/class_methods.png)
+
 ## Oggetti
 
 Possiamo pensare ad un oggetto come ad un tipo di dato più complesso e
