@@ -279,7 +279,7 @@ $a = [
 ];
 ```
 
-i noti che in entrambi gli esempi la virgola finale prima dell'ultima parentesi non ha
+Si noti che in entrambi gli esempi la virgola finale prima dell'ultima parentesi non ha
 funzione di separatore e può essere omessa, ma offre una pratica semplificazione di
 editing quando si vogliano aggiungere/rimuovere valori nell'array: tutti gli elementi sono
 seguiti da virgola, dal primo all'ultimo.
