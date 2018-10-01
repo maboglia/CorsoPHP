@@ -21,6 +21,72 @@ pertanto nelle pagine di manuale si trovano sempre doppia indicazione:
 * procedural style: 
   * l'implementazione procedurale che qui tralasciamo.
 
+## MySqli procedurale
+
+* mysqli_connect()
+* mysqli_connect_errno()
+* mysqli_connect_error()
+* mysqli_query()
+* mysqli_fetch_row(),
+  * Risultati in un array standard
+  * Le chiavi sono interi
+* mysqli_fetch_assoc(), 
+  * Risultati in un array associativo
+  * Le chiavi sono i nomi delle colonne
+* mysqli_fetch_array(), 
+  * Risultati in un array standard e associativo
+* Le chiavi sono: MYSQL_NUM, MYSQL_ASSOC, MYSQL_BOTH 
+* mysqli_free_result()
+* mysqli_close()
+
+### La funzione mysqli_insert_id() ritorna l’ultimo id inserito
+
+* ```$id = mysqli_insert_id($connessione);```
+
+## SQL Injection
+
+Per evitare SQL injections:
+* Backslash davanti agli apici
+    * addslashes($stringa_da_escapare)
+* Magic Quotes
+    * Sono state aggiunte automaticamente sui dati inviati via GET, POST, COOKIE in PHP 3, poi rimossi in PHP 5.4
+* Usa la funzione real_escape_string:
+    * mysqli_real_escape_string($conn,$stringa_da_escapare)
+
+
+```php
+function get_post($conn, $var)
+{
+return $conn->real_escape_string($_POST[$var]);
+}
+```
+## Prepared statements in PHP
+
+* INSERT INTO Studenti (nome, cognome, data) values(?,?,?);
+* Prepari lo statement una sola volta e successivamente lo usi iniettando solo i dati
+* È anche un modo per prevenire SQL Injections
+
+```php
+//1) scrivo la query parametrica
+	$query = "SELECT nome, cognome ";
+	$query .= "FROM Studenti ";
+	$query .= "WHERE username = ? AND password = ? ";
+//2) preparo lo statement per il database
+	$statement = mysqli_prepare($connessione, $query);
+//3) collego i parametri da bindare
+	mysqli_stmt_bind_param($statement, 'ss', $username, $password);
+//4) eseguo lo statement
+	mysqli_stmt_execute($statement);
+//5) collego i risultati alle variabili da usare
+	mysqli_stmt_bind_result($statement, $nome, $cognome);
+//6) ottengo i risultati
+	mysqli_stmt_fetch($statement);
+//7) chiudo lo statement
+	mysqli_stmt_close($statement);
+
+```
+
+
 
 ## La classe MySQLi
 
@@ -35,10 +101,11 @@ costruttore della classe l'attivazione della connessione
 
 Il costruttore ha dunque bisogno di quattro informazioni basilari:
 
-* host in cui risiede il server MySQL a cui connettersi
-  * username
-  * password
-  * database identifier
+* host 
+  * in cui risiede il server MySQL a cui connettersi
+* username
+* password
+* database identifier
 
 che devono essere passate come parametro all'istanziazione dell'oggetto.
 
@@ -62,7 +129,9 @@ oggetto per la connessione fornendo ogni volta i parametri adeguati.
 Punto debole di questa situazione è che se c'è bisogno di modificare un parametro di
 connessione (ad esempio la password) sarà necessario effettuare la modifica in tutte le
 occasioni in cui è prevista la connessione. Per questo motivo invece che specificare i
-parametri ad ogni esigenza di istanza di connessione può essere più efficace definire una propria classe di connessione che estende MySQLi su cui si ridefinisce il costruttore con i parametri impostati, ad esempio:
+parametri ad ogni esigenza di istanza di connessione può essere più efficace definire 
+una propria classe di connessione che estende MySQLi su cui si ridefinisce il costruttore 
+con i parametri impostati, ad esempio:
 
 ```php
 
