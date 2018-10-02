@@ -24,7 +24,6 @@ __Corso ITS Integrated Backend Services 2018__
 * Installare e configurare MySQL
 * Scegliere un IDE
 * Installare Xampp, Mamp, Wamp, ...
-* Modificare la document_root
 
 ## Primi passi
 * Incorporare codice PHP code una pagina
@@ -32,7 +31,7 @@ __Corso ITS Integrated Backend Services 2018__
 * Inserire commenti al codice
 * include e require
 
-## Exploring Data Types
+## Elementi fondamentali
 
 * Gli operatori principali
 * Tipi
@@ -51,6 +50,7 @@ __Corso ITS Integrated Backend Services 2018__
 * Type juggling and casting
 
 ## Strutture di controllo - Espressioni Logiche
+
 * If statements
 * Else and elseif statements
 * Logical operators
@@ -68,15 +68,15 @@ __Corso ITS Integrated Backend Services 2018__
 ## Funzioni 
 
 * Le funzioni native
-	* String functions
-	* Array functions
+  * String functions
+  * Array functions
 
 * Le funzioni definite dall'utente
-	* Function arguments
-	* Returning values from a function
-	* Multiple return values
-	* Scope and global variables
-	* Setting default argument values
+  * Function arguments
+  * Returning values from a function
+  * Multiple return values
+  * Scope and global variables
+  * Setting default argument values
 
 
 ## Testing, debugging, exceptions
