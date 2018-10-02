@@ -113,10 +113,9 @@ __Corso ITS Integrated Backend Services 2018__
 
 ## PHP e database
 
-* La navigazione
-* La connessione al database
-* DML: Modulo di inserimento
-* DML: Mostrare tutti i record
-* DML: Modulo di cancellazione
-* DML: Modulo di modifica
-* DML: Modulo di ricerca
+* La connessione al database (MySqli, PDO)
+* DML: selezionare e mostrare i record
+* DML: inserimento
+* DML: cancellazione
+* DML: modifica
+* DML: ricerca
