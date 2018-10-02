@@ -2,7 +2,7 @@
 
 ## API
 
-![API DB](img/api_db.png)
+![API DB](img/api_DB.png)
 
 * mysql
   * Api originali, deprecate, disabilitate dalla versione 7
@@ -11,11 +11,11 @@
 * PDO
   * PHP Data Objects
 
-![API DB](img/api_db2.png)
+![API DB](img/api_DB2.png)
 
 ## mysqli procedurale o object orinted
 
-![API DB](img/api_db_OOP.png)
+![API DB](img/api_DB_OOP.png)
 
 ### riferimenti
 
