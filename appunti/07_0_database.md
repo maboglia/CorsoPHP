@@ -1,5 +1,7 @@
 # Database in PHP
 
+![API DB](img/big_picture.png)
+
 ## API
 
 ![API DB](img/api_DB.png)
