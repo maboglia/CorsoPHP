@@ -2,6 +2,14 @@
 
 ![API DB](img/big_picture.png)
 
+## Database, connessione
+
+1. Crea una connessione al database
+2. Invia una richiesta al DB
+3. Usa i dati ricevuti, se disponibili
+4. Rilascia i dati in memoria
+5. Chiudi la connessione
+
 ## API
 
 ![API DB](img/api_DB.png)
@@ -19,21 +27,10 @@
 
 ![API DB](img/api_DB_OOP.png)
 
-### riferimenti
-
-[manuale php](http://php.net/manual/en/mysqlinfo.api.choosing.php)
-
-
-
-## Database, connessione
-
-1. Crea una connessione al database
-2. Invia una richiesta al DB
-3. Usa i dati ricevuti, se disponibili
-4. Rilascia i dati in memoria
-5. Chiudi la connessione
-
-
 ## prevenire SQL Injections
 
 ![API DB](img/sql_injection.png)
+
+### riferimenti
+
+[manuale php](http://php.net/manual/en/mysqlinfo.api.choosing.php)
