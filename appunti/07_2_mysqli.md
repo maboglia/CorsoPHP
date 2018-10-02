@@ -1,25 +1,46 @@
 # La connessione php-MySQL con MySQLi
 
+
+## La classe MySQLi
+
+Gli oggetti di questa classe hanno il compito di rappresentare la connessione fra php e un database MySQL.
+
+* l'estensione MySQLi (MySQL Improved Extension)  è una estensione 'migliorata' rispetto alla precedente 'MySQL Extention'.
+* Fornisce strumenti di accesso a DataBase ad alto livello, senza cioè dover implementare il protocollo di comunicazione fra client (php) e server (MySQL).
+* MySQLi offre strumenti orientati allo sviluppo ad oggetti che invece erano assenti nella precedente.
+* MySQLi offre anche delle funzioni di tipo procedurale, pertanto nelle pagine di manuale si trovano sempre doppia indicazione:
+  * object oriented syle:
+    * l'implementazione orientata agli oggetti
+  * procedural style:
+    * l'implementazione procedurale che qui tralasciamo.
+
+### Connessione al database
+
+La funzione di connessione è associata all'istanza dell'oggetto, quindi è compito del costruttore della classe l'attivazione della connessione  ( vedi http://it.php.net/manual/en/mysqli.construct.php ).
+
+**Il costruttore ha dunque bisogno di quattro informazioni basilari:**
+
+* host 
+  * in cui risiede il server MySQL a cui connettersi
+* username
+* password
+* database identifier
+
+che devono essere passate come parametro all'istanziazione dell'oggetto.
+
+#### La connessione php-MySQL con MySQLi
+
+Esempio:
+```$db=new MySQLi('localhost','root','','ilmiodb');```
+
+I quattro parametri sono stringhe, nell'esempio si indica che il server mysql
+risiede sullo stesso host del server web-php, le credenziali di accesso sono per utente root
+privo di password e il database ha identificatore 'ilmiodb'.
+
+
 L'applicazione php viene eseguita dal server web, per accedere a un database deve
 essere attivata una connessione con il server MySql.
 
-l'estensione MySQLi (MySQL Improved Extension)  è una
-estensione 'migliorata' rispetto alla precedente 'MySQL Extention'.
-
-Fornisce strumenti di accesso a DataBase ad alto livello,
-senza cioè dover implementare il protocollo di comunicazione fra client (php) e server
-(MySQL).
-
-MySQLi offre strumenti orientati allo sviluppo ad oggetti che
-invece erano assenti nella precedente.
-
-MySQLi offre anche delle funzioni di tipo procedurale,
-pertanto nelle pagine di manuale si trovano sempre doppia indicazione:
-
-* object oriented syle: 
-  * l'implementazione orientata agli oggetti
-* procedural style: 
-  * l'implementazione procedurale che qui tralasciamo.
 
 ## MySqli procedurale
 
@@ -43,80 +64,7 @@ pertanto nelle pagine di manuale si trovano sempre doppia indicazione:
 
 * ```$id = mysqli_insert_id($connessione);```
 
-## SQL Injection
 
-Per evitare SQL injections:
-* Backslash davanti agli apici
-    * addslashes($stringa_da_escapare)
-* Magic Quotes
-    * Sono state aggiunte automaticamente sui dati inviati via GET, POST, COOKIE in PHP 3, poi rimossi in PHP 5.4
-* Usa la funzione real_escape_string:
-    * mysqli_real_escape_string($conn,$stringa_da_escapare)
-
-
-```php
-function get_post($conn, $var)
-{
-return $conn->real_escape_string($_POST[$var]);
-}
-```
-## Prepared statements in PHP
-
-* INSERT INTO Studenti (nome, cognome, data) values(?,?,?);
-* Prepari lo statement una sola volta e successivamente lo usi iniettando solo i dati
-* È anche un modo per prevenire SQL Injections
-
-```php
-//1) scrivo la query parametrica
-	$query = "SELECT nome, cognome ";
-	$query .= "FROM Studenti ";
-	$query .= "WHERE username = ? AND password = ? ";
-//2) preparo lo statement per il database
-	$statement = mysqli_prepare($connessione, $query);
-//3) collego i parametri da bindare
-	mysqli_stmt_bind_param($statement, 'ss', $username, $password);
-//4) eseguo lo statement
-	mysqli_stmt_execute($statement);
-//5) collego i risultati alle variabili da usare
-	mysqli_stmt_bind_result($statement, $nome, $cognome);
-//6) ottengo i risultati
-	mysqli_stmt_fetch($statement);
-//7) chiudo lo statement
-	mysqli_stmt_close($statement);
-
-```
-
-
-
-## La classe MySQLi
-
-Gli oggetti di questa classe hanno il compito di rappresentare la connessione fra php e un database MySQL.
-
-### Connessione al database
-
-La funzione di connessione è associata all'istanza dell'oggetto, 
-quindi è compito del
-costruttore della classe l'attivazione della connessione 
-( vedi http://it.php.net/manual/en/mysqli.construct.php ).
-
-Il costruttore ha dunque bisogno di quattro informazioni basilari:
-
-* host 
-  * in cui risiede il server MySQL a cui connettersi
-* username
-* password
-* database identifier
-
-che devono essere passate come parametro all'istanziazione dell'oggetto.
-
-#### La connessione php-MySQL con MySQLi
-
-Esempio:
-```$db=new MySQLi('localhost','root','','ilmiodb');```
-
-I quattro parametri sono stringhe, nell'esempio si indica che il server mysql
-risiede sullo stesso host del server web-php, le credenziali di accesso sono per utente root
-privo di password e il database ha identificatore 'ilmiodb'.
 
 ### Classe di connessione personalizzata
 
@@ -223,23 +171,68 @@ echo "{$riga['nome']} {$riga['cognome']} {$riga['telefono']}
 }
 ```
 
-#### Gestione degli errori
 
-Partiamo dell'esempio del paragrafo precedente, in particolare le due righe che eseguono connessione/query:
+## SQL Injection
+
+Per evitare SQL injections:
+* Backslash davanti agli apici
+    * addslashes($stringa_da_escapare)
+* Magic Quotes
+    * Sono state aggiunte automaticamente sui dati inviati via GET, POST, COOKIE in PHP 3, poi rimossi in PHP 5.4
+* Usa la funzione real_escape_string:
+    * mysqli_real_escape_string($conn,$stringa_da_escapare)
+
+
+```php
+function get_post($conn, $var)
+{
+return $conn->real_escape_string($_POST[$var]);
+}
+```
+## Prepared statements in PHP
+
+* INSERT INTO Studenti (nome, cognome, data) values(?,?,?);
+* Prepari lo statement una sola volta e successivamente lo usi iniettando solo i dati
+* È anche un modo per prevenire SQL Injections
+
+```php
+//1) scrivo la query parametrica
+	$query = "SELECT nome, cognome ";
+	$query .= "FROM Studenti ";
+	$query .= "WHERE username = ? AND password = ? ";
+//2) preparo lo statement per il database
+	$statement = mysqli_prepare($connessione, $query);
+//3) collego i parametri da bindare
+	mysqli_stmt_bind_param($statement, 'ss', $username, $password);
+//4) eseguo lo statement
+	mysqli_stmt_execute($statement);
+//5) collego i risultati alle variabili da usare
+	mysqli_stmt_bind_result($statement, $nome, $cognome);
+//6) ottengo i risultati
+	mysqli_stmt_fetch($statement);
+//7) chiudo lo statement
+	mysqli_stmt_close($statement);
+
+```
+
+
+
+### Gestione degli errori
 
 ```php
 $db=new ConnessioneDb();
 $ris = $db->query("SELECT * FROM rubrica");
 ```
 
-e poniamoci l'obiettivo di verificare che ognuna di queste due abbia avuto successo. Se
-infatti per qualche motivo fallisce la connessione non ha senso tentare di eseguire una
-query. In modo simile se fallisce l'esecuzione di una query non ha senso trattare il risultato.
+* Se per qualche motivo fallisce la connessione non ha senso tentare di eseguire una
+query. 
+
+* Se fallisce l'esecuzione di una query non ha senso trattare il risultato.
 
 #### Errore di connessione
 
-La classe MySQLi rende disponibile l'attributo **connect_error**
-che contiene:
+La classe MySQLi rende disponibile l'attributo **connect_error** che contiene:
+
 * in caso di successo nella connessione il valore NULL
 * in caso di errore una stringa con messaggio che descrive l'errore riconosciuto
 
@@ -252,7 +245,7 @@ die('Connection failed: '.$db->connect_error);
 }
 ```
 
-Si noti l'uso del die che interrompe l'esecuzione dello script, infatti avevamo già osservato che in assenza di connessione non ha senso proseguire.
+Il metodo die() che interrompe l'esecuzione dello script: in assenza di connessione non ha senso proseguire.
 
 #### Errore su query
 
