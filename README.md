@@ -30,6 +30,7 @@ __Corso ITS Integrated Backend Services 2018__
 * Incorporare codice PHP code una pagina
 * Generare dynamic text
 * Inserire commenti al codice
+* include e require
 
 ## Exploring Data Types
 
@@ -83,8 +84,6 @@ __Corso ITS Integrated Backend Services 2018__
 * Warnings and errors
 * Debugging and troubleshooting
 * throw-try-catch
-
-## include e require
 
 ## WEB & REST
 
