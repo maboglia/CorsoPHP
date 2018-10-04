@@ -1,0 +1,6 @@
+CorsoPhpGithub/CorsoITS2017/Lezione_20170329
+/var/www/html/CorsoPhpGithub/CorsoITS2017/Lezione_20170405
+/var/www/html/CorsoPhpGithub/CorsoITS2017/Lezione_20170412
+/var/www/html/CorsoPhpGithub/CorsoITS2017/Lezione_20170419
+/var/www/html/CorsoPhpGithub/CorsoITS2017/Lezione_20170428
+/var/www/html/CorsoPhpGithub/CorsoITS2017/Lezione_20170505

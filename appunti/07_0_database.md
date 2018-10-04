@@ -1,27 +1,6 @@
 # Database in PHP
 
-## API
-
-![API DB](img/api_db.png)
-
-* mysql
-  * Api originali, deprecate, disabilitate dalla versione 7
-* mysqli
-  * I=Improved: API migliorate, permettono il procedurale e supportano OOP
-* PDO
-  * PHP Data Objects
-
-![API DB](img/api_db2.png)
-
-## mysqli procedurale o object orinted
-
-![API DB](img/api_db_OOP.png)
-
-### riferimenti
-
-[manuale php](http://php.net/manual/en/mysqlinfo.api.choosing.php)
-
-
+![API DB](img/big_picture.png)
 
 ## Database, connessione
 
@@ -31,7 +10,27 @@
 4. Rilascia i dati in memoria
 5. Chiudi la connessione
 
+## API
+
+![API DB](img/api_DB.png)
+
+* mysql
+  * Api originali, deprecate, disabilitate dalla versione 7
+* mysqli
+  * I=Improved: API migliorate, permettono il procedurale e supportano OOP
+* PDO
+  * PHP Data Objects
+
+![API DB](img/api_DB2.png)
+
+## mysqli procedurale o object orinted
+
+![API DB](img/api_DB_OOP.png)
 
 ## prevenire SQL Injections
 
 ![API DB](img/sql_injection.png)
+
+### riferimenti
+
+[manuale php](http://php.net/manual/en/mysqlinfo.api.choosing.php)
