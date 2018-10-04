@@ -20,7 +20,7 @@
 	$server = "localhost";
 	$admin = "root";
 
-	$mySQLconn = new mysqli($server, $admin, "", "esercitazionePhp");
+	$mySQLconn = new mysqli($server, $admin, "", "mondiale");
 	if (mysqli_connect_errno()){
  	echo "c'è stato un problema con la connessione:" . mysqli_connect_error();
  }

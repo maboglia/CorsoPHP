@@ -1,7 +1,7 @@
 <?php 
-include ''
-include 'testata.php';
-include 'menu.php';
-include 'contenuto.php';
-include 'piedipagina.php';
+
+include 'Views/testata.php';
+include 'Views/menu.php';
+include 'Views/contenuto.php';
+include 'Views/piedipagina.php';
  ?>

@@ -18,7 +18,7 @@ class Database {
     }
     
     public function select($query) {
-        
+        echo $query;
         $result = mysqli_query($this->link, $query);
         if ($result->num_rows > 0){
             return $result;

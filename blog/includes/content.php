@@ -28,7 +28,7 @@ $posts = $DB->select($query);
                 <p class="blog-post-meta"><?= $row['data_post'] ?> by <a href="#">Mauro</a></p>
 
                 <p><?= substr($row['testo'], 0, 200) ?></p>
-                <a class="btn btn-primary" href="?view=single&id=<?= $row['id'] ?>">Leggi tutto</a> 
+                <a class="btn btn-primary" href="?view=single&id_post=<?= $row['id'] ?>">Leggi tutto</a> 
                 <a class="btn btn-warning" href="?view=insert&id_post=<?= $row['id'] ?>">Modifica</a> 
                 <a class="btn btn-danger" href="?view=delete&id_post=<?= $row['id'] ?>">Elimina</a> 
                 <a class="btn btn-danger" onclick="eliminaAjax(<?= $row['id'] ?>)">Elimina Ajax</a> 

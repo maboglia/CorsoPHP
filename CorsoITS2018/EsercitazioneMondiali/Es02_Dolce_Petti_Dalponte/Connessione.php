@@ -1,9 +1,9 @@
 <?php  
 
 $DB_host     = 'localhost';
-$DB_user     = 'persona';
-$DB_password = 'ciao';
-$DB_name     = 'mondiali';
+$DB_user     = 'root';
+$DB_password = '';
+$DB_name     = 'mondiale';
 
 $link = mysql_connect($DB_host, $DB_user, $DB_password);
 if (!$link) {

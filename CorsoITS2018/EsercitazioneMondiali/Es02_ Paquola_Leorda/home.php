@@ -1,5 +1,5 @@
 <?php
-    $conn_db = new mysqli("localhost", "root", "", "esercitazionephp");
+    $conn_db = new mysqli("localhost", "root", "", "mondiale");
     if($conn_db->connect_error)
         echo "Connection error: ".$conn_db->connect_error;
     function login_user($username, $password){
