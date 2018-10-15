@@ -40,12 +40,12 @@ Per dichiarare un costruttore, è sufficiente creare una funzione all'interno
 della classe che abbia lo stesso nome di quest'ultima, oppure potete usare la parola
 chiave __construct().
 
-### Persona.php
+### Studente.php
     Il nome del file è uguale a quello della classe, così come lo è il nome del costruttore.
 
 ```php
 
-class Persona
+class Studente
 {
 public $nome = ""; // attributo
 public $cognome = ""; // attributo
@@ -57,7 +57,7 @@ rispettivamente nei propri attributi ($nome, $cognome, $datanascita), a cui acce
 chiave this.
 
 */
-public function Persona($n_nome, $n_cognome, $n_data) // costruttore
+public function Studente($n_nome, $n_cognome, $n_data) // costruttore
 {
     /* Con this l'oggetto può richiamare i suoi attributi e metodi, in quanto this indica l'oggetto
     stesso. */
@@ -70,8 +70,8 @@ $this->cognome = $n_cognome;
 $this->datanascita = $n_data;
 }
 
-    /* Infine troviamo il metodo stampaPersona() che semplicemente stampa gli attributi dell'oggetto tramite il costrutto echo. */
-public function stampaPersona()// metodo
+    /* Infine troviamo il metodo stampaStudente() che semplicemente stampa gli attributi dell'oggetto tramite il costrutto echo. */
+public function stampaStudente()// metodo
 {
 echo "Nome : " . $this->nome . "<br />\n";
 echo "Cognome : " . $this->cognome . "<br />\n";
@@ -84,12 +84,12 @@ echo "Data di nascita : " . $this->datanascita. "<br />\n";
 
 ### test.php
 
-Per creare una nuova istanza della classe "Persona", abbiamo usato la parola chiave new seguita dal costruttore della classe con i rispettivi parametri.
+Per creare una nuova istanza della classe "Studente", abbiamo usato la parola chiave new seguita dal costruttore della classe con i rispettivi parametri.
 
-A seguire richiamiamo il metodo "stampaPersona()" con l'operatore di selezione -> descritto in precedenza.
+A seguire richiamiamo il metodo "stampaStudente()" con l'operatore di selezione -> descritto in precedenza.
 
 ```html
-<?php require_once("Persona.php"); ?>
+<?php require_once("Studente.php"); ?>
 
 <html>
     <head>
@@ -97,8 +97,8 @@ A seguire richiamiamo il metodo "stampaPersona()" con l'operatore di selezione -
     </head>
     <body>
     <?php
-    $utente = new Persona("Mario", "Rossi", "10-01-1980");
-    $utente->stampaPersona();
+    $utente = new Studente("Mario", "Rossi", "10-01-1980");
+    $utente->stampaStudente();
     ?>
     </body>
 </html>
@@ -111,10 +111,10 @@ A seguire richiamiamo il metodo "stampaPersona()" con l'operatore di selezione -
 * **protected** - I membri dichiarati protected, possono essere utilizzati solo all'interno delle classi madri e derivate ($this->membro), questo modificatore implica l'ereditarietà
 
 ```php
-$utente = new Persona("Mario", "Rossi", "1-1-1970");
+$utente = new Studente("Mario", "Rossi", "1-1-1970");
 $utente >nome = "Giuseppe";
 $utente->cognome = "Verdi";
-$utente->stampaPersona();
+$utente->stampaStudente();
 // output = Nome : Giuseppe / Cognome : Verdi / Data di nascita : 1-1-1970
 ```
 

@@ -147,4 +147,3 @@ $cane = new Alano();
 $cane->stampaDati();
 ?>
 ```
-
