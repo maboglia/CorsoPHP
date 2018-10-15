@@ -7,7 +7,7 @@
 *   Per leggibilità è meglio usare gli operatori di concatenamento invece che gli operatori concatenanti di assegnazione
 *   Se ti trovi nello scope originale della variabile, usa l’indentazione quando il concatenamento occupa una nuova linea
 
-````php
+```php
 $a  = 'Esempio multi-linea';    // operatore di assegnazione/concatenamento (.=)
 $a .= "\n";
 $a .= 'di cosa non fare';
