@@ -1,6 +1,7 @@
 # Documentazione e risorse on line
 
 ### su php.net
+
 * [Che cos'è il PHP?](http://php.net/manual/it/intro-whatis.php)
 * [Una semplice introduzione](http://php.net/manual/it/tutorial.php)
 * [Che cosa può fare PHP?](http://php.net/manual/it/intro-whatcando.php)
