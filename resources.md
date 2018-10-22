@@ -2,13 +2,9 @@
 
 ### su php.net
 * [Che cos'è il PHP?](http://php.net/manual/it/intro-whatis.php)
-* 
 * [Una semplice introduzione](http://php.net/manual/it/tutorial.php)
-* 
 * [Che cosa può fare PHP?](http://php.net/manual/it/intro-whatcando.php)
-* 
 * [La prima pagina PHP](http://php.net/manual/it/tutorial.firstpage.php)
-* 
 * [Funzioni definite dall'utente](http://php.net/manual/it/functions.user-defined.php)
 
 ### altre risorse online
