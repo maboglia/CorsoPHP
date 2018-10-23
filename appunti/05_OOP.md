@@ -118,6 +118,28 @@ $utente->stampaStudente();
 // output = Nome : Giuseppe / Cognome : Verdi / Data di nascita : 1-1-1970
 ```
 
+## getter e setter
+
+`__get and __set`
+
+```php
+<?php
+class ContoCorrente {
+    private $saldo;
+
+    public function __get($nomeAttributo) {
+        return $this->$nomeAttributo;
+    }
+
+    public function __set($nomeAttributo, $value) {
+        if ( isset($value) ) $this->$nomeAttributo = $value;
+    }
+}
+$mioConto = new ContoCorrente();
+$mioConto->saldo = 100;
+
+```
+
 
 ### Oggetti e costanti
 
