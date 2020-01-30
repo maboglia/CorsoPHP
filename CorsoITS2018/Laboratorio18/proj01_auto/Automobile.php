@@ -8,12 +8,16 @@ class Automobile{
 	public $modello = "X5";
 	public $cilindrata = "3000";
 	public $colore = "Rossa";
-	//define("NUM_RUOTE", 4);
+
+
+	//nella classe si usa la keyword const:
+	//non define("NUM_RUOTE", 4), ma
 	const NUM_RUOTE= 4;
 
 
 	public function __construct($marca,$modello,$cilindrata,$colore)
 	{
+	
 		//echo "ho costruito un oggetto ";
 	 $this->marca = $marca ;
 	 $this->modello = $modello ;

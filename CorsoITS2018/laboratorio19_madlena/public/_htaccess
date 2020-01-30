@@ -1,0 +1,15 @@
+# disabilita la content negotiation
+Options -MultiViews
+
+RewriteEngine On 
+
+RewriteBase /laboratorio19/public
+
+# esegui solo se la regola è vera (-d directory, -f file regolare, ! negazione)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+# la ricerca: ^(.+)$ si riferisce a qualsiasi url eccetto server root
+# [QSA] appenderà la query string all'url riscritto
+# [L] non processerà ulteriori RULES se questa corrisponde a vero
+RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]

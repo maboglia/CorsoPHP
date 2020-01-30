@@ -2,24 +2,22 @@
 
 ## Concatenamento
 
-*   If your line extends beyond the recommended line length (120 characters), consider concatenating your line
-*   For readability it is best to use concatenation operators over concatenating assignment operators
-*   While within the original scope of the variable, indent when concatenation uses a new line
-    
+
 *   Se la tua linea eccede la lunghezza raccomandata (120 caratteri), considera il concatenamento
 *   Per leggibilità è meglio usare gli operatori di concatenamento invece che gli operatori concatenanti di assegnazione
 *   Se ti trovi nello scope originale della variabile, usa l’indentazione quando il concatenamento occupa una nuova linea
 
-    <?php
-    $a  = 'Esempio multi-linea';    // operatore di assegnazione/concatenamento (.=)
-    $a .= "\n";
-    $a .= 'di cosa non fare';
-    
-    // vs
-    
-    $a = 'Esempio multi-linea'      // operatore di concatenamento (.)
-        . "\n"                     // indentazione delle nuove linee
-        . 'di cosa fare';
+```php
+$a  = 'Esempio multi-linea';    // operatore di assegnazione/concatenamento (.=)
+$a .= "\n";
+$a .= 'di cosa non fare';
+
+// vs
+
+$a = 'Esempio multi-linea'      // operatore di concatenamento (.)
+    . "\n"                     // indentazione delle nuove linee
+    . 'di cosa fare';
+```
 
 *   [Operatori delle stringhe](http://php.net/language.operators.string)
 
@@ -33,7 +31,7 @@ Gli apici singoli vengono usati per denotare una “stringa letterale”. Le str
 
 Se usi gli apici singoli, puoi inserire il nome di una variabile così: `'qualche $cosa'` e vedresti l’output esatto `quale $cosa`. Se usi gli apici doppi, la stringa cercherebbe di recuperare la variabile `$cosa` e visualizzerebbe degli errori in caso la variabile non venisse trovata.
 
-    <?php
+```php
     echo 'Questa è la mia stringa, guarda come è bella.';    // non serve interpretare una stringa semplice
     
     /**
@@ -41,14 +39,14 @@ Se usi gli apici singoli, puoi inserire il nome di una variabile così: `'qualch
      *
      * Questa è la mia stringa, guarda come è bella.
      */
-
+```
 *   [Apici singoli](http://php.net/language.types.string#language.types.string.syntax.single)
 
 ### Virgolette
 
 Le virgolette sono il coltellno svizzero delle stringhe. Non solo effettuano il parsing delle variabili come abbiamo detto sopra, ma di tutti i caratteri speciali come `\n` per la nuova linea, `\t` per la tabulazione etc.
 
-    <?php
+```php
     echo 'phptherightway è ' . $adjective . '.'     // un esempio con apici singoli che usa concatenamento multiplo per
         . "\n"                                      // variabili e caratteri di escape
         . 'Adoro imparare' . $code . '!';
@@ -57,18 +55,20 @@ Le virgolette sono il coltellno svizzero delle stringhe. Non solo effettuano il 
     
     echo "phptherightway è $adjective.\n Adoro imparare $code!"    // Invece del concatenamento multiplo, le virgolette
                                                                    // ci permettono di creare una stringa interpretata
+```
 
 Gli apici doppi possono contenere variabili; questa si chiama “interpolazione”.
 
-    <?php
+```php
     $juice = 'plum';
     echo "I like $juice juice";    // Output: I like plum juice
+```
 
 Quando usi l’interpolazione, capita spesso che il nome di una variabile tocchi un altro carattere. Questo renderà impossibile distinguere il nome della variabile dal carattere letterale.
 
 Per ovviare al problema, racchiudi la variabile in un paio di parentesi graffe.
 
-    <?php
+```php
     $juice = 'prugn';
     echo "Ho bevuto del succo fatto con le $juicee";    // $juice non può essere interpetato
     
@@ -83,6 +83,7 @@ Per ovviare al problema, racchiudi la variabile in un paio di parentesi graffe.
     
     $juice = array('mel', 'banan', 'prugn');
     echo "Ho bevuto del succo fatto con le {$juice[1]}e";   // $juice[1] verrà interpretato
+```
 
 *   [Virgolette](http://php.net/language.types.string#language.types.string.syntax.double)
 
