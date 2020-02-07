@@ -8,17 +8,17 @@ Nonostante ciò, il concetto di [tipo di dato](http://it.wikipedia.org/wiki/Tipo
 
 ## Principalmente i tipi di dato sono:
 
-### Numero intero (*int*) o a virgola mobile (*float*) |
-un numero razionale o intero |
-`$a = 3; $b = -12.5;` ||
+### Numero intero (*int*) o a virgola mobile (*float*)
+un numero razionale o intero
+`$a = 3; $b = -12.5;`
 
 ### Stringa (*string*) |
 sequenza alfanumerica (testo); durante l'assegnazione deve essere delimitata da due virgolette (") o apici ('). |
-`$a = "testo"; $b = '"I promessi sposi" è un romanzo di A. Manzoni';` ||
+`$a = "testo"; $b = '"I promessi sposi" è un romanzo di A. Manzoni';`
 
 ### Booleano (*boolean*) |
 può assumere solo i valori *true* (vero) o *false* (falso) |
-`$a = true; $b = (3 == 5);` ||
+`$a = true; $b = (3 == 5);`
 
 ---
 
@@ -92,22 +92,22 @@ Una stringa in PHP deve essere delimitata da apici o da apici doppi; bisogna tut
 Può essere necessario in alcuni casi usare carattere particolari; ad esempio può essere necessario inserire un apice in una stringa delimitata da apici singoli. In questo caso si usano i **caratteri di commutazione** (o **sequenze di escape**). I principali sono:
 
 
-* `\' |` Singolo apice (necessario solo se la stringa è racchiusa da apici singoli) ||
+* `\' |` Singolo apice (necessario solo se la stringa è racchiusa da apici singoli)
 
-* `\" |` Doppio apice (necessario solo se la stringa è racchiusa da apici doppi) || |
-Backslash ||
+* `\" |` Doppio apice (necessario solo se la stringa è racchiusa da apici doppi) |
+Backslash
 
-* `\n |` New line (ritorno a capo) ||
+* `\n |` New line (ritorno a capo)
 
-* `\r |` Ritorno del carrello ||
+* `\r |` Ritorno del carrello
 
-* `\t |` Tabulazione orizzontale ||
+* `\t |` Tabulazione orizzontale
 
-* `\v |` Tabulazione verticale (disponibile nelle versioni di PHP superiori alla 5.2.5) ||
+* `\v |` Tabulazione verticale (disponibile nelle versioni di PHP superiori alla 5.2.5)
 
-* `\f |` form feed (disponibile nelle versioni di PHP superiori alla 5.2.5) ||
+* `\f |` form feed (disponibile nelle versioni di PHP superiori alla 5.2.5)
 
-* `\$ |` Segno del dollaro ||
+* `\$ |` Segno del dollaro
 
 * `\x00 - \xFF` | Carattere esadecimale |
 
