@@ -118,7 +118,6 @@ Esistono alcune **costanti predefinite**, che sono valide cioè in tutti gli scr
 Dichiarazioni di variabili
 --------------------------
 
-A volte, gli sviluppatori cercano di rendere il loro codice “più pulito” dichiarando variabili predefinite con un nome differente. Ciò che questo comporta, in realtà, è un raddoppiamento del consumo di memoria dello script. Nell’esempio sottostante, presumiamo che una stringa di esempio contenga dati per 1MB. Copiando la variabile hai portato il consumo di memoria dello script a 2MB.
 ```php
     <?php
     $about = 'Una stringa molto lunga';    // usa 2MB di memoria
