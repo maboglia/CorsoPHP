@@ -21,6 +21,9 @@
 	?>
 ```
 
+---
+
+
 In PHP le variabili sono identificate dal simbolo $ che precede il nome della variabile stessa. 
 
 Il primo carattere dopo il $ non può essere un numero o un carattere speciale, solo una lettera o un carattere underline (_).
@@ -37,6 +40,9 @@ La sintassi è
 `$nome_var = valore`
 
 dove _valore_ è un'espressione valida per PHP (per espressione si intende una sequenza di dati, operatori e/o variabili che restituisca un valore). 
+
+---
+
 
 Per fare riferimento ad una
 variabile e al suo valore sarà necessario semplicemente riferirsi al
@@ -67,6 +73,9 @@ $var1 = 3;
 $var2 = &$var1 //ora $var2 e $var1 puntano alla stessa cella di memoria
 $var2 = 4 //ora $var1 e $var2 contengono entrambe il valore 4
 
+---
+
+
 #### **Costanti**
 
 Può essere comodo durante la programmazione definire valori **costanti**
@@ -81,6 +90,9 @@ e per richiamarle si usa
 semplicemente il loro nome:
 
 echo NOME_COSTANTE;
+
+---
+
 
 Esistono alcune **costanti predefinite**, che sono valide cioè in tutti gli script:
 
@@ -100,11 +112,14 @@ Esistono alcune **costanti predefinite**, che sono valide cioè in tutti gli scr
 	restituisce il nome della classe in cui la costante è richiamata.
 
 
+---
+
+
 Dichiarazioni di variabili
 --------------------------
 
 A volte, gli sviluppatori cercano di rendere il loro codice “più pulito” dichiarando variabili predefinite con un nome differente. Ciò che questo comporta, in realtà, è un raddoppiamento del consumo di memoria dello script. Nell’esempio sottostante, presumiamo che una stringa di esempio contenga dati per 1MB. Copiando la variabile hai portato il consumo di memoria dello script a 2MB.
-
+```php
     <?php
     $about = 'Una stringa molto lunga';    // usa 2MB di memoria
     echo $about;
@@ -112,6 +127,10 @@ A volte, gli sviluppatori cercano di rendere il loro codice “più pulito” di
     // contro
     
     echo 'Una stringa molto lunga';        // usa 1MB di memoria
+```
+
+---
+
 
 *   [Consigli sulle prestazioni](http://web.archive.org/web/20140625191431/https://developers.google.com/speed/articles/optimizing-php)
 
