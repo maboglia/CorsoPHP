@@ -1,27 +1,42 @@
 # **Lavorare con le variabili**
 *da wikibook*
 
-In PHP le variabili sono identificate dal simbolo $ che precede il nome
-della variabile stessa. È necessario tuttavia che il primo carattere
-dopo il $ non sia un numero o un carattere speciale, ma sia una
-lettera o un carattere underscore (_).
 
-Molti linguaggi di programmazione richiedono che le variabili usate nel
-corso del programma siano dichiarate. Il linguaggio PHP è un
-linguaggio chiamato a **tipizzazione debole** , che significa
-invece che non richiede alcuna dichiarazione di variabile: per il
+```php
+	<?php
+	
+	$var1 = 10;
+	echo $var1;
+	
+	echo "<br />";
+	
+	$var1 = 100;
+	echo $var1;
+	
+	echo "<br />";
+	
+	$var2 = "Hello world";
+	echo $var2;
+	
+	?>
+```
+
+In PHP le variabili sono identificate dal simbolo $ che precede il nome della variabile stessa. 
+
+Il primo carattere dopo il $ non può essere un numero o un carattere speciale, solo una lettera o un carattere underline (_).
+
+## Variabili non tipizzate
+Il linguaggio PHP è un linguaggio chiamato a **tipizzazione debole**, non richiede alcuna dichiarazione di variabile: per il
 motore PHP, infatti, una variabile è tale dalla prima riga nella
 quale se ne fa uso.
 
-L'istruzione fondamentale che è possibile eseguire con una variabile è
-l'**assegnazione**, che imposta (assegna) il valore contenuto dalla variabile. 
+L'istruzione fondamentale che è possibile eseguire con una variabile è l'**assegnazione**, che imposta (assegna) il valore contenuto dalla variabile. 
 
 La sintassi è
 
-$nome_var = valore
+`$nome_var = valore`
 
-dove _valore_ è un'espressione valida per PHP (per espressione si intende una
-sequenza di dati, operatori e/o variabili che restituisca un valore). 
+dove _valore_ è un'espressione valida per PHP (per espressione si intende una sequenza di dati, operatori e/o variabili che restituisca un valore). 
 
 Per fare riferimento ad una
 variabile e al suo valore sarà necessario semplicemente riferirsi al
