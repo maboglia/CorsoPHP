@@ -4,6 +4,8 @@ PHP è a tipizzazione debole anche perché converte automaticamente il tipo di d
 
 Nonostante ciò, il concetto di [tipo di dato](http://it.wikipedia.org/wiki/Tipo_di_dato) esiste in PHP: ogni variabile è di un determinato tipo a seconda del valore che contiene in quel momento. 
 
+---
+
 ## Principalmente i tipi di dato sono:
 
 ### Numero intero (*int*) o a virgola mobile (*float*) |
@@ -18,6 +20,9 @@ sequenza alfanumerica (testo); durante l'assegnazione deve essere delimitata da 
 può assumere solo i valori *true* (vero) o *false* (falso) |
 `$a = true; $b = (3 == 5);` ||
 
+---
+
+
 ### Array |
 tipo di dato complesso
 
@@ -26,6 +31,9 @@ indica l'assenza di un valore; serve soprattutto ad annullare una variabile |
 `$a = null;` |
 
 Di fronte a diversi tipi di dato, il motore PHP può trovarsi in diverse situazioni e si comporta in maniere differenti:
+
+---
+
 
 
 * se si aspetta un valore *numerico intero* e viene fornito un *numero a virgola mobile* PHP tronca la parte decimale, restituendo solo la parte intera
@@ -50,6 +58,9 @@ Di fronte a diversi tipi di dato, il motore PHP può trovarsi in diverse situazi
 
 * il valore *null* viene trattato come un valore booleano FALSE
 
+---
+
+
 Esistono tuttavia numerose funzioni di conversione per trasformare un tipo di dato in un altro, che consistono nell'anteporre all'espressione in questione il nome del tipo di dato che si vuole ottenere tra parentesi. Ad esempio:
 
 `(int)(3.45 + 7.3)`
@@ -59,6 +70,9 @@ restituisce *10*, in quanto viene convertito un numero *float* in un intero seco
 `(boolean)("questa è un'espressione stringa")`
 
 restituisce TRUE
+
+---
+
 
 ### **- Calcolo multibase**
 
@@ -72,9 +86,11 @@ Una stringa in PHP deve essere delimitata da apici o da apici doppi; bisogna tut
 "Questa non è una stringa valida'
 'Questa lo è'
 
+---
+
+
 Può essere necessario in alcuni casi usare carattere particolari; ad esempio può essere necessario inserire un apice in una stringa delimitata da apici singoli. In questo caso si usano i **caratteri di commutazione** (o **sequenze di escape**). I principali sono:
 
-|
 
 * `\' |` Singolo apice (necessario solo se la stringa è racchiusa da apici singoli) ||
 
@@ -97,6 +113,9 @@ Backslash ||
 
 
 **Nota**: nel caso di stringhe racchiuse da apici singoli l'unica sequenza di escape ammessa è la prima (\')
+
+
+---
 
 
 ## Gli operatori principali sono:
@@ -127,6 +146,9 @@ Queste espressioni, infatti, nelle quali compare la stessa variabile ambo sia a 
 $a += 3;
 $b .= ' stringa';
 
+---
+
+
 -   booleani o di **confronto** (restituiscono un valore boolean)
 
 * `=== identicamente uguale (anche del medesimo tipo)`
@@ -143,6 +165,9 @@ $b .= ' stringa';
 
 * `<= minore o uguale a`
 
+---
+
+
 -   **logici** (restituiscono e operano su boolean)
 
 * `! corrisponde alla negazione logica ed è un operatore unario (necessita di un solo operando). Restituisce false se l'operando è true, true se viceversa.`
@@ -153,12 +178,18 @@ $b .= ' stringa';
 
 * `xor corrisponde alla disgiunzione esclusiva logica (out). Restituisce true solo se uno dei due valori è true e l'altro è false;`
 
+---
+
+
 -   due operatori molto importanti e comodi in PHP sono gli operatori chiamati di **incremento** e di **decremento** ++ e --, che restituiscono un valore numerico e aumentano o diminuiscono il valore della variabile di una unità. È più facile capire il loro funzionamento con un esempio:
 
 `$v1 = $v2++;` //assegna a $v1 il valore di $v2 e *poi* incrementa $v2 di 1
 `$v1 = $v2--` //assegna a $v1 il valore di $v2 e *poi* decrementa $v2 di 1
 `$v1 = ++$v2;` //incrementa $v2 di 1 e *poi* assegna a $v1 il valore di $v2
 `$v1 = --$v2` //decrementa $v2 di 1 e *poi* assegna a $v1 il valore di $v2
+
+---
+
 
 -   un altro operatore molto comodo in PHP è l'**operatore ternario** ? : la cui sintassi è
 
@@ -183,7 +214,10 @@ Ad esempio:
 
 Il codice sopra riportato darà come output:
 
-prova 1 prova 2
+`prova 1 prova 2`
+
+
+---
 
 
 Operatori di confronto
@@ -212,6 +246,10 @@ Gli operatori di confronto sono spesso un aspetto trascurato di PHP, il che può
         // codice...
     }
 ```
+
+---
+
+
 *   [Operatori](http://www.php.net/manual/en/language.operators.php)
 *   [Operatori di confronto](http://php.net/language.operators.comparison)
 *   [Tabella di confronto tra tipi](http://php.net/types.comparisons)
