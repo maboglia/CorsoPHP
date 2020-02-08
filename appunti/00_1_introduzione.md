@@ -2,7 +2,7 @@
 
 PHP è prima di tutto un linguaggio interpretato, non è compilato come p.es.il C e non dispone di una macchina virtuale come p.es Java
 
-In PHP (ma anche p.es. in Perl, Pythoon, Ruby, ...) il codice sorgente viene eseguito direttamente
+In PHP (ma anche p.es. in Perl, Python, Ruby, ...) il codice sorgente viene eseguito direttamente
 dall’interprete ed è questo a “dialogare” con il processore.
 
 La documentazione ufficiale
