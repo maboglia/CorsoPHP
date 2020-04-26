@@ -133,7 +133,6 @@ Dichiarazioni di variabili
 
 *   [Consigli sulle prestazioni](http://web.archive.org/web/20140625191431/https://developers.google.com/speed/articles/optimizing-php)
 
-[Return to Main Page](http://it.phptherightway.com/)
 
 [![Creative Commons License](Le%20basi%20-%20PHP:%20La%20Retta%20Via_files/88x31.png)](http://creativecommons.org/licenses/by-nc-sa/3.0/)  
 PHP: The Right Way di [Josh Lockhart](http://www.twitter.com/codeguy) è rilasciato sotto una licenza [Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License](http://creativecommons.org/licenses/by-nc-sa/3.0/).  
