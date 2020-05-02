@@ -28,6 +28,8 @@ In PHP le variabili sono identificate dal simbolo $ che precede il nome della va
 
 Il primo carattere dopo il $ non può essere un numero o un carattere speciale, solo una lettera o un carattere underline (_).
 
+---
+
 ## Variabili non tipizzate
 Il linguaggio PHP è un linguaggio chiamato a **tipizzazione debole**, non richiede alcuna dichiarazione di variabile: per il
 motore PHP, infatti, una variabile è tale dalla prima riga nella
@@ -59,6 +61,8 @@ esempio:
 $var1 = 3;
 $var2 = $var1 //ora $var2 contiene il valore 3
 $var2 = 4 //in questo caso non cambia il valore di $var1 ma solo quello di $var2
+
+---
 
 Talvolta, soprattutto per quanto
 riguarda l'uso di funzioni, è comodo aver due variabili che puntino

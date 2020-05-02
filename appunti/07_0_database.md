@@ -10,6 +10,8 @@
 4. Rilascia i dati in memoria
 5. Chiudi la connessione
 
+---
+
 ## API
 
 ![API DB](img/api_DB.png)
@@ -21,15 +23,23 @@
 * PDO
   * PHP Data Objects
 
+---
+
 ![API DB](img/api_DB2.png)
+
+---
 
 ## mysqli procedurale o object orinted
 
 ![API DB](img/api_DB_OOP.png)
 
+---
+
 ## prevenire SQL Injections
 
 ![API DB](img/sql_injection.png)
+
+---
 
 ### riferimenti
 

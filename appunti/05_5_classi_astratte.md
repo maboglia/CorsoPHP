@@ -9,6 +9,9 @@ La sottoclasse derivata da una classe astratta, dovrà
 obbligatoriamente definire tali metodi astratti 
 per far sì che l'ereditarietà venga accettata.
 
+
+---
+
 ```php
 <?php
 abstract class Animale{
@@ -36,6 +39,8 @@ $rex->suono();
 () // Stampa "bau!”
 ?>
 ```
+
+---
 
 Il metodo astratto "suono()" della classe astratta
 "Animale" è solamente dichiarato, mentre la definizione avviene

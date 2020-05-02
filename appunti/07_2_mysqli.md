@@ -14,6 +14,8 @@ Gli oggetti di questa classe hanno il compito di rappresentare la connessione fr
   * procedural style:
     * l'implementazione procedurale che qui tralasciamo.
 
+---
+
 ### Connessione al database
 
 La funzione di connessione è associata all'istanza dell'oggetto, quindi è compito del costruttore della classe l'attivazione della connessione  ( vedi http://it.php.net/manual/en/mysqli.construct.php ).
@@ -28,6 +30,8 @@ La funzione di connessione è associata all'istanza dell'oggetto, quindi è comp
 
 che devono essere passate come parametro all'istanziazione dell'oggetto.
 
+---
+
 #### La connessione php-MySQL con MySQLi
 
 Esempio:
@@ -41,6 +45,7 @@ privo di password e il database ha identificatore 'ilmiodb'.
 L'applicazione php viene eseguita dal server web, per accedere a un database deve
 essere attivata una connessione con il server MySql.
 
+---
 
 ## MySqli procedurale
 
@@ -60,11 +65,13 @@ essere attivata una connessione con il server MySql.
 * mysqli_free_result()
 * mysqli_close()
 
+---
+
 ### La funzione mysqli_insert_id() ritorna l’ultimo id inserito
 
 * ```$id = mysqli_insert_id($connessione);```
 
-
+---
 
 ### Classe di connessione personalizzata
 
@@ -91,7 +98,12 @@ class ConnessioneDb extends MySQLi{
 }
 
 ```
+
+---
+
 I vari script dell'applicazione potranno ottenere la connessione istanziando un oggetto di classe ConnessioneDb senza specificare parametri. Qualora uno dei parametri dovesse essere modificato andrà ritoccato il solo costruttore della classe ConnessioneDb e tutti gli script dell'applicazione saranno implicitamente aggiornati.
+
+---
 
 #### Query
 
@@ -112,6 +124,8 @@ Il valore di ritorno del metodo sarà:
 
 Si rimanda al paragrafo seguente il dettaglio sulla classe mysqli_result
 
+---
+
 **Esempio di uso:**
 ```
 $db=new ConnessioneDb();
@@ -124,6 +138,8 @@ questa tabella l'oggetto tiene un riferimento (cursore) ad una particolare riga,
 chiamiamo riga corrente. All'istanza dell'oggetto la riga corrente è la prima.
 
 La riga indirizzata dal cursore può essere accessibile con più di una modalità, qui per ora ne prendiamo in esame una.
+
+---
 
 #### Metodo fetch_assoc()
 Questo metodo restituisce la riga corrente del risultato come array associativo in cui le chiavi sono costituite dagli identificatori di colonna della tabella risultato. 
@@ -141,6 +157,8 @@ $riga = $ris->fetch_assoc();
 
 ```
 
+---
+
 Frequentemente si ha interesse a scandire l'intera tabella risultato, pertanto questa
 istruzione viene inserita in un ciclo controllato dal confronto con il valore NULL che indica il raggiungimento di fine tabella.
 
@@ -151,6 +169,8 @@ while ( ($riga=$ris->fetch_assoc()) !== NULL ) {
 // elaboro $riga secondo la finalità specifica dell'applicazione
 }
 ```
+
+---
 
 **Attributo num_rows**
 
@@ -171,6 +191,7 @@ echo "{$riga['nome']} {$riga['cognome']} {$riga['telefono']}
 }
 ```
 
+---
 
 ## SQL Injection
 
@@ -181,14 +202,15 @@ Per evitare SQL injections:
     * Sono state aggiunte automaticamente sui dati inviati via GET, POST, COOKIE in PHP 3, poi rimossi in PHP 5.4
 * Usa la funzione real_escape_string:
     * mysqli_real_escape_string($conn,$stringa_da_escapare)
-
-
 ```php
 function get_post($conn, $var)
 {
-return $conn->real_escape_string($_POST[$var]);
+  return $conn->real_escape_string($_POST[$var]);
 }
 ```
+
+---
+
 ## Prepared statements in PHP
 
 * INSERT INTO Studenti (nome, cognome, data) values(?,?,?);
@@ -215,7 +237,7 @@ return $conn->real_escape_string($_POST[$var]);
 
 ```
 
-
+---
 
 ### Gestione degli errori
 
@@ -228,6 +250,8 @@ $ris = $db->query("SELECT * FROM rubrica");
 query. 
 
 * Se fallisce l'esecuzione di una query non ha senso trattare il risultato.
+
+---
 
 #### Errore di connessione
 
@@ -246,6 +270,8 @@ die('Connection failed: '.$db->connect_error);
 ```
 
 Il metodo die() che interrompe l'esecuzione dello script: in assenza di connessione non ha senso proseguire.
+
+---
 
 #### Errore su query
 
@@ -267,7 +293,10 @@ die('Query failed: '.$db->error);
 
 ```
 
+
 Anche in questo caso il riconoscimento dell'errore viene trattato interrompendo lo script.
+
+---
 
 #### Classe di connessione con gestione dell'errore
 
@@ -292,6 +321,8 @@ class ConnessioneDb extends MySQLi{
     }
 }
 ```
+
+---
 
 Quest'opera è stata rilasciata con licenza Creative Commons Attribuzione - Non commerciale - Condividi allo stesso modo 3.0 Italia. Per leggere una
 copia della licenza visita il sito web http://creativecommons.org/licenses/by-nc-sa/3.0/it/ o spedisci una lettera a Creative Commons, 171 Second

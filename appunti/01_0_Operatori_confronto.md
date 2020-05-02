@@ -34,8 +34,6 @@ Di fronte a diversi tipi di dato, il motore PHP può trovarsi in diverse situazi
 
 ---
 
-
-
 * se si aspetta un valore *numerico intero* e viene fornito un *numero a virgola mobile* PHP tronca la parte decimale, restituendo solo la parte intera
 
 * se si aspetta un valore *numerico* e viene fornita una *stringa*, PHP elimina spazi e lettere di troppo utilizzando soltanto i numeri contenuti in tale stringa
@@ -45,6 +43,8 @@ Di fronte a diversi tipi di dato, il motore PHP può trovarsi in diverse situazi
 * se si aspetta un *numero* e viene fornito un *array* restituisce un numero pari al numero di elementi contenuti dall'array
 
 * se si aspetta una *stringa* e viene fornito un *numero* questo viene convertito in una stringa contentente esattamente il numero stesso
+
+---
 
 * se si aspetta un valore *stringa* e viene fornito un valore *booleano* viene restituito *1* se il valore è TRUE, una stringa vuota se è FALSE
 
@@ -91,25 +91,19 @@ Una stringa in PHP deve essere delimitata da apici o da apici doppi; bisogna tut
 
 Può essere necessario in alcuni casi usare carattere particolari; ad esempio può essere necessario inserire un apice in una stringa delimitata da apici singoli. In questo caso si usano i **caratteri di commutazione** (o **sequenze di escape**). I principali sono:
 
+---
 
-* `\' |` Singolo apice (necessario solo se la stringa è racchiusa da apici singoli)
-
-* `\" |` Doppio apice (necessario solo se la stringa è racchiusa da apici doppi) |
-Backslash
-
-* `\n |` New line (ritorno a capo)
-
-* `\r |` Ritorno del carrello
-
-* `\t |` Tabulazione orizzontale
-
-* `\v |` Tabulazione verticale (disponibile nelle versioni di PHP superiori alla 5.2.5)
-
-* `\f |` form feed (disponibile nelle versioni di PHP superiori alla 5.2.5)
-
-* `\$ |` Segno del dollaro
-
-* `\x00 - \xFF` | Carattere esadecimale |
+Operatore|descrizione
+---|---
+`\'`|Singolo apice (necessario solo se la stringa è racchiusa da apici singoli)
+`\"`|Doppio apice (necessario solo se la stringa è racchiusa da apici doppi)
+`\n`|New line (ritorno a capo)
+`\r`|Ritorno del carrello
+`\t`|Tabulazione orizzontale
+`\v`|Tabulazione verticale (disponibile nelle versioni di PHP superiori alla 5.2.5)
+`\f`|form feed (disponibile nelle versioni di PHP superiori alla 5.2.5)
+`\$`|Segno del dollaro
+`\x00 - \xFF` | Carattere esadecimale |
 
 
 **Nota**: nel caso di stringhe racchiuse da apici singoli l'unica sequenza di escape ammessa è la prima (\')
@@ -132,61 +126,59 @@ Backslash
 
 * `% modulo (resto della divisione intera)`
 
+---
+
 -   **stringa** (restituiscono una stringa)
 
 * `. (punto) concatena due stringhe`
 
 Gli operatori visti finora hanno inoltre una sintassi particolare nel caso di espressioni come ad esempio
 
-$a = $a + 3;
-$b = $b.' stringa';
+* `$a = $a + 3;`
+* `$b = $b.' stringa';`
 
 Queste espressioni, infatti, nelle quali compare la stessa variabile ambo sia a destra che a sinistra dell'uguale, possono essere riassunte in
 
-$a += 3;
-$b .= ' stringa';
+* `$a += 3;`
+* `$b .= ' stringa';`
 
 ---
 
 
 -   booleani o di **confronto** (restituiscono un valore boolean)
 
-* `=== identicamente uguale (anche del medesimo tipo)`
-
-* `== uguale a`
-
-* `!= diverso da`
-
-* `> maggiore di`
-
-* `< minore di`
-
-* `=> maggiore o uguale a`
-
-* `<= minore o uguale a`
+Operatore|descrizione
+---|---
+`===`| identicamente uguale (anche del medesimo tipo)
+`==`| uguale a
+`!=`| diverso da
+`>`| maggiore di
+`<`| minore di
+`=>`| maggiore o uguale a
+`<=`| minore o uguale a
 
 ---
 
 
 -   **logici** (restituiscono e operano su boolean)
 
-* `! corrisponde alla negazione logica ed è un operatore unario (necessita di un solo operando). Restituisce false se l'operando è true, true se viceversa.`
-
-* `and o && corrisponde alla congiunzione logica (et). Restituisce true solo se entrambi gli operandi sono veri.`
-
-* `or o || corrisponde disgiunzione inclusiva logica (vel). Restituisce true anche se uno sole degli operandi è vero.`
-
-* `xor corrisponde alla disgiunzione esclusiva logica (out). Restituisce true solo se uno dei due valori è true e l'altro è false;`
+Operatore|descrizione
+---|---
+`!`|corrisponde alla negazione logica ed è un operatore unario (necessita di un solo operando). Restituisce false se l'operando è true, true se viceversa.`
+`and o &&`|corrisponde alla congiunzione logica (et). Restituisce true solo se entrambi gli operandi sono veri.`
+`or o ||`|corrisponde disgiunzione inclusiva logica (vel). Restituisce true anche se uno sole degli operandi è vero.`
+`xor`|corrisponde alla disgiunzione esclusiva logica (out). Restituisce true solo se uno dei due valori è true e l'altro è false;`
 
 ---
 
-
 -   due operatori molto importanti e comodi in PHP sono gli operatori chiamati di **incremento** e di **decremento** ++ e --, che restituiscono un valore numerico e aumentano o diminuiscono il valore della variabile di una unità. È più facile capire il loro funzionamento con un esempio:
 
-`$v1 = $v2++;` //assegna a $v1 il valore di $v2 e *poi* incrementa $v2 di 1
-`$v1 = $v2--` //assegna a $v1 il valore di $v2 e *poi* decrementa $v2 di 1
-`$v1 = ++$v2;` //incrementa $v2 di 1 e *poi* assegna a $v1 il valore di $v2
-`$v1 = --$v2` //decrementa $v2 di 1 e *poi* assegna a $v1 il valore di $v2
+Operatore|descrizione
+---|---
+`$v1 = $v2++;`|assegna a $v1 il valore di $v2 e *poi* incrementa $v2 di 1
+`$v1 = $v2--`|assegna a $v1 il valore di $v2 e *poi* decrementa $v2 di 1
+`$v1 = ++$v2;`|incrementa $v2 di 1 e *poi* assegna a $v1 il valore di $v2
+`$v1 = --$v2`|decrementa $v2 di 1 e *poi* assegna a $v1 il valore di $v2
 
 ---
 
@@ -200,6 +192,8 @@ Quando il motore PHP legge questo operatore valuta il valore di *condizione*: se
 `$var = ($a > $b ? 'a maggiore di b' : 'a minore di b');`
 
 Il valore di $var sarà quindi dipendente dal valore booleano dell'espressione `a > $b`
+
+---
 
 L'operatore ternario può essere usato anche per determinare il valore di un parametro da passare ad una funzione.
 
@@ -224,6 +218,7 @@ Operatori di confronto
 ----------------------
 
 Gli operatori di confronto sono spesso un aspetto trascurato di PHP, il che può portare a molti risultati inaspettati. Uno di questi problemi deriva dai conforonti stretti (i confronti di valori booleani come se fossero interi).
+
 ```php
     <?php
     $a = 5;   // 5 come intero

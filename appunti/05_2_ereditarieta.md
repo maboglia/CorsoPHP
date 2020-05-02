@@ -21,6 +21,7 @@ generale, e pensate invece alle sottoclassi come ad una
 generale specializzazione di tale concetto, esteso mediante proprietà e metodi
 aggiuntivi.
 
+---
 
 ### Animale.php
 
@@ -42,6 +43,8 @@ protected function stampaDati() // Metodo protetto : può essere richiamato solo
 }
 ?>
 ```
+
+---
 
 ### Cane.php
 ```php
@@ -65,6 +68,8 @@ class Cane extends Animale // "Sottoclasse o Derivata"
 }
 ```
 
+---
+
 ### Gallina.php
 
 ```php
@@ -85,6 +90,8 @@ parent::stampaDati(); // Chiamata al metodo protetto della classe madre
 ?>
 ```
 
+---
+
 Il metodo stampaDati di Animale è dichiarato con il modificatore di
 accesso protected, ossia può essere utilizzato solo all'interno della
 classe madre Animale e all'interno di tutte le classi da essa derivate,
@@ -94,6 +101,8 @@ Per richiamare il costruttore della classe madre dalle figlie è sufficiente
 utilizzare parent:: invece di this, in questo modo accediamo
 direttamente alla classe base, allo stesso modo con cui self:: viene
 usato al posto di this.
+
+---
 
 ### test.php
 
@@ -113,6 +122,8 @@ $gallina->stampaDati("chicchirichì");
 
 ?>
 ```
+
+---
 
 Sottoclasse derivata da una sottoclasse
 

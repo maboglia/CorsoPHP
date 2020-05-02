@@ -18,6 +18,8 @@ Se volete quindi creare una copia di un'istanza, dovrete clonarla.
 Per clonare un oggetto è sufficiente mettere la parola chiave clone
 dopo l'operatore di assegnazione "=".
 
+---
+
 ```php
 <?php
 class Oggetto{
@@ -37,6 +39,8 @@ $istanza2 >valore; // Stampa 7
 echo $istanza3->valore; // Stampa 13
 ?>
 ```
+
+---
 
 Clonando un oggetto, per definizione si crea una copia esatta di tale oggetto, quindi i
 riferimenti contenuti in esso saranno comunque copiati come tali, e dopo la clonazione

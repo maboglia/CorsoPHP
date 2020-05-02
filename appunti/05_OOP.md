@@ -17,6 +17,8 @@ gli oggetti servono per organizzare e mantenere il codice
 * lasciano maggior spazio ai dati
 * permettono la modularizzazione e la riusabilità del codice
 
+---
+
 ## Oggetti
 
 Possiamo pensare ad un oggetto come ad un tipo di dato personalizzato, 
@@ -39,6 +41,8 @@ alla fine dello script.
 Per dichiarare un costruttore, è sufficiente creare una funzione all'interno
 della classe che abbia lo stesso nome di quest'ultima, oppure potete usare la parola
 chiave __construct().
+
+---
 
 ### Studente.php
     Il nome del file è uguale a quello della classe, così come lo è il nome del costruttore.
@@ -82,6 +86,8 @@ echo "Data di nascita : " . $this->datanascita. "<br />\n";
 
 ```
 
+---
+
 ### test.php
 
 Per creare una nuova istanza della classe "Studente", abbiamo usato la parola chiave new seguita dal costruttore della classe con i rispettivi parametri.
@@ -104,6 +110,8 @@ A seguire richiamiamo il metodo "stampaStudente()" con l'operatore di selezione 
 </html>
 ```
 
+---
+
 ## Modificatori di accesso
 
 * **public** - I membri (attributi o metodi) della classe dichiarati public, possono essere utilizzati sia all'interno che all'esterno della classe (`$this->membro` oppure `$oggetto->membro`)
@@ -117,6 +125,8 @@ $utente->cognome = "Verdi";
 $utente->stampaStudente();
 // output = Nome : Giuseppe / Cognome : Verdi / Data di nascita : 1-1-1970
 ```
+
+---
 
 ## getter e setter
 
@@ -140,6 +150,7 @@ $mioConto->saldo = 100;
 
 ```
 
+---
 
 ### Oggetti e costanti
 
@@ -158,6 +169,8 @@ echo "<font color='" . self::ROSSO . "'>Il valore esadecimale del colore rosso �
 }
 }
 ```
+
+---
 
 ### Utilizzo delle costanti globali
 
