@@ -12,23 +12,23 @@ Nonostante ciò, il concetto di [tipo di dato](http://it.wikipedia.org/wiki/Tipo
 un numero razionale o intero
 `$a = 3; $b = -12.5;`
 
-### Stringa (*string*) |
+### Stringa (*string*)
 sequenza alfanumerica (testo); durante l'assegnazione deve essere delimitata da due virgolette (") o apici ('). |
 `$a = "testo"; $b = '"I promessi sposi" è un romanzo di A. Manzoni';`
 
-### Booleano (*boolean*) |
+### Booleano (*boolean*)
 può assumere solo i valori *true* (vero) o *false* (falso) |
 `$a = true; $b = (3 == 5);`
 
 ---
 
 
-### Array |
+### Array
 tipo di dato complesso
 
-### Null |
-indica l'assenza di un valore; serve soprattutto ad annullare una variabile |
-`$a = null;` |
+### Null
+indica l'assenza di un valore; serve soprattutto ad annullare una variabile 
+`$a = null;`
 
 Di fronte a diversi tipi di dato, il motore PHP può trovarsi in diverse situazioni e si comporta in maniere differenti:
 
@@ -61,7 +61,7 @@ Di fronte a diversi tipi di dato, il motore PHP può trovarsi in diverse situazi
 ---
 
 
-Esistono tuttavia numerose funzioni di conversione per trasformare un tipo di dato in un altro, che consistono nell'anteporre all'espressione in questione il nome del tipo di dato che si vuole ottenere tra parentesi. Ad esempio:
+Esistono numerose funzioni di conversione per trasformare un tipo di dato in un altro, che consistono nell'anteporre all'espressione in questione il nome del tipo di dato che si vuole ottenere tra parentesi. Ad esempio:
 
 `(int)(3.45 + 7.3)`
 
@@ -74,11 +74,11 @@ restituisce TRUE
 ---
 
 
-### **- Calcolo multibase**
+### **Calcolo multibase**
 
 Oltre al sistema decimale, PHP può lavorare con i sistemi di numerazione in base [otto](http://it.wikipedia.org/wiki/Sistema_numerico_ottale) e [sedici](http://it.wikipedia.org/wiki/Sistema_numerico_esadecimale). Per inizializzare una variabile in base otto, il numero deve iniziare con uno `0` (es `01247`); i numeri in base sedici devono invece iniziare con `0x` (es `0xf56b`).
 
-### **- Stringhe**
+### **Stringhe**
 
 Meritano particolare attenzione le stringhe, soprattutto nell'analisi dei caratteri di commutazioni.\
 Una stringa in PHP deve essere delimitata da apici o da apici doppi; bisogna tuttavia chiudere una stringa con la stessa modalità con cui si è aperta:
