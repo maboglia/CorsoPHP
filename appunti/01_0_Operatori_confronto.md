@@ -114,7 +114,7 @@ Operatore|descrizione
 
 ## Gli operatori principali sono:
 
--   **matematici** (restituiscono e richiedono valori numerici)
+### **matematici** (restituiscono e richiedono valori numerici)
 
 * `+ somma algebrica`
 
@@ -128,7 +128,7 @@ Operatore|descrizione
 
 ---
 
--   **stringa** (restituiscono una stringa)
+### **stringa** (restituiscono una stringa)
 
 * `. (punto) concatena due stringhe`
 
@@ -145,7 +145,7 @@ Queste espressioni, infatti, nelle quali compare la stessa variabile ambo sia a 
 ---
 
 
--   booleani o di **confronto** (restituiscono un valore boolean)
+### booleani o di **confronto** (restituiscono un valore boolean)
 
 Operatore|descrizione
 ---|---
@@ -160,7 +160,7 @@ Operatore|descrizione
 ---
 
 
--   **logici** (restituiscono e operano su boolean)
+### **logici** (restituiscono e operano su boolean)
 
 Operatore|descrizione
 ---|---
@@ -171,7 +171,9 @@ Operatore|descrizione
 
 ---
 
--   due operatori molto importanti e comodi in PHP sono gli operatori chiamati di **incremento** e di **decremento** ++ e --, che restituiscono un valore numerico e aumentano o diminuiscono il valore della variabile di una unità. È più facile capire il loro funzionamento con un esempio:
+## operatori **incremento** e di **decremento**
+
+due operatori molto importanti e comodi in PHP sono gli operatori chiamati di **incremento** e di **decremento** ++ e --, che restituiscono un valore numerico e aumentano o diminuiscono il valore della variabile di una unità. È più facile capire il loro funzionamento con un esempio:
 
 Operatore|descrizione
 ---|---
@@ -181,9 +183,9 @@ Operatore|descrizione
 `$v1 = --$v2`|decrementa $v2 di 1 e *poi* assegna a $v1 il valore di $v2
 
 ---
-
-
--   un altro operatore molto comodo in PHP è l'**operatore ternario** ? : la cui sintassi è
+ 
+### **operatore ternario**
+ un altro operatore molto comodo in PHP è l'**operatore ternario** ? : la cui sintassi è
 
 `condizione ? espr1 : espr2`
 
