@@ -166,7 +166,7 @@ Operatore|descrizione
 ---|---
 `!`|corrisponde alla negazione logica ed è un operatore unario (necessita di un solo operando). Restituisce false se l'operando è true, true se viceversa.`
 `and o &&`|corrisponde alla congiunzione logica (et). Restituisce true solo se entrambi gli operandi sono veri.`
-`or o ||`|corrisponde disgiunzione inclusiva logica (vel). Restituisce true anche se uno sole degli operandi è vero.`
+`or o \||`|corrisponde disgiunzione inclusiva logica (vel). Restituisce true anche se uno sole degli operandi è vero.`
 `xor`|corrisponde alla disgiunzione esclusiva logica (out). Restituisce true solo se uno dei due valori è true e l'altro è false;`
 
 ---
