@@ -3,10 +3,8 @@
 Costrutti di controllo di flusso delle istruzioni
 
 Il controllo dell'esecuzione di istruzioni vene gestito da costrutti molto simili a quelli di
-Java.
+Java e C.
 
-Si rimanda al manuale php http://www.php.net/manual/en/language.control-structures.php
-per gli approfondimenti
 
 ## Sequenza
 Elenco di istruzioni fra parentesi graffe
@@ -34,30 +32,33 @@ else <statement>
 ---
 
 ## switch
-Ha una sintassi articolata, esemplifico qui il caso più ricorrente:
+Ha una sintassi articolata:
 
 ```php 
 switch (<espressione>){
-case <valore1>:
-<statement>...<statement>
-break;
-case <valore2>:
-<statement>...<statement>
-break;
-... altri case ...
-case <valoreN>:
-<statement>...<statement>
-break;
-default:
-<statement>...<statement>
-break;
+    case <valore1>:
+    <statement>...<statement>
+    break;
+
+    case <valore2>:
+    <statement>...<statement>
+    break;
+    ... altri case ...
+    
+    case <valoreN>:
+    <statement>...<statement>
+    break;
+    
+    default:
+    <statement>...<statement>
+    break;
 }
 ```
 
 ---
 
 La presenza del break non è vincolo sintattico, la sua assenza comporterebbe che
-terminata l'esenzione delle istruzioni di un caso verrebbero eseguite anche le seguenti
+terminata l'esecuzione delle istruzioni di un caso verrebbero eseguite anche le seguenti
 
 ## Iterazione
 Costrutti per la esecuzione ripetuta di istruzioni
@@ -163,6 +164,10 @@ Le istruzioni switch sono un ottimo modo per evitare di scrivere infiniti if ed 
     }
 ```
 
+---
+
+Si rimanda al manuale php http://www.php.net/manual/en/language.control-structures.php
+per gli approfondimenti
 *   [Istruzioni switch](http://php.net/control-structures.switch)
 *   [PHP switch](http://phpswitch.com/)
 
