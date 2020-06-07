@@ -7,7 +7,8 @@ Restituisce il valore assoluto di un numero.
 
 ## mixed max ( array numbers [, array ...] )
 
-## max() restituisce il numericamente più grande dei valori dati come parametro.
+## max() 
+restituisce il numericamente più grande dei valori dati come parametro.
 
 ## mixed min ( number arg1, number arg2 [, number ...] )
 
