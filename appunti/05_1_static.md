@@ -27,6 +27,7 @@ echo Colore::${$colore} . "</font><br />\n";
 ?>
 ```
 
+---
 
 ### test.php
 ```php
@@ -42,6 +43,8 @@ echo "<font color='" . Colore::$blu . "'>Il valore esadecimale del colore blu è
 ?>
 ```
 
+---
+
 ### test.php
 ```php
 <?php
@@ -52,6 +55,8 @@ Colore::$rosso = "#C11C1C"; // Rosso più scuro
 Colore::stampaColore("rosso");
 ?>
 ```
+
+---
 
 ### Self
 

@@ -7,6 +7,8 @@ non viene dato alcun warning quando la variabile non è valorizzata. Nota: empty
 variabili, qualsiasi altra cosa genera un errore di parsing. In altre parole, il seguente comando non
 funziona: empty(trim($name)).
 
+---
+
 ## float floatval ( mixed var )
 
 La funzione restituisce il valore di tipo float di var.
@@ -21,6 +23,8 @@ vale 10 di default).
 Verifica se il valore dato è un array.
 Inoltre, si hanno anche, is_bool, is_float, is_int, is_null, is_numeric, is_string con analoga funzione.
 
+---
+
 ## bool isset ( mixed variabile [, ...] )
 
 Restituisce TRUE se la variabile esiste; FALSE in caso contrario.
@@ -32,5 +36,5 @@ notare che il byte NULL ("\0") non equivale alla costante PHP NULL.
 ## void unset ( mixed var [, mixed var [, mixed ...]] )
 unset() distrugge la variabile specificata. Occorre notare che in PHP 3 la funzione unset() restituiva
 sempre TRUE (in realtà era il valore 1). In PHP 4, invece, la funzione unset() non è più una vera
-funzione, ora è una istruzione. In questa veste non ritorna alcun valore, e cercare di ottenere un
+funzione, __ora è una istruzione__. In questa veste non ritorna alcun valore, e cercare di ottenere un
 valore dalla funzione unset() produce un errore di parsing.

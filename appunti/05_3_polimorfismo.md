@@ -10,6 +10,8 @@ Il linguaggio può identificare una qualunque istanza della sottoclasse,
 come un'istanza della classe base, poiché per il principio dell'ereditarietà, ogni sottoclasse
 possiede per natura tutte le proprietà della classe base (attributi e metodi).
 
+---
+
 ```php
 <?php
 class Animale{
@@ -48,6 +50,9 @@ echo "Tipo di oggetto non riconosciuto!!";
 }
 numeroZampe(new Cane()); // Stampa:"Zampe : 4
 numeroZampe(new Gallina()); // Stampa :Zampe : 2
+
+---
+
 ```
 
 Nell’ esempio possiamo notare che abbiamo stabilito un nome univoco

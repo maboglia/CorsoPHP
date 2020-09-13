@@ -21,6 +21,8 @@ $a = 'Esempio multi-linea'      // operatore di concatenamento (.)
 
 *   [Operatori delle stringhe](http://php.net/language.operators.string)
 
+---
+
 ## Tipi di stringhe
 
 Le stringhe sono una serie di caratteri, e fin qui il concetto è piuttosto semplice. Detto questo, ci sono tipi diversi di stringhe che hanno una sintassi e funzionalità leggermente differenti.
@@ -42,19 +44,23 @@ Se usi gli apici singoli, puoi inserire il nome di una variabile così: `'qualch
 ```
 *   [Apici singoli](http://php.net/language.types.string#language.types.string.syntax.single)
 
+---
+
 ### Virgolette
 
 Le virgolette sono il coltellno svizzero delle stringhe. Non solo effettuano il parsing delle variabili come abbiamo detto sopra, ma di tutti i caratteri speciali come `\n` per la nuova linea, `\t` per la tabulazione etc.
 
 ```php
-    echo 'phptherightway è ' . $adjective . '.'     // un esempio con apici singoli che usa concatenamento multiplo per
-        . "\n"                                      // variabili e caratteri di escape
+    echo 'phptherightway è ' . $adjective . '.'  
+    // un esempio con apici singoli che usa concatenamento multiplo per
+        . "\n"                                      
+        // variabili e caratteri di escape
         . 'Adoro imparare' . $code . '!';
+        // contro
+        echo "phptherightway è $adjective.\n Adoro imparare $code!"    
     
-    // contro
-    
-    echo "phptherightway è $adjective.\n Adoro imparare $code!"    // Invece del concatenamento multiplo, le virgolette
-                                                                   // ci permettono di creare una stringa interpretata
+    // Invece del concatenamento multiplo, le virgolette
+    // ci permettono di creare una stringa interpretata
 ```
 
 Gli apici doppi possono contenere variabili; questa si chiama “interpolazione”.
@@ -63,6 +69,8 @@ Gli apici doppi possono contenere variabili; questa si chiama “interpolazione�
     $juice = 'plum';
     echo "I like $juice juice";    // Output: I like plum juice
 ```
+
+---
 
 Quando usi l’interpolazione, capita spesso che il nome di una variabile tocchi un altro carattere. Questo renderà impossibile distinguere il nome della variabile dal carattere letterale.
 
@@ -86,6 +94,8 @@ Per ovviare al problema, racchiudi la variabile in un paio di parentesi graffe.
 ```
 
 *   [Virgolette](http://php.net/language.types.string#language.types.string.syntax.double)
+
+---
 
 ### Qual è più veloce?
 

@@ -25,6 +25,7 @@ La sintassi heredoc internamente funziona nello stesso modo delle virgolette, ma
 
 *   [Sintassi heredoc](http://php.net/language.types.string#language.types.string.syntax.heredoc)
 
+---
 
 ## Sintassi nowdoc
 

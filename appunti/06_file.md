@@ -11,6 +11,8 @@ In particolare e' possibile:
 2.  Scrittura / lettura - fwrite, fread, fgets
 3.  Chiusura - fclose
 
+---
+
 ## La funzione fopen
 
 `handler = fopen(filename, modalita')`
@@ -37,6 +39,7 @@ filehandler.
   * Il puntatore di scrittura è alla fine del file.
   * 'a+' apre in lettura e scrittura.
 
+---
 
 ```php
 <?php
@@ -57,6 +60,8 @@ Il file va preventivamente aperto in scrittura e il file handler risultante deve
 Dopo l'apertura e la scrittura o lettura di un file, il file va sempre chiuso.
 
 La funzione per chiudere I file e' ```fclose(filehandler)```
+
+---
 
 ### Esempio: scrivere su un file
 
@@ -84,6 +89,8 @@ fwrite($fh, $frase2);
 fclose($fh); ?>
 ```
 
+---
+
 ## Leggere un file
 
 La lettura di un file (deve preventivamente essere aperto in lettura) avviene principalmente con due funzioni:
@@ -110,6 +117,9 @@ fclose($fh);
 echo $leggo;
 ?>
 ```
+
+---
+
 ## Esempio: Leggere un intero file con fread
 
 ```php
@@ -121,6 +131,8 @@ fclose($fh);
 echo $leggo;
 ?>
 ```
+
+
 ## Esempio: Leggere un file con fgets
 
 ```php
@@ -133,6 +145,8 @@ while (!feof($file))
 fclose($file);
 ?>
 ```
+
+---
 
 ## Per leggere tutto il file possiamo anche usare funzione file_get_contents().
 
@@ -155,6 +169,8 @@ foreach ($myarray as $item)
   echo $item;
 fclose($fh); ?>
 ```
+
+---
 
 ## Eliminare un file
 
@@ -182,6 +198,7 @@ unlink($myFile);
 </form>
 ```
 
+---
 
 ### il file che effettua l'upload
 
@@ -190,6 +207,8 @@ unlink($myFile);
 
 * ```$_FILES['uploadedfile']['name']``` - name contiene il path original del file caricato
 * ```$_FILES['uploadedfile']['tmp_name']``` - tmp_name contiene il path del file temporaneo sul server.
+
+---
 
 ```php
 <?php

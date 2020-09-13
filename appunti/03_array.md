@@ -5,7 +5,9 @@ proprietà che ritroviamo ad es negli array in Java esistono sostanziali differe
 
 In php un array è una variabile che permette di associare valori a chiavi.
 
-Le chiavi possono essre di tipo integer o string.
+Le chiavi possono essere di tipo integer o string.
+
+---
 
 ## Chiavi di tipo integer
 Nel caso di chiavi di tipo integer ritroviamo proprietà simili a quelle note in Java, si veda
@@ -18,6 +20,9 @@ $a[1]='Antonio';
 $a[99]='Luisa';
 ```
 in cui l'array $a ha indice numerico da 0 a 99, ogni elemento di $a contiene una stringa.
+
+---
+
 Sarà possibile accedere direttamente a un singolo elemento specificandone l'indice
 numerico, es
 
@@ -31,10 +36,11 @@ echo $a[$i].”\n”;// oppure echo ”{$a[$i]}\n”;
 
 Esiste un'altra importante proprietà sui valori che vedremo nel seguito.
 
+---
+
 ## Chiavi di tipo string
-La 'vera' natura degli array in php è di essere associativi, in cui i valori sono associati a
-chiavi e non sono incasellati in un elenco posizionale.
-Si veda l'esempio:
+La 'vera' natura degli array in php è di essere __associativi__, in cui i valori sono associati a chiavi e non sono incasellati in un elenco posizionale.
+
 
 ```php
 $nome['Rossi']='Mario';
@@ -46,7 +52,9 @@ $nome['Bianchi']='Luisa';
 si perde ogni riferimento posizionale per legare direttamente a ogni cognome il suo nome,
 quindi si pone l'accento sul significato dei dati più che al vincolo della struttura.
 
-Quindi alla domanda su qual'è il nome di Bianchi si può rispondere con
+---
+
+Quindi alla domanda su qual è il nome di Bianchi si può rispondere con
 
 ```echo $nome['Bianchi'];```
 
@@ -55,6 +63,8 @@ array di questo tipo, non esiste più un indica numerico che assume valori fra d
 noti.
 
 Per questo è previsto un costrutto specifico, foreach.
+
+---
 
 ## Foreach
 
@@ -77,6 +87,8 @@ In questo modo si otterranno tutti i valori (i nomi) ma non si hanno informazion
 
 Per questo esiste l'altra forma sintattica.
 
+---
+
 ### Sintassi array-chiave-valore
 
 ```php
@@ -92,6 +104,8 @@ foreach ($nome as $c => $n) {
 echo ”$n $c\n”;
 }
 ```
+
+---
 
 Il costrutto foreach può essere usato su qualunque array, anche quelli con chiave
 numerica, es:
@@ -110,6 +124,8 @@ echo ”$n $c\n”;
 ```
 La chiave qui è un numero, non più la stringa di cognome.
 
+---
+
 ## Proprietà associativa
 In php l'array è associativo. Il caso di array a chiave numerica è un caso particolare che
 rientra nella condizione generale, per cui possiamo avere array con indice numerico 'con
@@ -126,6 +142,8 @@ echo "$key $value\n";
 }
 ```
 
+---
+
 Esempio in ordine 'casuale':
 ```php
 $a[0]='Mario';
@@ -135,6 +153,8 @@ foreach ($a as $key => $value) {
 echo "$key $value\n";
 }
 ```
+
+---
 
 Esempio con indici che non partono da 0:
 ```php
@@ -155,6 +175,9 @@ for ($i=10;$i<13;$i++) {
 echo "$i {$a[$i]}\n";
 }
 ```
+
+---
+
 In caso di 'buchi':
 ```php
 $a[10]='Mario';
@@ -164,6 +187,7 @@ for ($i=10;$i<23;$i++) {
 echo "$i {$a[$i]}\n";
 }
 ```
+
 Mentre il foreach fa emergere solo i dati 'reali':
 ```php
 $a[10]='Mario';
@@ -175,6 +199,8 @@ $a[22]='Luisa';
 foreach ($a as $key => $value) {
 echo "$key $value\n";
 ```
+
+---
 
 ## I valori eterogenei
 Altra proprietà che distingue gli array Php da quelli Java è che il valore presente negli
@@ -205,10 +231,11 @@ echo "$key $value\n";
 }
 ```
 
+---
+
 ## Funzione print_r
 
-Comoda per visualizzare in modo compatto i dati di un array. Tipica applicazione è
-finalizzata al debug.
+Comoda per visualizzare in modo compatto i dati di un array. Tipica applicazione è finalizzata al debug.
 
 Es.
 ```php
@@ -219,6 +246,9 @@ $a['coniugato']=true;
 $a['dita nelle mani']=10;
 print_r($a);
 ```
+
+---
+
 ## Funzione array()
 Consente di istanziare un array.
 
@@ -243,6 +273,8 @@ $a[3]=true;
 $a[4]=10;
 ```
 
+---
+
 Infine i parametri passati possono avere la forma chiave=>valore:
 ```array(k1=>v1, k2=>v2, k3=>v3,..., kN=>vN)```
 in questo caso verrà costruito un array associativo.
@@ -261,15 +293,18 @@ $a['coniugato']=true;
 $a['dita nelle mani']=10;
 ```
 
+---
+
 ## Costruzione di array in stile JSON
-Con la versione 5.4 di PHP è stato introdotto la possibilità di definire un array anche con la
-scrittura semplificata prevista dal formato JSON, per cui il seguente array
+Con la versione 5.4 di PHP è stato introdotto la possibilità di definire un array anche con la scrittura semplificata prevista dal formato JSON, per cui il seguente array
+
 ```php
 $a = array(
 array(1,2),
 array(3,4),
 );
 ```
+
 può essere costruito anche in questo modo:
 
 ```php
@@ -279,12 +314,10 @@ $a = [
 ];
 ```
 
-Si noti che in entrambi gli esempi la virgola finale prima dell'ultima parentesi non ha
-funzione di separatore e può essere omessa, ma offre una pratica semplificazione di
-editing quando si vogliano aggiungere/rimuovere valori nell'array: tutti gli elementi sono
-seguiti da virgola, dal primo all'ultimo.
+Si noti che in entrambi gli esempi la virgola finale prima dell'ultima parentesi non ha funzione di separatore e può essere omessa, ma offre una pratica semplificazione di
+editing quando si vogliano aggiungere/rimuovere valori nell'array: tutti gli elementi sono seguiti da virgola, dal primo all'ultimo.
 
-
+---
 
 cc
 Quest'opera è stata rilasciata con licenza Creative Commons Attribuzione - Non commerciale - Condividi allo stesso modo 3.0 Italia. Per leggere una
