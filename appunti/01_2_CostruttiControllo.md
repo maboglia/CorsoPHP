@@ -130,8 +130,7 @@ switch (<espressione>){
     break;
 }
 ```
-La presenza del break non è vincolo sintattico, la sua assenza comporterebbe che
-terminata l'esecuzione delle istruzioni di un caso verrebbero eseguite anche le seguenti
+La presenza del break non è vincolo sintattico, la sua assenza comporterebbe che terminata l'esecuzione delle istruzioni di un caso verrebbero eseguite anche le seguenti
 
 ---
 

@@ -64,7 +64,7 @@ Si scrivano il form e le due pagine di prenotazione e riepilogo usando HTML/PHP.
 
 Si vuole realizzare un servizio Web per la gestione dell'indicizzazione e la ricerca su un insieme di documenti di testo. Il servizio prevede le seguenti pagine:
 
-* un form in cui l'utente può inserire un documento specificandone il titol e il testo in un textbox. Il form permette l'inserimento di un documento per volta e l'inserimento di più documenti avviene inviando più volte il form in una stessa sessione.
+* un form in cui l'utente può inserire un documento specificandone il titolo e il testo in un textbox. Il form permette l'inserimento di un documento per volta e l'inserimento di più documenti avviene inviando più volte il form in una stessa sessione.
     
 * una pagina di indicizzazione dei documenti che memorizza sul server i documenti inseriti col form del punto 1. Lo script deve creare l'indice che associa a ciascuna parola contenuta nei documenti, la lista dei documenti in cui compare (indice inverso) specificando per ogni documento il numero di volte che la parola vi compare (Term Frequency -TF). Inoltre per ogni parola deve essere memorizzato il numero di documenti in cui compare (Document Frequency - DF). Per ogni documento deve essere memorizzato il titolo e il testo contenuto. Per identificare le parole all'interno del testo si possono considerare come separatori la punteggiatura, gli spazi e altri caratteri non alfanumerici (parentesi, apici, ecc.). Le parole vengono indicizzate senza considerare differenze fra maiuscole e minuscole.
 * un form di ricerca che permette di inserire una sequenza di parole chiave separate dal carattere spazio.

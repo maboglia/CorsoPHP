@@ -1,6 +1,4 @@
 # Php Programming
-__Corso ITS Integrated Backend Services 2018__
-
 
 ## Introduzione
 
@@ -11,10 +9,14 @@ __Corso ITS Integrated Backend Services 2018__
 * Regole e sintassi
 * Relazione tra PHP e HTML
 
+---
+
 ## PHP Overview
 * Cos'è PHP
 * La storia PHP
 * Perchè scegliere PHP
+
+---
 
 ## Installazione
 * Lavorare con Apache Web Server
@@ -25,11 +27,16 @@ __Corso ITS Integrated Backend Services 2018__
 * Scegliere un IDE
 * Installare Xampp, Mamp, Wamp, ...
 
+---
+
 ## Primi passi
+
 * Incorporare codice PHP code una pagina
 * Generare dynamic text
 * Inserire commenti al codice
 * include e require
+
+---
 
 ## Elementi fondamentali
 
@@ -39,31 +46,33 @@ __Corso ITS Integrated Backend Services 2018__
 * Costanti
 * I commenti
 * Booleans
-* Numbers: Integers
-* Numbers: Floating points
+* Numbers: Integers, Floating points
 * NULL and empty
-* Strings
-* Approfondimento sulle stringhe
-* Arrays
-* Associative arrays
-* Conversione dei tipi in PHP il cast
-* Type juggling and casting
+* Stringhe
+* Array scalari e Array Associativi
+* Conversione dei tipi in PHP
+
+---
 
 ## Strutture di controllo - Espressioni Logiche
 
 * If statements
 * Else and elseif statements
-* Logical operators
 * Switch statements
+* [Operatore ternario](appunti/01_6_operatore_ternario.md)
+* Logical operators
+
+---
 
 ## Strutture di controllo - Loops
 
-* I cicli D0, FOR e WHILE
 * While loops
 * For loops
 * Foreach loops
 * Continue
 * Break
+
+---
 
 ## Funzioni 
 
@@ -79,11 +88,16 @@ __Corso ITS Integrated Backend Services 2018__
   * Setting default argument values
 
 
+---
+
 ## Testing, debugging, exceptions
+
 * Common problems
 * Warnings and errors
 * Debugging and troubleshooting
 * throw-try-catch
+
+---
 
 ## WEB & REST
 
@@ -93,10 +107,14 @@ __Corso ITS Integrated Backend Services 2018__
 * $_COOKIE
 * $_SESSION
 
+---
+
 ## Leggere e scrivere sul filesystem
 
 * Creare, scrivere e leggere un file
 * Fare l'upload di un file
+
+---
 
 ## PHP e OOP
 
@@ -109,6 +127,8 @@ __Corso ITS Integrated Backend Services 2018__
 * Polimorfismo
 * Classi astratte
 * Interfacce
+
+---
 
 ## PHP e database
 
