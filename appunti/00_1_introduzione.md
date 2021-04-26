@@ -5,6 +5,8 @@ PHP è prima di tutto un linguaggio interpretato, non è compilato come p.es.il 
 In PHP (ma anche p.es. in Perl, Python, Ruby, ...) il codice sorgente viene eseguito direttamente
 dall’interprete ed è questo a “dialogare” con il processore.
 
+---
+
 La documentazione ufficiale
 
 Perché usare PHP:
@@ -17,6 +19,9 @@ Su [php.net](www.php.net) si trova un elenco completo delle funzioni e relativi 
 
 La conoscenza di questo sito web è fondamentale!
 
+---
+
+
 
 ## Hello World con PHP
 
@@ -26,14 +31,23 @@ echo "Hello World";
 ?>
 ```
 
+---
+
+
 ## I tag di apertura e chiusura
 Il codice PHP può essere incorporato nel codice html di una pagina web, e viceversa. Naturalmente una pagina può contenere esclusivamente codice PHP. In ogni caso bisogna utilizzare gli appositi tag per delimitare il codice PHP: il tag di apertura <?php ed il tag di chiusura ?>. 
 
 La forma proposta non è l’unica, ma per adesso utilizzeremo questa.
 
+---
+
+
 ## echo
 echo é il comando utilizzato per gli output a video, lo si utilizzerà parecchio. Si può utilizzare
 anche print.
+
+---
+
 
 ## Doppi apici: ""
 
@@ -41,10 +55,16 @@ Servono ad indicare che si tratta di una stringa
 Punto e virgola per terminare le istruzioni;
 Ogni dichiarazione in PHP deve terminare con un il punto e virgola.
 
+---
+
+
 ## Estensione
 
 Salvate preferibilmente in un file con estensione .php.
 L’impostazione può essere modificata attraverso i file di configurazione del web server
+
+---
+
 
 ## Variabili
 

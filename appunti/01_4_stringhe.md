@@ -1,27 +1,5 @@
 # Stringhe
 
-## Concatenamento
-
-
-*   Se la tua linea eccede la lunghezza raccomandata (120 caratteri), considera il concatenamento
-*   Per leggibilità è meglio usare gli operatori di concatenamento invece che gli operatori concatenanti di assegnazione
-*   Se ti trovi nello scope originale della variabile, usa l’indentazione quando il concatenamento occupa una nuova linea
-
-```php
-$a  = 'Esempio multi-linea';    // operatore di assegnazione/concatenamento (.=)
-$a .= "\n";
-$a .= 'di cosa non fare';
-
-// vs
-
-$a = 'Esempio multi-linea'      // operatore di concatenamento (.)
-    . "\n"                     // indentazione delle nuove linee
-    . 'di cosa fare';
-```
-
-*   [Operatori delle stringhe](http://php.net/language.operators.string)
-
----
 
 ## Tipi di stringhe
 
@@ -63,7 +41,11 @@ Le virgolette sono il coltellno svizzero delle stringhe. Non solo effettuano il 
     // ci permettono di creare una stringa interpretata
 ```
 
-Gli apici doppi possono contenere variabili; questa si chiama “interpolazione”.
+---
+
+## interpolazione
+
+Gli apici doppi possono contenere variabili; questa si chiama **interpolazione**.
 
 ```php
     $juice = 'plum';
@@ -73,6 +55,10 @@ Gli apici doppi possono contenere variabili; questa si chiama “interpolazione�
 ---
 
 Quando usi l’interpolazione, capita spesso che il nome di una variabile tocchi un altro carattere. Questo renderà impossibile distinguere il nome della variabile dal carattere letterale.
+
+---
+
+## uso delle parentesi graffe
 
 Per ovviare al problema, racchiudi la variabile in un paio di parentesi graffe.
 
@@ -108,3 +94,28 @@ Se stai concatenando stringhe multiple di qualunque tipo, o interpolando valori 
 Indipendentemente da ciò che fai con le stringhe, nessuno dei tipi avrà mai un impatto evidente sulla tua applicazione. Cercare di riscrivere il codice per usare l’uno o l’altro tipo è un esercizio inutile, quindi evita queste micro-ottimizzazioni a meno che tu non capisca realmente il significato e l’impatto delle differenze.
 
 *   [Disproving the Single Quotes Performance Myth](http://nikic.github.io/2012/01/09/Disproving-the-Single-Quotes-Performance-Myth.html)
+
+---
+
+## Concatenamento
+
+
+*   Se la tua linea eccede la lunghezza raccomandata (120 caratteri), considera il concatenamento
+*   Per leggibilità è meglio usare gli operatori di concatenamento invece che gli operatori concatenanti di assegnazione
+*   Se ti trovi nello scope originale della variabile, usa l’indentazione quando il concatenamento occupa una nuova linea
+
+```php
+$a  = 'Esempio multi-linea';    // operatore di assegnazione/concatenamento (.=)
+$a .= "\n";
+$a .= 'di cosa non fare';
+
+// vs
+
+$a = 'Esempio multi-linea'      // operatore di concatenamento (.)
+    . "\n"                     // indentazione delle nuove linee
+    . 'di cosa fare';
+```
+
+*   [Operatori delle stringhe](http://php.net/language.operators.string)
+
+---

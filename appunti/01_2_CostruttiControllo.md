@@ -16,17 +16,27 @@ Elenco di istruzioni fra parentesi graffe
 
 Scelta fra due o più vie alternative (una sì e le altre no)
 ```php
-if
-if (<espressione>) <statement>
-if ... else
-if (<espressione>) <statement>
-else <statement>
-else if
-if (<espressione>) <statement>
-elseif (<espressione>) <statement>
+//if
+if (<espressione>) 
+    <statement>
+
+//if ... else
+if (<espressione>) 
+    <statement>
+else 
+    <statement>
+
+//else if
+
+if (<espressione>) 
+    <statement>
+elseif (<espressione>) 
+    <statement>
 ...
-elseif (<espressione>) <statement>
-else <statement>
+elseif (<espressione>)  
+    <statement>
+else 
+    <statement>
 ```
 
 ---
@@ -34,7 +44,9 @@ else <statement>
 
 ### Istruzioni if
 
-Nell’utilizzo di istruzioni ‘if/else’ in una funzione o in una classe, si pensa spesso che ‘else’ debba essere necessariamente usato per potenziali risultati. Ma se il risultato è la restituzione di un valore, ‘else’ non è necessario, perché ‘return’ terminerà la funzione, rendendo ‘else’ inutile.
+Nell’utilizzo di istruzioni ‘if/else’ in una funzione o in una classe, si pensa spesso che ‘else’ debba essere necessariamente usato per potenziali risultati.
+
+Ma se il risultato è la restituzione di un valore, ‘else’ non è necessario, perché ‘return’ terminerà la funzione, rendendo ‘else’ inutile.
 ```php
     <?php
     function test($a)
@@ -157,7 +169,7 @@ while (<espressione>) <statement>
 ### break
 
 Interrompe l'esecuzione del costrutto in cui è inserito, tipica applicazione è all'interno dello
-switch come visto in precedenza. Può essere utilizzato anch all'interno di for, foreach,
+switch come visto in precedenza. Può essere utilizzato anche all'interno di for, foreach,
 while, do-while, in tal caso interrrompe forzatamente la ripetizione.
 
 ### continue

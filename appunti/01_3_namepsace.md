@@ -1,13 +1,16 @@
-
-Namespace globale
------------------
+# Namespace globale
 
 Per organizzare meglio il codice sorgente sorgente, in PHP puoi usare il concetto di namespace. 
+
 Introdotto dalla versione 5.3.0, è utile per evitare collisioni di nomi e per creare alias.
 
 * `namespace Foo;`
 * `namespace Foo\Bar;`
 * `namespace Foo\Bar\subnamespace;`
+
+---
+
+## esempio d'uso
 
 ```php
     namespace phptherightway;
@@ -24,6 +27,10 @@ Introdotto dalla versione 5.3.0, è utile per evitare collisioni di nomi e per c
                                              // significa cercare di risolverla nel tuo namespace.
     }
 ```
+
+---
+
+## Attenzione
 
 Quando usi i namespace, potresti scoprire che le funzioni native sono nascoste dalle funzioni che hai scritto. 
 Per sistemarlo, riferisciti alla funzione globale mettendo un backslash prima del nome della funzione.

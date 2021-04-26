@@ -30,36 +30,7 @@ tipo di dato complesso
 indica l'assenza di un valore; serve soprattutto ad annullare una variabile 
 `$a = null;`
 
-Di fronte a diversi tipi di dato, il motore PHP può trovarsi in diverse situazioni e si comporta in maniere differenti:
-
----
-
-* se si aspetta un valore *numerico intero* e viene fornito un *numero a virgola mobile* PHP tronca la parte decimale, restituendo solo la parte intera
-
-* se si aspetta un valore *numerico* e viene fornita una *stringa*, PHP elimina spazi e lettere di troppo utilizzando soltanto i numeri contenuti in tale stringa
-
-* se si aspetta un valore *numerico* e viene fornito un valore *booleano* viene restituito 1 se il valore è TRUE, 0 se il valore è FALSE
-
-* se si aspetta un *numero* e viene fornito un *array* restituisce un numero pari al numero di elementi contenuti dall'array
-
-* se si aspetta una *stringa* e viene fornito un *numero* questo viene convertito in una stringa contentente esattamente il numero stesso
-
----
-
-* se si aspetta un valore *stringa* e viene fornito un valore *booleano* viene restituito *1* se il valore è TRUE, una stringa vuota se è FALSE
-
-* se si aspetta una *stringa* e viene fornito un *array* restituisce una stringa contenente il valore *array*
-
-* se si aspetta un valore *booleano* e viene fornito un *numero* PHP restituisce FALSE se il numero è uguale a 0, TRUE se è il numero è diverso da 0 (di solito 1)
-
-* se si aspetta un valore *booleano* e viene fornita una *stringa* PHP restituisce FALSE se la stringa è vuota o contiene il valore *0*; restituisce TRUE negli altri casi
-
-* se si aspetta un valore *booleano* e viene fornita un *array* PHP restituisce FALSE se l'array è vuoto , TRUE negli altri casi
-
-* il valore *null* viene trattato come un valore booleano FALSE
-
----
-
+## Conversione di tipo
 
 Esistono numerose funzioni di conversione per trasformare un tipo di dato in un altro, che consistono nell'anteporre all'espressione in questione il nome del tipo di dato che si vuole ottenere tra parentesi. Ad esempio:
 
@@ -251,3 +222,36 @@ Gli operatori di confronto sono spesso un aspetto trascurato di PHP, il che può
 *   [Operatori di confronto](http://php.net/language.operators.comparison)
 *   [Tabella di confronto tra tipi](http://php.net/types.comparisons)
 *   [Prontuario del confronto](http://phpcheatsheets.com/index.php?page=compare)
+
+
+---
+
+Di fronte a diversi tipi di dato, il motore PHP può trovarsi in diverse situazioni e si comporta in maniere differenti:
+
+---
+
+* se si aspetta un valore *numerico intero* e viene fornito un *numero a virgola mobile* PHP tronca la parte decimale, restituendo solo la parte intera
+
+* se si aspetta un valore *numerico* e viene fornita una *stringa*, PHP elimina spazi e lettere di troppo utilizzando soltanto i numeri contenuti in tale stringa
+
+* se si aspetta un valore *numerico* e viene fornito un valore *booleano* viene restituito 1 se il valore è TRUE, 0 se il valore è FALSE
+
+* se si aspetta un *numero* e viene fornito un *array* restituisce un numero pari al numero di elementi contenuti dall'array
+
+* se si aspetta una *stringa* e viene fornito un *numero* questo viene convertito in una stringa contentente esattamente il numero stesso
+
+---
+
+* se si aspetta un valore *stringa* e viene fornito un valore *booleano* viene restituito *1* se il valore è TRUE, una stringa vuota se è FALSE
+
+* se si aspetta una *stringa* e viene fornito un *array* restituisce una stringa contenente il valore *array*
+
+* se si aspetta un valore *booleano* e viene fornito un *numero* PHP restituisce FALSE se il numero è uguale a 0, TRUE se è il numero è diverso da 0 (di solito 1)
+
+* se si aspetta un valore *booleano* e viene fornita una *stringa* PHP restituisce FALSE se la stringa è vuota o contiene il valore *0*; restituisce TRUE negli altri casi
+
+* se si aspetta un valore *booleano* e viene fornita un *array* PHP restituisce FALSE se l'array è vuoto , TRUE negli altri casi
+
+* il valore *null* viene trattato come un valore booleano FALSE
+
+---
