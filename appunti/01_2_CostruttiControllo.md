@@ -42,7 +42,7 @@ else
 ---
 
 
-### Istruzioni if
+### Attenzione
 
 Nell’utilizzo di istruzioni ‘if/else’ in una funzione o in una classe, si pensa spesso che ‘else’ debba essere necessariamente usato per potenziali risultati.
 
@@ -130,7 +130,6 @@ switch (<espressione>){
     break;
 }
 ```
-La presenza del break non è vincolo sintattico, la sua assenza comporterebbe che terminata l'esecuzione delle istruzioni di un caso verrebbero eseguite anche le seguenti
 
 ---
 
@@ -140,9 +139,7 @@ La presenza del break non è vincolo sintattico, la sua assenza comporterebbe ch
 Costrutti per la esecuzione ripetuta di istruzioni
 
 ### while
-```
-while (<espressione>) <statement>
-```
+```while (<espressione>) <statement>```
 
 ### do while
 ```do <statement> while (<espressione>)```

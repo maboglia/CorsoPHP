@@ -1,8 +1,8 @@
 # **Lavorare con le variabili**
 
-In PHP le variabili sono identificate dal simbolo $ che precede il nome della variabile stessa. 
+In PHP le variabili sono identificate dal simbolo **$** che precede il nome della variabile stessa. 
 
-Il primo carattere dopo il $ non può essere un numero o un carattere speciale, solo una lettera o un carattere underline (_).
+Il primo carattere dopo il $ **non può essere un numero** o un **carattere speciale**, solo una lettera o un carattere underline (_).
 
 ---
 

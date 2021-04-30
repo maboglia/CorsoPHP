@@ -62,8 +62,6 @@ Una stringa in PHP deve essere delimitata da apici o da apici doppi; bisogna tut
 
 Può essere necessario in alcuni casi usare carattere particolari; ad esempio può essere necessario inserire un apice in una stringa delimitata da apici singoli. In questo caso si usano i **caratteri di commutazione** (o **sequenze di escape**). I principali sono:
 
----
-
 Operatore|descrizione
 ---|---
 `\'`|Singolo apice (necessario solo se la stringa è racchiusa da apici singoli)
@@ -83,9 +81,11 @@ Operatore|descrizione
 ---
 
 
-## Gli operatori principali sono:
+# Gli operatori principali
 
-### **matematici** (restituiscono e richiedono valori numerici)
+---
+
+### operatori **matematici** (restituiscono e richiedono valori numerici)
 
 * `+ somma algebrica`
 
@@ -99,7 +99,7 @@ Operatore|descrizione
 
 ---
 
-### **stringa** (restituiscono una stringa)
+### operatori per le **stringhe** (restituiscono una stringa)
 
 * `. (punto) concatena due stringhe`
 
@@ -116,7 +116,7 @@ Queste espressioni, infatti, nelle quali compare la stessa variabile ambo sia a 
 ---
 
 
-### booleani o di **confronto** (restituiscono un valore boolean)
+### operatori booleani o di **confronto** (restituiscono un valore boolean)
 
 Operatore|descrizione
 ---|---
@@ -131,7 +131,7 @@ Operatore|descrizione
 ---
 
 
-### **logici** (restituiscono e operano su boolean)
+### operatori **logici** (restituiscono e operano su boolean)
 
 Operatore|descrizione
 ---|---
@@ -142,7 +142,7 @@ Operatore|descrizione
 
 ---
 
-## operatori **incremento** e di **decremento**
+## operatori di **incremento** e di **decremento**
 
 due operatori molto importanti e comodi in PHP sono gli operatori chiamati di **incremento** e di **decremento** ++ e --, che restituiscono un valore numerico e aumentano o diminuiscono il valore della variabile di una unità. È più facile capire il loro funzionamento con un esempio:
 
@@ -156,6 +156,7 @@ Operatore|descrizione
 ---
  
 ### **operatore ternario**
+
  un altro operatore molto comodo in PHP è l'**operatore ternario** ? : la cui sintassi è
 
 `condizione ? espr1 : espr2`
@@ -167,6 +168,7 @@ Quando il motore PHP legge questo operatore valuta il valore di *condizione*: se
 Il valore di $var sarà quindi dipendente dal valore booleano dell'espressione `a > $b`
 
 ---
+### **operatore ternario**
 
 L'operatore ternario può essere usato anche per determinare il valore di un parametro da passare ad una funzione.
 
@@ -187,10 +189,8 @@ Il codice sopra riportato darà come output:
 ---
 
 
-Operatori di confronto
-----------------------
+## Operatori di confronto
 
-Gli operatori di confronto sono spesso un aspetto trascurato di PHP, il che può portare a molti risultati inaspettati. Uno di questi problemi deriva dai conforonti stretti (i confronti di valori booleani come se fossero interi).
 
 ```php
     <?php
@@ -228,7 +228,7 @@ Gli operatori di confronto sono spesso un aspetto trascurato di PHP, il che può
 
 Di fronte a diversi tipi di dato, il motore PHP può trovarsi in diverse situazioni e si comporta in maniere differenti:
 
----
+### *si aspetta* un intero
 
 * se si aspetta un valore *numerico intero* e viene fornito un *numero a virgola mobile* PHP tronca la parte decimale, restituendo solo la parte intera
 
@@ -238,13 +238,25 @@ Di fronte a diversi tipi di dato, il motore PHP può trovarsi in diverse situazi
 
 * se si aspetta un *numero* e viene fornito un *array* restituisce un numero pari al numero di elementi contenuti dall'array
 
-* se si aspetta una *stringa* e viene fornito un *numero* questo viene convertito in una stringa contentente esattamente il numero stesso
 
 ---
+
+Di fronte a diversi tipi di dato, il motore PHP può trovarsi in diverse situazioni e si comporta in maniere differenti:
+
+### *si aspetta* una stringa
+
+* se si aspetta una *stringa* e viene fornito un *numero* questo viene convertito in una stringa contentente esattamente il numero stesso
 
 * se si aspetta un valore *stringa* e viene fornito un valore *booleano* viene restituito *1* se il valore è TRUE, una stringa vuota se è FALSE
 
 * se si aspetta una *stringa* e viene fornito un *array* restituisce una stringa contenente il valore *array*
+
+---
+
+Di fronte a diversi tipi di dato, il motore PHP può trovarsi in diverse situazioni e si comporta in maniere differenti:
+
+### *si aspetta* un boolean
+
 
 * se si aspetta un valore *booleano* e viene fornito un *numero* PHP restituisce FALSE se il numero è uguale a 0, TRUE se è il numero è diverso da 0 (di solito 1)
 
@@ -253,5 +265,3 @@ Di fronte a diversi tipi di dato, il motore PHP può trovarsi in diverse situazi
 * se si aspetta un valore *booleano* e viene fornita un *array* PHP restituisce FALSE se l'array è vuoto , TRUE negli altri casi
 
 * il valore *null* viene trattato come un valore booleano FALSE
-
----
