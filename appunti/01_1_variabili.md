@@ -36,8 +36,7 @@ $var2 = 4 //in questo caso non cambia il valore di $var1 ma solo quello di $var2
 ```
 ---
 
-Talvolta, soprattutto per quanto riguarda l'uso di funzioni, è comodo aver due variabili che puntino
-alla stessa cella di memoria. 
+Talvolta, soprattutto per quanto riguarda l'uso di funzioni, è comodo aver due variabili che puntino alla stessa cella di memoria. 
 
 Per fare ciò si assegnano le **variabili per riferimento** usando la sintassi:
 
