@@ -19,7 +19,7 @@ gli oggetti servono per organizzare e mantenere il codice
 
 ---
 
-## Oggetti
+## Oggetti
 
 Possiamo pensare ad un oggetto come ad un tipo di dato personalizzato, 
 non esistente fra i tipi tradizionali di PHP, ma creato da noi.
@@ -49,38 +49,37 @@ chiave __construct().
 
 ```php
 
-class Studente
-{
-public $nome = ""; // attributo
-public $cognome = ""; // attributo
-public $datanascita = ""; // attributo
+class Studente {
+    public $nome = ""; // attributo
+    public $cognome = ""; // attributo
+    public $datanascita = ""; // attributo
 
-/*
-Il costruttore prende in input tre parametri ($n_nome, $n_cognome, $n_data) che andrà a memorizzare
-rispettivamente nei propri attributi ($nome, $cognome, $datanascita), a cui accederà tramite la parola
-chiave this.
+    /*
+    Il costruttore prende in input tre parametri ($n_nome, $n_cognome, $n_data) che andrà a memorizzare
+    rispettivamente nei propri attributi ($nome, $cognome, $datanascita), a cui accederà tramite la parola
+    chiave this.
 
-*/
-public function Studente($n_nome, $n_cognome, $n_data) // costruttore
-{
-    /* Con this l'oggetto può richiamare i suoi attributi e metodi, in quanto this indica l'oggetto
-    stesso. */
-$this->nome = $n_nome;
-    /* Subito dopo this segue l'operatore di selezione -> che punta ad un determinato attributo o metodo alla sua destra, appartenente
-    all'oggetto alla sua sinistra (this).
- */
-$this->cognome = $n_cognome;
-    /* Il simbolo del dollaro $, va solo su this e non sul nome dell'attributo/metodo. */
-$this->datanascita = $n_data;
-}
+    */
+    public function Studente($n_nome, $n_cognome, $n_data) // costruttore
+    {
+        /* Con this l'oggetto può richiamare i suoi attributi e metodi, in quanto this indica l'oggetto
+        stesso. */
+    $this->nome = $n_nome;
+        /* Subito dopo this segue l'operatore di selezione -> che punta ad un determinato attributo o metodo alla sua destra, appartenente
+        all'oggetto alla sua sinistra (this).
+    */
+    $this->cognome = $n_cognome;
+        /* Il simbolo del dollaro $, va solo su this e non sul nome dell'attributo/metodo. */
+    $this->datanascita = $n_data;
+    }
 
-    /* Infine troviamo il metodo stampaStudente() che semplicemente stampa gli attributi dell'oggetto tramite il costrutto echo. */
-public function stampaStudente()// metodo
-{
-echo "Nome : " . $this->nome . "<br />\n";
-echo "Cognome : " . $this->cognome . "<br />\n";
-echo "Data di nascita : " . $this->datanascita. "<br />\n";
-}
+        /* Infine troviamo il metodo stampaStudente() che semplicemente stampa gli attributi dell'oggetto tramite il costrutto echo. */
+    public function stampaStudente()// metodo
+    {
+    echo "Nome : " . $this->nome . "<br />\n";
+    echo "Cognome : " . $this->cognome . "<br />\n";
+    echo "Data di nascita : " . $this->datanascita. "<br />\n";
+    }
 
 }
 

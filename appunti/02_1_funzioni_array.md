@@ -55,9 +55,7 @@ altro oggetto avrà un elemento.
 
 ## array each( array array )
 Restituisce la corrente coppia chiave/valore corrente di array e incrementa il puntatore interno
-dell'array. Questa coppia è restituita in un array di quattro elementi, con le chiavi 0, 1, key, and
-value. Gli elementi 0 e key contengono il nome della chiave dell'elemento dell'array, mentre 1 e
-value contengono i dati.
+dell'array. Questa coppia è restituita in un array di quattro elementi, con le chiavi 0, 1, key, and value. Gli elementi 0 e key contengono il nome della chiave dell'elemento dell'array, mentre 1 e value contengono i dati.
 
 ```php
 <?php
