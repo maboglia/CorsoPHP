@@ -1,4 +1,4 @@
-# Oggetti ed Ereditarietà
+# Oggetti ed Ereditarietà
 
 Il concetto dell'ereditarietà, è uno dei più importanti della
 programmazione orientata agli oggetti, a cui si appoggiano altri
