@@ -5,6 +5,7 @@ Costrutti di controllo di flusso delle istruzioni
 Il controllo dell'esecuzione di istruzioni vene gestito da costrutti molto simili a quelli di
 Java e C.
 
+---
 
 ## Sequenza
 Elenco di istruzioni fra parentesi graffe
