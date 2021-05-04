@@ -1,4 +1,4 @@
-# Polimorfismo
+# Polimorfismo
 
 Il Polimorfismo è la capacità di utilizzare un unico metodo in grado di
 comportarsi in modo specifico quando applicato a tipi di dato differenti.

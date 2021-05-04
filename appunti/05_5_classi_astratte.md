@@ -1,4 +1,4 @@
-# Classi astratte
+# Classi astratte
 
 Le classi astratte ci permettono
 di specificare con esattezza quali classi e quali metodi devono

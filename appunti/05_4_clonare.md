@@ -1,4 +1,4 @@
-# Clonare oggetti
+# Clonare oggetti
 
 In PHP 4, durante la creazione di un oggetto attraverso la parola chiave
 new, veniva restituito l'oggetto stesso e questo veniva memorizzato
