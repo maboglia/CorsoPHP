@@ -1,5 +1,6 @@
 # PHP: OOP
 
+
 ## cosa sono gli oggetti
 
 codice raggruppato che fa riferimento ad un unico tema
@@ -44,72 +45,6 @@ chiave __construct().
 
 ---
 
-### Studente.php
-    Il nome del file è uguale a quello della classe, così come lo è il nome del costruttore.
-
-```php
-
-class Studente {
-    public $nome = ""; // attributo
-    public $cognome = ""; // attributo
-    public $datanascita = ""; // attributo
-
-    /*
-    Il costruttore prende in input tre parametri ($n_nome, $n_cognome, $n_data) che andrà a memorizzare
-    rispettivamente nei propri attributi ($nome, $cognome, $datanascita), a cui accederà tramite la parola
-    chiave this.
-
-    */
-    public function Studente($n_nome, $n_cognome, $n_data) // costruttore
-    {
-        /* Con this l'oggetto può richiamare i suoi attributi e metodi, in quanto this indica l'oggetto
-        stesso. */
-    $this->nome = $n_nome;
-        /* Subito dopo this segue l'operatore di selezione -> che punta ad un determinato attributo o metodo alla sua destra, appartenente
-        all'oggetto alla sua sinistra (this).
-    */
-    $this->cognome = $n_cognome;
-        /* Il simbolo del dollaro $, va solo su this e non sul nome dell'attributo/metodo. */
-    $this->datanascita = $n_data;
-    }
-
-        /* Infine troviamo il metodo stampaStudente() che semplicemente stampa gli attributi dell'oggetto tramite il costrutto echo. */
-    public function stampaStudente()// metodo
-    {
-    echo "Nome : " . $this->nome . "<br />\n";
-    echo "Cognome : " . $this->cognome . "<br />\n";
-    echo "Data di nascita : " . $this->datanascita. "<br />\n";
-    }
-
-}
-
-```
-
----
-
-### test.php
-
-Per creare una nuova istanza della classe "Studente", abbiamo usato la parola chiave new seguita dal costruttore della classe con i rispettivi parametri.
-
-A seguire richiamiamo il metodo "stampaStudente()" con l'operatore di selezione -> descritto in precedenza.
-
-```html
-<?php require_once("Studente.php"); ?>
-
-<html>
-    <head>
-    <title>Test</title>
-    </head>
-    <body>
-    <?php
-    $utente = new Studente("Mario", "Rossi", "10-01-1980");
-    $utente->stampaStudente();
-    ?>
-    </body>
-</html>
-```
-
----
 
 ## Modificatori di accesso
 
@@ -186,3 +121,75 @@ echo Colore::ROSSO . "";
 
 Colore::stampaRosso();
 ```
+
+---
+
+### Esempio
+
+
+### Studente.php
+    Il nome del file è uguale a quello della classe, così come lo è il nome del costruttore.
+
+```php
+
+class Studente {
+    public $nome = ""; // attributo
+    public $cognome = ""; // attributo
+    public $datanascita = ""; // attributo
+
+    /*
+    Il costruttore prende in input tre parametri ($n_nome, $n_cognome, $n_data) che andrà a memorizzare
+    rispettivamente nei propri attributi ($nome, $cognome, $datanascita), a cui accederà tramite la parola
+    chiave this.
+
+    */
+    public function Studente($n_nome, $n_cognome, $n_data) // costruttore
+    {
+        /* Con this l'oggetto può richiamare i suoi attributi e metodi, in quanto this indica l'oggetto
+        stesso. */
+    $this->nome = $n_nome;
+        /* Subito dopo this segue l'operatore di selezione -> che punta ad un determinato attributo o metodo alla sua destra, appartenente
+        all'oggetto alla sua sinistra (this).
+    */
+    $this->cognome = $n_cognome;
+        /* Il simbolo del dollaro $, va solo su this e non sul nome dell'attributo/metodo. */
+    $this->datanascita = $n_data;
+    }
+
+        /* Infine troviamo il metodo stampaStudente() che semplicemente stampa gli attributi dell'oggetto tramite il costrutto echo. */
+    public function stampaStudente()// metodo
+    {
+    echo "Nome : " . $this->nome . "<br />\n";
+    echo "Cognome : " . $this->cognome . "<br />\n";
+    echo "Data di nascita : " . $this->datanascita. "<br />\n";
+    }
+
+}
+
+```
+
+---
+
+### test.php
+
+Per creare una nuova istanza della classe "Studente", abbiamo usato la parola chiave new seguita dal costruttore della classe con i rispettivi parametri.
+
+A seguire richiamiamo il metodo "stampaStudente()" con l'operatore di selezione -> descritto in precedenza.
+
+```html
+<?php require_once("Studente.php"); ?>
+
+<html>
+    <head>
+    <title>Test</title>
+    </head>
+    <body>
+    <?php
+    $utente = new Studente("Mario", "Rossi", "10-01-1980");
+    $utente->stampaStudente();
+    ?>
+    </body>
+</html>
+```
+
+---

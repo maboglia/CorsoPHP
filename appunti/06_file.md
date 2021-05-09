@@ -7,9 +7,9 @@ In particolare e' possibile:
 * Creare, scrivere e leggere un file
 * Fare l'upload di un file
 * Azioni su files
-1.  Creazione o apertura - fopen
-2.  Scrittura / lettura - fwrite, fread, fgets
-3.  Chiusura - fclose
+  1. Creazione o apertura - fopen
+  2. Scrittura / lettura - fwrite, fread, fgets
+  3. Chiusura - fclose
 
 ---
 
@@ -26,7 +26,7 @@ filehandler.
 ## fopen: modalita di apertura file
 
 * **Lettura**: 'r'
-  * Apre un file solo per la lettura. 
+  * Apre un file solo per la lettura.
   * Il puntatore di inizio lettura è all'inizio del file.
   * 'r+' apre in lettura e scrittura.
 * **Scrittura**: 'w'
@@ -35,7 +35,7 @@ filehandler.
   * Il puntatore di scrittura viene posizionato all'inizio del file.
   * 'w+' apre in lettura e scrittura.
 * **Aggiunta**: 'a'
-  * Apre un file in scrittura, ma i dati vengono preservati e la scrittura inizia al termine del file. 
+  * Apre un file in scrittura, ma i dati vengono preservati e la scrittura inizia al termine del file.
   * Il puntatore di scrittura è alla fine del file.
   * 'a+' apre in lettura e scrittura.
 
@@ -95,16 +95,12 @@ fclose($fh); ?>
 
 La lettura di un file (deve preventivamente essere aperto in lettura) avviene principalmente con due funzioni:
 
-* fread(filehandler, integer) oppure 
-* fgets(filehandler)
+* `fread(filehandler, integer)` oppure
+* `fgets(filehandler)`
 
-L'intero indica quanti caratteri leggere dal puntatore di
-inizio lettura. In fgets e' opzionale in quanto legge
-l'intera riga.
+L'intero indica quanti caratteri leggere dal puntatore di inizio lettura. In fgets e' opzionale in quanto legge l'intera riga.
 
-Per leggere l'intero file occorre indicare l'intera lunghezza
-del file, che si puo' ottenere con la funzione
-filesize(nomefile)
+Per leggere l'intero file occorre indicare l'intera lunghezza del file, che si puo' ottenere con la funzione `filesize(nomefile)`
 
 ### Esempio: Leggere un file con fread
 
@@ -132,7 +128,6 @@ echo $leggo;
 ?>
 ```
 
-
 ## Esempio: Leggere un file con fgets
 
 ```php
@@ -148,14 +143,13 @@ fclose($file);
 
 ---
 
-## Per leggere tutto il file possiamo anche usare funzione file_get_contents().
+## Per leggere tutto il file possiamo anche usare funzione file_get_contents()
 
 ```php
 $testo = file_get_contents("prova.txt");
 
 echo $testo;
 ```
-
 
 ## La funzione file() permette di caricare un file in un array
 
