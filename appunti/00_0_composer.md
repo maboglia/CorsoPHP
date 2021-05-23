@@ -106,8 +106,7 @@ caricatore automatico per le dipendenze del progetto.
 
 `{lang="php"}`
 
-`<?php
-require 'vendor/autoload.php';`
+`<?php require 'vendor/autoload.php';?>`
 
 
 Ora puoi usare le dipendenze del tuo progetto e verranno caricate automaticamente su richiesta.
