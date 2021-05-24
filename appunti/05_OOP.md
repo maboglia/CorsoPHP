@@ -193,3 +193,20 @@ A seguire richiamiamo il metodo "stampaStudente()" con l'operatore di selezione 
 ```
 
 ---
+
+### autoload
+
+```php
+
+function includeClassFile($class) {
+    $file = "include/" . strtolower( trim( $class ) ) . ".php";
+    if (file_exists($file)
+    {
+        include $file;
+        return true;
+    }
+    return false;
+}
+
+spl_autoload_register('includeClassFile');
+```
