@@ -1,5 +1,5 @@
 
-## Chapter 1: Using PHP 
+## 1: Using PHP 
 
 * Embedding PHP 
 * Outputting Text 
@@ -8,7 +8,7 @@
 * Compile and Parse 
 * Comments 
 
-## Chapter 2: Variables 
+## 2: Variables 
 
 * Defi ning Variables 
 * Data Types 
@@ -18,7 +18,7 @@
 * Null Type 
 * Default Values 
 
-## Chapter 3: Operators 
+## 3: Operators 
 
 * Arithmetic Operators 
 * Assignment Operators 
@@ -30,7 +30,7 @@
 * Operator Precedence 
 * Additional Logical Operators 
 
-## Chapter 4: String 
+## 4: String 
 
 * String Concatenation 
 * Delimiting Strings 
@@ -40,14 +40,14 @@
 * Character Reference 
 * String Compare 
 
-## Chapter 5: Arrays 
+## 5: Arrays 
 
 * Numeric Arrays 
 * Associative Arrays 
 * Mixed Arrays
 * Multi-Dimensional Arrays 
 
-## Chapter 6: Conditionals 
+## 6: Conditionals 
 
 * If Statement 
 * Switch Statement 
@@ -55,7 +55,7 @@
 * Mixed Modes 
 * Ternary Operator 
 
-## Chapter 7: Loops 
+## 7: Loops 
 
 * While Loop 
 * Do-while Loop 
@@ -66,7 +66,7 @@
 * Continue 
 * Goto 
 
-## Chapter 8: Functions 
+## 8: Functions 
 
 * Defining Functions 
 * Calling Functions 
@@ -80,7 +80,7 @@
 * Generators 
 * Built-in Functions 
 
-## Chapter 9: Class 
+## 9: Class 
 
 * Instantiating an Object 
 * Accessing Object Members 
@@ -92,13 +92,13 @@
 * Anonymous Classes 
 * Closure Object 
 
-## Chapter 10: Inheritance 
+## 10: Inheritance 
 
 * Overriding Members 
 * Final Keyword 
 * Instanceof Operator 
 
-## Chapter 11: Access Levels 
+## 11: Access Levels 
 
 * Private Access 
 * Protected Access 
@@ -107,13 +107,13 @@
 * Object Access 
 * Access Level Guideline 
 
-## Chapter 12: Static 
+## 12: Static 
 
 * Referencing Static Members 
 * Static Variables 
 * Late Static Bindings 
 
-## Chapter 13: Constants 
+## 13: Constants 
 
 * Const 
 * Define 
@@ -121,26 +121,26 @@
 * Constant Guideline 
 * Magic Constants 
 
-## Chapter 14: Interface 
+## 14: Interface 
 
 * Interface Signatures 
 * Interface Example 
 * Interface Usages 
 * Interface Guideline 
 
-## Chapter 15: Abstract 
+## 15: Abstract 
 
 * Abstract Methods 
 * Abstract Example 
 * Abstract Classes and Interfaces 
 * Abstract Guideline 
 
-## Chapter 16: Traits 
+## 16: Traits 
 
 Inheritance and Traits 
 Trait Guidelines 
 
-## Chapter 17: Importing Files 
+## 17: Importing Files 
 
 * Include Path 
 * Require 
@@ -149,19 +149,19 @@ Trait Guidelines
 * Return 
 * _Autoload 
 
-## Chapter 18: Type Declarations 
+## 18: Type Declarations 
 
 * Argument Type Declarations 
 * Return Type Declarations 
 * Strict Typing 
 
-## Chapter 19: Type Conversions 
+## 19: Type Conversions 
 
 * Explicit Casts 
 * Set type 
 * Get type 
 
-## Chapter 20: Variable Testing
+## 20: Variable Testing
 
 * Isset 
 * Empty 
@@ -171,13 +171,13 @@ Trait Guidelines
 * Determining Types 
 * Variable Information 
 
-## Chapter 21: Overloading 
+## 21: Overloading 
 
 * Property Overloading 
 * Method Overloading 
 * Isset and unset Overloading 
 
-## Chapter 22: Magic Methods 
+## 22: Magic Methods 
 
 * _ToString 
 * _Invoke 
@@ -187,7 +187,7 @@ Trait Guidelines
 * Set State 
 * Object Cloning 
 
-## Chapter 23: User Input
+## 23: User Input
 
 * HTML Form 
 * Sending with POST 
@@ -198,19 +198,19 @@ Trait Guidelines
 * File Uploading 
 * Superglobals 
 
-## Chapter 24: Cookies 
+## 24: Cookies 
 
 * Creating Cookies 
 * Cookie Array 
 * Deleting Cookies 
 
-## Chapter 25: Sessions 
+## 25: Sessions 
 
 * Starting a Session 
 * Session Array 
 * Deleting a Session 
 
-## Chapter 26: Namespaces 
+## 26: Namespaces 
 
 * Creating Namespaces 
 * Nested Namespaces 
@@ -220,20 +220,20 @@ Trait Guidelines
 * Namespace Keyword 
 * Namespace Guideline
 
-## Chapter 27: References 
+## 27: References 
 
 * Assign by Reference 
 * Pass by Reference 
 * Return by Reference 
 
-## Chapter 28: Advanced Variables 
+## 28: Advanced Variables 
 
 * Curly Syntax 
 * Variable Variable Names
 * Variable Function Names 
 * Variable Class Names 
 
-## Chapter 29: Error Handling 
+## 29: Error Handling 
 
 * Correcting Errors 
 * Error Levels 
@@ -241,7 +241,7 @@ Trait Guidelines
 * Custom Error Handlers 
 * Raising Errors 
 
-## Chapter 30: Exception Handling 
+## 30: Exception Handling 
 
 * Try-catch Statement 
 * Throwing Exceptions 
@@ -251,7 +251,7 @@ Trait Guidelines
 * Uncaught Exception Handler 
 * Errors and Exceptions 
 
-## Chapter 31: Assertions 
+## 31: Assertions 
 
 * Assert 
 * Performance 
