@@ -83,6 +83,13 @@ Operatore|descrizione
 
 # Gli operatori principali
 
+* operatori **matematici** 
+* operatori per le **stringhe**
+* operatori booleani o di **confronto**
+* operatori **logici** 
+* operatori di **incremento** e di **decremento**
+* **operatore ternario**
+
 ---
 
 ### operatori **matematici** (restituiscono e richiedono valori numerici)
