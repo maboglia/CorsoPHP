@@ -2,10 +2,7 @@
 
 Costrutti di controllo di flusso delle istruzioni
 
-Il controllo dell'esecuzione di istruzioni vene gestito da costrutti molto simili a quelli di
-Java e C.
-
----
+Il controllo dell'esecuzione di istruzioni vene gestito da costrutti molto simili a quelli di Java e C.
 
 ## Sequenza
 Elenco di istruzioni fra parentesi graffe
@@ -17,24 +14,17 @@ Elenco di istruzioni fra parentesi graffe
 
 Scelta fra due o più vie alternative (una sì e le altre no)
 ```php
-//if
-if (<espressione>) 
+if (<espressione>) //if
     <statement>
 
-//if ... else
-if (<espressione>) 
+if (<espressione>) //if ... else
     <statement>
 else 
     <statement>
 
-//else if
-
-if (<espressione>) 
+if (<espressione>) //else if
     <statement>
 elseif (<espressione>) 
-    <statement>
-...
-elseif (<espressione>)  
     <statement>
 else 
     <statement>
@@ -48,6 +38,7 @@ else
 Nell’utilizzo di istruzioni ‘if/else’ in una funzione o in una classe, si pensa spesso che ‘else’ debba essere necessariamente usato per potenziali risultati.
 
 Ma se il risultato è la restituzione di un valore, ‘else’ non è necessario, perché ‘return’ terminerà la funzione, rendendo ‘else’ inutile.
+
 ```php
     <?php
     function test($a)
