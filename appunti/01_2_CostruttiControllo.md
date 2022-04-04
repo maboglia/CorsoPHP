@@ -157,11 +157,9 @@ Costrutti per la esecuzione ripetuta di istruzioni
 
 ```foreach (<array_expression> as <variabileK> => <variabileV>)<statement>```
 
-testo 
-
 ---
 
-## controllo di cicli e selezioni
+controllo di cicli e selezioni
 
 ### break
 
