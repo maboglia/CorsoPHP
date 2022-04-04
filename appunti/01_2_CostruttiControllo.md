@@ -6,6 +6,7 @@ Il controllo dell'esecuzione di istruzioni vene gestito da costrutti molto simil
 
 ## Sequenza
 Elenco di istruzioni fra parentesi graffe
+
 ```{ <statement> ... <statement> }```
 
 ---
