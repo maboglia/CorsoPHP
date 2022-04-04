@@ -103,12 +103,7 @@ Esistono alcune **costanti predefinite**, che sono valide cioè in tutti gli scr
     echo 'Una stringa molto lunga';        // usa 1MB di memoria
 ```
 
----
 
 
-*   [Consigli sulle prestazioni](http://web.archive.org/web/20140625191431/https://developers.google.com/speed/articles/optimizing-php)
+*   [Consigli sulle prestazioni](https://developers.google.com/speed/articles/optimizing-php)
 
-
-[![Creative Commons License](Le%20basi%20-%20PHP:%20La%20Retta%20Via_files/88x31.png)](http://creativecommons.org/licenses/by-nc-sa/3.0/)  
-PHP: The Right Way di [Josh Lockhart](http://www.twitter.com/codeguy) è rilasciato sotto una licenza [Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License](http://creativecommons.org/licenses/by-nc-sa/3.0/).  
-Basato su un lavoro a [www.phptherightway.com](http://www.phptherightway.com/).
