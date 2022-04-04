@@ -143,6 +143,8 @@ Costrutti per la esecuzione ripetuta di istruzioni
 ### do while
 ```do <statement> while (<espressione>)```
 
+---
+
 ### for
 ```for (<espressione1>;<espressione2>;<espressione3>) <statement>```
 
