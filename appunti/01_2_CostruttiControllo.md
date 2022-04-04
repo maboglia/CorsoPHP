@@ -8,10 +8,12 @@ Il controllo dell'esecuzione di istruzioni vene gestito da costrutti molto simil
 Elenco di istruzioni fra parentesi graffe
 
 ```php
-{ <statement> ... <statement> }
+{ 
+    <statement> 
+    ... 
+    <statement> }
 ```
 
-.
 ---
 
 ## Alternativa - condizione - selezione 
@@ -180,11 +182,8 @@ interrompere necessariamentre la ripetizione
 Interrompe l'esecuzione del metodo corrente e restituisce all'ambiente chiamante il valore
 ottenuto valutando l'espressione.
 
----
-
 
 Si rimanda al manuale php http://www.php.net/manual/en/language.control-structures.php
 per gli approfondimenti
 *   [Istruzioni switch](http://php.net/control-structures.switch)
 *   [PHP switch](http://phpswitch.com/)
-
