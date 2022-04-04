@@ -10,9 +10,10 @@ dall’interprete ed è questo a “dialogare” con il processore.
 La documentazione ufficiale
 
 Perché usare PHP:
-* E’ gratuito;
-* E’ molto utilizzato, sono disponibili moltissimi articoli, librerie, script e tutorial;
-* E’ documentato in modo estremamente dettagliato.
+
+* È gratuito;
+* È molto utilizzato, sono disponibili moltissimi articoli, librerie, script e tutorial;
+* È documentato in modo estremamente dettagliato.
 * I principali framework e CMS utilizzati in ambito web sono scritti in PHP.
 
 Su [php.net](www.php.net) si trova un elenco completo delle funzioni e relativi esempi d’uso.
@@ -31,7 +32,6 @@ echo "Hello World";
 ?>
 ```
 
----
 
 
 ## I tag di apertura e chiusura
@@ -46,7 +46,6 @@ La forma proposta non è l’unica, ma per adesso utilizzeremo questa.
 echo é il comando utilizzato per gli output a video, lo si utilizzerà parecchio. Si può utilizzare
 anche print.
 
----
 
 
 ## Doppi apici: ""
@@ -63,7 +62,6 @@ Ogni dichiarazione in PHP deve terminare con un il punto e virgola.
 Salvate preferibilmente in un file con estensione .php.
 L’impostazione può essere modificata attraverso i file di configurazione del web server
 
----
 
 
 ## Variabili

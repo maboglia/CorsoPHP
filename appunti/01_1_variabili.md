@@ -7,6 +7,7 @@ Il primo carattere dopo il $ **non può essere un numero** o un **carattere spec
 ---
 
 ## Variabili non tipizzate
+
 Il linguaggio PHP è un linguaggio chiamato a **tipizzazione debole**, non richiede alcuna dichiarazione di variabile: una variabile è tale dalla prima riga nella quale se ne fa uso.
 
 L'istruzione fondamentale che è possibile eseguire con una variabile è l'**assegnazione**, che imposta (assegna) il valore contenuto dalla variabile. 
