@@ -11,7 +11,6 @@ Elenco di istruzioni fra parentesi graffe
 { <statement> ... <statement> }
 ```
 
----
 
 ## Alternativa - condizione - selezione 
 
@@ -76,6 +75,8 @@ Le istruzioni switch sono un ottimo modo per evitare di scrivere infiniti if ed 
 *   Iterano caso dopo caso finché non viene trovata una corrispondenza. Se non viene trovata, viene eseguita quella di default (se definita)
 *   Senza un ‘break’, continueranno a implementare ogni caso finché non raggiungono un break/return
 *   In una funzione, l’utilizzo di ‘return’ elimina la necessità per un ‘break’, perché esso termina la funzione
+
+---
 
 ```php
     <?php
