@@ -11,7 +11,8 @@ Elenco di istruzioni fra parentesi graffe
 { 
     <statement> 
     ... 
-    <statement> }
+    <statement> 
+}
 ```
 
 ---
@@ -37,7 +38,6 @@ else
 ```
 
 ---
-
 
 ### Attenzione
 
@@ -106,8 +106,8 @@ Le istruzioni switch sono un ottimo modo per evitare di scrivere infiniti if ed 
 
 ---
 
-
 ## switch
+
 Ha una sintassi articolata:
 
 ```php 
@@ -132,7 +132,6 @@ switch (<espressione>){
 ```
 
 ---
-
 
 ## Iterazione - ripetizione - loop
 
@@ -175,15 +174,12 @@ while, do-while, in tal caso interrrompe forzatamente la ripetizione.
 Salta cioè che segue all'interno del costrutto ciclico in cui è inserito, senza però
 interrompere necessariamentre la ripetizione
 
-
 ### return
+
 ```return <espressione>```
 
 Interrompe l'esecuzione del metodo corrente e restituisce all'ambiente chiamante il valore
 ottenuto valutando l'espressione.
 
-
 Si rimanda al manuale php http://www.php.net/manual/en/language.control-structures.php
 per gli approfondimenti
-*   [Istruzioni switch](http://php.net/control-structures.switch)
-*   [PHP switch](http://phpswitch.com/)
