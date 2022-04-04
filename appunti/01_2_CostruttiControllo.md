@@ -11,6 +11,8 @@ Elenco di istruzioni fra parentesi graffe
 { <statement> ... <statement> }
 ```
 
+.
+---
 
 ## Alternativa - condizione - selezione 
 
@@ -153,6 +155,8 @@ Costrutti per la esecuzione ripetuta di istruzioni
 * sintassi 2
 
 ```foreach (<array_expression> as <variabileK> => <variabileV>)<statement>```
+
+testo 
 
 ---
 
