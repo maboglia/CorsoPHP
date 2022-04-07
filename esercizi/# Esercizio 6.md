@@ -1,4 +1,4 @@
-# Esercizio 6
+# Esercizio 6 indicizzazione documenti di testo
 
 Si vuole realizzare un servizio Web per la gestione dell'indicizzazione e la ricerca su un insieme di documenti di testo. Il servizio prevede le seguenti pagine:
 

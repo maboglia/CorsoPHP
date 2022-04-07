@@ -1,4 +1,4 @@
-# Esercizio 2
+# Esercizio 2 acquisto prodotti
 
 Si vuole realizzare un servizio Web per la gestione dell'acquisto di un insieme di prodotti da parte di un utente. Il servizio prevede le seguenti pagine:
 

@@ -1,4 +1,4 @@
-# Esercizio 7
+# Esercizio 7 temperature massime e minime
 
 Si vuole realizzare un servizio Web per la raccolta dei dati relativi alle temperature massime e minime di un insieme di stazioni metereologiche. Il servizio prevede le seguenti pagine:
 

@@ -1,4 +1,4 @@
-# Esercizio 1
+# Esercizio 1 prenotazione eventi
 
 Si vuole realizzare un servizio Web per la gestione della prenotazione di un insieme di eventi da parte di un utente. Il servizio prevede le seguenti pagine:
 

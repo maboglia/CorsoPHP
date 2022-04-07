@@ -1,4 +1,4 @@
-# Esercizio 5
+# Esercizio 5 risultati partite calcio
 
 Si vuole realizzare un servizio Web per la gestione della raccolta dei risultati delle partite di calcio. Il servizio prevede le seguenti pagine:
 

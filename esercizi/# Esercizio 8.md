@@ -1,4 +1,4 @@
-# Esercizio 8
+# Esercizio 8 pressione sanguigna massima e minima
 
 Si vuole realizzare un servizio Web per la raccolta dei dati relativi alla pressione sanguigna massima e minima di un insieme di pazienti di controllo. Il servizio prevede le seguenti pagine:
 
