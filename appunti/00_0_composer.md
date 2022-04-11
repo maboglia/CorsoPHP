@@ -146,6 +146,9 @@ Puoi anche usare il carattere jolly "*" come in "1.8. *".
 Ora il comando `composer update` di Composer aggiornerà tutti i tuoi file
 dipendenze dalla versione più recente che si adatta alle restrizioni definite.
 
+---
+
+
 ### Update Notifications
 
 Per ricevere notifiche sui nuovi rilasci di versioni è possibile iscriversi a [VersionEye], un servizio web
@@ -156,6 +159,9 @@ versioni dei pacchetti.
 
 Il [Security Advisories Checker] è un servizio web e uno strumento da riga di comando, entrambi esamineranno il tuo `composer.lock`
 file e dirti se devi aggiornare le tue dipendenze.
+
+---
+
 
 ### Handling global dependencies with Composer
 
@@ -173,7 +179,10 @@ Questo creerà una cartella `~ / .composer` dove risiedono le tue dipendenze glo
 binari dei pacchetti disponibili ovunque, dovresti quindi aggiungere la cartella `~ / .composer / vendor / bin` al tuo file
 Variabile "$ PATH".
 
-* [Learn about Composer]
+---
+
+
+## Learn More about Composer
 
 [Packagist]: http://packagist.org/
 [Twig]: http://twig.sensiolabs.org
