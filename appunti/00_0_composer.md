@@ -1,27 +1,28 @@
-# Dependency Management {#dependency_management_title}
+# Dependency Management: Gestione delle dipendenze
 
-Ci sono un sacco di librerie, framework e componenti PHP tra cui scegliere. Il tuo progetto probabilmente utilizzerà
-molte di esse - sono dipendenze del progetto. Fino a poco tempo, PHP non aveva un buon modo per gestire
-queste dipendenze del progetto. Anche se li gestivi manualmente, dovevi comunque preoccuparti dei caricatori automatici.
-Non è più un problema.
+Ci sono un sacco di librerie, framework e componenti PHP tra cui scegliere. 
 
----
+Il tuo progetto probabilmente utilizzerà molte di esse - sono dipendenze del progetto. 
 
-Attualmente ci sono due principali sistemi di gestione dei pacchetti per PHP: [Composer] e [PEAR]. Il composer è attualmente
-il gestore di pacchetti più popolare per PHP, tuttavia per molto tempo PEAR è stato il gestore di pacchetti principale in uso.
+Fino a poco tempo, PHP non aveva un buon modo per gestire queste dipendenze del progetto. 
+
+Anche se li gestivi manualmente, dovevi comunque preoccuparti dei caricatori automatici. 
+
+Attualmente ci sono due principali sistemi di gestione dei pacchetti per PHP: [Composer] e [PEAR]. 
+
+Il **composer** è attualmente il gestore di pacchetti più popolare per PHP, tuttavia per molto tempo **PEAR** è stato il gestore di pacchetti principale in uso.
+
 Conoscere la storia di PEAR è una buona idea, poiché potresti ancora trovare riferimenti ad essa anche se non la usi mai.
-[Composer]: /#composer_and_packagist
 
 ---
 
-## Composer and Packagist {#composer_and_packagist_title}
+## Composer and Packagist
 
 Composer è un **brillante** gestore delle dipendenze per PHP. Elenca le dipendenze del tuo progetto in un file `composer.json` e,
 con pochi semplici comandi, Composer scaricherà automaticamente le dipendenze del tuo progetto e configurerà il caricamento automatico per
-voi. Composer è analogo a NPM nel mondo node.js o Bundler nel mondo Ruby.
+voi. Composer è analogo a **NPM** nel mondo **node.js** o Bundler nel mondo Ruby.
 
-Esistono già molte librerie PHP compatibili con Composer, pronte per essere utilizzate nel tuo progetto. Questi
-i "pacchetti" sono elencati su [Packagist], il repository ufficiale per le librerie PHP compatibili con Composer. 
+Esistono già molte librerie PHP compatibili con Composer, pronte per essere utilizzate nel tuo progetto. Questi i "pacchetti" sono elencati su [Packagist](http://packagist.org/), il repository ufficiale per le librerie PHP compatibili con Composer. 
 
 ---
 
