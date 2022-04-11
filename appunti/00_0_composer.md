@@ -5,10 +5,14 @@ molte di esse - sono dipendenze del progetto. Fino a poco tempo, PHP non aveva u
 queste dipendenze del progetto. Anche se li gestivi manualmente, dovevi comunque preoccuparti dei caricatori automatici.
 Non è più un problema.
 
+---
+
 Attualmente ci sono due principali sistemi di gestione dei pacchetti per PHP: [Composer] e [PEAR]. Il composer è attualmente
 il gestore di pacchetti più popolare per PHP, tuttavia per molto tempo PEAR è stato il gestore di pacchetti principale in uso.
 Conoscere la storia di PEAR è una buona idea, poiché potresti ancora trovare riferimenti ad essa anche se non la usi mai.
 [Composer]: /#composer_and_packagist
+
+---
 
 ## Composer and Packagist {#composer_and_packagist_title}
 
@@ -19,10 +23,14 @@ voi. Composer è analogo a NPM nel mondo node.js o Bundler nel mondo Ruby.
 Esistono già molte librerie PHP compatibili con Composer, pronte per essere utilizzate nel tuo progetto. Questi
 i "pacchetti" sono elencati su [Packagist], il repository ufficiale per le librerie PHP compatibili con Composer. 
 
-### How to Install Composer
+---
+
+### Come installare Composer
 
 Il modo più sicuro per scaricare Composer è [seguendo le istruzioni ufficiali] (https://getcomposer.org/download/).
+
 Ciò verificherà che il programma di installazione non sia danneggiato o manomesso.
+
 Il programma di installazione installa Composer *localmente*, nella directory di lavoro corrente.
 
 Ti consigliamo di installarlo *globalmente* (ad esempio una singola copia in / usr / local / bin) - per farlo, eseguilo in seguito:
@@ -36,13 +44,17 @@ Ti consigliamo di installarlo *globalmente* (ad esempio una singola copia in / u
 
 Per eseguire un compositore installato localmente dovresti usare `php composer.phar`, globalmente è semplicemente` composer`.
 
-#### Installing on Windows
+---
+
+#### Installare su Windows
 
 Per gli utenti Windows, il modo più semplice per essere operativi è utilizzare il programma di installazione [ComposerSetup], che
 esegue un'installazione globale e imposta il tuo `$ PATH` in modo che tu possa semplicemente chiamare` composer` da qualsiasi file
 directory nella riga di comando.
 
-### How to Install Composer (manually)
+---
+
+### Installare Composer (manualmente)
 
 L'installazione manuale di Composer è una tecnica avanzata; tuttavia, ci sono vari motivi per cui a
 lo sviluppatore potrebbe preferire questo metodo rispetto all'utilizzo della routine di installazione interattiva. L'interattivo
@@ -54,8 +66,7 @@ l'installazione controlla l'installazione di PHP per garantire che:
 - alcune estensioni problematiche non vengono caricate
 - alcune impostazioni di `php.ini` sono impostate
 
-Poiché un'installazione manuale non esegue nessuno di questi controlli, è necessario decidere se il compromesso è
-ne vale la pena per te. Pertanto, di seguito è riportato come ottenere Composer manualmente:
+Poiché un'installazione manuale non esegue nessuno di questi controlli, è necessario decidere se il compromesso "vale la pena" per te. Pertanto, di seguito è riportato come ottenere Composer manualmente:
 
 `{lang="console"}`
 
@@ -66,9 +77,7 @@ ne vale la pena per te. Pertanto, di seguito è riportato come ottenere Composer
 Il percorso `$ HOME / local / bin` (o una directory a tua scelta) dovrebbe essere nel tuo ambiente` $ PATH`
 variabile. Ciò risulterà nella disponibilità di un comando `composer`.
 
-Quando ti imbatti nella documentazione che afferma di eseguire Composer come `php composer.phar install`, puoi farlo
-sostituiscilo con:
-
+Quando ti imbatti nella documentazione che afferma di eseguire Composer come `php composer.phar install`, puoi farlo sostituiscilo con:
 
 `{lang="console"}`
 
@@ -77,22 +86,27 @@ sostituiscilo con:
 
 This section will assume you have installed composer globally.
 
-### How to Define and Install Dependencies
+---
 
-Composer tiene traccia delle dipendenze del tuo progetto in un file chiamato `composer.json`. Puoi gestirlo
-a mano se vuoi, o usa lo stesso Composer. Il comando `composer require` aggiunge una dipendenza dal progetto
-e se non hai un file `composer.json`, ne verrà creato uno. Ecco un esempio che aggiunge [Twig]
-come dipendenza del tuo progetto.
+### Come definire ed installare le Dependencies
+
+Composer tiene traccia delle dipendenze del tuo progetto in un file chiamato `composer.json`. Puoi gestirlo a mano se vuoi, o usa lo stesso Composer. 
+
+Il comando `composer require` aggiunge una dipendenza dal progetto
+e se non hai un file `composer.json`, ne verrà creato uno. Ecco un esempio che aggiunge [Twig] come dipendenza del tuo progetto.
 
 `{lang="console"}`
 
 `composer require twig/twig:~1.8`
 
+---
 
-In alternativa, il comando `composer init` ti guiderà attraverso la creazione di un file completo` composer.json`
-per il tuo progetto. In ogni caso, una volta creato il file `composer.json` puoi dire a Composer di farlo
-scarica e installa le tue dipendenze nella directory `vendor /`. Questo vale anche per i progetti
-hai scaricato che fornisce già un file `composer.json`:
+In alternativa, il comando `composer init` ti guiderà attraverso la creazione di un file completo` composer.json` per il tuo progetto. 
+
+In ogni caso, una volta creato il file `composer.json` puoi dire a Composer di farlo
+scarica e installa le tue dipendenze nella directory `vendor /`. 
+
+Questo vale anche per i progetti che hai scaricato che fornisce già un file `composer.json`:
 
 
 `{lang="console"}`
@@ -111,18 +125,25 @@ caricatore automatico per le dipendenze del progetto.
 
 Ora puoi usare le dipendenze del tuo progetto e verranno caricate automaticamente su richiesta.
 
-### Updating your dependencies
+---
 
-Composer crea un file chiamato `composer.lock` che memorizza la versione esatta di ogni pacchetto
-scaricato la prima volta che hai eseguito `composer install`. Se condividi il tuo progetto con altri,
-assicurati che il file `composer.lock` sia incluso, in modo che quando eseguono` composer install` lo faranno
-ottenere le stesse versioni di te. Per aggiornare le tue dipendenze, esegui `composer update`. Non usare
-`composer update` durante la distribuzione, solo` composer install`, altrimenti potresti ritrovarti con un file
-versioni del pacchetto in produzione.
+### Aggiornare le dependencies
 
-Ciò è particolarmente utile quando si definiscono i requisiti della versione in modo flessibile. Ad esempio, una versione
-requisito di "~ 1.8" significa "qualsiasi cosa più recente di" 1.8.0 ", ma minore di" 2.0.x-dev "". Puoi anche usare
-il carattere jolly "*" come in "1.8. *". Ora il comando `composer update` di Composer aggiornerà tutti i tuoi file
+Composer crea un file chiamato `composer.lock` che memorizza la versione esatta di ogni pacchetto scaricato la prima volta che hai eseguito `composer install`. 
+
+Se condividi il tuo progetto con altri, assicurati che il file `composer.lock` sia incluso, in modo che quando eseguono` composer install` lo faranno
+ottenere le stesse versioni di te. 
+
+Per aggiornare le tue dipendenze, esegui `composer update`. 
+Non usare `composer update` durante la distribuzione, solo` composer install`, altrimenti potresti ritrovarti con un file versioni del pacchetto in produzione.
+
+Ciò è particolarmente utile quando si definiscono i requisiti della versione in modo flessibile. 
+
+Ad esempio, una versione requisito di "~ 1.8" significa "qualsiasi cosa più recente di" 1.8.0 ", ma minore di" 2.0.x-dev "". 
+
+Puoi anche usare il carattere jolly "*" come in "1.8. *". 
+
+Ora il comando `composer update` di Composer aggiornerà tutti i tuoi file
 dipendenze dalla versione più recente che si adatta alle restrizioni definite.
 
 ### Update Notifications
