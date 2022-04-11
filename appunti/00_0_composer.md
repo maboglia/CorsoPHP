@@ -149,21 +149,18 @@ dipendenze dalla versione più recente che si adatta alle restrizioni definite.
 ---
 
 
-### Update Notifications
+### ricevere notifiche
 
-Per ricevere notifiche sui nuovi rilasci di versioni è possibile iscriversi a [VersionEye], un servizio web
-che può monitorare i tuoi account GitHub e BitBucket per i file `composer.json` e inviare e-mail con nuovi
-versioni dei pacchetti.
+Per ricevere notifiche sui nuovi rilasci di versioni è possibile iscriversi a [VersionEye], un servizio web che può monitorare i tuoi account GitHub e BitBucket per i file `composer.json` e inviare e-mail con nuove versioni dei pacchetti.
 
-### Checking your dependencies for security issues
+### Controllare le didendenze e le issues di sicurezza
 
-Il [Security Advisories Checker] è un servizio web e uno strumento da riga di comando, entrambi esamineranno il tuo `composer.lock`
-file e dirti se devi aggiornare le tue dipendenze.
+Il **[Security Advisories Checker]** è un servizio web e uno strumento da riga di comando, entrambi esamineranno il tuo `composer.lock` file e dirti se devi aggiornare le tue dipendenze.
 
 ---
 
 
-### Handling global dependencies with Composer
+### Gestire le dipendenze globali con Composer
 
 Composer può anche gestire le dipendenze globali e i loro binari. L'utilizzo è semplice, tutto ciò di cui hai bisogno
 da fare è anteporre al comando "global". Se ad esempio volessi installare PHPUnit e averlo
@@ -181,12 +178,11 @@ Variabile "$ PATH".
 
 ---
 
-
-## Learn More about Composer
+## Altro su Composer
 
 * [Packagist](http://packagist.org/)
 * [Twig](http://twig.sensiolabs.org)
 * [VersionEye](https://www.versioneye.com/)
 * [Security Advisories Checker](https://security.sensiolabs.org/)
 * [Learn about Composer](http://getcomposer.org/doc/00-intro.md)
-* [ComposerSetup](https://getcomposer.org/Composer-Setup.exe)
+* [ComposerSetup](https://getcomposer.org)
