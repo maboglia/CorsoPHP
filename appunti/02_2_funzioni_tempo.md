@@ -1,6 +1,6 @@
 # FUNZIONI DI DATA E ORA
 
-## string date ( string formato [, int timestamp] )
+* `string date ( string formato [, int timestamp] )`
 
 Restituisce una stringa formattata in accordo con il formato della stringa usato nell' intero
 timestamp o nell'attuale orario locale se timestamp non è assegnato.
@@ -44,7 +44,7 @@ $today = date("H:i:s");
 
 ```
 
-## string setlocale ( mixed category, array locale )
+* `string setlocale ( mixed category, array locale )`
 
 ```php
 <?php
@@ -60,7 +60,7 @@ echo strftime("%A %d %B %Y", mktime(0, 0, 0, 12, 22, 1978));
 ```
 
 
-## int mktime ( int hour, int minute, int second, int month, int day, int year [, int is_dst])
+* `int mktime ( int hour, int minute, int second, int month, int day, int year [, int is_dst])`
 
 Restituisce la UNIX timestamp per una data
 
