@@ -1,59 +1,3 @@
-# PHP
-
-PHP, acronimo per "PHP: Hypertext Preprocessor" (PHP: Preprocessore di Ipertesti, è una sigla ricorsiva), è un linguaggio di programmazione general-purpose (per svariati utilizzi) open source molto utilizzato soprattutto nell'ambito della programmazione web. La sua sintassi è basata su quella del C, del Java e del Perl.
-Il linguaggio PHP è uno tra i più semplici attualmente in uso con funzioni intuitive e con una guida online molto esaustiva (disponibile al sito php.net). Per costruire siti web dinamici, l'uso del linguaggio PHP insieme ad un database (come ad esempio MySql) e ad un webserver (come ad esempio Apache), offre innumerevoli funzioni così che la gestione delle informazioni si è molto semplificata.
-Molti si saranno chiesti cosa avesse realmente il PHP di diverso dagli altri linguaggi quali HTML, ASP ecc... La risposta non è così semplice come potrebbe sembrare...
-Alcune caratteristiche che saltano all'occhio sono:
-La dinamicità: le pagine in HTML sono statiche e la possibilità di renderle dinamiche si riduce alle operazioni eseguibili in Javascript e al dhtml. Con il PHP, il Javascript serve molto meno in quanto il codice viene eseguito dal browser al caricamento della pagina, eventuali script Javascript servirebbero solo per cambiamenti in real time come le dissolvenze e le etichette. Per altre informazioni su questa innovazione vai alla sezione Come funziona 
-La semplicità: il linguaggio PHP, a differenza dell'ASP, è molto più semplice da sviluppare, gestire e in seguito modificare. Non occorre infatti essere laureati per poter scrivere del codice complesso grazie a funzioni molto semplici e intuitive. Ve ne sarà data una dimostrazione in seguito. 
-La grandissima varietà di funzioni: nel sito www.php.net è visualizzabile la documentazione completa del PHP con tutte le funzioni disponibili all'uso. Ce ne sono veramente tante, per appunto soddisfare ogni scopo si abbia in mente. 
-Il costo: dato da non sottovalutare è il costo. Il php è Open Source, non ha limitazioni di sorta e permette ai sysadmin di compilare solo le parti realmente utili. Ha costi di manutenzione molto bassi e, ovviamente, non ha costi di licenza al contrario dell'asp. 
-La comunità: PEAR è il più eclatante esempio di comunità di sivluppatori. Chiunque può scrivere una funzione o una classe php specifica e renderla disponibile a tutta la comunità grazie a PEAR che permette allo sviluppatore di ridurre il tempo utilizzando classi e/o funzioni già scritte. 
-
-## STORIA
-L'8 giugno il danese 1995 Rasmus Lerdorf invia un messaggio in un newsgroup (leggi il messaggio) annunciando il rilascio di "un set di piccoli binari scritti in C", PHP 1.0 (che, all'inizio, significava "Personal Home Page", "Pagina Principale Personale"). Le funzioni di PHP 1.0 sono limitate: registra gli accessi ad un sito tracciando anche i referrers, può fare inclusioni server-side, mostra gli utenti connessi, protegge con password una pagina...
-Nelle successive versioni vengono aggiunti il supporto per le query SQL in mSQL (predecessore di MySQL) e la disponibilità di un wrapper cgi (FI, "Form Interpreter", "Interprete di Form"). Intanto, verso la fine del '95, PHP comincia a diventare famoso e viene rinominato in PHP/FI, anche grazie alla possibilità di integrare PHP nelle pagine HTML
-Il 12 novembre 1997 arriva PHP/FI 2.0 che, secondo il sito php.net, è usato da circa 50 000 domini.
-PHP 3.0, rilasciato il 6 giugno 1998, segna un punto di svolta, in quanto appare lo "Zend Engine", creato dagli israeliani Zeev Suraski and Andi Gutmans. Oltre a questo vengono aggiunti il supporto per altri database e la compatibilità con Windows ed altri sistemi operativi. Cambia anche il nome che da "Personal Home Page" diventa l'attuale "PHP: Hypertext Preprocessor".
-PHP 4.0 porta, il 22 maggio 2000, molte ottimizzazioni. Viene cambiata anche la licenza, che dalla GPL (addottata fin da PHP 1.0) passò alla PHP License, più restrittiva ma sempre Open source.
-Circa quattro anni dopo, il 13 luglio 2004, viene rilasciato PHP 5.0. Molti sono i miglioramenti proposti da questa versione; il principale è l'introduzione dello Zend Engine 2 e il supporto nativo alla programmazione a oggetti.
-Nel 2005 la configurazione LAMP (Linux, Apache, MySql, PHP) supera il 50% del totale dei server sulla rete mondiale. 
-
-
-## COME FUNZIONA
-
-Fin dalla sua prima uscita, PHP è stato un linguaggio fortemente orientato al web. Tuttavia, i nuovi e più recenti miglioramenti lo rendono adatto ai più svariati scopi. Le tre principali aree di utilizzo di PHP sono:
-Server side scripting - scripting lato server per il web 
-Shell scripting - scripting a riga di comando 
-Applicazioni desktop 
-
-## SERVER-SIDE-SCRIPTING
-
-Questo ambito di utilizzo è il più tradizionale ed il più diffuso. PHP consente di generare in maniera dinamica le pagine web. Per utilizzare PHP in questo ambito occorrono:
-un server web 
-l'interprete PHP 
-un browser web 
-Durante il caricamento di una pagina Web, il browser del client (cioè dell'utente) invia una richiesta HTTP al web server, il quale si incarica di restituirgli una file, normalmente "pagina" contenente codice HTML, oppure anche ad esempio un'immagine.
-Nel caso sia una pagina scritta in HTML (solitamente indicata dall'estensione .htm o .html"), una volta ricevuta il browser è in grado di disegnarne il contenuto sullo schermo interpretando il linguaggio di markup.
-Le pagine nelle quali è presente codice PHP, che sono memorizzate sul server, non sono direttamente lette ed interpretate dal browser ma vengono interpretate da un modulo aggiuntivo del web server che è appunto il modulo PHP.
-Normalmente le pagine contenente codice PHP devono avere una estensione di tipo ".php" ma, configurando opportunamente il server, è possibile utilizzare anche estensione ".html" o altro.
-Tutte le volte che al web server viene fatta la richiesta di una pagina, questa viene analizzata da esso. Se all'interno della pagina viene riconosciuta la presenza di codice PHP (delimitato da tags — marcatori — appositi) questa viene passata al modulo PHP che si preoccuperà di restituirla (in un certo senso di riscriverla) nel formato HTML, direttamente interpretabile dal browser richiedente.
-Il susseguirsi logico delle varie fasi è il seguente:
-* 1. l'utente richiama la pagina (inserendo l'URL o cliccando un link) 
-* 2. il browser inoltra la richiesta al web server 
-* 3. il web server cerca la pagina (il file) richiesto 
-* 4. se la pagina contiene codice PHP viene passata al modulo PHP, altrimenti si va al punto 6 
-* 5. il modulo PHP interpreta la pagina PHP e restituisce la corrispondente pagina HTML 
-* 6. la pagina "HTML" viene spedita al browser richiedente 
-* 7. il browser, una volta ricevuta la pagina, la legge e la disegna a monitor 
-Una pagina web è da considerare composta da due componenti fondamentali: la struttura o layout e il contenuto. Per layout intendiamo tutto ciò che descrive come la pagina deve essere disegnata, tabelle, colori, fonts, frames... in generale tutto ciò che può essere definito mediante il linguaggio HTML. Per contenuto consideriamo, per semplicità, tutto ciò che non è struttura ma informazione che la pagina ci offre. In un sito web di solito la struttura resta all'incirca la stessa per tutte le pagine. Quel che cambia è il contenuto.
-Per facilitare il lavoro ai webmaster la soluzione sarebbe quella di poter separare "fisicamente" il contenuto delle pagine dalla loro struttura. Il PHP viene in aiuto soprattutto in tali situazioni: generalmente un pagina viene costruita memorizzando in un file la struttura (della generica pagina) e in un database il contenuto. In questo modo quello che è il compito dell'interprete PHP è quello di assemblare la pagina inserendo il contenuto caricato dal database nella struttura.
-Il funzionamento a questo punto differisce leggermente da quello sopra riportato in quanto il punto 5 si modifica in questo modo:
-il modulo PHP interpreta la pagina PHP, richiede al database il contenuto da inserire, genera e restituisce la corrispondente pagina HTML. 
-In realtà, esistono anche altre possibilità: si può modificare il mime type con l'istruzione
-<?php Header("Content-type: Linguaggio contenuto"); ?>
-oppure tramite particolari estensioni di PHP come le librerie GD è possibile creare delle immagini e restituire quindi non una pagina HTML bensì un'immagine vera e propria.
-
 
 
 ## PROGRAMMAZIONE
@@ -108,7 +52,7 @@ In questo esempio l'istruzione echo produrrà come output la stringa in linguagg
  <p>Hello world</p>
 che verrà inviata al browser e quindi interpretata visivamente come un paragrafo contenente le parole Hello world
 
-ll'interno dei tag <?php e ?> è possibile inserire dei commenti al codice, ovvero porzioni di testo opportunamente marcate che verranno ignorate dal motore PHP durante il parsing degli script.
+All'interno dei tag <?php e ?> è possibile inserire dei commenti al codice, ovvero porzioni di testo opportunamente marcate che verranno ignorate dal motore PHP durante il parsing degli script.
 Un commento ha una doppia valenza:
 1. può servire per non eseguire una parte di codice che però potrebbe essere necessario riprendere successivamente (ad esempio per dei test); 
 2. rende più leggibile il sorgente da parte di altri utenti che eventualmente debbano variare lo script PHP (utile soprattutto nei casi di collaborazione). 
@@ -153,6 +97,7 @@ Indice
 2 Tipi di dati 
 2.1 Calcolo multibase 
 2.2 Stringhe 
+
 Lavorare con le variabili
 In PHP le variabili sono identificate dal simbolo $ che precede il nome della variabile stessa. È necessario tuttavia che il primo carattere dopo il $ non sia un numero o un carattere speciale, ma sia una lettera o un carattere underscore (_).
 Molti linguaggi di programmazione richiedono che le variabili usate nel corso del programma siano dichiarate. Il linguaggio PHP è un linguaggio chiamato a tipizzazione debole , che significa invece che non richiede alcuna dichiarazione di variabile: per il motore PHP, infatti, una variabile è tale dalla prima riga nella quale se ne fa uso.
