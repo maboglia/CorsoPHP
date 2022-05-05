@@ -2,33 +2,28 @@
 
 ## PHP Overview
 
-* Cos'è PHP
-* La storia PHP
+* Cos'è PHP, a cosa serve
+* La storia di PHP
 * Perchè scegliere PHP
 
 ---
 
 ## Installazione
 
-* Lavorare con Apache Web Server
+* Installare un Web Server (Apache, Nginx, ...)
 * Modificare la document root
 * Abilitare PHP
-* Upgrading
-* Configuring PHP
-* Installing MySQL
-* Configuring MySQL
-* Text editor
-* Installing XamppServer
-* Installing MampServer
-* Installing WampServer
-* Finding the document root
+* Configurare PHP
+* Installare e configurare MySQL
+* Le principali istruzioni MySQL
+* Text editor, IDE
 
 ---
 
 ## Primi passi
 
-* Incorporare codice PHP code una pagina
-* Outputting dynamic text
+* Incorporare codice PHP in una pagina
+* Mandare in outpu dynamic text
 * Gli operatori principali
 * Inserire commenti al codice
 
@@ -36,18 +31,18 @@
 
 ## Tipi di dato
 
-* Variables
-* Strings
-* String funzioni
-* Numbers part one Integers
-* Numbers part two Floating points
-* Arrays
-* Associative arrays
-* Array funzioni
+* Variabili
+* Costanti
+* Numeri: Integers
+* Numeri: Floating points
 * Booleans
 * NULL e empty
-* Type juggling e casting
-* Constants
+* Stringhe
+* Arrays
+* Associative arrays
+* Funzioni per String 
+* Funzioni per Array 
+* Type juggling e type casting (conversioni di tipo)
 
 ---
 
@@ -57,35 +52,36 @@
 * Else e elseif statements
 * Logical operators
 * Switch statements
+* Operatore ternario (if su una riga)
 
 ---
 
 ## Strutture di controllo - Loops
 
-* While loops
+* While e do-while loops
 * For loops
 * Foreach loops
 * Continue
 * Break
-* Comprendere gli array pointers
+* Scorrere gli array
 
 ---
 
 ## Funzioni definite dagli utenti
 
-* Defining funzioni
+* Definire funzioni
 * Function arguments
-* Ritornare valori from a function
-* Multiple return valori
+* Ritornare valori da una function
 * Scope e global variables
-* Settare default argument valori
+* Settare valori di default per gli argomenti 
 
 ---
 
 ## Debugging
 
-* Common Problemi
-* Warnings e errori
+* Problemi comuni
+* Warnings e tipi di errore in PHP
+* Il costrutto try - catch
 * Debugging e troubleshooting
 
 ---
@@ -94,7 +90,6 @@
 
 * Links e URLs
 * Usare valori inviati via GET
-* Codificare valori inviati via GET
 * Codificare per HTML
 * Including e requiring files
 * Modificare headers
@@ -105,13 +100,13 @@
 
 ## Lavorare con Forms e Form Data
 
-* Creare forms
-* Detecting form submissions
-* Form processing
-* Validare form valori
-* Problemi con validazione logic
+* Creare form html per inviare dati al server
+* Gestire le form submissions
+* Processare i valori del form html
+* Validare i valori del form
+* Problemi con la validazione
 * Mostrare validazione errori
-* Custom validazione funzioni
+* Funzioni custom per la validazione 
 * Single-page form con validazione
 
 ---
@@ -119,10 +114,10 @@
 ## Persistenza con Cookies e Sessions
 
 * Lavorare con cookies
-* Settare cookie valori
-* Leggere cookie valori
-* Resettare cookie valori
-* Lavorare con sessions
+* Settare valori dei cookies 
+* Leggere valori dei cookies 
+* Resettare valori dei cookies 
+* Lavorare con le sessioni
 
 ---
 
@@ -132,9 +127,8 @@
 * Creare database
 * Creare tables
 * CRUD in MySQL
-* Popolare MySQL database
-* Relational database tables
-* Popolare le tabelle relazionali
+* Popolare database MySQL 
+* Gestire le tabelle relazionali
 
 ---
 
@@ -154,15 +148,15 @@
 
 ## OOP in Php
 
-* cosa sono gli oggetti
-* Oggetti
+* Programmare ad Oggetti
 * Modificatori di accesso
-* getter e setter
+* Metodi Getters e Setters
 * Oggetti e costanti
 * Utilizzo delle costanti globali
 * Oggetti ed Ereditarietà
 * Polimorfismo
 * Classi astratte
 * Interfacce
-* namespace
-* autoload
+* Il namespace
+* Il caricamento automatico delle classi autoload
+* Gestire le dipendenze con composer e packagist
