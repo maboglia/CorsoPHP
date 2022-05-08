@@ -107,3 +107,16 @@ Esistono alcune **costanti predefinite**, che sono valide cioè in tutti gli scr
 
 *   [Consigli sulle prestazioni](https://developers.google.com/speed/articles/optimizing-php)
 
+## Tipi di dato
+
+Data Type|Category|Description
+---|---|---
+int|Scalar|Integer
+float|Scalar|Floating-point number
+bool|Scalar|Boolean value
+string|Scalar|Series of characters
+array|Composite|Collection of values
+object|Composite|User-defined data type
+resource|Special|External resource
+callable|Special|Function or method
+null|Special|No value

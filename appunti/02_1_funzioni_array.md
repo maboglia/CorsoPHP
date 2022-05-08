@@ -1,5 +1,7 @@
 # Funzioni per array
 
+* [Elenco completo funzioni per array](https://www.php.net/manual/en/ref.array.php)
+
 * `array_chunk()`
 array array_chunk( array input, int dimensione [, bool mantieni_chiavi] )
 

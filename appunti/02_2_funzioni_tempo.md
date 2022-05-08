@@ -6,29 +6,32 @@ Restituisce una stringa formattata in accordo con il formato della stringa usato
 timestamp o nell'attuale orario locale se timestamp non è assegnato.
 
 I seguenti caratteri sono utilizzati nella stringa formato:
-* a - "am" o "pm"
-* A - "AM" o "PM"
-* d - giorno del mese, 2 cifre senza tralasciare gli zero; i.e. "01" a "31"
-* D - giorno della settimana, testuale, 3 lettere; i.e. "Fri"
-* F - mese, testuale, long; i.e. "January"
-* g - ora, formato a 12-ore senza eventuali zero; i.e. "1" a "12"
-* G - ora, formato a 24-ore senza eventuali zero; i.e. "0" a "23"
-* h - ora, formato a 12-ore; i.e. "01" a "12"
-* H - ora, formato a 24-ore; i.e. "00" a "23"
-* i - minuti; i.e. "00" a "59"
-* I (i grande) - "1" se c'è l'ora legale, "0" altrimenti.
-* j - giorno del mese senza eventuali zero; i.e. "1" a "31"
-* l ('L' piccola) - giorno della settimana, testuale, long; i.e. "Friday"
-* L - valore booleano per stabilire se è un anno bisestile; i.e. "0" o "1"
-* m - mese; i.e. "01" a "12"
-* M - mese, testuale, 3 lettere; i.e. "Jan"
-* n - mese senza eventuali zero; i.e. "1" a "12"
-* s - secondi; i.e. "00" a "59"
-* t - numero di giorni del mese dato; i.e. "28" a "31"
-* w - giorno della settimana, numerico, i.e. "0" (Domenica) a "6" (Sabato)
-* Y - anno, 4 cifre; i.e. "1999"
-* y - anno, 2 cifre; i.e. "99"
-* z - giorno dell'anno; i.e. "0" a "365"
+
+char|significato
+---|---
+a|"am" o "pm"
+A|"AM" o "PM"
+d|giorno del mese, 2 cifre senza tralasciare gli zero; i.e. "01" a "31"
+D|giorno della settimana, testuale, 3 lettere; i.e. "Fri"
+F|mese, testuale, long; i.e. "January"
+g|ora, formato a 12-ore senza eventuali zero; i.e. "1" a "12"
+G|ora, formato a 24-ore senza eventuali zero; i.e. "0" a "23"
+h|ora, formato a 12-ore; i.e. "01" a "12"
+H|ora, formato a 24-ore; i.e. "00" a "23"
+i|minuti; i.e. "00" a "59"
+I (i maiusc.)|"1" se c'è l'ora legale, "0" altrimenti.
+j|giorno del mese senza eventuali zero; i.e. "1" a "31"
+l ('L' minusc.)|giorno della settimana, testuale, long; i.e. "Friday"
+L|valore booleano per stabilire se è un anno bisestile; i.e. "0" o "1"
+m|mese; i.e. "01" a "12"
+M|mese, testuale, 3 lettere; i.e. "Jan"
+n|mese senza eventuali zero; i.e. "1" a "12"
+s|secondi; i.e. "00" a "59"
+t|numero di giorni del mese dato; i.e. "28" a "31"
+w|giorno della settimana, numerico, i.e. "0" (Domenica) a "6" (Sabato)
+Y|anno, 4 cifre; i.e. "1999"
+y|anno, 2 cifre; i.e. "99"
+z|giorno dell'anno; i.e. "0" a "365"
 
 ```php
 
