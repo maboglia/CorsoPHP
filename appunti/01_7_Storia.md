@@ -18,8 +18,6 @@ Nel 2005 la configurazione LAMP (Linux, Apache, MySql, PHP) supera il 50% del to
 
 Nel 2008 PHP 5 è diventata l'unica versione stabile in fase di sviluppo. A partire da PHP 5.3.0 il linguaggio implementa una funzione chiamata "late static binding" che può essere utilizzata per fare riferimento alla classe chiamata in un contesto di eredità statica.
 
-A partire dal 5 febbraio 2008, a causa dell'iniziativa GoPHP5 sostenuta da una serie di sviluppatori PHP, molti dei progetti open-source di alto profilo cessano di supportare PHP 4 nel nuovo codice e promuovono il passaggio da PHP 4 a PHP 5.
-
 La versione 5 di PHP ha raggiunto la release 5.6 prima di essere abbandonata dal punto di vista dello sviluppo e supporto nel gennaio 2019.
 
 ## PHP 7
