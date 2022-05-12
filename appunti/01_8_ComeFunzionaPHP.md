@@ -10,15 +10,17 @@ Il linguaggio PHP è uno tra i più semplici attualmente in uso con funzioni int
 
 ## Alcune caratteristiche:
 
-* La dinamicità: le pagine in HTML sono statiche.
-* La semplicità: il linguaggio PHP è semplice da sviluppare, gestire e modificare. 
-* La grandissima varietà di funzioni: nel sito www.php.net è visualizzabile la documentazione completa del PHP con tutte le funzioni disponibili all'uso. 
-* Il costo: dato da non sottovalutare è il costo. Il php è Open Source, non ha limitazioni di sorta.
-* La comunità: una enorme comunità di sviluppatori e moltissima documentazione e tutorial online.
+* La **dinamicità**: le pagine in HTML sono statiche.
+* La **semplicità**: il linguaggio PHP è semplice da sviluppare, gestire e modificare. 
+* La grandissima **varietà di funzioni**: nel sito www.php.net è visualizzabile la documentazione completa del PHP con tutte le funzioni disponibili all'uso. 
+* Il **costo**: dato da non sottovalutare è il costo. Il php è Open Source, non ha limitazioni di sorta.
+* La **comunità**: una enorme comunità di sviluppatori e moltissima documentazione e tutorial online.
 
 ## COME FUNZIONA
 
-Fin dalla sua prima uscita, PHP è stato un linguaggio fortemente orientato al web. Tuttavia, i nuovi e più recenti miglioramenti lo rendono adatto ai più svariati scopi. Le tre principali aree di utilizzo di PHP sono:
+Fin dalla sua prima uscita, PHP è stato un linguaggio fortemente orientato al web. 
+Le tre principali aree di utilizzo di PHP sono:
+
 * Server side scripting - scripting lato server per il web 
 * Shell scripting - scripting a riga di comando 
 * Applicazioni desktop 
@@ -28,6 +30,7 @@ Fin dalla sua prima uscita, PHP è stato un linguaggio fortemente orientato al w
 ## SERVER-SIDE-SCRIPTING
 
 Questo ambito di utilizzo è il più tradizionale ed il più diffuso. PHP consente di generare in maniera dinamica le pagine web. Per utilizzare PHP in questo ambito occorrono:
+
 * un server web 
 * l'interprete PHP 
 * un browser web 
