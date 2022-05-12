@@ -14,3 +14,18 @@ Circa quattro anni dopo, il 13 luglio 2004, viene rilasciato **PHP 5.0**. Molti 
 
 Nel 2005 la configurazione LAMP (Linux, Apache, MySql, PHP) supera il 50% del totale dei server sulla rete mondiale. 
 
+## PHP 5
+
+Nel 2008 PHP 5 è diventata l'unica versione stabile in fase di sviluppo. A partire da PHP 5.3.0 il linguaggio implementa una funzione chiamata "late static binding" che può essere utilizzata per fare riferimento alla classe chiamata in un contesto di eredità statica.
+
+A partire dal 5 febbraio 2008, a causa dell'iniziativa GoPHP5 sostenuta da una serie di sviluppatori PHP, molti dei progetti open-source di alto profilo cessano di supportare PHP 4 nel nuovo codice e promuovono il passaggio da PHP 4 a PHP 5.
+
+La versione 5 di PHP ha raggiunto la release 5.6 prima di essere abbandonata dal punto di vista dello sviluppo e supporto nel gennaio 2019.
+
+## PHP 7
+
+Il 3 dicembre 2015 è stata rilasciata la versione 7, attualmente ancora in fase di sviluppo e attivamente supportata.
+
+## PHP 8
+
+Il 27 novembre 2020 è stata rilasciata la versione 8.
