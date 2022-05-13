@@ -1,6 +1,6 @@
 ## STORIA
 
-L'8 giugno il danese 1995 **Rasmus Lerdorf** invia un messaggio in un newsgroup (leggi il messaggio) annunciando il rilascio di "un set di piccoli binari scritti in C", **PHP 1.0** (che, all'inizio, significava "**Personal Home Page**". Le funzioni di **PHP 1.0** sono limitate: registra gli accessi ad un sito tracciando anche i referrers, può fare inclusioni server-side, mostra gli utenti connessi, protegge con password una pagina...
+L'8 giugno il danese 1995 **Rasmus Lerdorf** invia un messaggio in un newsgroup ([leggi i suoi messaggi](https://en.wikiquote.org/wiki/Rasmus_Lerdorf)) annunciando il rilascio di "un set di piccoli binari scritti in C", **PHP 1.0** (che, all'inizio, significava "**Personal Home Page**". Le funzioni di **PHP 1.0** sono limitate: registra gli accessi ad un sito tracciando anche i referrers, può fare inclusioni server-side, mostra gli utenti connessi, protegge con password una pagina...
 
 Nelle successive versioni vengono aggiunti il supporto per le query SQL in mSQL (predecessore di MySQL) e la disponibilità di un wrapper cgi (FI, "Form Interpreter", "Interprete di Form"). Intanto, verso la fine del '95, PHP comincia a diventare famoso e viene rinominato in PHP/FI, anche grazie alla possibilità di integrare PHP nelle pagine HTML
 
