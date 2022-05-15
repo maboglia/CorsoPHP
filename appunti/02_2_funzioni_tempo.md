@@ -99,3 +99,28 @@ seguente espressione (strftime ("%w") + 6) % 7
 
 Questo numero è utilizzabile anche come indice di un array di nomi di giorni ove, per esempio
 Array ([0] => Lunedì, [1] => Martedì, … [6] = Domenica)
+
+---
+
+## Elenco funzioni
+
+
+* [checkdate() "Validates a Gregorian date"](http://php.net/manual/en/function.checkdate.php)
+* [date_default_timezone_get() "Returns the default time zone"](http://php.net/manual/en/function.date-default-timezone-get.php)
+* [date_default_timezone_set() "Sets the default time zone"](http://php.net/manual/en/function.date-default-timezone-set.php)
+* [date_sunrise() "Returns the time of sunrise for a given day / location"](http://php.net/manual/en/function.date-sunrise.php)
+* [date_sunset() "Returns the time of sunset for a given day / location"](http://php.net/manual/en/function.date-sunset.php)
+* [date() "Formats a local time/date"](http://php.net/manual/en/function.date.php)
+* [getdate() "Returns an array that contains date and time information for a Unix timestamp"](http://php.net/manual/en/function.getdate.php)
+* [gettimeofday() "Returns an array that contains current time information"](http://php.net/manual/en/function.gettimeofday.php)
+* [gmdate() "Formats a GMT/UTC date/time"](http://php.net/manual/en/function.gmdate.php)
+* [gmmktime() "Returns the Unix timestamp for a GMT date"](http://php.net/manual/en/function.gmmktime.php)
+* [gmstrftime() "Formats a GMT/UTC time/date according to locale settings"](http://php.net/manual/en/function.gmstrftime.php)
+* [idate() "Formats a local time/date as integer"](http://php.net/manual/en/function.idate.php)
+* [localtime() "Returns an array that contains the time components of a Unix timestamp"](http://php.net/manual/en/function.localtime.php)
+* [microtime() "Returns the microseconds for the current time"](http://php.net/manual/en/function.microtime.php)
+* [mktime() "Returns the Unix timestamp for a date"](http://php.net/manual/en/function.mktime.php)
+* [strftime() "Formats a local time/date according to locale settings"](http://php.net/manual/en/function.strftime.php)
+* [strptime() "Parses a time/date generated with strftime()"](http://php.net/manual/en/function.strftime.php)
+* [strtotime() "Parses an English textual date or time into a Unix timestamp"](http://php.net/manual/en/function.strtotime.php)
+* [time() "Returns the current time as a Unix timestamp"](http://php.net/manual/en/function.time.php)
