@@ -75,6 +75,9 @@ non è negativo, la stringa restituita inizierà dalla posizione start di string
 
 Questa funzione restituisce il parametro str privo degli spazi iniziali e finali.
 
+---
+
+## Elenco funzioni
 
 
 * [addcslashes() - "Returns a string with backslashes in front of the specified characters"](http://php.net/manual/en/function.addcslashes.php)

@@ -123,6 +123,10 @@ echo "Trovato macos";
 
 **NB: La seconda condizione fallisce perché in_array() è case sensitive**
 
+---
+
+## Elenco funzioni
+
 * [array()](http://php.net/manual/en/function.array.php) Creates an array.
 * [array_change_key_case()](http://php.net/manual/en/function.array-change-key-case.php) Returns an array with all keys in lowercase or uppercase.
 * [array_chunk()](http://php.net/manual/en/function.array-chunk.php) Splits an array into chunks of arrays.
