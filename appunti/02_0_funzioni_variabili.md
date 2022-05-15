@@ -39,7 +39,9 @@ sempre TRUE (in realtà era il valore 1). In PHP 4, invece, la funzione unset() 
 funzione, __ora è una istruzione__. In questa veste non ritorna alcun valore, e cercare di ottenere un
 valore dalla funzione unset() produce un errore di parsing.
 
+---
 
+## Elenco funzioni
 
 * [boolval "Get the boolean value of a variable"](http://www.php.net/manual/en/function.boolval.php)
 * [debug_zval_dump "Dumps a string representation of an internal zend value to output"](http://www.php.net/manual/en/function.debug-zval-dump.php)
