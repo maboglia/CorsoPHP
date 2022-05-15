@@ -31,6 +31,10 @@ compreso fra 0 e RAND_MAX. Se ad esempio si desidera un numero casuale compreso 
 Restituisce il valore arrotondato di val con la precisione specificata (numero di cifre dopo il punto
 decimale). precisione può anche essere negativa o zero (predefinito).
 
+---
+
+## Elenco funzioni
+
 
 * [abs() "Returns the absolute value of a number"](http://php.net/manual/en/function.abs.php) 
 * [acos() "Returns the arccosine of a number"](http://php.net/manual/en/function.acos.php) 
