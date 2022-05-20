@@ -1,5 +1,7 @@
 # Corso PHP
 
+---
+
 ## PHP Overview
 
 * Cos'è PHP, a cosa serve
