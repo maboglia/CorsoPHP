@@ -25,8 +25,8 @@
 ## Primi passi
 
 * Incorporare codice PHP in una pagina
-* Mandare in outpu dynamic text
-* Gli operatori principali
+* Mandare in output testo dinamico (generato lato server)
+* Conoscere gli operatori principali
 * Inserire commenti al codice
 
 ---
@@ -52,9 +52,9 @@
 
 * If statements
 * Else e elseif statements
-* Logical operators
 * Switch statements
 * Operatore ternario (if su una riga)
+* Operatori logici
 
 ---
 
@@ -127,9 +127,9 @@
 
 * Intro MySQL 
 * Creare database
-* Creare tables
-* CRUD in MySQL
+* Creare tabelle e viste
 * Popolare database MySQL 
+* CRUD in MySQL
 * Gestire le tabelle relazionali
 
 ---
@@ -140,11 +140,11 @@
 * Connettere MySQL con PHP
 * Ricevere dati da MySQL
 * Lavorare con i dati
-* Creare records con PHP
-* Aggiornare ed eliminare records con PHP
-* SQL injection
-* Escaping strings per MySQL
-* Intro prepared statements
+* Creare record con PHP
+* Aggiornare ed eliminare record con PHP
+* Prevenire le SQL injection
+* Tecniche di filtro ed escaping strings per MySQL
+* Introduzione ai prepared statements
 
 ---
 
