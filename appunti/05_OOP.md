@@ -3,15 +3,15 @@
 
 ## cosa sono gli oggetti
 
-codice raggruppato che fa riferimento ad un unico tema
+*codice raggruppato che fa riferimento ad un unico tema*
 
 * astrazione delle strutture di codice
-  * funzioni
   * attributi
+  * funzioni (metodi)
 
-ad un livello base, con poche informazioni utilizziamo gli array per aggregare le nostre informazioni
+ad un livello base, con poche informazioni utilizziamo gli **array** per aggregare le nostre informazioni
 
-gli oggetti servono per organizzare e mantenere il codice
+gli **oggetti** servono per organizzare e mantenere il codice
 
 * aggiungono chiarezza, riducendo la complessità
 * regole semplici e interazione complessa
@@ -22,14 +22,126 @@ gli oggetti servono per organizzare e mantenere il codice
 
 ## Oggetti
 
-Possiamo pensare ad un oggetto come ad un tipo di dato personalizzato, 
-non esistente fra i tipi tradizionali di PHP, ma creato da noi.
+Una classe è un modello utilizzato per creare oggetti. Per definirne uno viene utilizzata la parola chiave class, seguita da un nome e da un blocco di codice. 
 
-Gli oggetti sono formati principalmente da attributi e metodi.
-* Gli attributi sono delle variabili proprietarie dell'oggetto, semplici o complesse,
-quindi anche Array o Oggetti.
-* I metodi sono delle funzioni proprietarie dell'oggetto, e fra questi ce ne
-sono due molto importanti i Costruttori e i Distruttori.
+La convenzione di denominazione per le classi è maiuscola, il che significa che ogni parola dovrebbe essere inizialmente in maiuscolo.
+
+Il corpo della classe può contenere proprietà e metodi. Le proprietà sono variabili che mantengono lo stato dell'oggetto, mentre i metodi sono funzioni che definiscono ciò che l'oggetto può fare. 
+
+Le proprietà sono anche conosciute come campi o attributi in altre lingue. In PHP, devono avere un livello di accesso esplicito specificato. Di seguito viene utilizzato il livello di accesso public, che consente l'accesso illimitato alla proprietà.
+
+```php
+class Rettangolo
+{
+  public $x, $y;
+  function newArea($a, $b) { return $a * $b; }
+}
+
+```
+
+---
+
+Per accedere ai membri dall'interno della classe, viene utilizzata la pseudo variabile $this insieme all'operatore a freccia singola (`->`). La variabile `$this` è un riferimento all'istanza corrente della classe e può essere utilizzata solo all'interno di un contesto di oggetti. Senza di essa, `$x` e `$y` sarebbero visti solo come variabili locali.
+
+---
+## Istanziare  un oggetto
+
+Per utilizzare i membri di una classe dall'esterno della classe che la racchiude, è necessario prima creare un oggetto della classe. Questo viene fatto usando la parola chiave `new`, che crea un nuovo oggetto o istanza.
+$r = new Rettangolo(); // oggetto istanziato
+L'oggetto contiene il proprio insieme di proprietà, che possono contenere valori diversi da quelli di altre istanze della classe. Come per le funzioni, gli oggetti di una classe possono essere creati anche se la definizione della classe appare più in basso nel file di script.
+
+```php
+$r = new ClasseDemo(); // ok
+classe ClasseDemo {};
+```
+
+---
+
+## Accesso ai membri dell'oggetto
+Per accedere ai membri che appartengono a un oggetto, è necessario l'operatore freccia singola (`->`). Può essere utilizzato per chiamare metodi o assegnare valori a proprietà.
+
+```php
+$r->x = 5;
+$r->y = 10;
+$r->getArea(); // 50
+```
+
+Un altro modo per inizializzare le proprietà consiste nell'utilizzare i valori delle proprietà iniziali.
+
+---
+
+## Valori iniziali delle proprietà
+
+Se una proprietà deve avere un valore iniziale, un modo semplice consiste nell'assegnare la proprietà nello stesso momento in cui viene dichiarata. Questo valore iniziale viene quindi impostato al momento della creazione dell'oggetto. Deve essere un'espressione costante. Non può, ad esempio, essere una variabile o un'espressione matematica.
+
+```php
+
+class Rettangolo
+{
+  public $x = 5, $y = 10;
+}
+```
+
+---
+
+## Costruttore
+Una classe può avere un costruttore, che è un metodo speciale utilizzato per inizializzare (costruire) l'oggetto. Questo metodo fornisce un modo per inizializzare le proprietà, che non è limitato alle espressioni costanti. In PHP, il costruttore inizia con due caratteri di sottolineatura seguiti dalla parola costrutto. Metodi come questi sono conosciuti come metodi magici.
+```php
+class Rettangolo
+{
+   public $x, $y;
+   function __construct()
+   {
+     $this->x = 5;
+     $this->y = 10;
+     echo "Costruito";
+} }
+```
+
+Quando viene creata una nuova istanza di questa classe, viene chiamato il costruttore, che in questo esempio imposta le proprietà sui valori specificati. 
+
+Si noti che tutti i valori di proprietà iniziali vengono impostati prima dell'esecuzione del costruttore.
+`$r = new Rettangolo(); // "Costruito"`
+
+Poiché questo costruttore non accetta argomenti, le parentesi possono essere opzionalmente omesse.
+`$r = new Rettangolo; // "Costruito"`
+
+---
+
+Proprio come qualsiasi altro metodo, il costruttore può avere un elenco di parametri. Può essere utilizzato per impostare i valori delle proprietà sugli argomenti passati al momento della creazione dell'oggetto.
+```php
+class Rettangolo
+{
+   public $x, $y;
+   function __construct($x, $y)
+   {
+     $this->x = $x;
+     $this->y = $y;
+   }
+}
+
+$r = new Rettangolo(5,10);
+```
+
+---
+
+## Distruttore
+
+Oltre al costruttore, le classi possono avere anche un distruttore. Questo metodo magico inizia con due trattini bassi seguiti dalla parola distruzione. Viene chiamato non appena non ci sono più riferimenti all'oggetto, prima che l'oggetto venga distrutto dal Garbage Collector di PHP.
+
+```php
+class Rettangolo
+{
+// ...
+   function __destruct() { echo "Distrutto"; }
+}
+```
+
+Per testare il distruttore, la funzione unset può rimuovere manualmente tutti i riferimenti all'oggetto.
+`unset($r); // "Distrutto"`
+
+
+---
 
 Se non definirete un costruttore e un distruttore per la vostra classe
 (oggetto), PHP li rimpiazzerà con dei metodi propri di default.
@@ -39,9 +151,11 @@ creato un oggetto (istanza), mentre il distruttore sarà chiamato quando l'ogget
 verrà distrutto, ossia quando non esiste più alcun riferimento all'oggetto oppure
 alla fine dello script.
 
-Per dichiarare un costruttore, è sufficiente creare una funzione all'interno
-della classe che abbia lo stesso nome di quest'ultima, oppure potete usare la parola
-chiave __construct().
+---
+
+## Confronto di oggetti
+
+Quando si utilizza l'operatore "uguale a" (`==`) sugli oggetti, questi oggetti sono considerati uguali se gli oggetti sono istanze della stessa classe e le loro proprietà hanno gli stessi valori e tipi. Al contrario, l'operatore "strettamente uguale a" (`===`) restituisce true solo se le variabili si riferiscono alla stessa istanza della stessa classe.
 
 ---
 
@@ -52,23 +166,15 @@ chiave __construct().
 * **private** - I membri dichiarati private, possono essere utilizzati solo all interno della classe ($this->membro)
 * **protected** - I membri dichiarati protected, possono essere utilizzati solo all'interno delle classi madri e derivate ($this->membro), questo modificatore implica l'ereditarietà
 
-```php
-$utente = new Studente("Mario", "Rossi", "1-1-1970");
-$utente >nome = "Giuseppe";
-$utente->cognome = "Verdi";
-$utente->stampaStudente();
-// output = Nome : Giuseppe / Cognome : Verdi / Data di nascita : 1-1-1970
-```
-
 ---
 
 ## getter e setter
 
-`__get and __set`
+In Php sono disponibili i metodi magici `__get and __set`
 
 ```php
 <?php
-class ContoCorrente {
+class ContoBancario {
     private $saldo;
 
     public function __get($nomeAttributo) {
@@ -79,32 +185,14 @@ class ContoCorrente {
         if ( isset($value) ) $this->$nomeAttributo = $value;
     }
 }
-$mioConto = new ContoCorrente();
-$mioConto->saldo = 100;
+$mioConto = new ContoBancario();
+$mioConto->saldo = 1000;//setter
+echo $mioConto->saldo;//getter
 
 ```
 
 ---
 
-### Oggetti e costanti
-
-`Colore.php`
-
-```php
-class Colore
-{
-const ROSSO = "#FF0000";
-const VERDE = "#00FF00";
-const BLU = "#0000FF";
-
-static public function stampaRosso()
-{
-echo "<font color='" . self::ROSSO . "'>Il valore esadecimale del colore rosso è : ". self::ROSSO . "</font>";
-}
-}
-```
-
----
 
 ### Utilizzo delle costanti globali
 
@@ -112,89 +200,22 @@ Con le costanti globali è necessario omettere il simbolo del dollaro $ durante 
 
 I nomi delle costanti in PHP 5 sono sempre Case Sensitive, ed è buona norma scriverle tutte in maiuscolo per distinguerle immediatamente come costanti, ma non è obbligatorio.
 
-### test.php
-
-```php
-require once("Colore.php");
-
-echo Colore::ROSSO . "";
-
-Colore::stampaRosso();
-```
-
----
-
-### Esempio
-
-
-### Studente.php
-    Il nome del file è uguale a quello della classe, così come lo è il nome del costruttore.
-
-```php
-
-class Studente {
-    public $nome = ""; // attributo
-    public $cognome = ""; // attributo
-    public $datanascita = ""; // attributo
-
-    /*
-    Il costruttore prende in input tre parametri ($n_nome, $n_cognome, $n_data) che andrà a memorizzare
-    rispettivamente nei propri attributi ($nome, $cognome, $datanascita), a cui accederà tramite la parola
-    chiave this.
-
-    */
-    public function Studente($n_nome, $n_cognome, $n_data) // costruttore
-    {
-        /* Con this l'oggetto può richiamare i suoi attributi e metodi, in quanto this indica l'oggetto
-        stesso. */
-    $this->nome = $n_nome;
-        /* Subito dopo this segue l'operatore di selezione -> che punta ad un determinato attributo o metodo alla sua destra, appartenente
-        all'oggetto alla sua sinistra (this).
-    */
-    $this->cognome = $n_cognome;
-        /* Il simbolo del dollaro $, va solo su this e non sul nome dell'attributo/metodo. */
-    $this->datanascita = $n_data;
-    }
-
-        /* Infine troviamo il metodo stampaStudente() che semplicemente stampa gli attributi dell'oggetto tramite il costrutto echo. */
-    public function stampaStudente()// metodo
-    {
-    echo "Nome : " . $this->nome . "<br />\n";
-    echo "Cognome : " . $this->cognome . "<br />\n";
-    echo "Data di nascita : " . $this->datanascita. "<br />\n";
-    }
-
-}
-
-```
-
 ---
 
 ### test.php
 
-Per creare una nuova istanza della classe "Studente", abbiamo usato la parola chiave new seguita dal costruttore della classe con i rispettivi parametri.
+```php
+require once("Taglie.php");
 
-A seguire richiamiamo il metodo "stampaStudente()" con l'operatore di selezione -> descritto in precedenza.
+echo Taglie::XL . "";
 
-```html
-<?php require_once("Studente.php"); ?>
+Taglie::mostraTaglia();
 
-<html>
-    <head>
-    <title>Test</title>
-    </head>
-    <body>
-    <?php
-    $utente = new Studente("Mario", "Rossi", "10-01-1980");
-    $utente->stampaStudente();
-    ?>
-    </body>
-</html>
 ```
 
 ---
 
-### autoload
+### autoloader delle classi
 
 ```php
 

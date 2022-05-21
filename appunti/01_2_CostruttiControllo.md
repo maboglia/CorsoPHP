@@ -2,9 +2,8 @@
 
 Costrutti di controllo di flusso delle istruzioni
 
-Il controllo dell'esecuzione di istruzioni vene gestito da costrutti molto simili a quelli di Java e C.
-
 ## Sequenza
+
 Elenco di istruzioni fra parentesi graffe
 
 ```php
@@ -21,20 +20,24 @@ Elenco di istruzioni fra parentesi graffe
 
 Scelta fra due o più vie alternative (una sì e le altre no)
 ```php
-if (<espressione>) //if
-    <statement>
+if (<espressione>){
+    //<statement>
+    } //if
 
-if (<espressione>) //if ... else
-    <statement>
+if (<espressione>){
+    //<statement>
+    } //if ... else
 else 
-    <statement>
+    //<statement>
 
-if (<espressione>) //else if
-    <statement>
-elseif (<espressione>) 
-    <statement>
+if (<espressione>){
+    //<statement>
+    } //else if
+elseif (<espressione>){
+    //<statement>
+    } 
 else 
-    <statement>
+    //<statement>
 ```
 
 ---
@@ -84,16 +87,19 @@ Le istruzioni switch sono un ottimo modo per evitare di scrivere infiniti if ed 
 
 ```php
     <?php
-    $answer = test(2);    // sia il codice del 'case 2', sia quello del 'case 3' saranno implementati
+    $answer = test(2);    
+    
     
     function test($a)
     {
         switch ($a) {
             case 1:
                 // codice...
-                break;             // break viene usato per terminare l'istruzione switch
+                break; // break viene usato per terminare l'istruzione switch
+    // sia il codice del 'case 2', sia quello del 'case 3' saranno implementati
             case 2:
-                // codice...         // senza un break, il confronto continua fino al caso 3
+                // codice...         
+                // senza un break, il confronto continua fino al caso 3
             case 3:
                 // codice...
                 return $result;    // in una funzione, 'return' termina la funzione

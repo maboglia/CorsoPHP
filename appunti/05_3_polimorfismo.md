@@ -3,12 +3,10 @@
 Il Polimorfismo è la capacità di utilizzare un unico metodo in grado di
 comportarsi in modo specifico quando applicato a tipi di dato differenti.
 
-Questo è reso possibile
-grazie all'ereditarietà, che consente alle sottoclassi di ridefinire i metodi ereditati dalla classe base.
+Questo è reso possibile grazie all'ereditarietà, che consente alle sottoclassi di ridefinire i metodi ereditati dalla classe base.
 
 Il linguaggio può identificare una qualunque istanza della sottoclasse,
-come un'istanza della classe base, poiché per il principio dell'ereditarietà, ogni sottoclasse
-possiede per natura tutte le proprietà della classe base (attributi e metodi).
+come un'istanza della classe base, poiché per il principio dell'ereditarietà, ogni sottoclasse possiede per natura tutte le proprietà della classe base (attributi e metodi).
 
 ---
 
@@ -55,6 +53,7 @@ numeroZampe(new Gallina()); // Stampa :Zampe : 2
 
 ```
 
+
 Nell’ esempio possiamo notare che abbiamo stabilito un nome univoco
 per il nostro metodo ("zampe()"), ereditato direttamente dalla classe
 base Animale.
@@ -63,3 +62,16 @@ Flessibilità della funzione esterna numeroZampe(), che sarà in
 grado di gestire anche altri classi oltre a Cane e Gallina,
  definibili in un secondo momento senza necessità di apportare modifiche alla
 funzione numeroZampe() o alle tre classi (Animale, Cane e Gallina).
+
+---
+
+## Interfacce
+
+In PHP non si possono ereditare proprietà da più classi.
+
+* Per ovviare al problema si possono creare delle interfacce che 
+forniscano le proprietà di più classi.
+* Lo scopo delle interfacceè quello di fornire un preciso set di metodi 
+base per le classi, mediante la dichiarazione di metodi astratti
+* Le interfacce possono avere solo metodi che saranno di default 
+astratti e costanti.

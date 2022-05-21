@@ -12,6 +12,8 @@ superclassi).
 Un grande vantaggio è quello di poter riutilizzare il codice di una
 classe di base senza doverlo modificare.
 
+---
+
 L'ereditarietà ci consente quindi di scrivere del codice molto più
 flessibile, in quanto permette una generalizzazione molto più forte di
 un concetto, rendendo più facile descrivere una situazione di vita reale.
@@ -56,7 +58,7 @@ class Cane extends Animale // "Sottoclasse o Derivata"
     {
         parent::Animale(4, "Vertebrati", "Cane"); // Chiamata al costruttore della classe madre
         /* oppure più generalizzato
-        parent::__construct(4, "Vertebrati",, "Cane");
+        parent::__construct(4, "Vertebrati", "Cane");
         */
     }
 
@@ -114,10 +116,7 @@ require_once("Gallina.php");
 $cane = new Cane();
 $cane->stampaDati("bau");
 
-echo "\n\n<br /><br />\n\n";
-
 $gallina = new Gallina();
-
 $gallina->stampaDati("chicchirichì");
 
 ?>
