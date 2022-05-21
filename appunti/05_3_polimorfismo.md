@@ -10,68 +10,22 @@ come un'istanza della classe base, poiché per il principio dell'ereditarietà, 
 
 ---
 
-```php
-<?php
-class Animale{
-    /* Rendiamo protetto il metodo
-    per obbligare una ridefinizione in una
-    sottoclasse. Più avanti per ottenere un risultato
-    migliore useremo le Classi Astratte. */
+In informatica, il termine polimorfismo (dal greco `πολυμορφος` composto dai termini `πολυ` molto e `μορφή` forma quindi "**avere molte forme**") viene usato in senso generico per riferirsi a espressioni che possono rappresentare valori di diversi tipi (dette espressioni polimorfiche). In un linguaggio non tipizzato, tutte le espressioni sono intrinsecamente polimorfiche.
 
-protected function zampe(){
-echo "Errore : la funzione va
-obbligatoriamente ridefinita da una
-sottoclasse!";
-}
-}
-class Cane extends Animale{
-public function zampe(){
-echo "Zampe : 4";
-}
-}
-class Gallina extends Animale{
-public function zampe(){
-echo "Zampe : 2";
-?>
+Il termine viene associato a due significati specifici:
 
-}
-}
-function numeroZampe($oggetto){
-if ($oggetto instanceof Animale) //Condizione = Se oggetto è un istanza di Animale o derivata da essa
+* nel contesto della **programmazione orientata agli oggetti**, si riferisce al fatto che un'espressione il cui tipo sia descritto da una classe A può assumere valori di un qualunque tipo descritto da una classe B sottoclasse di A (polimorfismo per inclusione);
+* nel contesto della **programmazione generica**, si riferisce al fatto che il codice del programma può ricevere un tipo come parametro invece che conoscerlo a priori (polimorfismo parametrico).
 
-{
-$oggetto->zampe();
-}
-else{
-echo "Tipo di oggetto non riconosciuto!!";
-}
-}
-numeroZampe(new Cane()); // Stampa:"Zampe : 4
-numeroZampe(new Gallina()); // Stampa :Zampe : 2
+* [polimorfismo su wikipedia](https://it.wikipedia.org/wiki/Polimorfismo_(informatica))  
 
 ---
 
-```
+## Polimorfismo per inclusione
+Solitamente è legato alle relazioni di eredità tra classi, che garantisce che tali oggetti, pur di tipo differente, abbiano una stessa interfaccia: nei linguaggi ad oggetti tipizzati, le istanze di una sottoclasse possono essere utilizzate al posto di istanze della superclasse (polimorfismo per inclusione). 
+
+## Polimorfismo parametrico
+Un altro meccanismo spesso disponibile nei linguaggi tipizzati è il polimorfismo parametrico: in determinati contesti, è possibile definire delle variabili dal tipo parametrizzato, che viene poi specificato durante l'uso effettivo. Esempi di polimorfismo parametrico sono i template del C++ e i generics del Java.
 
 
-Nell’ esempio possiamo notare che abbiamo stabilito un nome univoco
-per il nostro metodo ("zampe()"), ereditato direttamente dalla classe
-base Animale.
 
-Flessibilità della funzione esterna numeroZampe(), che sarà in
-grado di gestire anche altri classi oltre a Cane e Gallina,
- definibili in un secondo momento senza necessità di apportare modifiche alla
-funzione numeroZampe() o alle tre classi (Animale, Cane e Gallina).
-
----
-
-## Interfacce
-
-In PHP non si possono ereditare proprietà da più classi.
-
-* Per ovviare al problema si possono creare delle interfacce che 
-forniscano le proprietà di più classi.
-* Lo scopo delle interfacceè quello di fornire un preciso set di metodi 
-base per le classi, mediante la dichiarazione di metodi astratti
-* Le interfacce possono avere solo metodi che saranno di default 
-astratti e costanti.

@@ -177,8 +177,7 @@ while, do-while, in tal caso interrrompe forzatamente la ripetizione.
 
 ### continue
 
-Salta cioè che segue all'interno del costrutto ciclico in cui è inserito, senza però
-interrompere necessariamentre la ripetizione
+Salta cioè che segue all'interno del costrutto ciclico in cui è inserito, senza però interrompere necessariamente la ripetizione
 
 ### return
 
@@ -189,3 +188,18 @@ ottenuto valutando l'espressione.
 
 Si rimanda al manuale php http://www.php.net/manual/en/language.control-structures.php
 per gli approfondimenti
+
+---
+
+## Operatore `null coalescing`
+
+L'operatore `null coalescing (??)` è stato aggiunto in PHP 7 come scorciatoia per il caso comune di utilizzo di un ternario con `isset`. Restituisce il suo primo operando se esiste e non è nullo; in caso contrario, restituisce il suo secondo operando.
+
+```php
+$x = null;
+$nome = $x ?? 'sconosciuto'; // "sconosciuto"
+```
+
+Questa istruzione è equivalente alla seguente operazione ternaria, che utilizza il costrutto isset.
+
+`$nome = oggetto($x) ? $x : 'sconosciuto';`

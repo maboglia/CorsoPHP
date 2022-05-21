@@ -25,135 +25,113 @@ aggiuntivi.
 
 ---
 
-### Animale.php
-
-```php
-<?php
-class Animale // Classe Base
-{
-public $zampe;
-public $ordine;
-public $nome;
-public function Animale($z, $o, $n) // Costruttore
-{
-$this->zampe = $z;
-$this->ordine = $o;
-$this->nome = $n;
-}
-protected function stampaDati() // Metodo protetto : può essere richiamato solo dalle classi derivate
-{ echo $this->nome . " : Zampe = " . $this->zampe . " / Ordine = " . $this->ordine;}
-}
-?>
-```
+L'ereditarietà consente a una classe di acquisire i membri di un'altra classe. Nell'esempio seguente, la classe `Quadrato` eredita da `Rettangolo`, specificato dalla parola chiave extends. `Rettangolo` diventa quindi la classe padre di `Quadrato`, che a sua volta diventa una classe derivata di `Rettangolo`. Oltre ai propri membri, `Quadrato` ottiene tutti i membri accessibili (non privati) in `Rettangolo`, incluso qualsiasi costruttore.
 
 ---
 
-### Cane.php
 ```php
-<?php
-require_once("Animale.php");
-class Cane extends Animale // "Sottoclasse o Derivata"
+// Classe padre (classe base)
+class Rettangolo
 {
-    public function Cane() // Costruttore classe derivata
-    {
-        parent::Animale(4, "Vertebrati", "Cane"); // Chiamata al costruttore della classe madre
-        /* oppure più generalizzato
-        parent::__construct(4, "Vertebrati", "Cane");
-        */
-    }
+   public $x, $y;
+   function __construct($a, $b)
+   {
+     $questo->x = $a;
+     $questo->y = $b;
+   }
+}
 
-    public function stampaDati($suono)
-    {
-        echo "Faccio $suono perchè sono ";
-        parent::stampaDati(); // Chiamata al metodo protetto della classe
-    }
+// Classe figlio (classe derivata)
+
+class Quadrato extends Rettangolo {
+    //eredita tutto quello che non è privato del Rettangolo
 }
 ```
 
 ---
 
-### Gallina.php
+Quando si crea un'istanza di `Quadrato`, ora devono essere specificati due argomenti perché `Quadrato` ha ereditato il costruttore di `Rettangolo`.
+
+`$forma = new Quadrato(5,10);`
+
+Gli attributi e metodi ereditati da `Rettangolo` sono accessibili anche dall'oggetto `Quadrato`.
+
+`$forma->x = 5; $forma->y = 10;`
+
+Una classe in PHP può ereditare solo da una superclasse e il genitore deve essere definito prima della classe derivata nel file di script.
+
+---
+
+## Override: sovrascrittura dei metodi
+
+Un membro in una classe derivata può ridefinire un membro nella sua classe padre per assegnargli una nuova implementazione. Per sovrascrivere un membro ereditato, deve solo essere dichiarato nuovamente con lo stesso nome. Come illustrato di seguito, il costruttore Quadrato esegue l'override del costruttore in Rettangolo.
 
 ```php
-<?php
-require_once("Animale.php");
-class Gallina extends Animale // "Sottoclasse" o "Classe Derivata"
+class Quadrato extends Rettangolo
 {
-public function Gallina() // Costruttore classe derivata
-{
-parent::Animale(2, "Vertebrati", "Gallina"); // Chiamata al costruttore della classe madre
+  function __construct($a)
+  {
+    $questo->x = $a;
+    $questo->y = $a;
+  }
 }
-public function stampaDati($suono)
-{
-echo "Faccio $suono perchè sono ";
-parent::stampaDati(); // Chiamata al metodo protetto della classe madre
-}
-}
-?>
 ```
 
 ---
 
-Il metodo stampaDati di Animale è dichiarato con il modificatore di
-accesso protected, ossia può essere utilizzato solo all'interno della
-classe madre Animale e all'interno di tutte le classi da essa derivate,
-quindi anche Cane e Gallina.
 
-Per richiamare il costruttore della classe madre dalle figlie è sufficiente
-utilizzare parent:: invece di this, in questo modo accediamo
-direttamente alla classe base, allo stesso modo con cui self:: viene
-usato al posto di this.
-
----
-
-### test.php
+Con questo nuovo costruttore, viene utilizzato un solo argomento per creare lo Quadrato.
+`$forma = nuovo quadrato(5);`
+Poiché il costruttore ereditato di Rettangolo viene sovrascritto, il costruttore di Rettangolo non viene più chiamato quando viene creato l'oggetto Quadrato. Spetta allo sviluppatore chiamare il costruttore padre, se necessario. Questo viene fatto anteponendo alla chiamata la parola chiave padre e due due punti. I due punti sono noti come `operatore di risoluzione dell'ambito (::)`.
 
 ```php
-<?php
-require_once("Cane.php");
-require_once("Gallina.php");
-
-$cane = new Cane();
-$cane->stampaDati("bau");
-
-$gallina = new Gallina();
-$gallina->stampaDati("chicchirichì");
-
-?>
+class Quadrato extends Rettangolo
+{
+  function __construct($a)
+  {
+    parent::__construct($a,$a);
+  }
+}
 ```
 
 ---
 
-Sottoclasse derivata da una sottoclasse
-
-### Alano.php
+La parola chiave parent è un alias per il nome della superclasse, che può essere utilizzato in alternativa. In PHP, è possibile accedere a membri sovrascritti a qualsiasi livello nella gerarchia di ereditarietà utilizzando questa notazione.
 
 ```php
-<?php
-require_once("Cane.php");
-
-class Alano extends Cane{
-private $suono;
-public function Alano()
+class Quadrato extends Rettangolo
 {
-parent::Cane();
-$this->suono = "wuoff";
+  function __construct($a)
+  {
+    Rettangolo::__construct($a,$a);
+  }
 }
-public function stampaDati()
-{
-parent::stampaDati($this->suono);
-echo " / Razza : Alano";
-}
-}
-?>
 ```
 
-### test.php
+---
+
+## la parola chiave **final**
+
+Per impedire a una classe figlio di eseguire l'override di un metodo, è possibile definirlo come `final`. Una classe stessa può anche essere definita come `final` per impedire a qualsiasi classe di estenderla.
 
 ```php
-<?php
-require_once("Alano.php");
-$cane = new Alano();
-$cane->stampaDati();
-?>
+final class NotExtendable
+{
+  final function notOverridable() {}
+}
+
+```
+
+---
+
+## l'operatore Instanceof 
+Come precauzione di sicurezza, è possibile verificare se è possibile eseguire il cast di un oggetto in una classe specifica utilizzando l'operatore instanceof. 
+
+Questo operatore restituisce true se è possibile eseguire il cast dell'oggetto sul lato sinistro nel tipo sul lato destro senza causare un errore. Questo è vero quando l'oggetto è un'istanza o eredita dalla classe di destra.
+
+```php
+
+$forma = new Quadrato(5);
+$forma instanceof Quadrato;    // true
+$forma instanceof Rettangolo; // true
 ```
