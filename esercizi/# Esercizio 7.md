@@ -8,6 +8,6 @@ Si vuole realizzare un servizio Web per la raccolta dei dati relativi alle tempe
     
 * Una pagina di riepilogo che stampa per ogni stazione la temperatura massima più alta e la media della temperatura minima del giorno corrente e dell'ultima settimana (si assuma che il giorno e la settimana corrente partano dal timestamp attuale meno 24*60*60 e 7*24*60*60 rispettivamente). 
     
-    Infine supponendo che ciascuna stazione sia associata ad una zona ("Trento"=>"Nord", "Milano" => "Nord", "Torino" => "Nord", "Firenze" => "Centro", "Bologna" => "Centro", "Roma" => "Centro", "Napoli"=> "Sud", "Bari" => "Sud", "Messina" => "Sud"), la pagina deve stampare la media, su tutti i dati disponibili, delle temperature massime e minime misurate per ciascuna zona.
+* Infine supponendo che ciascuna stazione sia associata ad una zona ("Trento"=>"Nord", "Milano" => "Nord", "Torino" => "Nord", "Firenze" => "Centro", "Bologna" => "Centro", "Roma" => "Centro", "Napoli"=> "Sud", "Bari" => "Sud", "Messina" => "Sud"), la pagina deve stampare la media, su tutti i dati disponibili, delle temperature massime e minime misurate per ciascuna zona.
 
 Si scrivano il form e le due pagine di raccolta dati e riepilogo usando HTML/PHP. Si supponga di utilizzare il metodo GET nel form.
