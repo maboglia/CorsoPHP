@@ -186,8 +186,7 @@ Salta cioè che segue all'interno del costrutto ciclico in cui è inserito, senz
 Interrompe l'esecuzione del metodo corrente e restituisce all'ambiente chiamante il valore
 ottenuto valutando l'espressione.
 
-Si rimanda al manuale php http://www.php.net/manual/en/language.control-structures.php
-per gli approfondimenti
+Si rimanda al [manuale php](http://www.php.net/manual/en/language.control-structures.php) per gli approfondimenti
 
 ---
 
