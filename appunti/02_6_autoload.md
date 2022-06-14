@@ -9,7 +9,7 @@ Richiede un parametro, che è il nome della classe o dell'interfaccia PHP.
 
 function __autoload($class)
 {
-    echo "Argument Passed to Autoloader = $class\n";
+    echo "Argomento Passato alla funzione Autoloader = $class\n";
     include __DIR__ . '/../' . str_replace('\\', DIRECTORY_SEPARATOR, $class) . '.php';
 }
 
@@ -18,7 +18,7 @@ function __autoload($class)
 Una buona pratica da seguire quando si scrivono applicazioni orientate agli oggetti
 è utilizzare un file per ogni classe e denominarlo in base al nome della classe.
 
-Seguendo questa convenzione, la funzione __autoload è in grado di caricare la classe necessaria.
+Seguendo questa convenzione, la funzione `__autoload` è in grado di caricare la classe necessaria.
 
 ```php
 <?php
