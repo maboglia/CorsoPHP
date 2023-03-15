@@ -45,9 +45,6 @@ restituisce TRUE
 ---
 
 
-### **Calcolo multibase**
-
-Oltre al sistema decimale, PHP può lavorare con i sistemi di numerazione in base [otto](http://it.wikipedia.org/wiki/Sistema_numerico_ottale) e [sedici](http://it.wikipedia.org/wiki/Sistema_numerico_esadecimale). Per inizializzare una variabile in base otto, il numero deve iniziare con uno `0` (es `01247`); i numeri in base sedici devono invece iniziare con `0x` (es `0xf56b`).
 
 ### **Stringhe**
 
@@ -272,3 +269,7 @@ Di fronte a diversi tipi di dato, il motore PHP può trovarsi in diverse situazi
 * se si aspetta un valore *booleano* e viene fornita un *array* PHP restituisce FALSE se l'array è vuoto , TRUE negli altri casi
 
 * il valore *null* viene trattato come un valore booleano FALSE
+
+### **Calcolo multibase**
+
+Oltre al sistema decimale, PHP può lavorare con i sistemi di numerazione in base [otto](http://it.wikipedia.org/wiki/Sistema_numerico_ottale) e [sedici](http://it.wikipedia.org/wiki/Sistema_numerico_esadecimale). Per inizializzare una variabile in base otto, il numero deve iniziare con uno `0` (es `01247`); i numeri in base sedici devono invece iniziare con `0x` (es `0xf56b`).
