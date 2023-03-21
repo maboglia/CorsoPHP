@@ -4,10 +4,11 @@ In PHP 4, durante la creazione di un oggetto attraverso la parola chiave
 new, veniva restituito l'oggetto stesso e questo veniva memorizzato
 nella variabile specificata.
 
-In PHP 5 invece, quando creiamo una nuova istanza ($oggetto =
-new MiaClasse();),
-MiaClasse();) new ci restituisce non il nuovo oggetto ma un
+In PHP 5 invece, quando creiamo una nuova istanza `$oggetto = new MiaClasse();`, 
+new ci restituisce non il nuovo oggetto ma un
 riferimento ad esso.
+
+---
 
 In PHP 5 se assegnate ad una variabile l'istanza di un oggetto,
 l'assegnazione avverrà per riferimento poichè l'istanza stessa contiene
@@ -44,10 +45,5 @@ echo $istanza3->valore; // Stampa 13
 
 Clonando un oggetto, per definizione si crea una copia esatta di tale oggetto, quindi i
 riferimenti contenuti in esso saranno comunque copiati come tali, e dopo la clonazione
-conterranno ancora il riferimento alla stessa risorsa di prima.
-
-Clonando un oggetto, per definizione
-si crea una copia esatta di tale oggetto, quindi i riferimenti contenuti in esso saranno
-comunque copiati come tali, e dopo la clonazione
 conterranno ancora il riferimento alla stessa risorsa di prima.
 

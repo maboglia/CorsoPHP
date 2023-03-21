@@ -9,14 +9,13 @@ La sottoclasse derivata da una classe astratta, dovrà
 obbligatoriamente definire tali metodi astratti 
 per far sì che l'ereditarietà venga accettata.
 
-
 ---
-Una classe astratta fornisce un'implementazione parziale su cui altre classi possono basarsi. Quando una classe viene dichiarata astratta, significa che la classe può contenere metodi incompleti che devono essere implementati nelle classi figlie, oltre ai normali membri della classe.
 
 ## Metodi astratti
-In una classe astratta, qualsiasi metodo può essere dichiarato astratto. Questi metodi vengono quindi lasciati non implementati e vengono specificate solo le loro firme, mentre i blocchi di codice vengono sostituiti da punti e virgola.
 
----
+Una classe astratta fornisce un'implementazione parziale su cui altre classi possono basarsi. Quando una classe viene dichiarata astratta, significa che la classe può contenere metodi incompleti che devono essere implementati nelle classi figlie, oltre ai normali membri della classe.
+
+In una classe astratta, qualsiasi metodo può essere dichiarato astratto. Questi metodi vengono quindi lasciati non implementati e vengono specificate solo le loro firme, mentre i blocchi di codice vengono sostituiti da punti e virgola.
 
 ```php
 abstract class FiguraGeometrica
@@ -25,6 +24,8 @@ abstract class FiguraGeometrica
   abstract public function getArea();
 }
 ```
+  
+---
 
 Se una classe eredita da questa classe astratta, è quindi forzata a sovrascrivere il metodo astratto. La firma del metodo deve corrispondere, ad eccezione del livello di accesso, che può essere reso meno ristretto.
 
