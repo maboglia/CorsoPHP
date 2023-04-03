@@ -5,7 +5,7 @@ new, veniva restituito l'oggetto stesso e questo veniva memorizzato
 nella variabile specificata.
 
 In PHP 5 invece, quando creiamo una nuova istanza `$oggetto = new MiaClasse();`, 
-new ci restituisce non il nuovo oggetto ma un
+`new`  **NON** restituisce il nuovo oggetto ma un
 riferimento ad esso.
 
 ---
