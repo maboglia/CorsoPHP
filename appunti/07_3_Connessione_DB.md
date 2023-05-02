@@ -17,6 +17,8 @@ try {
 }
 ```
 
+---
+
 ## Connessione MySQLi - object oriented
 
 ```php 
@@ -27,6 +29,8 @@ try {
          die("ERROR : -> ".$connessione->connect_error);
      }
 ```
+
+---
 
 ## Connessione MySQLi - procedural
 
