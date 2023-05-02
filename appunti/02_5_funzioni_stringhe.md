@@ -65,6 +65,8 @@ La funzione restituisce la stringa string con tutti i caratteri alfabetici conve
 
 Restituisce la stringa string con i caratteri alfabetici convertiti in maiuscolo.
 
+---
+
 * `mixed str_replace ( mixed search, mixed replace, mixed subject [, int &count] )`
 
 Questa funzione restituisce una stringa, od una matrice, con tutte le occorrenze di search nella

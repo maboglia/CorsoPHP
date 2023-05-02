@@ -18,6 +18,8 @@ restituisce il numericamente più grande dei valori dati come parametro.
 
 * `float pow ( float base, float esp )`
 
+---
+
 Restituisce base elevato alla potenza di esp. Se possibile, questa funzione restituisce un integer.
 Nota: Il PHP non può gestire valori negativi per bases.
 
