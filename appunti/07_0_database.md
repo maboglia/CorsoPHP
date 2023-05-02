@@ -1,6 +1,6 @@
 # Database in PHP
 
-![API DB](img/big_picture.png)
+![API DB](https://github.com/maboglia/CorsoPHP/raw/master/appunti/img/big_picture.png)
 
 ## Database, connessione
 
@@ -14,7 +14,7 @@
 
 ## API
 
-![API DB](img/api_DB.png)
+![API DB](https://github.com/maboglia/CorsoPHP/raw/master/appunti/img/api_DB.png)
 
 * mysql
   * Api originali, deprecate, disabilitate dalla versione 7
@@ -25,19 +25,19 @@
 
 ---
 
-![API DB](img/api_DB2.png)
+![API DB](https://github.com/maboglia/CorsoPHP/raw/master/appunti/img/api_DB2.png)
 
 ---
 
 ## mysqli procedurale o object orinted
 
-![API DB](img/api_DB_OOP.png)
+![API DB](https://github.com/maboglia/CorsoPHP/raw/master/appunti/img/api_DB_OOP.png)
 
 ---
 
 ## prevenire SQL Injections
 
-![API DB](img/sql_injection.png)
+![API DB](https://github.com/maboglia/CorsoPHP/raw/master/appunti/img/sql_injection.png)
 
 ---
 

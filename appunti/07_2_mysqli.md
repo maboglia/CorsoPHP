@@ -1,6 +1,5 @@
 # La connessione php-MySQL con MySQLi
 
-
 ## La classe MySQLi
 
 Gli oggetti di questa classe hanno il compito di rappresentare la connessione fra php e un database MySQL.
@@ -18,11 +17,11 @@ Gli oggetti di questa classe hanno il compito di rappresentare la connessione fr
 
 ### Connessione al database
 
-La funzione di connessione è associata all'istanza dell'oggetto, quindi è compito del costruttore della classe l'attivazione della connessione  ( vedi http://it.php.net/manual/en/mysqli.construct.php ).
+La funzione di connessione è associata all'istanza dell'oggetto, quindi è compito del costruttore della classe l'attivazione della connessione  ( vedi <http://it.php.net/manual/en/mysqli.construct.php> ).
 
 **Il costruttore ha dunque bisogno di quattro informazioni basilari:**
 
-* host 
+* host
   * in cui risiede il server MySQL a cui connettersi
 * username
 * password
@@ -41,7 +40,6 @@ I quattro parametri sono stringhe, nell'esempio si indica che il server mysql
 risiede sullo stesso host del server web-php, le credenziali di accesso sono per utente root
 privo di password e il database ha identificatore 'ilmiodb'.
 
-
 L'applicazione php viene eseguita dal server web, per accedere a un database deve
 essere attivata una connessione con il server MySql.
 
@@ -56,12 +54,12 @@ essere attivata una connessione con il server MySql.
 * mysqli_fetch_row(),
   * Risultati in un array standard
   * Le chiavi sono interi
-* mysqli_fetch_assoc(), 
+* mysqli_fetch_assoc(),
   * Risultati in un array associativo
   * Le chiavi sono i nomi delle colonne
-* mysqli_fetch_array(), 
+* mysqli_fetch_array(),
   * Risultati in un array standard e associativo
-* Le chiavi sono: MYSQL_NUM, MYSQL_ASSOC, MYSQL_BOTH 
+* Le chiavi sono: MYSQL_NUM, MYSQL_ASSOC, MYSQL_BOTH
 * mysqli_free_result()
 * mysqli_close()
 
@@ -75,7 +73,7 @@ essere attivata una connessione con il server MySql.
 
 ### Classe di connessione personalizzata
 
-In base a quanto visto l'istanza di un oggetto di classe MySQLi produce la connessione al database. 
+In base a quanto visto l'istanza di un oggetto di classe MySQLi produce la connessione al database.
 
 In una applicazione web tipicamente sono presenti molti script php ognuno dei
 quali avrà necessità di accedere al database, pertanto in ognuno verrà istanziato un
@@ -84,8 +82,8 @@ oggetto per la connessione fornendo ogni volta i parametri adeguati.
 Punto debole di questa situazione è che se c'è bisogno di modificare un parametro di
 connessione (ad esempio la password) sarà necessario effettuare la modifica in tutte le
 occasioni in cui è prevista la connessione. Per questo motivo invece che specificare i
-parametri ad ogni esigenza di istanza di connessione può essere più efficace definire 
-una propria classe di connessione che estende MySQLi su cui si ridefinisce il costruttore 
+parametri ad ogni esigenza di istanza di connessione può essere più efficace definire
+una propria classe di connessione che estende MySQLi su cui si ridefinisce il costruttore
 con i parametri impostati, ad esempio:
 
 ```php
@@ -110,13 +108,14 @@ I vari script dell'applicazione potranno ottenere la connessione istanziando un 
 Il metodo query consente l'invio al dbms di un comando, con la conseguente esecuzione e
 ottenimento del risultato.
 
-```mixed query ( string $query [, int $resultmode = MYSQLI_STORE_RESULT ] )```
+`mixed query ( string $query [, int $resultmode = MYSQLI_STORE_RESULT ] )`
 
 Il parametro stringa $query rappresenta il comando da inviare al dbms, sarà in generale
 un comando SQL.
 Il secondo parametro opzionale al momento lo tralasciamo (assumerà quindi il suo valore
 di default)
 Il valore di ritorno del metodo sarà:
+
 * in caso di fallimento della query viene restituito il valore false
 * in caso di successo della query viene restituito:
 * se la query è del tipo SELECT, SHOW, DESCRIBE, EXPLAIN un oggetto di classe MySQLi_Result
@@ -127,12 +126,14 @@ Si rimanda al paragrafo seguente il dettaglio sulla classe mysqli_result
 ---
 
 **Esempio di uso:**
+
 ```
 $db=new ConnessioneDb();
 $ris = $db->query("SELECT * FROM rubrica");
 ```
 
 ### La classe MySQLi_Result
+
 Un oggetto di questa classe rappresenta la tabella risultato ottenuta da una query. Su
 questa tabella l'oggetto tiene un riferimento (cursore) ad una particolare riga, che
 chiamiamo riga corrente. All'istanza dell'oggetto la riga corrente è la prima.
@@ -142,12 +143,14 @@ La riga indirizzata dal cursore può essere accessibile con più di una modalit�
 ---
 
 #### Metodo fetch_assoc()
-Questo metodo restituisce la riga corrente del risultato come array associativo in cui le chiavi sono costituite dagli identificatori di colonna della tabella risultato. 
 
-Inoltre il cursore viene spostato alla riga seguente (se disponibile). 
+Questo metodo restituisce la riga corrente del risultato come array associativo in cui le chiavi sono costituite dagli identificatori di colonna della tabella risultato.
+
+Inoltre il cursore viene spostato alla riga seguente (se disponibile).
 Se il cursore è a fine tabella il metodo retituisce NULL.
 
 **Esempio**
+
 ```php
 $db=new ConnessioneDb();
 $ris = $db->query("SELECT * FROM rubrica");
@@ -196,12 +199,14 @@ echo "{$riga['nome']} {$riga['cognome']} {$riga['telefono']}
 ## SQL Injection
 
 Per evitare SQL injections:
+
 * Backslash davanti agli apici
-    * addslashes($stringa_da_escapare)
+  * addslashes($stringa_da_escapare)
 * Magic Quotes
-    * Sono state aggiunte automaticamente sui dati inviati via GET, POST, COOKIE in PHP 3, poi rimossi in PHP 5.4
+  * Sono state aggiunte automaticamente sui dati inviati via GET, POST, COOKIE in PHP 3, poi rimossi in PHP 5.4
 * Usa la funzione real_escape_string:
-    * mysqli_real_escape_string($conn,$stringa_da_escapare)
+  * mysqli_real_escape_string($conn,$stringa_da_escapare)
+
 ```php
 function get_post($conn, $var)
 {
@@ -219,21 +224,21 @@ function get_post($conn, $var)
 
 ```php
 //1) scrivo la query parametrica
-	$query = "SELECT nome, cognome ";
-	$query .= "FROM Studenti ";
-	$query .= "WHERE username = ? AND password = ? ";
+ $query = "SELECT nome, cognome ";
+ $query .= "FROM Studenti ";
+ $query .= "WHERE username = ? AND password = ? ";
 //2) preparo lo statement per il database
-	$statement = mysqli_prepare($connessione, $query);
+ $statement = mysqli_prepare($connessione, $query);
 //3) collego i parametri da bindare
-	mysqli_stmt_bind_param($statement, 'ss', $username, $password);
+ mysqli_stmt_bind_param($statement, 'ss', $username, $password);
 //4) eseguo lo statement
-	mysqli_stmt_execute($statement);
+ mysqli_stmt_execute($statement);
 //5) collego i risultati alle variabili da usare
-	mysqli_stmt_bind_result($statement, $nome, $cognome);
+ mysqli_stmt_bind_result($statement, $nome, $cognome);
 //6) ottengo i risultati
-	mysqli_stmt_fetch($statement);
+ mysqli_stmt_fetch($statement);
 //7) chiudo lo statement
-	mysqli_stmt_close($statement);
+ mysqli_stmt_close($statement);
 
 ```
 
@@ -247,7 +252,7 @@ $ris = $db->query("SELECT * FROM rubrica");
 ```
 
 * Se per qualche motivo fallisce la connessione non ha senso tentare di eseguire una
-query. 
+query.
 
 * Se fallisce l'esecuzione di una query non ha senso trattare il risultato.
 
@@ -284,6 +289,7 @@ L'atttributo contiene:
 * in caso di errore una stringa con messaggio che descrive l'errore riconosciuto
 
 Quindi ecco una possibile applicazione:
+
 ```php
 $ris = $db->query("SELECT * FROM rubrica");
 if ($db->error){
@@ -292,7 +298,6 @@ die('Query failed: '.$db->error);
 }
 
 ```
-
 
 Anche in questo caso il riconoscimento dell'errore viene trattato interrompendo lo script.
 
@@ -321,10 +326,3 @@ class ConnessioneDb extends MySQLi{
     }
 }
 ```
-
----
-
-Quest'opera è stata rilasciata con licenza Creative Commons Attribuzione - Non commerciale - Condividi allo stesso modo 3.0 Italia. Per leggere una
-copia della licenza visita il sito web http://creativecommons.org/licenses/by-nc-sa/3.0/it/ o spedisci una lettera a Creative Commons, 171 Second
-Street, Suite 300, San Francisco, California, 94105, USA.
-Giovanni Ragno
