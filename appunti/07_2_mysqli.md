@@ -34,7 +34,7 @@ che devono essere passate come parametro all'istanziazione dell'oggetto.
 #### La connessione php-MySQL con MySQLi
 
 Esempio:
-```$db=new MySQLi('localhost','root','','ilmiodb');```
+`$db=new MySQLi('localhost','root','','ilmiodb');`
 
 I quattro parametri sono stringhe, nell'esempio si indica che il server mysql
 risiede sullo stesso host del server web-php, le credenziali di accesso sono per utente root
@@ -67,7 +67,7 @@ essere attivata una connessione con il server MySql.
 
 ### La funzione mysqli_insert_id() ritorna l’ultimo id inserito
 
-* ```$id = mysqli_insert_id($connessione);```
+* `$id = mysqli_insert_id($connessione);`
 
 ---
 
@@ -127,7 +127,7 @@ Si rimanda al paragrafo seguente il dettaglio sulla classe mysqli_result
 
 **Esempio di uso:**
 
-```
+```php
 $db=new ConnessioneDb();
 $ris = $db->query("SELECT * FROM rubrica");
 ```
