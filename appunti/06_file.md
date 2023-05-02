@@ -23,6 +23,8 @@ argomenti ha il nome del file e la modalita' di apertura.
 Restituisce un numero identificativo del file chiamato
 filehandler.
 
+---
+
 ## fopen: modalita di apertura file
 
 * **Lettura**: 'r'
@@ -48,6 +50,8 @@ $MyFileHandler = fopen($myfile, 'w') ;
 fclose($MyFileHandler );
 ?>
 ```
+
+---
 
 ## Scrivere su un file
 
