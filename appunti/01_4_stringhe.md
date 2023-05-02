@@ -1,6 +1,5 @@
 # Stringhe
 
-
 ## Tipi di stringhe
 
 Le stringhe sono una serie di caratteri, e fin qui il concetto è piuttosto semplice. Detto questo, ci sono tipi diversi di stringhe che hanno una sintassi e funzionalità leggermente differenti.
@@ -11,6 +10,8 @@ Gli apici singoli vengono usati per denotare una “stringa letterale”. Le str
 
 Se usi gli apici singoli, puoi inserire il nome di una variabile così: `'qualche $cosa'` e vedresti l’output esatto `quale $cosa`. Se usi gli apici doppi, la stringa cercherebbe di recuperare la variabile `$cosa` e visualizzerebbe degli errori in caso la variabile non venisse trovata.
 
+---
+
 ```php
     echo 'Questa è la mia stringa, guarda come è bella.';    // non serve interpretare una stringa semplice
     
@@ -20,7 +21,8 @@ Se usi gli apici singoli, puoi inserire il nome di una variabile così: `'qualch
      * Questa è la mia stringa, guarda come è bella.
      */
 ```
-*   [Apici singoli](http://php.net/language.types.string#language.types.string.syntax.single)
+
+* [Apici singoli](http://php.net/language.types.string#language.types.string.syntax.single)
 
 ---
 
@@ -79,7 +81,7 @@ Per ovviare al problema, racchiudi la variabile in un paio di parentesi graffe.
     echo "Ho bevuto del succo fatto con le {$juice[1]}e";   // $juice[1] verrà interpretato
 ```
 
-*   [Virgolette](http://php.net/language.types.string#language.types.string.syntax.double)
+* [Virgolette](http://php.net/language.types.string#language.types.string.syntax.double)
 
 ---
 
@@ -93,16 +95,15 @@ Se stai concatenando stringhe multiple di qualunque tipo, o interpolando valori 
 
 Indipendentemente da ciò che fai con le stringhe, nessuno dei tipi avrà mai un impatto evidente sulla tua applicazione. Cercare di riscrivere il codice per usare l’uno o l’altro tipo è un esercizio inutile, quindi evita queste micro-ottimizzazioni a meno che tu non capisca realmente il significato e l’impatto delle differenze.
 
-*   [Disproving the Single Quotes Performance Myth](http://nikic.github.io/2012/01/09/Disproving-the-Single-Quotes-Performance-Myth.html)
+* [Disproving the Single Quotes Performance Myth](http://nikic.github.io/2012/01/09/Disproving-the-Single-Quotes-Performance-Myth.html)
 
 ---
 
-## Concatenamento
+## Concatenare elementi
 
-
-*   Se la tua linea eccede la lunghezza raccomandata (120 caratteri), considera il concatenamento
-*   Per leggibilità è meglio usare gli operatori di concatenamento invece che gli operatori concatenanti di assegnazione
-*   Se ti trovi nello scope originale della variabile, usa l’indentazione quando il concatenamento occupa una nuova linea
+* Se la tua linea eccede la lunghezza raccomandata (120 caratteri), considera il concatenamento
+* Per leggibilità è meglio usare gli operatori di concatenamento invece che gli operatori concatenanti di assegnazione
+* Se ti trovi nello scope originale della variabile, usa l’indentazione quando il concatenamento occupa una nuova linea
 
 ```php
 $a  = 'Esempio multi-linea';    // operatore di assegnazione/concatenamento (.=)
@@ -116,6 +117,4 @@ $a = 'Esempio multi-linea'      // operatore di concatenamento (.)
     . 'di cosa fare';
 ```
 
-*   [Operatori delle stringhe](http://php.net/language.operators.string)
-
----
+* [Operatori delle stringhe](http://php.net/language.operators.string)

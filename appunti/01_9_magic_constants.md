@@ -1,6 +1,8 @@
-# Costanti magiche¶
+# Costanti magiche
 
 Ci sono nove costanti magiche che cambiano valore a seconda di dove vengono utilizzate. Ad esempio, il valore di __LINE__ dipende dalla riga su cui viene utilizzato nello script. Tutte queste costanti "magiche" vengono risolte in fase di compilazione, a differenza delle costanti regolari, che vengono risolte in fase di esecuzione. Queste costanti speciali non fanno distinzione tra maiuscole e minuscole e sono le seguenti:
+
+---
 
 ## Costanti magiche di PHP Nome Descrizione
 

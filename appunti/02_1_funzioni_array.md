@@ -127,77 +127,97 @@ echo "Trovato macos";
 
 ## Elenco funzioni
 
-* [array()](http://php.net/manual/en/function.array.php) Creates an array.
-* [array_change_key_case()](http://php.net/manual/en/function.array-change-key-case.php) Returns an array with all keys in lowercase or uppercase.
-* [array_chunk()](http://php.net/manual/en/function.array-chunk.php) Splits an array into chunks of arrays.
-* [array_combine()](http://php.net/manual/en/function.array-combine.php) Creates an array by using one array for keys and another for its values.
-* [array_count_values()](http://php.net/manual/en/function.array-count-values.php) Returns an array with the number of occurrences for each value.
-* [array_diff()](http://php.net/manual/en/function.array-diff.php) Compares array values, and returns the differences.
-* [array_diff_assoc()](http://php.net/manual/en/function.array-diff-assoc.php) Compares array keys and values, and returns the differences.
-* [array_diff_key()](http://php.net/manual/en/function.array-diff-key.php) Compares array keys, and returns the differences.
-* [array_diff_uassoc()](http://php.net/manual/en/function.array-diff-uassoc.php) Compares array keys and values, with an additional user-made function check, and returns the differences.
-* [array_diff_ukey()](http://php.net/manual/en/function.array-diff-ukey.php) Compares array keys, with an additional user-made function check, and returns the differences.
-* [array_fill()](http://php.net/manual/en/function.array-fill.php) Fills an array with values.
-* [array_filter()](http://php.net/manual/en/function.array-filter.php) Filters elements of an array using a user-made function.
-* [array_flip()](http://php.net/manual/en/function.array-flip.php) Exchanges all keys with their associated values in an array.
-* [array_intersect()](http://php.net/manual/en/function.array-intersect.php) Compares array values, and returns the matches.
-* [array_intersect_assoc()](http://php.net/manual/en/function.array-intersect-assoc.php) Compares array keys and values, and returns the matches.
-* [array_intersect_key()](http://php.net/manual/en/function.array-intersect-key.php) Compares array keys, and returns the matches.
-* [array_intersect_uassoc()](http://php.net/manual/en/function.array-intersect-uassoc.php) Compares array keys and values, with an additional user-made function check, and returns the matches.
-* [array_intersect_ukey()](http://php.net/manual/en/function.array-intersect-ukey.php) Compares array keys, with an additional user-made function check, and returns the matches.
-* [array_key_exists()](http://php.net/manual/en/function.array-key-exists.php) Checks if the specified key exists in the array.
-* [array_keys()](http://php.net/manual/en/function.array-keys.php) Returns all the keys of an array.
-* [array_map()](http://php.net/manual/en/function.array-map.php) Sends each value of an array to a user-made function, which returns new values.
-* [array_merge()](http://php.net/manual/en/function.array-merge.php) Merges one or more arrays into one array.
-* [array_merge_recursive()](http://php.net/manual/en/function.array-merge-recursive.php) Merges one or more arrays into one array.
-* [array_multisort()](http://php.net/manual/en/function.array-multisort.php) Sorts multiple or multi-dimensional arrays.
-* [array_pad()](http://php.net/manual/en/function.array-pad.php) Inserts a specified number of items, with a specified value, to an array.
-* [array_pop()](http://php.net/manual/en/function.array-pop.php) Deletes the last element of an array.
-* [array_product()](http://php.net/manual/en/function.array-product.php) Calculates the product of the values in an array.
-* [array_push()](http://php.net/manual/en/function.array-push.php) Inserts one or more elements to the end of an array.
-* [array_rand()](http://php.net/manual/en/function.array-rand.php) Returns one or more random keys from an array.
-* [array_reduce()](http://php.net/manual/en/function.array-reduce.php) Returns an array as a string, using a user-defined function.
-* [array_reverse()](http://php.net/manual/en/function.array-reverse.php) Returns an array in the reverse order.
-* [array_search()](http://php.net/manual/en/function.array-search.php) Searches an array for a given value and returns the key.
-* [array_shift()](http://php.net/manual/en/function.array-shift.php) Removes the first element from an array, and returns the value of the removed element.
-* [array_slice()](http://php.net/manual/en/function.array-slice.php) Returns selected parts of an array.
-* [array_splice()](http://php.net/manual/en/function.array-splice.php) Removes and replaces specified elements of an array.
-* [array_sum()](http://php.net/manual/en/function.array-sum.php) Returns the sum of the values in an array.
-* [array_udiff()](http://php.net/manual/en/function.array-udiff.php) Compares array values in a user-made function and returns an array.
-* [array_udiff_assoc()](http://php.net/manual/en/function.array-udiff-assoc.php) Compares array keys, and compares array values in a user-made function, and returns an array.
-* [array_udiff_uassoc()](http://php.net/manual/en/function.array-udiff-uassoc.php) Compares array keys and array values in user-made functions, and returns an array.
-* [array_uintersect()](http://php.net/manual/en/function.array-uintersect.php) Compares array values in a user-made function and returns an array.
-* [array_uintersect_assoc()](http://php.net/manual/en/function.array-uintersect-assoc.php) Compares array keys, and compares array values in a user-made function, and returns an array.
-* [array_uintersect_uassoc()](http://php.net/manual/en/function.array-uintersect-uassoc.php) Compares array keys and array values in user-made functions, and returns an array.
-* [array_unique()](http://php.net/manual/en/function.array-unique.php) Removes duplicate values from an array.
-* [array_unshift()](http://php.net/manual/en/function.array-unshift.php) Adds one or more elements to the beginning of an array.
-* [array_values()](http://php.net/manual/en/function.array-values.php) Returns all the values of an array.
-* [array_walk()](http://php.net/manual/en/function.array-walk.php) Applies a user function to every member of an array.
-* [array_walk_recursive()](http://php.net/manual/en/function.array-walk-recursive.php) Applies a user function recursively to every member of an array.
-* [arsort()](http://php.net/manual/en/function.arsort.php) Sorts an array in reverse order and maintain index association.
-* [asort()](http://php.net/manual/en/function.asort.php) Sorts an array and maintain index association.
-* [compact()](http://php.net/manual/en/function.compact.php) Create array containing variables and their values.
-* [count()](http://php.net/manual/en/function.count.php) Counts elements in an array, or properties in an object.
-* [current()](http://php.net/manual/en/function.current.php) Returns the current element in an array.
-* [each()](http://php.net/manual/en/function.each.php) Returns the current key and value pair from an array.
-* [end()](http://php.net/manual/en/function.end.php) Sets the internal pointer of an array to its last element.
-* [extract()](http://php.net/manual/en/function.extract.php) Imports variables into the current symbol table from an array.
-* [in_array()](http://php.net/manual/en/function.in-array.php) Checks if a specified value exists in an array.
-* [key()](http://php.net/manual/en/function.key.php) Fetches a key from an array.
-* [krsort()](http://php.net/manual/en/function.krsort.php) Sorts an array by key in reverse order.
-* [ksort()](http://php.net/manual/en/function.ksort.php) Sorts an array by key.
-* [list()](http://php.net/manual/en/function.list.php) Assigns variables as if they were an array.
-* [()](http://php.net/manual/en/function.natcasesort.php) Sorts an array using a case insensitive " natural="" order"="" algorithm"=": natcaseso.
-* [()](http://php.net/manual/en/function.natsort.php) Sorts an array using a " natural="" order"="" algorithm"=": natso.
-* [next()](http://php.net/manual/en/function.next.php) Advance the internal array pointer of an array.
-* [()](http://php.net/manual/en/function.current.php) Alias of current(): p.
-* [prev()](http://php.net/manual/en/function.prev.php) Rewinds the internal array pointer.
-* [range()](http://php.net/manual/en/function.range.php) Creates an array containing a range of elements.
-* [reset()](http://php.net/manual/en/function.reset.php) Sets the internal pointer of an array to its first element.
-* [rsort()](http://php.net/manual/en/function.rsort.php) Sorts an array in reverse order.
-* [shuffle()](http://php.net/manual/en/function.shuffle.php) Shuffles an array.
-* [()](http://php.net/manual/en/function.count.php) Alias of count(): size.
-* [sort()](http://php.net/manual/en/function.sort.php) Sorts an array.
-* [uasort()](http://php.net/manual/en/function.uasort.php) Sorts an array with a user-defined function and maintain index association.
-* [uksort()](http://php.net/manual/en/function.uksort.php) Sorts an array by keys using a user-defined function.
-* [usort()](http://php.net/manual/en/function.usort.php) Sorts an array by values using a user-defined  function.
+* [array()](http://php.net/manual/en/function.array.php) Crea un array.
+* [array_change_key_case()](http://php.net/manual/en/function.array-change-key-case.php) Restituisce un array con tutte le chiavi in minuscolo o maiuscolo.
+* [array_chunk()](http://php.net/manual/en/function.array-chunk.php) Divide un array in blocchi di array.
+* [array_combine()](http://php.net/manual/en/function.array-combine.php) Crea un array utilizzando un array per le chiavi e un altro per i suoi valori.
+* [array_count_values()](http://php.net/manual/en/function.array-count-values.php) Restituisce un array con il numero di occorrenze per ogni valore.
+* [array_diff()](http://php.net/manual/en/function.array-diff.php) Confronta i valori dell'array e restituisce le differenze.
+* [array_diff_assoc()](http://php.net/manual/en/function.array-diff-assoc.php) Confronta chiavi e valori dell'array e restituisce le differenze.
+* [array_diff_key()](http://php.net/manual/en/function.array-diff-key.php) Confronta le chiavi dell'array e restituisce le differenze.
+* [array_diff_uassoc()](http://php.net/manual/en/function.array-diff-uassoc.php) Confronta le chiavi ei valori dell'array, con un ulteriore controllo della funzione creata dall'utente, e restituisce le differenze.
+* [array_diff_ukey()](http://php.net/manual/en/function.array-diff-ukey.php) Confronta le chiavi dell'array, con un ulteriore controllo della funzione creata dall'utente, e restituisce le differenze.
+
+---
+
+## Elenco funzioni 2
+
+* [array_fill()](http://php.net/manual/en/function.array-fill.php) Riempie un array di valori.
+* [array_filter()](http://php.net/manual/en/function.array-filter.php) Filtra gli elementi di un array utilizzando una funzione creata dall'utente.
+* [array_flip()](http://php.net/manual/en/function.array-flip.php) Scambia tutte le chiavi con i loro valori associati in un array.
+* [array_intersect()](http://php.net/manual/en/function.array-intersect.php) Confronta i valori dell'array e restituisce le corrispondenze.
+* [array_intersect_assoc()](http://php.net/manual/en/function.array-intersect-assoc.php) Confronta le chiavi ei valori dell'array e restituisce le corrispondenze.
+* [array_intersect_key()](http://php.net/manual/en/function.array-intersect-key.php) Confronta le chiavi dell'array e restituisce le corrispondenze.
+* [array_intersect_uassoc()](http://php.net/manual/en/function.array-intersect-uassoc.php) Confronta le chiavi ei valori dell'array, con un ulteriore controllo della funzione creata dall'utente, e restituisce le corrispondenze.
+* [array_intersect_ukey()](http://php.net/manual/en/function.array-intersect-ukey.php) Confronta le chiavi dell'array, con un ulteriore controllo della funzione creata dall'utente, e restituisce le corrispondenze.
+* [array_key_exists()](http://php.net/manual/en/function.array-key-exists.php) Controlla se la chiave specificata esiste nell'array.
+* [array_keys()](http://php.net/manual/en/function.array-keys.php) Restituisce tutte le chiavi di un array.
+* [array_map()](http://php.net/manual/en/function.array-map.php) Invia ogni valore di un array a una funzione creata dall'utente, che restituisce nuovi valori.
+* [array_merge()](http://php.net/manual/en/function.array-merge.php) Unisce uno o più array in un unico array.
+* [array_merge_recursive()](http://php.net/manual/en/function.array-merge-recursive.php) Unisce uno o più array in un unico array.
+* [array_multisort()](http://php.net/manual/en/function.array-multisort.php) Ordina array multipli o multidimensionali.
+
+---
+
+## Elenco funzioni 3
+
+* [array_pad()](http://php.net/manual/en/function.array-pad.php) Inserisce un numero specificato di elementi, con un valore specificato, in un array.
+* [array_pop()](http://php.net/manual/en/function.array-pop.php) Elimina l'ultimo elemento di un array.
+* [array_product()](http://php.net/manual/en/function.array-product.php) Calcola il prodotto dei valori in un array.
+* [array_push()](http://php.net/manual/en/function.array-push.php) Inserisce uno o più elementi alla fine di un array.
+* [array_rand()](http://php.net/manual/en/function.array-rand.php) Restituisce una o più chiavi casuali da un array.
+* [array_reduce()](http://php.net/manual/en/function.array-reduce.php) Restituisce un array come stringa, utilizzando una funzione definita dall'utente.
+* [array_reverse()](http://php.net/manual/en/function.array-reverse.php) Restituisce un array nell'ordine inverso.
+* [array_search()](http://php.net/manual/en/function.array-search.php) Cerca un array per un dato valore e restituisce la chiave.
+* [array_shift()](http://php.net/manual/en/function.array-shift.php) Rimuove il primo elemento da un array e restituisce il valore dell'elemento rimosso.
+* [array_slice()](http://php.net/manual/en/function.array-slice.php) Restituisce parti selezionate di un array.
+* [array_splice()](http://php.net/manual/en/function.array-splice.php) Rimuove e sostituisce gli elementi specificati di un array.
+* [array_sum()](http://php.net/manual/en/function.array-sum.php) Restituisce la somma dei valori in un array.
+* [array_udiff()](http://php.net/manual/en/function.array-udiff.php) Confronta i valori dell'array in una funzione creata dall'utente e restituisce un array.
+* [array_udiff_assoc()](http://php.net/manual/en/function.array-udiff-assoc.php) Confronta le chiavi dell'array e confronta i valori dell'array in una funzione creata dall'utente e restituisce un array.
+* [array_udiff_uassoc()](http://php.net/manual/en/function.array-udiff-uassoc.php) Confronta le chiavi dell'array ei valori dell'array nelle funzioni create dall'utente e restituisce un array.
+* [array_uintersect()](http://php.net/manual/en/function.array-uintersect.php) Confronta i valori dell'array in una funzione creata dall'utente e restituisce un array.
+* [array_uintersect_assoc()](http://php.net/manual/en/function.array-uintersect-assoc.php) Confronta le chiavi dell'array e confronta i valori dell'array in una funzione creata dall'utente e restituisce un array.
+* [array_uintersect_uassoc()](http://php.net/manual/en/function.array-uintersect-uassoc.php) Confronta le chiavi dell'array ei valori dell'array nelle funzioni create dall'utente e restituisce un array.
+* [array_unique()](http://php.net/manual/en/function.array-unique.php) Rimuove i valori duplicati da un array.
+* [array_unshift()](http://php.net/manual/en/function.array-unshift.php) Aggiunge uno o più elementi all'inizio di un array.
+
+---
+
+## Elenco funzioni 4
+
+* [array_values()](http://php.net/manual/en/function.array-values.php) Restituisce tutti i valori di un array.
+* [array_walk()](http://php.net/manual/en/function.array-walk.php) Applica una funzione utente a ogni membro di un array.
+* [array_walk_recursive()](http://php.net/manual/en/function.array-walk-recursive.php) Applica una funzione utente in modo ricorsivo a ogni membro di un array.
+* [arsort()](http://php.net/manual/en/function.arsort.php) Ordina un array in ordine inverso e mantiene l'associazione dell'indice.
+* [asort()](http://php.net/manual/en/function.asort.php) Ordina un array e mantiene l'associazione dell'indice.
+* [compact()](http://php.net/manual/en/function.compact.php) Crea un array contenente le variabili ei loro valori.
+* [count()](http://php.net/manual/en/function.count.php) Conta gli elementi in un array o le proprietà in un oggetto.
+* [current()](http://php.net/manual/en/function.current.php) Restituisce l'elemento corrente in un array.
+* [each()](http://php.net/manual/en/function.each.php) Restituisce la coppia chiave e valore corrente da un array.
+* [end()](http://php.net/manual/en/function.end.php) Imposta il puntatore interno di un array al suo ultimo elemento.
+* [extract()](http://php.net/manual/en/function.extract.php) Importa le variabili nella tabella dei simboli corrente da un array.
+* [in_array()](http://php.net/manual/en/function.in-array.php) Controlla se un valore specificato esiste in un array.
+* [key()](http://php.net/manual/en/function.key.php) Recupera una chiave da un array.
+* [krsort()](http://php.net/manual/en/function.krsort.php) Ordina un array per chiave in ordine inverso.
+* [ksort()](http://php.net/manual/en/function.ksort.php) Ordina un array per chiave.
+* [list()](http://php.net/manual/en/function.list.php) Assegna le variabili come se fossero un array.
+
+---
+
+## Elenco funzioni 5
+
+* [natcasesort()](http://php.net/manual/en/function.natcasesort.php) Ordina un array usando un " natural="" order"="" algoritmi"=" senza distinzione tra maiuscole e minuscole: natcaseso.
+* [natsort()](http://php.net/manual/en/function.natsort.php) Ordina un array usando un " natural="" order"="" algoritmi"=": natso.
+* [next()](http://php.net/manual/en/function.next.php) Avanza il puntatore all'array interno di un array.
+* [()](http://php.net/manual/en/function.current.php) Alias di current(): p.
+* [prev()](http://php.net/manual/en/function.prev.php) Riavvolge il puntatore dell'array interno.
+* [range()](http://php.net/manual/en/function.range.php) Crea un array contenente un intervallo di elementi.
+* [reset()](http://php.net/manual/en/function.reset.php) Imposta il puntatore interno di un array al suo primo elemento.
+* [rsort()](http://php.net/manual/en/function.rsort.php) Ordina un array in ordine inverso.
+* [shuffle()](http://php.net/manual/en/function.shuffle.php) Mescola un array.
+* [()](http://php.net/manual/en/function.count.php) Alias di count(): size.
+* [sort()](http://php.net/manual/en/function.sort.php) Ordina un array.
+* [uasort()](http://php.net/manual/en/function.uasort.php) Ordina un array con una funzione definita dall'utente e mantiene l'associazione dell'indice.
+* [uksort()](http://php.net/manual/en/function.uksort.php) Ordina un array per chiavi utilizzando una funzione definita dall'utente.
+* [usort()](http://php.net/manual/en/function.usort.php) Ordina un array per valori utilizzando una funzione definita dall'utente.

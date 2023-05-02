@@ -21,6 +21,8 @@ ottenuta dividendo la stringa originale utilizzando separator come separatore di
 imposta limit la matrice restituita conterrà al massimo limit elementi di cui l'ultimo conterrà la parte
 restante di string.
 
+---
+
 * `int fprintf ( resource handle, string format [, mixed args [, mixed ...]] )`
 La funzione scrive una stringa formattata in base al parametro format nello stream indicato dal
 parametro handle. I valori per il parametro format sono descritti nella documentazione della
@@ -39,6 +41,8 @@ Restituisce il valore ASCII del primo carattere di string. È complementare di c
 * `int strcmp ( string str1, string str2 )`
 Restituisce < 0 se str1 è minore di str2; > 0 se str1 è maggiore di str2, e 0 se sono uguali.
 Attenzione: il confronto tiene conto delle lettere maiuscole e minuscole.
+
+---
 
 * `int strcasecmp ( string str1, string str2 )`
 Restituisce < 0 se str1 è minore di str2; > 0 se str1 è maggiore di str2, e 0 se sono uguali. Confronto
@@ -79,285 +83,122 @@ Questa funzione restituisce il parametro str privo degli spazi iniziali e finali
 
 ## Elenco funzioni
 
-
-* [addcslashes() - "Returns a string with backslashes in front of the specified characters"](http://php.net/manual/en/function.addcslashes.php)
-
-
-* [addslashes() - "Returns a string with backslashes in front of predefined characters"](http://php.net/manual/en/function.addslashes.php)
-
-
-* [bin2hex() - "Converts a string of ASCII characters to hexadecimal values"](http://php.net/manual/en/function.bin2hex.php)
-
-
-* [chop() - "Alias of rtrim()"](http://php.net/manual/en/function.rtrim.php)
-
-
-* [chr() - "Returns a character from a specified ASCII value"](http://php.net/manual/en/function.chr.php)
-
-
-* [chunk_split() - "Splits a string into a series of smaller parts"](http://php.net/manual/en/function.chunk-split.php)
-
-
-* [convert_cyr_string() - "Converts a string from one Cyrillic character-set to another"](http://php.net/manual/en/function.convert-cyr-string.php)
-
-
-* [convert_uudecode() - "Decodes a uuencoded string"](http://php.net/manual/en/function.convert-uudecode.php)
-
-
-* [convert_uuencode() - "Encodes a string using the uuencode algorithm"](http://php.net/manual/en/function.convert-uuencode.php)
-
-
-* [count_chars() - "Returns how many times an ASCII character occurs within a string and returns the information"](http://php.net/manual/en/function.count-chars.php)
-
-
-* [crc32() - "Calculates a 32-bit CRC for a string"](http://php.net/manual/en/function.crc32.php)
-
-
-* [crypt() - "One-way string encryption (hashing)"](http://php.net/manual/en/function.crypt.php)
-
-
-* [echo() - "Outputs strings"](http://php.net/manual/en/function.echo.php)
-
-
-* [explode() - "Breaks a string into an array"](http://php.net/manual/en/function.explode.php)
-
-
-* [fprintf() - "Writes a formatted string to a specified output stream"](http://php.net/manual/en/function.fprintf.php)
-
-
-* [get_html_translation_table() - "Returns the translation table used by htmlspecialchars() and htmlentities()"](http://php.net/manual/en/function.htmlspecialchars.php)
-
-
-* [hebrev() - "Converts Hebrew text to visual text"](http://php.net/manual/en/function.hebrev.php)
-
-
-* [hebrevc() - "Converts Hebrew text to visual text and new lines (\n) into <br />"](http://php.net/manual/en/function.hebrevc.php)
-
-
-* [html_entity_decode() - "Converts HTML entities to characters"](http://php.net/manual/en/function.html-entity-decode.php)
-
-
-* [htmlentities() - "Converts characters to HTML entities"](http://php.net/manual/en/function.htmlentities.php)
-
-
-* [htmlspecialchars_decode() - "Converts some predefined HTML entities to characters"](http://php.net/manual/en/function.htmlspecialchars-decode.php)
-
-
-* [htmlspecialchars() - "Converts some predefined characters to HTML entities"](http://php.net/manual/en/function.htmlspecialchars.php)
-
-
-* [implode() - "Returns a string from the elements of an array"](http://php.net/manual/en/function.implode.php)
-
-
-* [join() - "Alias of implode()"](http://php.net/manual/en/function.join.php)
-
-
-* [levenshtein() - "Returns the Levenshtein distance between two strings"](http://php.net/manual/en/function.levenshtein.php)
-
-
-* [localeconv() - "Returns locale numeric and monetary formatting information"](http://php.net/manual/en/function.localeconv.php)
-
-
-* [ltrim() - "Strips whitespace from the left side of a string"](http://php.net/manual/en/function.ltrim.php)
-
-
-* [md5() - "Calculates the MD5 hash of a string"](http://php.net/manual/en/function.md5.php)
-
-
-* [md5_file() - "Calculates the MD5 hash of a file"](http://php.net/manual/en/function.md5-file.php)
-
-
-* [metaphone() - "Calculates the metaphone key of a string"](http://php.net/manual/en/function.metaphone.php)
-
-
-* [money_format() - "Returns a string formatted as a currency string"](http://php.net/manual/en/function.money-format.php)
-
-
-* [nl_langinfo() - "Returns specific local information"](http://php.net/manual/en/function.nl-langinfo.php)
-
-
-* [nl2br() - "Inserts HTML line breaks in front of each newline in a string"](http://php.net/manual/en/function.nl2br.php)
-
-
-* [number_format() - "Formats a number with grouped thousands"](http://php.net/manual/en/function.number-format.php)
-
-
-* [ord() - "Returns the ASCII value of the first character of a string"](http://php.net/manual/en/function.ord.php)
-
-
-* [parse_str() - "Parses a query string into variables"](http://php.net/manual/en/function.parse-str.php)
-
-
-* [print() - "Outputs a string"](http://php.net/manual/en/function.print.php)
-
-
-* [printf() - "Outputs a formatted string"](http://php.net/manual/en/function.printf.php)
-
-
-* [quoted_printable_decode() - "Decodes a quoted-printable string"](http://php.net/manual/en/function.quoted-printable-decode.php)
-
-
-* [quotemeta() - "Quotes meta characters"](http://php.net/manual/en/function.quotemeta.php)
-
-
-* [rtrim() - "Strips whitespace from the right side of a string"](http://php.net/manual/en/function.rtrim.php)
-
-
-* [setlocale() - "Sets locale information"](http://php.net/manual/en/function.setlocale.php)
-
-
-* [sha1() - "Calculates the SHA-1 hash of a string"](http://php.net/manual/en/function.sha1.php)
-
-
-* [sha1_file() - "Calculates the SHA-1 hash of a file"](http://php.net/manual/en/function.sha1-file.php)
-
-
-* [similar_text() - "Calculates the similarity between two strings"](http://php.net/manual/en/function.similar-text.php)
-
-
-* [soundex() - "Calculates the soundex key of a string"](http://php.net/manual/en/function.soundex.php)
-
-
-* [sprintf() - "Writes a formatted string to a variable"](http://php.net/manual/en/function.sprintf.php)
-
-
-* [sscanf() - "Parses input from a string according to a format"](http://php.net/manual/en/function.sscanf.php)
-
-
-* [str_ireplace() - "Replaces some characters in a string (case-insensitive)"](http://php.net/manual/en/function.str-ireplace.php)
-
-
-* [str_pad() - "Pads a string to a new length"](http://php.net/manual/en/function.str-pad.php)
-
-
-* [str_repeat() - "Repeats a string a specified number of times"](http://php.net/manual/en/function.str-repeat.php)
-
-
-* [str_replace() - "Replaces some characters in a string (case-sensitive)"](http://php.net/manual/en/function.str-replace.php)
-
-
-* [str_rot13() - "Performs the ROT13 encoding on a string"](http://php.net/manual/en/function.str-rot13.php)
-
-
-* [str_shuffle() - "Randomly shuffles all characters in a string"](http://php.net/manual/en/function.str-shuffle.php)
-
-
-* [str_split() - "Splits a string into an array"](http://php.net/manual/en/function.str-split.php)
-
-
-* [str_word_count() - "Count the number of words in a string"](http://php.net/manual/en/function.str-word-count.php)
-
-
-* [strcasecmp() - "Compares two strings (case-insensitive)"](http://php.net/manual/en/function.strcasecmp.php)
-
-
-* [strchr() - "Finds the first occurrence of a string inside another string (alias of strstr())"](http://php.net/manual/en/function.strchr.php)
-
-
-* [strcmp() - "Compares two strings (case-sensitive)"](http://php.net/manual/en/function.strcmp.php)
-
-
-* [strcoll() - "Locale based string comparison"](http://php.net/manual/en/function.strcoll.php)
-
-
-* [strcspn() - "Returns the number of characters found in a string before any part of some specified characters are found"](http://php.net/manual/en/function.strcspn.php)
-
-
-* [strip_tags() - "Strips HTML and PHP tags from a string"](http://php.net/manual/en/function.strip-tags.php)
-
-
-* [stripcslashes() - "Unquotes a string quoted with addcslashes()"](http://php.net/manual/en/function.addcslashes.php)
-
-
-* [stripslashes() - "Unquotes a string quoted with addslashes()"](http://php.net/manual/en/function.addslashes.php)
-
-
-* [stripos() - "Returns the position of the first occurrence of a string inside another string (case-insensitive)"](http://php.net/manual/en/function.stripos.php)
-
-
-* [stristr() - "Finds the first occurrence of a string inside another string (case-insensitive)"](http://php.net/manual/en/function.stristr.php)
-
-
-* [strlen() - "Returns the length of a string"](http://php.net/manual/en/function.strlen.php)
-
-
-* [strnatcasecmp() - "Compares two strings using a " natural="" order"="" algorithm="" (case-insensitive)"=""](http://php.net/manual/en/function.strnatcasecmp.php)
-
-
-* [strnatcmp() - "Compares two strings using a " natural="" order"="" algorithm="" (case-sensitive)"=""](http://php.net/manual/en/function.strnatcmp.php)
-
-
-* [strncasecmp() - "String comparison of the first n characters (case-insensitive)"](http://php.net/manual/en/function.strncasecmp.php)
-
-
-* [strncmp() - "String comparison of the first n characters (case-sensitive)"](http://php.net/manual/en/function.strncmp.php)
-
-
-* [strpbrk() - "Searches a string for any of a set of characters"](http://php.net/manual/en/function.strpbrk.php)
-
-
-* [strpos() - "Returns the position of the first occurrence of a string inside another string (case-sensitive)"](http://php.net/manual/en/function.strpos.php)
-
-
-* [strrchr() - "Finds the last occurrence of a string inside another string"](http://php.net/manual/en/function.strrchr.php)
-
-
-* [strrev() - "Reverses a string"](http://php.net/manual/en/function.strrev.php)
-
-
-* [strripos() - "Finds the position of the last occurrence of a string inside another string (case-insensitive)"](http://php.net/manual/en/function.strripos.php)
-
-
-* [strrpos() - "Finds the position of the last occurrence of a string inside another string (case-sensitive)"](http://php.net/manual/en/function.strrpos.php)
-
-
-* [strspn() - "Returns the number of characters found in a string that contains only characters from a specified charlist"](http://php.net/manual/en/function.strspn.php)
-
-
-* [strstr() - "Finds the first occurrence of a string inside another string (case-sensitive)"](http://php.net/manual/en/function.strstr.php)
-
-
-* [strtok() - "Splits a string into smaller strings"](http://php.net/manual/en/function.strtok.php)
-
-
-* [strtolower() - "Converts a string to lowercase letters"](http://php.net/manual/en/function.strtolower.php)
-
-
-* [strtoupper() - "Converts a string to uppercase letters"](http://php.net/manual/en/function.strtoupper.php)
-
-
-* [strtr() - "Translates certain characters in a string"](http://php.net/manual/en/function.strtr.php)
-
-
-* [substr() - "Returns a part of a string"](http://php.net/manual/en/function.substr.php)
-
-
-* [substr_compare() - "Compares two strings from a specified start position (binary safe and optionally case-sensitive)"](http://php.net/manual/en/function.substr-compare.php)
-
-
-* [substr_count() - "Counts the number of times a substring occurs in a string"](http://php.net/manual/en/function.substr-count.php)
-
-
-* [substr_replace() - "Replaces a part of a string with another string"](http://php.net/manual/en/function.substr-replace.php)
-
-
-* [trim() - "Strips whitespace from both sides of a string"](http://php.net/manual/en/function.trim.php)
-
-
-* [ucfirst() - "Converts the first character of a string to uppercase"](http://php.net/manual/en/function.ucfirst.php)
-
-
-* [ucwords() - "Converts the first character of each word in a string to uppercase"](http://php.net/manual/en/function.ucwords.php)
-
-
-* [vfprintf() - "Writes a formatted string to a specified output stream"](http://php.net/manual/en/function.vfprintf.php)
-
-
-* [vprintf() - "Outputs a formatted string"](http://php.net/manual/en/function.vprintf.php)
-
-
-* [vsprintf() - "Writes a formatted string to a variable"](http://php.net/manual/en/function.vsprintf.php)
-
-
-* [wordwrap() - "Wraps a string to a given number of characters"](http://php.net/manual/en/function.wordwrap.php)
-
+* [addcslashes() - "Restituisce una stringa con barre rovesciate davanti ai caratteri specificati"](http://php.net/manual/en/function.addcslashes.php)
+* [addslashes() - "Restituisce una stringa con barre rovesciate davanti a caratteri predefiniti"](http://php.net/manual/en/function.addslashes.php)
+* [bin2hex() - "Converte una stringa di caratteri ASCII in valori esadecimali"](http://php.net/manual/en/function.bin2hex.php)
+* [chop() - "Alias di rtrim()"](http://php.net/manual/en/function.rtrim.php)
+* [chr() - "Restituisce un carattere da un valore ASCII specificato"](http://php.net/manual/en/function.chr.php)
+* [chunk_split() - "Divide una stringa in una serie di parti più piccole"](http://php.net/manual/en/function.chunk-split.php)
+* [convert_cyr_string() - "Converte una stringa da un set di caratteri cirillici a un altro"](http://php.net/manual/en/function.convert-cyr-string.php)
+* [convert_uudecode() - "Decodifica una stringa uuencoded"](http://php.net/manual/en/function.convert-uudecode.php)
+* [convert_uuencode() - "Codifica una stringa usando l'algoritmo uuencode"](http://php.net/manual/en/function.convert-uuencode.php)
+* [count_chars() - "Restituisce quante volte un carattere ASCII ricorre all'interno di una stringa e restituisce le informazioni"](http://php.net/manual/en/function.count-chars.php)
+* [crc32() - "Calcola un CRC a 32 bit per una stringa"](http://php.net/manual/en/function.crc32.php)
+* [crypt() - "Crittografia stringa unidirezionale (hashing)"](http://php.net/manual/en/function.crypt.php)
+
+---
+
+## Elenco funzioni 1
+
+* [echo() - "Emette stringhe"](http://php.net/manual/en/function.echo.php)
+* [explode() - "Spezza una stringa in un array"](http://php.net/manual/en/function.explode.php)
+* [fprintf() - "Scrive una stringa formattata in un flusso di output specificato"](http://php.net/manual/en/function.fprintf.php)
+* [get_html_translation_table() - "Restituisce la tabella di traduzione utilizzata da htmlspecialchars() e htmlentities()"](http://php.net/manual/en/function.htmlspecialchars.php)
+* [hebrev() - "Converte il testo ebraico in testo visivo"](http://php.net/manual/en/function.hebrev.php)
+* [hebrevc() - "Converte il testo ebraico in testo visivo e le nuove righe (\n) in <br />"](http://php.net/manual/en/function.hebrevc.php)
+* [html_entity_decode() - "Converte le entità HTML in caratteri"](http://php.net/manual/en/function.html-entity-decode.php)
+* [htmlentities() - "Converte i caratteri in entità HTML"](http://php.net/manual/en/function.htmlentities.php)
+* [htmlspecialchars_decode() - "Converte alcune entità HTML predefinite in caratteri"](http://php.net/manual/en/function.htmlspecialchars-decode.php)
+* [htmlspecialchars() - "Converte alcuni caratteri predefiniti in entità HTML"](http://php.net/manual/en/function.htmlspecialchars.php)
+* [implode() - "Restituisce una stringa dagli elementi di un array"](http://php.net/manual/en/function.implode.php)
+* [join() - "Alias di implode()"](http://php.net/manual/en/function.join.php)
+* [levenshtein() - "Restituisce la distanza di Levenshtein tra due stringhe"](http://php.net/manual/en/function.levenshtein.php)
+* [localeconv() - "Restituisce informazioni sulla formattazione numerica e monetaria locale"](http://php.net/manual/en/function.localeconv.php)
+* [ltrim() - "Elimina gli spazi bianchi dal lato sinistro di una stringa"](http://php.net/manual/en/function.ltrim.php)
+
+---
+
+## Elenco funzioni 2
+
+* [md5() - "Calcola l'hash MD5 di una stringa"](http://php.net/manual/en/function.md5.php)
+* [md5_file() - "Calcola l'hash MD5 di un file"](http://php.net/manual/en/function.md5-file.php)
+* [metaphone() - "Calcola la chiave metafonica di una stringa"](http://php.net/manual/en/function.metaphone.php)
+* [money_format() - "Restituisce una stringa formattata come una stringa di valuta"](http://php.net/manual/en/function.money-format.php)
+* [nl_langinfo() - "Restituisce informazioni locali specifiche"](http://php.net/manual/en/function.nl-langinfo.php)
+* [nl2br() - "Inserisce interruzioni di riga HTML davanti a ogni nuova riga in una stringa"](http://php.net/manual/en/function.nl2br.php)
+* [number_format() - "Formatta un numero con migliaia raggruppate"](http://php.net/manual/en/function.number-format.php)
+* [ord() - "Restituisce il valore ASCII del primo carattere di una stringa"](http://php.net/manual/en/function.ord.php)
+* [parse_str() - "Analizza una stringa di query in variabili"](http://php.net/manual/en/function.parse-str.php)
+* [print() - "Emette una stringa"](http://php.net/manual/en/function.print.php)
+* [printf() - "Emette una stringa formattata"](http://php.net/manual/en/function.printf.php)
+* [quoted_printable_decode() - "Decodifica una stringa stampabile tra virgolette"](http://php.net/manual/en/function.quoted-printable-decode.php)
+* [quotemeta() - "Quote meta caratteri"](http://php.net/manual/en/function.quotemeta.php)
+* [rtrim() - "Elimina gli spazi bianchi dal lato destro di una stringa"](http://php.net/manual/en/function.rtrim.php)
+* [setlocale() - "Imposta informazioni locali"](http://php.net/manual/en/function.setlocale.php)
+* [sha1() - "Calcola l'hash SHA-1 di una stringa"](http://php.net/manual/en/function.sha1.php)
+* [sha1_file() - "Calcola l'hash SHA-1 di un file"](http://php.net/manual/en/function.sha1-file.php)
+* [similar_text() - "Calcola la somiglianza tra due stringhe"](http://php.net/manual/en/function.similar-text.php)
+* [soundex() - "Calcola la chiave soundex di una stringa"](http://php.net/manual/en/function.soundex.php)
+* [sprintf() - "Scrive una stringa formattata in una variabile"](http://php.net/manual/en/function.sprintf.php)
+* [sscanf() - "Analizza l'input da una stringa in base a un formato"](http://php.net/manual/en/function.sscanf.php)
+
+---
+
+## Elenco funzioni 3
+
+* [str_ireplace() - "Sostituisce alcuni caratteri in una stringa (case-insensitive)"](http://php.net/manual/en/function.str-ireplace.php)
+* [str_pad() - "Aggiunge una nuova lunghezza a una stringa"](http://php.net/manual/en/function.str-pad.php)
+* [str_repeat() - "Ripete una stringa un numero specificato di volte"](http://php.net/manual/en/function.str-repeat.php)
+* [str_replace() - "Sostituisce alcuni caratteri in una stringa (case-sensitive)"](http://php.net/manual/en/function.str-replace.php)
+* [str_rot13() - "Esegue la codifica ROT13 su una stringa"](http://php.net/manual/en/function.str-rot13.php)
+* [str_shuffle() - "Mescola casualmente tutti i caratteri in una stringa"](http://php.net/manual/en/function.str-shuffle.php)
+* [str_split() - "Divide una stringa in un array"](http://php.net/manual/en/function.str-split.php)
+* [str_word_count() - "Conta il numero di parole in una stringa"](http://php.net/manual/en/function.str-word-count.php)
+* [strcasecmp() - "Confronta due stringhe (senza distinzione tra maiuscole e minuscole)"](http://php.net/manual/en/function.strcasecmp.php)
+* [strchr() - "Trova la prima occorrenza di una stringa all'interno di un'altra stringa (alias di strstr())"](http://php.net/manual/en/function.strchr.php)
+* [strcmp() - "Confronta due stringhe (case-sensitive)"](http://php.net/manual/en/function.strcmp.php)
+* [strcoll() - "Confronto di stringhe basato sulla locale"](http://php.net/manual/en/function.strcoll.php)
+* [strcspn() - "Restituisce il numero di caratteri trovati in una stringa prima che venga trovata qualsiasi parte di alcuni caratteri specificati"](http://php.net/manual/en/function.strcspn.php)
+* [strip_tags() - "Rimuove i tag HTML e PHP da una stringa"](http://php.net/manual/en/function.strip-tags.php)
+* [stripcslashes() - "Rimuove le virgolette da una stringa tra virgolette con addcslashes()"](http://php.net/manual/en/function.addcslashes.php)
+* [stripslashes() - "Rimuove le virgolette da una stringa tra virgolette con addslashes()"](http://php.net/manual/en/function.addslashes.php)
+* [stripos() - "Restituisce la posizione della prima occorrenza di una stringa all'interno di un'altra stringa (case-insensitive)"](http://php.net/manual/en/function.stripos.php)
+* [stristr() - "Trova la prima occorrenza di una stringa all'interno di un'altra stringa (senza distinzione tra maiuscole e minuscole)"](http://php.net/manual/en/function.stristr.php)
+* [strlen() - "Restituisce la lunghezza di una stringa"](http://php.net/manual/en/function.strlen.php)
+
+---
+
+## Elenco funzioni 4
+
+* [strnatcasecmp() - "Confronta due stringhe usando un " natural="" order"="" algoritmi="" (case-insensitive)"=""](http://php.net/manual/en/function .strnatcasecmp.php)
+* [strnatcmp() - "Confronta due stringhe usando un " natural="" order"="" algoritmi="" (case-sensitive)"=""](http://php.net/manual/en/function .strnatcmp.php)
+* [strncasecmp() - "Confronto tra stringhe dei primi n caratteri (senza distinzione tra maiuscole e minuscole)"](http://php.net/manual/en/function.strncasecmp.php)
+* [strncmp() - "Confronto tra stringhe dei primi n caratteri (case-sensitive)"](http://php.net/manual/en/function.strncmp.php)
+* [strpbrk() - "Cerca una stringa per qualsiasi set di caratteri"](http://php.net/manual/en/function.strpbrk.php)
+* [strpos() - "Restituisce la posizione della prima occorrenza di una stringa all'interno di un'altra stringa (case-sensitive)"](http://php.net/manual/en/function.strpos.php)
+* [strrchr() - "Trova l'ultima occorrenza di una stringa all'interno di un'altra stringa"](http://php.net/manual/en/function.strrchr.php)
+* [strrev() - "Inverte una stringa"](http://php.net/manual/en/function.strrev.php)
+* [strripos() - "Trova la posizione dell'ultima occorrenza di una stringa all'interno di un'altra stringa (case-insensitive)"](http://php.net/manual/en/function.strripos.php)
+* [strrpos() - "Trova la posizione dell'ultima occorrenza di una stringa all'interno di un'altra stringa (case-sensitive)"](http://php.net/manual/en/function.strrpos.php)
+* [strspn() - "Restituisce il numero di caratteri trovati in una stringa che contiene solo caratteri da un charlist specificato"](http://php.net/manual/en/function.strspn.php)
+
+---
+
+## Elenco funzioni 5
+
+* [strstr() - "Trova la prima occorrenza di una stringa all'interno di un'altra stringa (case-sensitive)"](http://php.net/manual/en/function.strstr.php)
+* [strtok() - "Divide una stringa in stringhe più piccole"](http://php.net/manual/en/function.strtok.php)
+* [strtolower() - "Converte una stringa in lettere minuscole"](http://php.net/manual/en/function.strtolower.php)
+* [strtoupper() - "Converte una stringa in lettere maiuscole"](http://php.net/manual/en/function.strtoupper.php)
+* [strtr() - "Traduce determinati caratteri in una stringa"](http://php.net/manual/en/function.strtr.php)
+* [substr() - "Restituisce una parte di una stringa"](http://php.net/manual/en/function.substr.php)
+* [substr_compare() - "Confronta due stringhe da una posizione iniziale specificata (binary safe e facoltativamente case-sensitive)"](http://php.net/manual/en/function.substr-compare.php)
+* [substr_count() - "Conta il numero di volte in cui una sottostringa si verifica in una stringa"](http://php.net/manual/en/function.substr-count.php)
+* [substr_replace() - "Sostituisce una parte di una stringa con un'altra stringa"](http://php.net/manual/en/function.substr-replace.php)
+* [trim() - "Elimina gli spazi bianchi da entrambi i lati di una stringa"](http://php.net/manual/en/function.trim.php)
+* [ucfirst() - "Converte il primo carattere di una stringa in maiuscolo"](http://php.net/manual/en/function.ucfirst.php)
+* [ucwords() - "Converte il primo carattere di ogni parola in una stringa in maiuscolo"](http://php.net/manual/en/function.ucwords.php)
+* [vfprintf() - "Scrive una stringa formattata in un flusso di output specificato"](http://php.net/manual/en/function.vfprintf.php)
+* [vprintf() - "Emette una stringa formattata"](http://php.net/manual/en/function.vprintf.php)
+* [vsprintf() - "Scrive una stringa formattata in una variabile"](http://php.net/manual/en/function.vsprintf.php)
+* [wordwrap() - "Avvolge una stringa in un dato numero di caratteri"](http://php.net/manual/en/function.wordwrap.php)

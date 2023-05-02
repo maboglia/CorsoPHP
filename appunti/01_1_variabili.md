@@ -20,6 +20,22 @@ dove _valore_ è un'**espressione** valida per PHP (per espressione si intende u
 
 ---
 
+## Tipi di dato
+
+Data Type|Category|Description
+---|---|---
+int|Scalar|Integer
+float|Scalar|Floating-point number
+bool|Scalar|Boolean value
+string|Scalar|Series of characters
+array|Composite|Collection of values
+object|Composite|User-defined data type
+resource|Special|External resource
+callable|Special|Function or method
+null|Special|No value
+
+---
+
 ## fare riferimento ad una variabile
 
 Per fare riferimento ad una variabile e al suo valore sarà necessario semplicemente riferirsi al nome; si noti che PHP è case-sensitive, quindi $var e $Var sono due variabili differenti. 
@@ -103,20 +119,4 @@ Esistono alcune **costanti predefinite**, che sono valide cioè in tutti gli scr
     echo 'Una stringa molto lunga';        // usa 1MB di memoria
 ```
 
-
-
 *   [Consigli sulle prestazioni](https://developers.google.com/speed/articles/optimizing-php)
-
-## Tipi di dato
-
-Data Type|Category|Description
----|---|---
-int|Scalar|Integer
-float|Scalar|Floating-point number
-bool|Scalar|Boolean value
-string|Scalar|Series of characters
-array|Composite|Collection of values
-object|Composite|User-defined data type
-resource|Special|External resource
-callable|Special|Function or method
-null|Special|No value

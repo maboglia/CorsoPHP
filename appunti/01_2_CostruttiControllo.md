@@ -144,26 +144,26 @@ switch (<espressione>){
 Costrutti per la esecuzione ripetuta di istruzioni
 
 ### while
-```while (<espressione>) <statement>```
+`while (<espressione>) <statement>`
 
 ### do while
-```do <statement> while (<espressione>)```
+`do <statement> while (<espressione>)`
 
 ---
 
 ### for
-```for (<espressione1>;<espressione2>;<espressione3>) <statement>```
+`for (<espressione1>;<espressione2>;<espressione3>) <statement>`
 
 
 ### foreach
 
 * sintassi 1
 
-```foreach (<array_expression> as <variabile>) <statement>```
+`foreach (<array_expression> as <variabile>) <statement>`
 
 * sintassi 2
 
-```foreach (<array_expression> as <variabileK> => <variabileV>)<statement>```
+`foreach (<array_expression> as <variabileK> => <variabileV>)<statement>`
 
 ---
 
@@ -181,7 +181,7 @@ Salta cioè che segue all'interno del costrutto ciclico in cui è inserito, senz
 
 ### return
 
-```return <espressione>```
+`return <espressione>`
 
 Interrompe l'esecuzione del metodo corrente e restituisce all'ambiente chiamante il valore
 ottenuto valutando l'espressione.
