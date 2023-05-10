@@ -1,3 +1,8 @@
+# Php Quick Scripting Reference
+[Libro di Mikael Olsson](https://www.amazon.it/Quick-Scripting-Reference-Mikael-Olsson/dp/1430262834)
+
+
+---
 
 ## 1: Using PHP 
 
@@ -8,6 +13,8 @@
 * Compile and Parse 
 * Comments 
 
+---
+
 ## 2: Variables 
 
 * Defi ning Variables 
@@ -17,6 +24,8 @@
 * Bool Type 
 * Null Type 
 * Default Values 
+
+---
 
 ## 3: Operators 
 
@@ -30,6 +39,8 @@
 * Operator Precedence 
 * Additional Logical Operators 
 
+---
+
 ## 4: String 
 
 * String Concatenation 
@@ -40,12 +51,16 @@
 * Character Reference 
 * String Compare 
 
+---
+
 ## 5: Arrays 
 
 * Numeric Arrays 
 * Associative Arrays 
 * Mixed Arrays
 * Multi-Dimensional Arrays 
+
+---
 
 ## 6: Conditionals 
 
@@ -54,6 +69,8 @@
 * Alternative Syntax 
 * Mixed Modes 
 * Ternary Operator 
+
+---
 
 ## 7: Loops 
 
@@ -65,6 +82,8 @@
 * Break 
 * Continue 
 * Goto 
+
+---
 
 ## 8: Functions 
 
@@ -80,6 +99,8 @@
 * Generators 
 * Built-in Functions 
 
+---
+
 ## 9: Class 
 
 * Instantiating an Object 
@@ -92,11 +113,15 @@
 * Anonymous Classes 
 * Closure Object 
 
+---
+
 ## 10: Inheritance 
 
 * Overriding Members 
 * Final Keyword 
 * Instanceof Operator 
+
+---
 
 ## 11: Access Levels 
 
@@ -107,11 +132,15 @@
 * Object Access 
 * Access Level Guideline 
 
+---
+
 ## 12: Static 
 
 * Referencing Static Members 
 * Static Variables 
 * Late Static Bindings 
+
+---
 
 ## 13: Constants 
 
@@ -121,12 +150,16 @@
 * Constant Guideline 
 * Magic Constants 
 
+---
+
 ## 14: Interface 
 
 * Interface Signatures 
 * Interface Example 
 * Interface Usages 
 * Interface Guideline 
+
+---
 
 ## 15: Abstract 
 
@@ -135,10 +168,14 @@
 * Abstract Classes and Interfaces 
 * Abstract Guideline 
 
+---
+
 ## 16: Traits 
 
 Inheritance and Traits 
 Trait Guidelines 
+
+---
 
 ## 17: Importing Files 
 
@@ -149,17 +186,23 @@ Trait Guidelines
 * Return 
 * _Autoload 
 
+---
+
 ## 18: Type Declarations 
 
 * Argument Type Declarations 
 * Return Type Declarations 
 * Strict Typing 
 
+---
+
 ## 19: Type Conversions 
 
 * Explicit Casts 
 * Set type 
 * Get type 
+
+---
 
 ## 20: Variable Testing
 
@@ -171,11 +214,15 @@ Trait Guidelines
 * Determining Types 
 * Variable Information 
 
+---
+
 ## 21: Overloading 
 
 * Property Overloading 
 * Method Overloading 
 * Isset and unset Overloading 
+
+---
 
 ## 22: Magic Methods 
 
@@ -186,6 +233,8 @@ Trait Guidelines
 * _Wakeup 
 * Set State 
 * Object Cloning 
+
+---
 
 ## 23: User Input
 
@@ -198,17 +247,23 @@ Trait Guidelines
 * File Uploading 
 * Superglobals 
 
+---
+
 ## 24: Cookies 
 
 * Creating Cookies 
 * Cookie Array 
 * Deleting Cookies 
 
+---
+
 ## 25: Sessions 
 
 * Starting a Session 
 * Session Array 
 * Deleting a Session 
+
+---
 
 ## 26: Namespaces 
 
@@ -220,11 +275,15 @@ Trait Guidelines
 * Namespace Keyword 
 * Namespace Guideline
 
+---
+
 ## 27: References 
 
 * Assign by Reference 
 * Pass by Reference 
 * Return by Reference 
+
+---
 
 ## 28: Advanced Variables 
 
@@ -233,6 +292,8 @@ Trait Guidelines
 * Variable Function Names 
 * Variable Class Names 
 
+---
+
 ## 29: Error Handling 
 
 * Correcting Errors 
@@ -240,6 +301,8 @@ Trait Guidelines
 * Error-Handling Environment 
 * Custom Error Handlers 
 * Raising Errors 
+
+---
 
 ## 30: Exception Handling 
 
@@ -250,6 +313,8 @@ Trait Guidelines
 * Rethrowing Exceptions 
 * Uncaught Exception Handler 
 * Errors and Exceptions 
+
+---
 
 ## 31: Assertions 
 

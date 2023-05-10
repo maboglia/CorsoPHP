@@ -34,7 +34,7 @@
 		<br />
 		<?php
 		  $prices = array("Brand New Computer" => 2000,
-		                  "1 month of Lynda.com" => 25,
+		                  "1 month of example.com" => 25,
 		                  "Learning PHP" => null);
 
 		  foreach($prices as $item => $price) {

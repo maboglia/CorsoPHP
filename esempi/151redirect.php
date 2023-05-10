@@ -13,7 +13,7 @@
 	if ($logged_in == "1") {
 		redirect_to("basic.html");
 	} else {
-		redirect_to("http://www.lynda.com");
+		redirect_to("http://www.example.com");
 	}
 	
 ?>
