@@ -1,7 +1,6 @@
 # Php Quick Scripting Reference
 [Libro di Mikael Olsson](https://www.amazon.it/Quick-Scripting-Reference-Mikael-Olsson/dp/1430262834)
 
-
 ---
 
 ## 1: Using PHP 
@@ -172,8 +171,8 @@
 
 ## 16: Traits 
 
-Inheritance and Traits 
-Trait Guidelines 
+* Inheritance and Traits 
+* Trait Guidelines 
 
 ---
 
