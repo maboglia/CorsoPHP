@@ -16,7 +16,7 @@
 
 ## 2: Variables 
 
-* Defi ning Variables 
+* Defining Variables 
 * Data Types 
 * Integer Type 
 * Floating-Point Type 
