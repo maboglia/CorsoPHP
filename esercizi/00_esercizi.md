@@ -89,7 +89,7 @@ Considerare la stringa:
 Applicare le funzioni di manipolazioni di stringhe  e visualizzare 
 il risultato per ogni passo: 
 
-* Visualizzare la sottostringa dalla posizione 4 alle 10 
+* Visualizzare la sottostringa dalla posizione 4 alla 10 
 * Sostituire "gatto" con "cane" 
 * Sostituire "tetto" con "letto" 
 * Trasformarla in maiuscole 
