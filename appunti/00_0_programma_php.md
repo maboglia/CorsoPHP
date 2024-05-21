@@ -1,28 +1,48 @@
+---
+theme: gaia
+_class: lead
+paginate: true
+backgroundColor: #fff
+backgroundImage: url('https://marp.app/assets/hero-background.svg')
+---
+
 # Corso PHP
 
 ---
 
 ## 1: Using PHP
 
+---
+
 ### Embedding PHP
 
 PHP può essere incorporato all'interno del codice HTML utilizzando i tag di apertura e chiusura `<?php ... ?>`. Questo permette di aggiungere dinamismo alle pagine web statiche.
+
+---
 
 ### Outputting Text
 
 In PHP, è possibile visualizzare testo e contenuti HTML utilizzando le funzioni `echo` e `print`. Queste funzioni sono fondamentali per mostrare informazioni all'utente.
 
+---
+
 ### Installing a Web Server
 
 Per eseguire script PHP, è necessario installare un web server come Apache o Nginx, insieme a PHP e, opzionalmente, MySQL per gestire i database. Pacchetti come XAMPP o WAMP semplificano questa installazione.
+
+---
 
 ### Hello World
 
 Il classico programma "Hello World" in PHP è un semplice script che utilizza `echo` per stampare "Hello World!" sullo schermo, dimostrando la sintassi di base del linguaggio.
 
+---
+
 ### Compile and Parse
 
 PHP è un linguaggio interpretato, il che significa che il codice viene analizzato e eseguito direttamente dal server senza una fase di compilazione preliminare, rendendo rapido il processo di sviluppo.
+
+---
 
 ### Comments
 
@@ -33,29 +53,43 @@ I commenti in PHP sono utilizzati per annotare il codice. Possono essere su una 
 
 ## 2: Variables
 
+---
+
 ### Defining Variables
 
 In PHP, le variabili vengono definite assegnando loro un valore utilizzando il simbolo di assegnazione `=`. Ad esempio, `$nome = "Mario";` definisce una variabile `$nome` e le assegna il valore "Mario".
+
+---
 
 ### Data Types
 
 PHP supporta diversi tipi di dati, tra cui integer, floating-point, string, boolean, array, object, resource e null. Ogni variabile in PHP assume un tipo di dati in base al valore che contiene.
 
+---
+
 ### Integer Type
 
 Il tipo di dato integer rappresenta un numero intero senza parte decimale. Ad esempio, `$numero = 10;` assegna alla variabile `$numero` il valore intero 10.
+
+---
 
 ### Floating-Point Type
 
 Il tipo di dato floating-point rappresenta un numero con parte decimale. Ad esempio, `$prezzo = 10.99;` assegna alla variabile `$prezzo` il valore floating-point 10.99.
 
+---
+
 ### Bool Type
 
 Il tipo di dato bool rappresenta un valore booleano, che può essere `true` o `false`. Viene utilizzato per valutare condizioni in istruzioni di controllo come `if` e `while`.
 
+---
+
 ### Null Type
 
 Il tipo di dato null rappresenta una variabile senza valore. Viene utilizzato per indicare che una variabile non contiene alcun dato. Ad esempio, `$variabile = null;` assegna alla variabile `$variabile` il valore null.
+
+---
 
 ### Default Values
 
@@ -66,37 +100,55 @@ Le variabili in PHP possono essere inizializzate con valori predefiniti. Se non 
 
 ## 3: Operators
 
+---
+
 ### Arithmetic Operators
 
 Gli operatori aritmetici in PHP sono utilizzati per eseguire operazioni matematiche come l'addizione (`+`), la sottrazione (`-`), la moltiplicazione (`*`), la divisione (`/`) e il resto della divisione (`%`).
+
+---
 
 ### Assignment Operators
 
 Gli operatori di assegnazione in PHP vengono utilizzati per assegnare valori alle variabili. L'operatore di assegnazione base è `=`.
 
+---
+
 ### Combined Assignment Operators
 
 Gli operatori di assegnazione combinati in PHP, come `+=`, `-=`, `*=`, `/=`, `%=`, consentono di combinare un'operazione aritmetica con l'assegnazione di un valore a una variabile.
+
+---
 
 ### Increment and Decrement Operators
 
 Gli operatori di incremento (`++`) e decremento (`--`) in PHP vengono utilizzati per aumentare o diminuire il valore di una variabile di uno.
 
+---
+
 ### Comparison Operators
 
 Gli operatori di confronto in PHP vengono utilizzati per confrontare due valori. Ad esempio, `==` confronta se due valori sono uguali, `!=` confronta se due valori sono diversi, `>` confronta se il primo valore è maggiore del secondo, e così via.
+
+---
 
 ### Logical Operators
 
 Gli operatori logici in PHP, come `&&` (AND), `||` (OR) e `!` (NOT), vengono utilizzati per combinare o invertire condizioni logiche.
 
+---
+
 ### Bitwise Operators
 
 Gli operatori bitwise in PHP, come `&` (AND), `|` (OR), `^` (XOR), `~` (NOT), `<<` (Shift left) e `>>` (Shift right), vengono utilizzati per eseguire operazioni bitwise sui numeri binari.
 
+---
+
 ### Operator Precedence
 
 L'ordine di valutazione degli operatori in PHP è determinato dalla precedenza degli operatori. Ad esempio, gli operatori aritmetici hanno una precedenza più alta rispetto agli operatori di confronto.
+
+---
 
 ### Additional Logical Operators
 
@@ -106,29 +158,43 @@ In PHP, ci sono operatori logici aggiuntivi come `xor` (OR esclusivo) e `&&` (AN
 
 ## 4: String
 
+---
+
 ### String Concatenation
 
 La concatenazione delle stringhe in PHP avviene utilizzando il punto (`.`) come operatore. È possibile concatenare più stringhe insieme per formare una stringa più lunga.
+
+---
 
 ### Delimiting Strings
 
 Le stringhe in PHP possono essere delimitate da virgolette singole (`'`) o doppie (`"`). La scelta del delimitatore dipende dalle esigenze del programmatore e dalla necessità di interpretare caratteri di escape all'interno della stringa.
 
+---
+
 ### Heredoc Strings
 
 Le stringhe heredoc in PHP consentono di creare stringhe multilinea senza dover utilizzare citazioni. Le stringhe heredoc sono delimitate da `<<<` seguito da un identificatore, seguito dal testo della stringa, e terminate da un identificatore su una riga separata.
+
+---
 
 ### Nowdoc Strings
 
 Le stringhe nowdoc in PHP sono simili alle stringhe heredoc, ma non interpretano le variabili all'interno della stringa. Le stringhe nowdoc sono delimitate da `<<<'IDENTIFIER'` seguito dal testo della stringa e terminate da `IDENTIFIER` su una riga separata.
 
+---
+
 ### Escape Characters
 
 I caratteri di escape in PHP, preceduti dal simbolo di backslash (`\`), vengono utilizzati per rappresentare caratteri speciali all'interno di una stringa. Ad esempio, `\"` rappresenta un doppio apice e `\\` rappresenta un backslash.
 
+---
+
 ### Character Reference
 
 I riferimenti ai caratteri in PHP vengono utilizzati per rappresentare caratteri speciali o non stampabili utilizzando la loro rappresentazione numerica o esadecimale. Ad esempio, `\x41` rappresenta il carattere "A" e `\u{1F602}` rappresenta una faccina sorridente Unicode.
+
+---
 
 ### String Compare
 
@@ -138,17 +204,25 @@ La funzione `strcmp()` in PHP viene utilizzata per confrontare due stringhe e re
 
 ## 5: Arrays
 
+---
+
 ### Numeric Arrays
 
 Gli array numerici in PHP sono una collezione ordinata di elementi indicizzati da numeri interi. Gli elementi di un array numerico possono essere acceduti utilizzando il loro indice numerico.
+
+---
 
 ### Associative Arrays
 
 Gli array associativi in PHP sono una collezione di coppie chiave-valore, in cui ogni elemento è associato a una chiave unica anziché a un indice numerico. Gli elementi di un array associativo possono essere acceduti utilizzando la loro chiave anziché un indice numerico.
 
+---
+
 ### Mixed Arrays
 
 Gli array misti in PHP sono array che contengono una combinazione di elementi numerici e associativi. Possono includere sia elementi indicizzati numericamente che elementi associati a una chiave.
+
+---
 
 ### Multi-Dimensional Arrays
 
@@ -158,17 +232,27 @@ Gli array multidimensionali in PHP sono array che contengono altri array come lo
 
 ## 6: Conditionals
 
+---
+
 ### If Statement
 L'istruzione condizionale "if" in PHP viene utilizzata per eseguire un blocco di codice se una determinata condizione è vera. Può anche essere seguita da istruzioni "elseif" e "else" per gestire più casi.
+
+---
 
 ### Switch Statement
 Lo statement "switch" in PHP viene utilizzato per eseguire un blocco di codice diverso in base al valore di una variabile o di un'espressione. È simile all'istruzione "if", ma offre una sintassi più concisa per confronti multipli.
 
+---
+
 ### Alternative Syntax
 PHP offre una sintassi alternativa per le istruzioni di controllo come "if", "else", "elseif", "while", "for", "foreach" e "switch". Questa sintassi utilizza parentesi graffe e due punti per definire i blocchi di codice anziché le parentesi tonde e le parentesi graffe.
 
+---
+
 ### Mixed Modes
 È possibile combinare diversi modi di condizionali all'interno di una singola istruzione di controllo. Ad esempio, è possibile utilizzare l'istruzione "if" all'interno di un blocco "switch" o viceversa.
+
+---
 
 ### Ternary Operator
 L'operatore ternario in PHP è una forma concisa di un'istruzione "if-else" ed è utilizzato per eseguire un'operazione condizionale in una singola espressione. Ha la seguente sintassi: `condizione ? espressione_vera : espressione_falsa`. Se la condizione è vera, restituisce l'espressione vera, altrimenti restituisce l'espressione falsa.
@@ -177,33 +261,49 @@ L'operatore ternario in PHP è una forma concisa di un'istruzione "if-else" ed �
 
 ## 7: Loops
 
+---
+
 ### While Loop
 
 Il ciclo "while" in PHP viene utilizzato per eseguire un blocco di codice finché una determinata condizione è vera. Viene controllata la condizione all'inizio di ogni iterazione.
+
+---
 
 ### Do-while Loop
 
 Il ciclo "do-while" in PHP è simile al ciclo "while", ma viene eseguito almeno una volta prima di controllare la condizione.
 
+---
+
 ### For Loop
 
 Il ciclo "for" in PHP viene utilizzato per eseguire un blocco di codice per un numero specificato di volte. Viene utilizzato comunemente quando si conosce il numero esatto di iterazioni.
+
+---
 
 ### Foreach Loop
 
 Il ciclo "foreach" in PHP viene utilizzato per iterare su array o oggetti. È particolarmente utile quando si vuole eseguire un'azione per ogni elemento in un array senza dover gestire manualmente gli indici.
 
+---
+
 ### Alternative Syntax
 
 Come per le istruzioni condizionali, PHP offre una sintassi alternativa per i cicli come "while", "for", "foreach" e "do-while". Questa sintassi utilizza due punti e parentesi graffe anziché le parentesi tonde e le parentesi graffe.
+
+---
 
 ### Break
 
 L'istruzione "break" in PHP viene utilizzata per interrompere l'esecuzione di un ciclo, anche se la condizione di uscita non è stata soddisfatta.
 
+---
+
 ### Continue
 
 L'istruzione "continue" in PHP viene utilizzata per saltare l'iterazione corrente di un ciclo e continuare con la successiva iterazione.
+
+---
 
 ### Goto
 
@@ -213,45 +313,67 @@ L'istruzione "goto" in PHP consente di saltare a una determinata etichetta all'i
 
 ## 8: Functions
 
+---
+
 ### Defining Functions
 
 Le funzioni in PHP vengono definite utilizzando la parola chiave "function", seguita dal nome della funzione e dalla lista dei parametri tra parentesi tonde. Il corpo della funzione è racchiuso tra parentesi graffe.
+
+---
 
 ### Calling Functions
 
 Per chiamare una funzione in PHP, è sufficiente utilizzare il suo nome seguito da parentesi tonde. Se la funzione accetta argomenti, questi devono essere passati tra parentesi tonde durante la chiamata.
 
+---
+
 ### Function Parameters
 
 I parametri di una funzione in PHP sono specificati nella dichiarazione della funzione e possono essere utilizzati all'interno del corpo della funzione. I parametri possono essere passati per valore o per riferimento.
+
+---
 
 ### Default Parameters
 
 È possibile definire valori predefiniti per i parametri di una funzione in PHP. Se un argomento non viene passato durante la chiamata della funzione, verrà utilizzato il valore predefinito.
 
+---
+
 ### Variable Parameter Lists
 
 In PHP, è possibile definire funzioni che accettano un numero variabile di argomenti. Questi argomenti sono trattati come un array all'interno della funzione.
+
+---
 
 ### Return Statement
 
 La parola chiave "return" in PHP viene utilizzata per restituire un valore dalla funzione. Quando viene eseguita un'istruzione "return", il controllo viene restituito al punto di chiamata della funzione e il valore viene restituito.
 
+---
+
 ### Scope and Lifetime
 
 Le variabili definite all'interno di una funzione hanno uno scope locale e esistono solo all'interno della funzione stessa. La loro vita è limitata al tempo di esecuzione della funzione.
+
+---
 
 ### Anonymous Functions
 
 Le funzioni anonime, anche conosciute come "closure", sono funzioni senza un nome definito. Possono essere assegnate a variabili o passate come argomenti ad altre funzioni.
 
+---
+
 ### Closures
 
 Le chiusure in PHP consentono di catturare variabili dall'ambiente circostante in cui sono state create. Possono essere utili per creare funzioni callback o per incapsulare comportamenti specifici all'interno di una funzione.
 
+---
+
 ### Generators
 
 I generatori in PHP consentono di scrivere funzioni che possono restituire un numero di valori a richiesta, anziché generare e restituire tutti i valori in una volta sola. Questo può essere utile per gestire grandi insiemi di dati in modo efficiente.
+
+---
 
 ### Built-in Functions
 
@@ -261,37 +383,55 @@ PHP fornisce numerose funzioni integrate che consentono di eseguire una vasta ga
 
 ## 9: Class
 
+---
+
 ### Instantiating an Object
 
 Per istanziare un oggetto in PHP, si utilizza la parola chiave "new" seguita dal nome della classe e dalle parentesi tonde.
+
+---
 
 ### Accessing Object Members
 
 I membri di un oggetto in PHP, come le proprietà e i metodi, possono essere accessibili utilizzando l'operatore di accesso "->".
 
+---
+
 ### Initial Property Values
 
 Le proprietà di una classe possono essere inizializzate con valori predefiniti all'interno della dichiarazione della classe.
+
+---
 
 ### Constructor
 
 Il costruttore di una classe in PHP è un metodo speciale chiamato "__construct()". Viene chiamato automaticamente ogni volta che un nuovo oggetto della classe viene istanziato.
 
+---
+
 ### Destructor
 
 Il distruttore di una classe in PHP è un metodo speciale chiamato "__destruct()". Viene chiamato automaticamente quando l'ultimo riferimento a un oggetto viene eliminato o quando lo script termina.
+
+---
 
 ### Case Sensitivity
 
 In PHP, i nomi delle classi sono sensibili alla maiuscola e minuscola, il che significa che "MiaClasse" e "miaclasse" sono considerati nomi di classe diversi.
 
+---
+
 ### Object Comparison
 
 Gli oggetti in PHP possono essere confrontati utilizzando gli operatori di confronto "==" e "===". L'operatore "==" verifica se due oggetti hanno lo stesso tipo e valore, mentre l'operatore "===" verifica anche se gli oggetti si riferiscono allo stesso oggetto nella memoria.
 
+---
+
 ### Anonymous Classes
 
 Le classi anonime in PHP sono classi senza un nome definito. Possono essere utili quando si desidera creare una classe per un'uso singolo senza doverla dichiarare esplicitamente.
+
+---
 
 ### Closure Object
 
@@ -301,11 +441,17 @@ In PHP, le chiusure possono essere utilizzate anche come oggetti. Possono essere
 
 ## 10: Inheritance
 
+---
+
 ### Overriding Members
 In PHP, è possibile sovrascrivere i membri di una classe genitore (metodi e proprietà) nelle classi figlio. Questo consente alle classi figlio di modificare il comportamento ereditato dalla classe genitore.
 
+---
+
 ### Final Keyword
 La parola chiave "final" può essere utilizzata per impedire l'ereditarietà di una classe o il sovrascrivere di metodi e proprietà. Se una classe è dichiarata come "final", non può essere estesa da altre classi.
+
+---
 
 ### Instanceof Operator
 L'operatore "instanceof" viene utilizzato per verificare se un oggetto è un'istanza di una determinata classe o di una classe che eredita da quella specificata. Restituisce true se l'oggetto è un'istanza della classe specificata, altrimenti restituisce false.
@@ -314,25 +460,37 @@ L'operatore "instanceof" viene utilizzato per verificare se un oggetto è un'ist
 
 ## 11: Access Levels
 
+---
+
 ### Private Access
 
 Quando un membro di una classe è dichiarato come "private", può essere accessibile solo all'interno della stessa classe. Questo significa che non può essere accessibile dalle classi figlio o da istanze dell'oggetto.
+
+---
 
 ### Protected Access
 
 Un membro di una classe dichiarato come "protected" è accessibile all'interno della stessa classe e dalle classi figlio. Tuttavia, non è accessibile da istanze dell'oggetto al di fuori della classe.
 
+---
+
 ### Public Access
 
 Un membro di una classe dichiarato come "public" è accessibile ovunque. Può essere accessibile all'interno della stessa classe, dalle classi figlio e dalle istanze dell'oggetto.
+
+---
 
 ### Var Keyword
 
 In PHP, la parola chiave "var" può essere utilizzata per dichiarare una proprietà di una classe. Tuttavia, è considerata obsoleta e non è più raccomandata. È meglio utilizzare "public", "protected" o "private" per dichiarare la visibilità delle proprietà.
 
+---
+
 ### Object Access
 
 La visibilità di una proprietà o di un metodo di una classe determina se può essere accessibile da istanze dell'oggetto. Ad esempio, se una proprietà è dichiarata come "private", non può essere accessibile direttamente da un'istanza dell'oggetto.
+
+---
 
 ### Access Level Guideline
 
@@ -342,13 +500,19 @@ Nel determinare quale livello di accesso utilizzare per i membri di una classe, 
 
 ## 12: Static
 
+---
+
 ### Referencing Static Members
 
 I membri statici di una classe possono essere referenziati utilizzando il nome della classe seguito dal doppio doppio punti (::) e quindi il nome del membro statico. Ad esempio, MyClass::staticMember.
 
+---
+
 ### Static Variables
 
 Una variabile statica all'interno di una classe mantiene il suo valore anche dopo che la funzione o il metodo che la ha creato è uscito dallo scope. Questo significa che la variabile conserva il suo valore tra le chiamate successive della funzione o del metodo.
+
+---
 
 ### Late Static Bindings
 
@@ -358,21 +522,31 @@ Late static binding si riferisce alla possibilità di utilizzare la parola chiav
 
 ## 13: Constants
 
+---
+
 ### Const
 
 In PHP, la parola chiave "const" viene utilizzata per definire costanti di classe. Le costanti di classe sono simili alle costanti globali, ma sono definite all'interno di una classe e non possono essere ridefinite o cancellate una volta definite.
+
+---
 
 ### Define
 
 La funzione "define" viene utilizzata per definire costanti globali in PHP. Queste costanti possono essere utilizzate ovunque nel codice e sono accessibili da qualsiasi punto dello script.
 
+---
+
 ### Const and define
 
 La principale differenza tra "const" e "define" è che "const" può essere utilizzata solo per definire costanti di classe, mentre "define" può essere utilizzata per definire costanti globali.
 
+---
+
 ### Constant Guideline
 
 Nella definizione delle costanti, è consigliabile seguire alcune linee guida. Ad esempio, è consigliabile utilizzare nomi in maiuscolo per le costanti per distinguerle facilmente dalle variabili e utilizzare sottolineature (_) per separare le parole nei nomi delle costanti.
+
+---
 
 ### Magic Constants
 
@@ -382,8 +556,12 @@ Le magic constants in PHP sono costanti predefinite che restituiscono informazio
 
 ## 14: Interface
 
+---
+
 ### Interface Signatures
 Un'interfaccia in PHP definisce una serie di metodi pubblici che una classe che implementa quell'interfaccia deve fornire. Non contiene implementazioni effettive di questi metodi, ma solo le loro firme (nome del metodo, parametri e tipo di ritorno).
+
+---
 
 ### Interface Example
 Ecco un esempio di definizione di un'interfaccia in PHP:
@@ -394,8 +572,12 @@ interface Animal {
 }
 ```
 
+---
+
 ### Interface Usages
 Le interfacce vengono utilizzate per definire un contratto che le classi devono seguire. Le classi che implementano un'interfaccia devono fornire implementazioni per tutti i metodi definiti nell'interfaccia. Questo consente il polimorfismo, in cui oggetti di diverse classi che implementano la stessa interfaccia possono essere trattati allo stesso modo.
+
+---
 
 ### Interface Guideline
 Nella definizione delle interfacce, è consigliabile utilizzare nomi descrittivi per le interfacce che riflettano il loro scopo e le loro funzionalità. Inoltre, le firme dei metodi nell'interfaccia dovrebbero essere progettate in modo da essere generiche e riutilizzabili da diverse classi.
@@ -404,8 +586,12 @@ Nella definizione delle interfacce, è consigliabile utilizzare nomi descrittivi
 
 ## 15: Abstract
 
+---
+
 ### Abstract Methods
 Un metodo astratto è un metodo definito in una classe senza una sua implementazione. Le classi che contengono almeno un metodo astratto devono essere dichiarate astratte.
+
+---
 
 ### Abstract Example
 Ecco un esempio di una classe astratta e un metodo astratto in PHP:
@@ -416,8 +602,12 @@ abstract class Shape {
 }
 ```
 
+---
+
 ### Abstract Classes and Interfaces
 Le classi astratte in PHP sono simili alle interfacce, ma possono anche includere implementazioni concrete di metodi, oltre a metodi astratti. Le interfacce non possono avere implementazioni concrete di metodi.
+
+---
 
 ### Abstract Guideline
 Le classi astratte sono utili quando si desidera definire una classe di base che fornisce alcune implementazioni di base ma lascia alcune funzionalità da implementare alle sottoclassi. Si consiglia di utilizzare le classi astratte quando si desidera fornire un'implementazione predefinita per alcuni metodi ma si vuole che le sottoclassi forniscono implementazioni specifiche per alcuni altri metodi.
@@ -426,9 +616,13 @@ Le classi astratte sono utili quando si desidera definire una classe di base che
 
 ## 16: Traits
 
+---
+
 ### Inheritance and Traits
 
 I traits in PHP permettono la riutilizzazione del codice in modo più flessibile rispetto all'ereditarietà tradizionale. Una classe può utilizzare più traits, permettendo così di ereditare comportamenti da più fonti diverse.
+
+---
 
 ### Trait Guidelines
 
@@ -444,6 +638,8 @@ Quando si utilizzano i traits, è importante seguire alcune linee guida per mant
 
 5. __Testare l'interazione__: Testare attentamente l'interazione dei traits con le classi che li utilizzano per garantire che i comportamenti siano corretti e non causino problemi.
 
+
+---
 
 ### Ecco un esempio di trait in PHP:
 
