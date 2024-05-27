@@ -1,50 +1,42 @@
-# Dependency Management: Gestione delle dipendenze
+# Gestione delle Dipendenze
 
-Ci sono un sacco di librerie, framework e componenti PHP tra cui scegliere. 
+Ci sono molte librerie, framework e componenti PHP tra cui scegliere. Il tuo progetto probabilmente utilizzerà molte di esse - sono dipendenze del progetto.
 
-Il tuo progetto probabilmente utilizzerà molte di esse - sono dipendenze del progetto. 
+Fino a poco tempo fa, PHP non aveva un buon modo per gestire queste dipendenze del progetto. Anche se le gestivi manualmente, dovevi comunque preoccuparti dei caricatori automatici.
 
-Fino a poco tempo, PHP non aveva un buon modo per gestire queste dipendenze del progetto. 
+Attualmente, ci sono due principali sistemi di gestione dei pacchetti per PHP: [Composer] e [PEAR].
 
-Anche se li gestivi manualmente, dovevi comunque preoccuparti dei caricatori automatici. 
-
-Attualmente ci sono due principali sistemi di gestione dei pacchetti per PHP: [Composer] e [PEAR]. 
-
-Il **composer** è attualmente il gestore di pacchetti più popolare per PHP, tuttavia per molto tempo **PEAR** è stato il gestore di pacchetti principale in uso.
+**Composer** è attualmente il gestore di pacchetti più popolare per PHP. Tuttavia, per molto tempo, **PEAR** è stato il gestore di pacchetti principale in uso.
 
 Conoscere la storia di PEAR è una buona idea, poiché potresti ancora trovare riferimenti ad essa anche se non la usi mai.
 
 ---
 
-## Composer and Packagist
+## Composer e Packagist
 
-Composer è un **brillante** gestore delle dipendenze per PHP. Elenca le dipendenze del tuo progetto in un file `composer.json` e,
-con pochi semplici comandi, Composer scaricherà automaticamente le dipendenze del tuo progetto e configurerà il caricamento automatico per
-voi. Composer è analogo a **NPM** nel mondo **node.js** o Bundler nel mondo Ruby.
+Composer è un **brillante** gestore delle dipendenze per PHP. Elenca le dipendenze del tuo progetto in un file `composer.json` e, con pochi semplici comandi, Composer scaricherà automaticamente le dipendenze del tuo progetto e configurerà il caricamento automatico per te. Composer è analogo a **NPM** nel mondo **node.js** o Bundler nel mondo Ruby.
 
-Esistono già molte librerie PHP compatibili con Composer, pronte per essere utilizzate nel tuo progetto. Questi i "pacchetti" sono elencati su [Packagist](http://packagist.org/), il repository ufficiale per le librerie PHP compatibili con Composer. 
+Esistono già molte librerie PHP compatibili con Composer, pronte per essere utilizzate nel tuo progetto. Questi "pacchetti" sono elencati su [Packagist](http://packagist.org/), il repository ufficiale per le librerie PHP compatibili con Composer.
 
 ---
 
 ### Come installare Composer
 
-Il modo più sicuro per scaricare Composer è [seguendo le istruzioni ufficiali] (https://getcomposer.org/download/).
+Il modo più sicuro per scaricare Composer è [seguendo le istruzioni ufficiali](https://getcomposer.org/download/).
 
 Ciò verificherà che il programma di installazione non sia danneggiato o manomesso.
 
 Il programma di installazione installa Composer *localmente*, nella directory di lavoro corrente.
 
-Ti consigliamo di installarlo *globalmente* (ad esempio una singola copia in / usr / local / bin) - per farlo, eseguilo in seguito:
+Ti consigliamo di installarlo *globalmente* (ad esempio una singola copia in `/usr/local/bin`) - per farlo, esegui il comando seguente:
 
+```console
+mv composer.phar /usr/local/bin/composer
+```
 
-`{lang="console"}`
-`mv composer.phar /usr/local/bin/composer`
+**Nota:** Se il comando sopra fallisce a causa dei permessi, aggiungi il prefisso `sudo`.
 
-
-**Note:** Se quanto sopra fallisce a causa dei permessi, aggiungere il prefisso `sudo`.
-
-Per eseguire un compositore installato localmente dovresti usare `php composer.phar`, globalmente è semplicemente` composer`.
-
+Per eseguire un Composer installato localmente dovresti usare `php composer.phar`, mentre per quello installato globalmente è sufficiente usare `composer`
 ---
 
 #### Installare su Windows

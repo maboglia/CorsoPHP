@@ -4,7 +4,10 @@ _class: lead
 paginate: true
 backgroundColor: #fff
 backgroundImage: url('https://marp.app/assets/hero-background.svg')
+marp: true
 ---
+![logo](./its.png)
+
 
 # Corso PHP
 
@@ -624,60 +627,14 @@ I traits in PHP permettono la riutilizzazione del codice in modo più flessibile
 
 ---
 
-### Trait Guidelines
-
-Quando si utilizzano i traits, è importante seguire alcune linee guida per mantenerne la chiarezza e l'efficacia:
-
-1. __Coerenza e coesione__: I traits dovrebbero contenere metodi e comportamenti correlati tra loro, mantenendo così la coerenza all'interno del trait.
-
-2. __Evitare conflitti di nomi__: Prestare attenzione ai nomi dei metodi e delle proprietà per evitare conflitti con altri traits o classi.
-
-3. __Usare con parsimonia__: Utilizzare i traits con parsimonia e solo quando è appropriato. Non è necessario utilizzare i traits per ogni piccolo comportamento condiviso.
-
-4. __Documentazione__: Documentare chiaramente l'uso dei traits e i comportamenti che forniscono per facilitarne la comprensione e l'utilizzo da parte di altri sviluppatori.
-
-5. __Testare l'interazione__: Testare attentamente l'interazione dei traits con le classi che li utilizzano per garantire che i comportamenti siano corretti e non causino problemi.
-
-
----
-
-### Ecco un esempio di trait in PHP:
-
-```php
-// Definizione del trait
-trait Loggable {
-    // Metodo per registrare un messaggio di log
-    public function log($message) {
-        echo "[" . date('Y-m-d H:i:s') . "] $message\n";
-    }
-}
-
-// Classe che utilizza il trait
-class MyClass {
-    // Includi il trait Loggable
-    use Loggable;
-
-    // Metodo della classe che utilizza il metodo log del trait
-    public function doSomething() {
-        // Utilizza il metodo log del trait per registrare un messaggio di log
-        $this->log("Doing something...");
-    }
-}
-
-// Creazione di un'istanza della classe e invocazione del metodo che utilizza il trait
-$obj = new MyClass();
-$obj->doSomething();
-```
-
-In questo esempio, abbiamo definito un trait chiamato `Loggable`, che fornisce un metodo `log()` per registrare messaggi di log con la data e l'ora corrente. Successivamente, abbiamo una classe `MyClass` che utilizza il trait `Loggable` attraverso l'istruzione `use`. Infine, nella classe `MyClass` c'è un metodo `doSomething()` che utilizza il metodo `log()` del trait per registrare un messaggio di log quando viene chiamato.
-
----
-
 ## 17: Importing Files 
 
 1. __Include Path__: Specifica la directory in cui PHP cerca i file inclusi tramite le funzioni di inclusione come `include` e `require`.
 2. __Require__: La parola chiave `require` viene utilizzata per includere e valutare un file. Se il file non può essere trovato o inclusi, PHP genera un errore fatale.
 3. __Include_once__: Funzione simile a `include`, ma se il file è già stato incluso precedentemente durante l'esecuzione dello script, non verrà incluso di nuovo.
+
+---
+
 4. __Require_once__: Simile a `require`, ma se il file è già stato incluso precedentemente durante l'esecuzione dello script, non verrà incluso di nuovo.
 5. __Return__: Utilizzato per restituire un valore da un file incluso quando è incluso in una funzione. Viene anche utilizzato per interrompere l'esecuzione del file incluso.
 6. ___Autoload__: Una funzione di callback che viene chiamata automaticamente quando si tenta di utilizzare una classe o un'interfaccia che non è ancora stata definita. È utile per il caricamento automatico delle classi in PHP senza dover includere manualmente i file delle classi.
@@ -714,6 +671,8 @@ Ecco una breve spiegazione dei concetti relativi al testing delle variabili:
 
 3. __Is_null__: La funzione `is_null()` viene utilizzata per verificare se una variabile è nulla.
 
+---
+
 4. __Unset__: La funzione `unset()` viene utilizzata per eliminare una variabile o gli elementi di un array.
 
 5. __Null Coalescing Operator__: L'operatore di fusione nulla (`??`) fornisce un modo conciso per restituire il primo operando se esiste e non è nullo; altrimenti restituisce il secondo operando.
@@ -740,6 +699,8 @@ Ecco una breve spiegazione dei concetti relativi al testing delle variabili:
 
 2. **`__invoke`**: Questo metodo magico viene chiamato quando si cerca di utilizzare un oggetto come una funzione. Consente agli oggetti di essere invocabili.
 
+---
+
 3. **Serializzazione dell'oggetto**: I metodi magici `__sleep` e `__wakeup` vengono chiamati quando un oggetto deve essere serializzato o deserializzato. Consentono di personalizzare il processo di serializzazione e deserializzazione di un oggetto.
 
 4. **`__set_state`**: Questo metodo magico viene utilizzato per creare un nuovo oggetto da una rappresentazione array generata da `var_export()`. 
@@ -756,11 +717,15 @@ Ecco una breve spiegazione dei concetti relativi al testing delle variabili:
 
 3. **Invio con GET**: I dati inviati tramite un modulo HTML con il metodo GET vengono inviati al server come parte dell'URL. Sono visibili all'interno dell'URL.
 
+---
+
 4. **Array di richiesta**: In PHP, i dati inviati da un modulo HTML sono accessibili tramite l'array `$_POST` o `$_GET`, a seconda del metodo di invio.
 
 5. **Questioni di sicurezza**: Quando si gestisce l'input dell'utente, è importante proteggersi da attacchi come l'iniezione SQL e l'iniezione di script. È necessario validare e sanificare i dati prima di utilizzarli.
 
 6. **Invio di array**: È possibile inviare array tramite HTML forms, ad esempio utilizzando nomi di input con la notazione di array (`name="myArray[]"`).
+
+---
 
 7. **Caricamento di file**: I moduli HTML consentono agli utenti di caricare file sul server. In PHP, i file caricati sono accessibili tramite l'array `$_FILES`.
 
@@ -796,6 +761,8 @@ Ecco una breve spiegazione dei concetti relativi al testing delle variabili:
 
 3. __Sintassi alternativa__: È possibile utilizzare la sintassi alternativa per definire namespace utilizzando le parentesi graffe: `namespace A { }`.
 
+---
+
 4. __Riferimento ai namespace__: Per riferirsi a classi o funzioni all'interno di un namespace, è necessario utilizzare il nome completo della classe o della funzione, ad esempio `A\B\C`.
 
 5. __Alias dei namespace__: È possibile creare alias per i namespace per abbreviare i loro nomi quando si fa riferimento a elementi all'interno del namespace. Ad esempio, `use A\B\C as ABC;` consente di riferirsi al namespace `A\B\C` utilizzando l'alias `ABC`.
@@ -806,7 +773,7 @@ Ecco una breve spiegazione dei concetti relativi al testing delle variabili:
 
 ---
 
-27. __Riferimenti__:
+## 27. Riferimenti:
 
 - __Assegnazione per riferimento__: Consente di assegnare un riferimento a una variabile anziché copiare il valore. Ad esempio, `$a = &$b;`.
 - __Passaggio per riferimento__: Consente di passare una variabile per riferimento a una funzione anziché copiarla. Si utilizza il simbolo `&` prima del nome del parametro nella definizione della funzione e nell'invocazione della funzione.
@@ -814,7 +781,7 @@ Ecco una breve spiegazione dei concetti relativi al testing delle variabili:
 
 ---
 
-28. __Variabili avanzate__:
+## 28. Variabili avanzate:
 
 - __Sintassi tra parentesi graffe__: Consente di accedere al valore di una variabile all'interno di stringhe, ad esempio `"{$var}"`.
 - __Nomi di variabili variabili__: Consente di utilizzare il valore di una variabile come nome di un'altra variabile, ad esempio `$var = 'name'; $$var = 'value';`.
@@ -823,7 +790,7 @@ Ecco una breve spiegazione dei concetti relativi al testing delle variabili:
 
 ---
 
-29. __Gestione degli errori__:
+## 29. Gestione degli errori:
 
 - __Correzione degli errori__: Risolvere gli errori rilevati durante l'esecuzione del programma.
 - __Livelli di errore__: Gli errori in PHP possono essere classificati in diversi livelli, come Notice, Warning, Error, etc.
@@ -839,6 +806,9 @@ Ecco una breve spiegazione dei concetti relativi al testing delle variabili:
 * **Sollevare eccezioni**: Utilizzando la parola chiave `throw`, è possibile generare manualmente un'eccezione.
 * **Blocco Catch**: Viene utilizzato per gestire le eccezioni sollevate nel blocco `try`. È possibile specificare diversi blocchi `catch` per gestire diversi tipi di eccezioni.
 * **Blocco Finally**: Viene eseguito indipendentemente dal fatto che un'eccezione sia stata sollevata o meno. È utile per la pulizia delle risorse.
+
+---
+
 * **Risollevare eccezioni**: Consente di rilanciare un'eccezione catturata a un livello superiore per ulteriori elaborazioni.
 * **Gestore di eccezioni non catturate**: PHP consente di definire un gestore globale per le eccezioni non catturate utilizzando `set_exception_handler()`.
 * **Errori ed eccezioni**: PHP tratta errori e eccezioni in modo diverso. Gli errori sono problemi di esecuzione, mentre le eccezioni sono oggetti che possono essere catturati e gestiti.
