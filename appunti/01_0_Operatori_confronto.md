@@ -44,8 +44,6 @@ restituisce TRUE
 
 ---
 
-
-
 ### **Stringhe**
 
 Meritano particolare attenzione le stringhe, soprattutto nell'analisi dei caratteri di commutazioni.\
