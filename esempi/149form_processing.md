@@ -1,6 +1,14 @@
-Introduzione:
-Questo codice PHP elabora i dati inviati da un modulo HTML tramite il metodo POST. Visualizza i dati ricevuti dal modulo e quindi li elabora, assegnandoli a variabili. Utilizza anche l'operatore ternario per impostare valori predefiniti se le variabili non sono impostate nel modulo.
-Commenti al codice:
+# elabora i dati inviati da un modulo HTML tramite il metodo POST. 
+
+Visualizza i dati ricevuti dal modulo e quindi li elabora, assegnandoli a variabili. Utilizza anche l'operatore ternario per impostare valori predefiniti se le variabili non sono impostate nel modulo.
+
+
+
+---
+
+## Commenti al codice:
+
+
 ```php
 <html lang="en">
 	<head>

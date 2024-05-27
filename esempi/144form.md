@@ -1,7 +1,11 @@
-Introduzione:
-Questo codice rappresenta una semplice pagina HTML con un modulo di inserimento dati. Quando il modulo viene inviato, i dati inseriti verranno inviati a un'altra pagina PHP denominata "form_processing.php" utilizzando il metodo POST.
-Commenti al codice:
-```html
+#  modulo di inserimento dati. Quando il modulo viene inviato, i dati inseriti verranno inviati a un'altra pagina PHP denominata "form_processing.php" utilizzando il metodo POST.
+
+---
+
+## Commenti al codice:
+
+
+```php
 <html lang="en">
 	<head>
 		<title>Form</title>

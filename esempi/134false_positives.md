@@ -1,6 +1,14 @@
-Introduzione:
-Questo codice mostra la differenza tra l'operatore di confronto `==` e l'operatore di confronto stretto `===` in PHP. Mentre l'operatore `==` confronta solo i valori delle variabili, l'operatore `===` confronta sia i valori che i tipi di dati delle variabili. Questa distinzione è importante per evitare falsi positivi nei confronti delle variabili con tipi di dati diversi ma con lo stesso valore.
-Commenti al codice:
+# differenza tra l'operatore di confronto `==` e l'operatore di confronto stretto `===` in PHP. 
+
+Mentre l'operatore `==` confronta solo i valori delle variabili, l'operatore `===` confronta sia i valori che i tipi di dati delle variabili. Questa distinzione è importante per evitare falsi positivi nei confronti delle variabili con tipi di dati diversi ma con lo stesso valore.
+
+
+---
+
+## Commenti al codice:
+
+
+
 ```php
 <html lang="en">
 	<head>

@@ -1,19 +1,19 @@
 ```php
 <html lang="en">
-	<head>
-		<title>Pointers</title>
-	</head>
-	<body>
-		<?php
+ <head>
+  <title>Pointers</title>
+ </head>
+ <body>
+  <?php
 
 $ages = array(4,8,15,16,23,42);
 
 // current: current pointer value
-			echo "1: " . current($ages) . "<br />";
+   echo "1: " . current($ages) . "<br />";
 
 // next: move the pointer forward
-			// similar to using 'continue' inside a loop
-			next($ages);
+   // similar to using 'continue' inside a loop
+   next($ages);
 echo "2: " . current($ages) . "<br />";
 
 next($ages);
@@ -21,45 +21,49 @@ next($ages);
 echo "3: " . current($ages) . "<br />";
 
 // prev: move the pointer backward
-			prev($ages);
+   prev($ages);
 echo "4: " . current($ages) . "<br />";
 
 // reset: move the pointer to the first element
-			reset($ages);
+   reset($ages);
 echo "5: " . current($ages) . "<br />";
 
 // end: move the pointer to the last element
-			end($ages);
+   end($ages);
 echo "6: " . current($ages) . "<br />";
 
 // move the pointer past the last element
-			next($ages);
+   next($ages);
 echo "7: " . current($ages) . "<br />";
 
 ?>
-		<br />
-		<?php
-			reset($ages);
+  <br />
+  <?php
+   reset($ages);
 
 // while loop that moves the array pointer
-			// similar to foreach
-			while($age = current($ages)) {
-	echo $age . ", ";
-	next($ages);
+   // similar to foreach
+   while($age = current($ages)) {
+ echo $age . ", ";
+ next($ages);
 }
 ?>
-	</body>
+ </body>
 </html>
 ```
+
 ---
 
 Ecco una spiegazione del funzionamento di ciascuna funzione utilizzata:
+
 - `current($array)`: Restituisce il valore corrente dell'array, cioè il valore dell'elemento puntato dal puntatore interno dell'array.
 - `next($array)`: Sposta il puntatore interno dell'array all'elemento successivo e restituisce il valore di tale elemento.
 - `prev($array)`: Sposta il puntatore interno dell'array all'elemento precedente e restituisce il valore di tale elemento.
 - `reset($array)`: Sposta il puntatore interno dell'array all'inizio (primo elemento) dell'array e restituisce il valore di tale elemento.
 - `end($array)`: Sposta il puntatore interno dell'array alla fine (ultimo elemento) dell'array e restituisce il valore di tale elemento.
-### Esempio di Utilizzo nel Codice:
+
+### Esempio di Utilizzo nel Codice
+
 - `current($ages)`: Restituisce il valore corrente dell'array `$ages`.
 - `next($ages)`: Sposta il puntatore interno di `$ages` all'elemento successivo e restituisce il valore di tale elemento.
 - `prev($ages)`: Sposta il puntatore interno di `$ages` all'elemento precedente e restituisce il valore di tale elemento.

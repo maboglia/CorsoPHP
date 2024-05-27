@@ -1,8 +1,16 @@
-### Scheda Informativa: Struttura di un Documento HTML con PHP
-#### Introduzione
+# Struttura di un Documento HTML con PHP
+
+---
+
+####  Introduzione
+
 Il codice PHP viene solitamente inserito all'interno di un documento HTML. Questo esempio mostra come integrare PHP in una pagina HTML e come utilizzare i commenti e le operazioni di base in PHP.
-#### Codice HTML di Base
-```html
+
+---
+
+####  Codice HTML di Base
+
+```php
 <html lang="en">
 	<head>
 		<title>Hello World</title>
@@ -16,7 +24,11 @@ Il codice PHP viene solitamente inserito all'interno di un documento HTML. Quest
 - `<head>`: Contiene informazioni meta e il titolo della pagina.
 - `<title>Hello World</title>`: Titolo della pagina, visibile nella scheda del browser.
 - `<body>`: Contiene il contenuto visibile della pagina.
-#### Inserimento di PHP in HTML
+
+---
+
+####  Inserimento di PHP in HTML
+
 ```php
 <?php
 // single-line comments are like this
@@ -32,7 +44,11 @@ like this, so that you can keep typing
 - `//`: Commento su una singola linea.
 - `#`: Un altro modo di scrivere commenti su una singola linea (meno comune).
 - `/* ... */`: Commento su più linee, utile per spiegazioni più lunghe o per blocchi di codice.
-#### Esempi di Codice PHP
+
+---
+
+####  Esempi di Codice PHP
+
 ```php
 <?php echo "Hello World!";
 ?><br />
@@ -50,7 +66,11 @@ like this, so that you can keep typing
 ?>
 ```
 - `2 + 3`: Esegue una semplice operazione aritmetica (addizione) e stampa il risultato (5).
-#### Riepilogo
+
+---
+
+####  Riepilogo
+
 In questo esempio, abbiamo visto:
 - Come integrare PHP in un documento HTML.
 - I vari tipi di commenti utilizzabili in PHP.

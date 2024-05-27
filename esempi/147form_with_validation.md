@@ -1,6 +1,13 @@
-Introduzione:
-Questo codice PHP e HTML rappresenta una pagina di accesso che include anche la validazione dei campi dello username e della password. Quando l'utente invia il modulo di accesso, i dati vengono verificati per assicurarsi che i campi non siano vuoti e che rispettino le lunghezze massime consentite. Se i dati inseriti superano la validazione, vengono verificate le credenziali. Se le credenziali sono corrette, l'utente viene reindirizzato a una pagina chiamata "basic.html"; altrimenti, viene visualizzato un messaggio di errore.
-Commenti al codice:
+# pagina di accesso che include anche la validazione dei campi dello username e della password. 
+
+Quando l'utente invia il modulo di accesso, i dati vengono verificati per assicurarsi che i campi non siano vuoti e che rispettino le lunghezze massime consentite. Se i dati inseriti superano la validazione, vengono verificate le credenziali. Se le credenziali sono corrette, l'utente viene reindirizzato a una pagina chiamata "basic.html"; altrimenti, viene visualizzato un messaggio di errore.
+
+
+---
+
+## Commenti al codice:
+
+
 ```php
 <?php
 	require_once("included_functions.php");

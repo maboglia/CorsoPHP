@@ -1,8 +1,16 @@
-### Scheda Informativa: Utilizzo delle Variabili in PHP
-#### Introduzione
+# Utilizzo delle Variabili in PHP
+
+---
+
+####  Introduzione
+
 Le variabili in PHP sono utilizzate per memorizzare dati che possono essere utilizzati e manipolati nel codice. PHP è un linguaggio a tipizzazione debole, il che significa che non è necessario dichiarare il tipo di variabile; il tipo è determinato automaticamente in base al valore assegnato.
-#### Codice di Esempio
-```html
+
+---
+
+####  Codice di Esempio
+
+```php
 <html lang="en">
 	<head>
 		<title>Variables</title>
@@ -25,7 +33,11 @@ echo $var2;
 	</body>
 </html>
 ```
-#### Spiegazione del Codice
+
+---
+
+####  Spiegazione del Codice
+
 - **Dichiarazione e Assegnazione di Variabili**
 ```php
 $var1 = 10;
@@ -39,7 +51,7 @@ echo $var1;
 - `echo`: Comando utilizzato per stampare il valore di una variabile o una stringa sul browser.
 - `$var1`: Stampa il valore corrente di `$var1`, che è `10`.
 - **Interruzione di Linea HTML**
-```html
+```php
 echo "<br />";
 ```
 - `<br />`: Tag HTML per andare a capo. Usato qui per separare le stampe successive su linee diverse.
@@ -65,12 +77,20 @@ $var2 = "Hello world";
 echo $var2;
 ```
 - Stampa il valore della variabile `$var2`, che è "Hello world".
-#### Concetti Chiave
+
+---
+
+####  Concetti Chiave
+
 - **Dichiarazione di Variabili**: Le variabili in PHP si dichiarano assegnando un valore con l'operatore `=`.
 - **Riassegnazione di Variabili**: Le variabili possono essere riassegnate con nuovi valori in qualsiasi momento.
 - **Tipi di Dati**: PHP supporta vari tipi di dati, come interi, stringhe, float, array, ecc. Il tipo di dato è determinato automaticamente.
 - **Stampa delle Variabili**: Utilizzando `echo`, si possono stampare i valori delle variabili nel documento HTML.
-#### Esempio di Output
+
+---
+
+####  Esempio di Output
+
 Quando il codice è eseguito, l'output sarà:
 ```
 10
@@ -78,5 +98,9 @@ Quando il codice è eseguito, l'output sarà:
 Hello world
 ```
 Ogni valore viene stampato su una nuova linea grazie all'uso del tag `<br />`.
-#### Conclusione
+
+---
+
+####  Conclusione
+
 Le variabili sono uno degli elementi fondamentali della programmazione in PHP. Capire come dichiararle, assegnarle e utilizzarle è essenziale per scrivere codice efficace e dinamico. Con questi concetti di base, sei pronto per esplorare ulteriormente le potenzialità di PHP nella gestione dei dati.

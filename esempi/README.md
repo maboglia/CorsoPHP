@@ -25,7 +25,6 @@
 </html>
 ```
 
-
 ---
 
 ## variabili
@@ -57,7 +56,6 @@
 	</body>
 </html>
 ```
-
 
 ---
 
@@ -93,7 +91,6 @@
 	</body>
 </html>
 ```
-
 
 ---
 
@@ -137,7 +134,6 @@
 </html>
 ```
 
-
 ---
 
 ## interi
@@ -179,7 +175,6 @@
 	</body>
 </html>
 ```
-
 ---
 
 ## float
@@ -219,7 +214,6 @@
 	</body>
 </html>
 ```
-
 
 ---
 
@@ -263,7 +257,6 @@
 	</body>
 </html>
 ```
-
 ---
 
 ## array associativi
@@ -293,7 +286,6 @@
 	</body>
 </html>
 ```
-
 ---
 
 ## funzioni per array
@@ -329,7 +321,6 @@
 	</body>
 </html>
 ```
-
 ---
 
 ## booleans
@@ -363,7 +354,6 @@
 	</body>
 </html>
 ```
-
 ---
 
 ## null
@@ -400,7 +390,6 @@
 	</body>
 </html>
 ```
-
 ---
 
 ## Type casting
@@ -444,7 +433,6 @@
 	</body>
 </html>
 ```
-
 ---
 
 ## costanti
@@ -478,7 +466,6 @@
 	</body>
 </html>
 ```
-
 ---
 
 ## operatori logici
@@ -530,7 +517,6 @@
 	</body>
 </html>
 ```
-
 ---
 
 ## operatori
@@ -575,7 +561,6 @@
 	</body>
 </html>
 ```
-
 ---
 
 ## switch
@@ -652,7 +637,6 @@
 	</body>
 </html>
 ```
-
 ---
 
 ## cicli while
@@ -698,7 +682,6 @@
 	</body>
 </html>
 ```
-
 ---
 
 ## cicli for
@@ -745,7 +728,6 @@
 	</body>
 </html>
 ```
-
 ---
 
 ## foreach
@@ -807,7 +789,6 @@
 	</body>
 </html>
 ```
-
 ---
 
 ## continue
@@ -859,7 +840,6 @@
 	</body>
 </html>
 ```
-
 ---
 
 ## break
@@ -899,7 +879,6 @@
 	</body>
 </html>
 ```
-
 ---
 
 ## pointers - puntatori
@@ -962,7 +941,6 @@
 	</body>
 </html>
 ```
-
 ---
 
 ## funzioni
@@ -1005,7 +983,6 @@
 	</body>
 </html>
 ```
-
 ---
 
 ## funzioni con argomenti
@@ -1046,7 +1023,6 @@
 	</body>
 </html>
 ```
-
 ---
 
 ## funzioni con ritorno di valori
@@ -1114,7 +1090,6 @@
 	</body>
 </html>
 ```
-
 ---
 
 ## funzioni con ritorno multiplo
@@ -1149,7 +1124,6 @@
 	</body>
 </html>
 ```
-
 ---
 
 ## scope funzioni 
@@ -1215,7 +1189,6 @@
 	</body>
 </html>
 ```
-
 ---
 
 ## debugging
@@ -1257,7 +1230,6 @@
 	</body>
 </html>
 ```
-
 ---
 
 ## first-page
@@ -1292,7 +1264,6 @@
 	</body>
 </html>
 ```
-
 ---
 
 ## second - GET
@@ -1337,7 +1308,6 @@
 	</body>
 </html>
 ```
-
 ---
 
 ## passare parametri via GET
@@ -1389,7 +1359,6 @@
 	</body>
 </html>
 ```
-
 ---
 
 ## urlencode
@@ -1416,7 +1385,6 @@
 	</body>
 </html>
 ```
-
 ---
 
 ## htmlencoding
@@ -1467,7 +1435,6 @@
 	</body>
 </html>
 ```
-
 ---
 
 ## include
@@ -1504,7 +1471,6 @@
 	</body>
 </html>
 ```
-
 ---
 
 ## headers
@@ -1537,7 +1503,6 @@
 	</body>
 </html>
 ```
-
 ---
 
 ## redirect
@@ -1570,7 +1535,6 @@
   </body>
 </html>
 ```
-
 ---
 
 ## form processing
@@ -1594,7 +1558,6 @@
 	</body>
 </html>
 ```
-
 ---
 
 ```php
@@ -1622,7 +1585,6 @@
 	</body>
 </html>
 ```
-
 ---
 
 ## form single page
@@ -1642,7 +1604,6 @@
 	
 ?>
 ```
-
 ---
 
 ```php
@@ -1764,7 +1725,6 @@
 	</body>
 </html>
 ```
-
 ---
 
 ## falsi positivi
@@ -1840,7 +1800,6 @@
 	</body>
 </html>
 ```
-
 ---
 
 ## validation errors
@@ -1936,7 +1895,6 @@
 	</body>
 </html>
 ```
-
 ---
 
 ## validation functions

@@ -1,6 +1,12 @@
-Introduzione:
-Questo codice dimostra l'utilizzo delle funzioni di inclusione in PHP per integrare altri file all'interno di un file PHP principale. Le inclusioni consentono di suddividere il codice in più file per renderlo più organizzato, manutenibile e riutilizzabile.
-Commenti al codice:
+# funzioni di inclusione in PHP 
+
+per integrare altri file all'interno di un file PHP principale. Le inclusioni consentono di suddividere il codice in più file per renderlo più organizzato, manutenibile e riutilizzabile.
+
+---
+
+## Commenti al codice:
+
+
 ```php
 <?php
 	// Inclusione dei file delle funzioni e dell'intestazione

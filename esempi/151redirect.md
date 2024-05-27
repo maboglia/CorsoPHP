@@ -1,6 +1,12 @@
-Introduzione:
-Questo codice PHP gestisce il reindirizzamento a una nuova pagina in base al valore del parametro "logged_in" passato nell'URL. Se il valore di "logged_in" è "1", viene reindirizzato alla pagina "basic.html", altrimenti viene reindirizzato a "http://www.example.com".
-Commenti al codice:
+# reindirizzamento a una nuova pagina in base al valore del parametro "logged_in" passato nell'URL. 
+
+Se il valore di "logged_in" è "1", viene reindirizzato alla pagina "basic.html", altrimenti viene reindirizzato a "http://www.example.com".
+
+---
+
+## Commenti al codice:
+
+
 ```php
 <?php
 	// Questa è la funzione per reindirizzare a una nuova pagina

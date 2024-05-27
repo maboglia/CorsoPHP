@@ -1,6 +1,14 @@
-Introduzione:
-In questo codice, stiamo affrontando l'argomento delle validazioni dei dati in PHP. Le validazioni sono un aspetto fondamentale nella creazione di applicazioni web sicure e funzionali. Garantiscono che i dati inseriti dagli utenti siano conformi alle regole specificate prima di essere utilizzati o memorizzati nel database. Le funzioni qui presenti sono progettate per verificare la presenza, la lunghezza della stringa e l'inclusione in un set di valori.
-Commenti al codice:
+# validazione dei dati in PHP. 
+
+Le validazioni sono un aspetto fondamentale nella creazione di applicazioni web sicure e funzionali. Garantiscono che i dati inseriti dagli utenti siano conformi alle regole specificate prima di essere utilizzati o memorizzati nel database. Le funzioni qui presenti sono progettate per verificare la presenza, la lunghezza della stringa e l'inclusione in un set di valori.
+
+
+---
+
+## Commenti al codice:
+
+
+
 ```php
 <?php
 

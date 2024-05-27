@@ -1,6 +1,12 @@
-Introduzione:
-Questo codice si occupa di gestire gli errori di validazione nei dati inseriti dall'utente in un modulo HTML. La validazione dei dati è cruciale per garantire che solo dati corretti vengano elaborati e memorizzati. In questo caso, vengono eseguite diverse forme di validazione, come presenza, lunghezza della stringa, tipo di dato, inclusione in un set e formato. Gli errori di validazione vengono quindi visualizzati all'utente per consentire correzioni.
-Commenti al codice:
+# errori di validazione 
+
+nei dati inseriti dall'utente in un modulo HTML. La validazione dei dati è cruciale per garantire che solo dati corretti vengano elaborati e memorizzati. In questo caso, vengono eseguite diverse forme di validazione, come presenza, lunghezza della stringa, tipo di dato, inclusione in un set e formato. Gli errori di validazione vengono quindi visualizzati all'utente per consentire correzioni.
+
+---
+
+## Commenti al codice:
+
+
 ```php
 <html lang="en">
 	<head>

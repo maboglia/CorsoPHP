@@ -1,6 +1,13 @@
-Introduzione:
-Questo codice illustra l'utilizzo delle funzioni `urlencode` e `rawurlencode` in PHP per la creazione di URL sicuri e compatibili con gli standard. Queste funzioni sono utilizzate per codificare correttamente i caratteri speciali all'interno degli URL, garantendo che i parametri passati siano interpretati correttamente dai server web e dai browser.
-Commenti al codice:
+# funzioni `urlencode` e `rawurlencode` in PHP 
+
+per la creazione di URL sicuri e compatibili con gli standard. Queste funzioni sono utilizzate per codificare correttamente i caratteri speciali all'interno degli URL, garantendo che i parametri passati siano interpretati correttamente dai server web e dai browser.
+
+---
+
+## Commenti al codice:
+
+
+
 ```php
 <html lang="en">
 	<head>

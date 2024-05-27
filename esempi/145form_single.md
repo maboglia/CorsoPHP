@@ -1,6 +1,12 @@
-Introduzione:
-Questo codice PHP e HTML rappresenta una pagina di accesso basica. Quando l'utente invia il modulo di accesso, i dati vengono verificati per accertare se lo username e la password corrispondono a valori predefiniti. Se le credenziali sono corrette, l'utente viene reindirizzato a una pagina chiamata "basic.html"; in caso contrario, viene visualizzato un messaggio di errore.
-Commenti al codice:
+# pagina di accesso basica. 
+
+Quando l'utente invia il modulo di accesso, i dati vengono verificati per accertare se lo username e la password corrispondono a valori predefiniti. Se le credenziali sono corrette, l'utente viene reindirizzato a una pagina chiamata "basic.html"; in caso contrario, viene visualizzato un messaggio di errore.
+
+---
+
+## Commenti al codice:
+
+
 ```php
 <?php
 	require_once("included_functions.php");

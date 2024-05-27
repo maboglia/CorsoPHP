@@ -1,6 +1,12 @@
-Introduzione:
-Questo codice illustra l'importanza dell'encoding HTML e la differenza tra le funzioni `htmlspecialchars` ed `htmlentities` in PHP. L'encoding HTML è essenziale per evitare attacchi di tipo cross-site scripting (XSS) e per garantire che i caratteri speciali vengano visualizzati correttamente all'interno di una pagina web.
-Commenti al codice:
+# encoding HTML e la differenza tra le funzioni `htmlspecialchars` ed `htmlentities` in PHP. 
+
+L'encoding HTML è essenziale per evitare attacchi di tipo cross-site scripting (XSS) e per garantire che i caratteri speciali vengano visualizzati correttamente all'interno di una pagina web.
+
+---
+
+## Commenti al codice:
+
+
 ```php
 <html lang="en">
 	<head>

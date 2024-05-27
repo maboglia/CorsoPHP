@@ -1,6 +1,12 @@
-Introduzione:
-Questo codice dimostra l'utilizzo delle intestazioni HTTP in PHP per controllare il comportamento del server web e comunicare informazioni aggiuntive al client. Le intestazioni HTTP sono utilizzate per trasmettere metadati tra il client e il server durante una richiesta e una risposta HTTP.
-Commenti al codice:
+# intestazioni HTTP in PHP 
+
+per controllare il comportamento del server web e comunicare informazioni aggiuntive al client. Le intestazioni HTTP sono utilizzate per trasmettere metadati tra il client e il server durante una richiesta e una risposta HTTP.
+
+---
+
+## Commenti al codice:
+
+
 ```php
 <?php
 	// Imposta l'intestazione HTTP per indicare che la risorsa richiesta non è stata trovata (404)
