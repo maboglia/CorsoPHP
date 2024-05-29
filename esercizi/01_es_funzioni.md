@@ -1,4 +1,4 @@
-Certo! Ecco altri 10 esercizi focalizzati sull'uso delle funzioni in PHP:
+
 
 ### Esercizio 11: Funzione per il Calcolo della Somma
 
