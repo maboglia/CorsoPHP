@@ -1,7 +1,10 @@
 
 ### Esercizio 1: Hello World
 
+<details>
+<summary>
 Scrivi uno script PHP che stampa "Hello, World!" sullo schermo.
+</summary>
 
 ```php
 <?php
@@ -9,9 +12,14 @@ echo "Hello, World!";
 ?>
 ```
 
+</details>
+
 ### Esercizio 2: Variabili e Operazioni Aritmetiche
 
+<details>
+<summary>
 Crea uno script PHP che dichiara due variabili numeriche e stampa la somma, la differenza, il prodotto e il quoziente.
+</summary>
 
 ```php
 <?php
@@ -25,9 +33,14 @@ echo "Quoziente: " . ($a / $b) . "\n";
 ?>
 ```
 
+</details>
+
 ### Esercizio 3: Condizioni
 
+<details>
+<summary>
 Scrivi uno script PHP che controlla se una variabile numerica è positiva, negativa o zero e stampa un messaggio appropriato.
+</summary>
 
 ```php
 <?php
@@ -43,9 +56,14 @@ if ($num > 0) {
 ?>
 ```
 
+</details>
+
 ### Esercizio 4: Ciclo For
 
+<details>
+<summary>
 Crea uno script PHP che utilizza un ciclo for per stampare i numeri da 1 a 10.
+</summary>
 
 ```php
 <?php
@@ -55,9 +73,14 @@ for ($i = 1; $i <= 10; $i++) {
 ?>
 ```
 
+</details>
+
 ### Esercizio 5: Ciclo While
 
+<details>
+<summary>
 Scrivi uno script PHP che utilizza un ciclo while per stampare i numeri da 1 a 10.
+</summary>
 
 ```php
 <?php
@@ -69,9 +92,14 @@ while ($i <= 10) {
 ?>
 ```
 
+</details>
+
 ### Esercizio 6: Funzioni
 
+<details>
+<summary>
 Crea una funzione PHP che accetta due numeri come parametri e restituisce il loro prodotto. Chiama questa funzione e stampa il risultato.
+</summary>
 
 ```php
 <?php
@@ -83,9 +111,14 @@ echo "Il prodotto di 4 e 5 è: " . prodotto(4, 5);
 ?>
 ```
 
+</details>
+
 ### Esercizio 7: Array
 
+<details>
+<summary>
 Crea un array con almeno 5 elementi e stampa ciascun elemento utilizzando un ciclo foreach.
+</summary>
 
 ```php
 <?php
@@ -97,9 +130,14 @@ foreach ($array as $valore) {
 ?>
 ```
 
+</details>
+
 ### Esercizio 8: Array Associativi
 
-Crea un array associativo che contiene i nomi e le età di almeno 3 persone. Stampa ciascun nome e età utilizzando un ciclo foreach.
+<details>
+<summary>
+Crea un array associativo che contiene i nomi e le età di almeno 3 persone. Stampa ciascun nome e età utilizzando un ciclo foreach.</summary>
+
 
 ```php
 <?php
@@ -111,9 +149,14 @@ foreach ($persone as $nome => $eta) {
 ?>
 ```
 
+</details>
+
 ### Esercizio 9: Stringhe
 
+<details>
+<summary>
 Scrivi uno script PHP che dichiara una stringa e stampa il numero di caratteri in essa contenuti.
+</summary>
 
 ```php
 <?php
@@ -122,9 +165,14 @@ echo "La lunghezza della stringa è: " . strlen($testo);
 ?>
 ```
 
+</details>
+
 ### Esercizio 10: Gestione dei Moduli
 
-Crea un semplice modulo HTML con un campo di testo e un pulsante di invio. Scrivi uno script PHP che recupera il valore del campo di testo e lo stampa sullo schermo.
+<details>
+<summary>
+Crea un semplice modulo HTML con un campo di testo e un pulsante di invio. Scrivi uno script PHP che recupera il valore del campo di </summary>
+testo e lo stampa sullo schermo.
 
 HTML:
 
@@ -145,6 +193,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 ```
+
+</details>
 
 ---
 
