@@ -1,7 +1,9 @@
 
+### Esercizio 11: Funzione per il Calcolo della Somma
+
 <details>
 <summary>
-### Esercizio 11: Funzione per il Calcolo della Somma
+Esercizio 11: Funzione per il Calcolo della Somma
 </summary>
 Crea una funzione che accetta due numeri come argomenti e restituisce la loro somma.
 
@@ -17,9 +19,11 @@ echo "La somma di 3 e 7 è: " . somma(3, 7);
 
 </details>
 
+### Esercizio 12: Funzione per il Calcolo del Fattoriale
+
 <details>
 <summary>
-### Esercizio 12: Funzione per il Calcolo del Fattoriale
+Esercizio 12: Funzione per il Calcolo del Fattoriale
 </summary>
 Scrivi una funzione che calcola il fattoriale di un numero dato.
 
@@ -38,9 +42,11 @@ echo "Il fattoriale di 5 è: " . fattoriale(5);
 
 </details>
 
+### Esercizio 13: Funzione per Contare le Vocali
+
 <details>
 <summary>
-### Esercizio 13: Funzione per Contare le Vocali
+Esercizio 13: Funzione per Contare le Vocali
 </summary>
 Crea una funzione che accetta una stringa e restituisce il numero di vocali in essa contenute.
 
@@ -63,9 +69,11 @@ echo "Il numero di vocali in 'Hello World' è: " . contaVocali('Hello World');
 
 </details>
 
+### Esercizio 14: Funzione per il Massimo Comune Divisore (MCD)
+
 <details>
 <summary>
-### Esercizio 14: Funzione per il Massimo Comune Divisore (MCD)
+Esercizio 14: Funzione per il Massimo Comune Divisore (MCD)
 </summary>
 Scrivi una funzione che calcola il MCD di due numeri usando l'algoritmo di Euclide.
 
@@ -86,9 +94,11 @@ echo "Il MCD di 48 e 18 è: " . mcd(48, 18);
 
 </details>
 
+### Esercizio 15: Funzione per Invertire una Stringa
+
 <details>
 <summary>
-### Esercizio 15: Funzione per Invertire una Stringa
+Esercizio 15: Funzione per Invertire una Stringa
 </summary>
 Crea una funzione che accetta una stringa e restituisce la stringa invertita.
 
@@ -104,9 +114,11 @@ echo "La stringa invertita di 'Hello' è: " . invertiStringa('Hello');
 
 </details>
 
+### Esercizio 16: Funzione per Verificare se un Numero è Primo
+
 <details>
 <summary>
-### Esercizio 16: Funzione per Verificare se un Numero è Primo
+Esercizio 16: Funzione per Verificare se un Numero è Primo
 </summary>
 Scrivi una funzione che verifica se un numero è primo.
 
@@ -130,9 +142,11 @@ echo "Il numero 7 è primo? " . (èPrimo(7) ? "Sì" : "No");
 
 </details>
 
+### Esercizio 17: Funzione per Generare Numeri Casuali
+
 <details>
 <summary>
-### Esercizio 17: Funzione per Generare Numeri Casuali
+Esercizio 17: Funzione per Generare Numeri Casuali
 </summary>
 Crea una funzione che genera un array di numeri casuali di una lunghezza specificata.
 
@@ -153,9 +167,11 @@ echo "Numeri casuali: " . implode(", ", $numeri);
 
 </details>
 
+### Esercizio 18: Funzione per Convertire Temperatura
+
 <details>
 <summary>
-### Esercizio 18: Funzione per Convertire Temperatura
+Esercizio 18: Funzione per Convertire Temperatura
 </summary>
 Scrivi una funzione che converte una temperatura da gradi Celsius a gradi Fahrenheit.
 
@@ -171,9 +187,11 @@ echo "25 gradi Celsius sono " . celsiusToFahrenheit(25) . " gradi Fahrenheit.";
 
 </details>
 
+### Esercizio 19: Funzione per Calcolare la Media di un Array
+
 <details>
 <summary>
-### Esercizio 19: Funzione per Calcolare la Media di un Array
+Esercizio 19: Funzione per Calcolare la Media di un Array
 </summary>
 Crea una funzione che calcola la media dei numeri in un array.
 
@@ -192,9 +210,11 @@ echo "La media è: " . media($numeri);
 
 </details>
 
+### Esercizio 20: Funzione per Trovare il Massimo in un Array
+
 <details>
 <summary>
-### Esercizio 20: Funzione per Trovare il Massimo in un Array
+Esercizio 20: Funzione per Trovare il Massimo in un Array
 </summary>
 Scrivi una funzione che trova il valore massimo in un array.
 
