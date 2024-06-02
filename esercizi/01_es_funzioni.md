@@ -1,7 +1,8 @@
 
-
+<details>
+<summary>
 ### Esercizio 11: Funzione per il Calcolo della Somma
-
+</summary>
 Crea una funzione che accetta due numeri come argomenti e restituisce la loro somma.
 
 ```php
@@ -14,8 +15,12 @@ echo "La somma di 3 e 7 è: " . somma(3, 7);
 ?>
 ```
 
-### Esercizio 12: Funzione per il Calcolo del Fattoriale
+</details>
 
+<details>
+<summary>
+### Esercizio 12: Funzione per il Calcolo del Fattoriale
+</summary>
 Scrivi una funzione che calcola il fattoriale di un numero dato.
 
 ```php
@@ -31,8 +36,12 @@ echo "Il fattoriale di 5 è: " . fattoriale(5);
 ?>
 ```
 
-### Esercizio 13: Funzione per Contare le Vocali
+</details>
 
+<details>
+<summary>
+### Esercizio 13: Funzione per Contare le Vocali
+</summary>
 Crea una funzione che accetta una stringa e restituisce il numero di vocali in essa contenute.
 
 ```php
@@ -52,8 +61,12 @@ echo "Il numero di vocali in 'Hello World' è: " . contaVocali('Hello World');
 ?>
 ```
 
-### Esercizio 14: Funzione per il Massimo Comune Divisore (MCD)
+</details>
 
+<details>
+<summary>
+### Esercizio 14: Funzione per il Massimo Comune Divisore (MCD)
+</summary>
 Scrivi una funzione che calcola il MCD di due numeri usando l'algoritmo di Euclide.
 
 ```php
@@ -71,8 +84,12 @@ echo "Il MCD di 48 e 18 è: " . mcd(48, 18);
 ?>
 ```
 
-### Esercizio 15: Funzione per Invertire una Stringa
+</details>
 
+<details>
+<summary>
+### Esercizio 15: Funzione per Invertire una Stringa
+</summary>
 Crea una funzione che accetta una stringa e restituisce la stringa invertita.
 
 ```php
@@ -85,8 +102,12 @@ echo "La stringa invertita di 'Hello' è: " . invertiStringa('Hello');
 ?>
 ```
 
-### Esercizio 16: Funzione per Verificare se un Numero è Primo
+</details>
 
+<details>
+<summary>
+### Esercizio 16: Funzione per Verificare se un Numero è Primo
+</summary>
 Scrivi una funzione che verifica se un numero è primo.
 
 ```php
@@ -107,8 +128,12 @@ echo "Il numero 7 è primo? " . (èPrimo(7) ? "Sì" : "No");
 ?>
 ```
 
-### Esercizio 17: Funzione per Generare Numeri Casuali
+</details>
 
+<details>
+<summary>
+### Esercizio 17: Funzione per Generare Numeri Casuali
+</summary>
 Crea una funzione che genera un array di numeri casuali di una lunghezza specificata.
 
 ```php
@@ -126,8 +151,12 @@ echo "Numeri casuali: " . implode(", ", $numeri);
 ?>
 ```
 
-### Esercizio 18: Funzione per Convertire Temperatura
+</details>
 
+<details>
+<summary>
+### Esercizio 18: Funzione per Convertire Temperatura
+</summary>
 Scrivi una funzione che converte una temperatura da gradi Celsius a gradi Fahrenheit.
 
 ```php
@@ -140,8 +169,12 @@ echo "25 gradi Celsius sono " . celsiusToFahrenheit(25) . " gradi Fahrenheit.";
 ?>
 ```
 
-### Esercizio 19: Funzione per Calcolare la Media di un Array
+</details>
 
+<details>
+<summary>
+### Esercizio 19: Funzione per Calcolare la Media di un Array
+</summary>
 Crea una funzione che calcola la media dei numeri in un array.
 
 ```php
@@ -157,8 +190,12 @@ echo "La media è: " . media($numeri);
 ?>
 ```
 
-### Esercizio 20: Funzione per Trovare il Massimo in un Array
+</details>
 
+<details>
+<summary>
+### Esercizio 20: Funzione per Trovare il Massimo in un Array
+</summary>
 Scrivi una funzione che trova il valore massimo in un array.
 
 ```php
@@ -172,3 +209,4 @@ echo "Il valore massimo è: " . trovaMassimo($numeri);
 ?>
 ```
 
+</details>
