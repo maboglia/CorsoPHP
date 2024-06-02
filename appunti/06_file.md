@@ -166,6 +166,9 @@ $myarray=file($myfilename);
 foreach ($myarray as $item)
   echo $item;
 fclose($fh); ?>
+
+//se hai bisogno di togliere i fine-linea
+$item = trim(preg_replace('/\s+/', ' ', $item));
 ```
 
 ---
