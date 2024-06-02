@@ -23,6 +23,8 @@ echo pariDispari(5);
 
 </details>
 
+---
+
 ### Esercizio 2: Trova il numero maggiore tra tre numeri
 
 <details>
@@ -48,6 +50,8 @@ echo trovaMaggiore(10, 20, 15);
 ```
 
 </details>
+
+---
 
 ### Esercizio 3: Verifica se un numero è positivo, negativo o zero
 
@@ -75,6 +79,8 @@ echo verificaNumero(-10);
 
 </details>
 
+---
+
 ### Esercizio 4: Verifica se un anno è bisestile
 
 <details>
@@ -98,6 +104,8 @@ echo annoBisestile(2024);
 ```
 
 </details>
+
+---
 
 ### Esercizio 5: Verifica se un carattere è una vocale o una consonante
 
@@ -123,6 +131,8 @@ echo vocaleConsonante('E');
 ```
 
 </details>
+
+---
 
 ### Esercizio 6: Verifica se un numero è primo
 
@@ -152,6 +162,8 @@ echo numeroPrimo(7);
 
 </details>
 
+---
+
 ### Esercizio 7: Verifica se una stringa è vuota o meno
 
 <details>
@@ -175,6 +187,8 @@ echo stringaVuota('');
 ```
 
 </details>
+
+---
 
 ### Esercizio 8: Verifica se un numero è compreso tra due valori
 
@@ -200,6 +214,8 @@ echo compresoTra(5, 1, 10);
 
 </details>
 
+---
+
 ### Esercizio 9: Verifica se una parola è palindroma
 
 <details>
@@ -224,6 +240,8 @@ echo parolaPalindroma('Anna');
 ```
 
 </details>
+
+---
 
 ### Esercizio 10: Verifica l'età per guidare
 

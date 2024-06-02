@@ -18,6 +18,8 @@ echo "La somma degli elementi è: " . sommaArray($numeri);
 
 </details>
 
+---
+
 ### Esercizio 22: Filtrare i Numeri Pari
 <details>
 <summary>
@@ -40,6 +42,8 @@ echo "Numeri pari: " . implode(", ", $pari);
 
 </details>
 
+---
+
 ### Esercizio 23: Trovare il Minimo e il Massimo
 <details>
 <summary>
@@ -59,6 +63,8 @@ echo "Minimo: " . $minMax['min'] . ", Massimo: " . $minMax['max'];
 ```
 
 </details>
+
+---
 
 ### Esercizio 24: Ordinare un Array
 <details>
@@ -81,6 +87,8 @@ echo "Array ordinato: " . implode(", ", $ordinati);
 
 </details>
 
+---
+
 ### Esercizio 25: Unire Due Array
 <details>
 <summary>
@@ -102,6 +110,8 @@ echo "Array unito: " . implode(", ", $uniti);
 
 </details>
 
+---
+
 ### Esercizio 26: Rimuovere Duplicati
 <details>
 <summary>
@@ -121,6 +131,8 @@ echo "Array senza duplicati: " . implode(", ", $unici);
 ```
 
 </details>
+
+---
 
 ### Esercizio 27: Contare le Occorrenze di un Valore
 <details>
@@ -142,6 +154,8 @@ echo "Il valore 2 appare: " . $conta . " volte";
 
 </details>
 
+---
+
 ### Esercizio 28: Invertire un Array
 <details>
 <summary>
@@ -162,6 +176,8 @@ echo "Array invertito: " . implode(", ", $invertiti);
 
 </details>
 
+---
+
 ### Esercizio 29: Trasformare una Stringa in un Array
 <details>
 <summary>
@@ -181,6 +197,8 @@ echo "Array: " . implode(", ", $array);
 ```
 
 </details>
+
+---
 
 ### Esercizio 30: Calcolare la Lunghezza di un Array
 <details>

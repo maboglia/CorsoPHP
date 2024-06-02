@@ -18,6 +18,8 @@ echo "La lunghezza della stringa 'Hello, World!' è: " . lunghezzaStringa('Hello
 
 </details>
 
+---
+
 ### Esercizio 52: Convertire una Stringa in Maiuscolo
 
 <details>
@@ -36,6 +38,8 @@ echo "La stringa 'hello' in maiuscolo è: " . stringaMaiuscola('hello');
 ```
 
 </details>
+
+---
 
 ### Esercizio 53: Convertire una Stringa in Minuscolo
 
@@ -56,6 +60,8 @@ echo "La stringa 'HELLO' in minuscolo è: " . stringaMinuscola('HELLO');
 
 </details>
 
+---
+
 ### Esercizio 54: Invertire una Stringa
 
 <details>
@@ -74,6 +80,8 @@ echo "La stringa 'hello' invertita è: " . invertiStringa('hello');
 ```
 
 </details>
+
+---
 
 ### Esercizio 55: Contare le Parole in una Stringa
 
@@ -94,6 +102,8 @@ echo "Il numero di parole nella stringa 'Hello, World!' è: " . contaParole('Hel
 
 </details>
 
+---
+
 ### Esercizio 56: Estrarre una Sottostringa
 
 <details>
@@ -112,6 +122,8 @@ echo "La sottostringa di 'Hello, World!' da 7, di lunghezza 5 è: " . estraiSott
 ```
 
 </details>
+
+---
 
 ### Esercizio 57: Trovare la Posizione di una Sottostringa
 
@@ -132,6 +144,8 @@ echo "La posizione della sottostringa 'World' in 'Hello, World!' è: " . trovaPo
 
 </details>
 
+---
+
 ### Esercizio 58: Sostituire una Parte di una Stringa
 
 <details>
@@ -151,6 +165,8 @@ echo "Sostituendo 'World' con 'PHP' in 'Hello, World!': " . sostituisciStringa('
 
 </details>
 
+---
+
 ### Esercizio 59: Contare le Occorrenze di una Sottostringa
 
 <details>
@@ -169,6 +185,8 @@ echo "Il numero di occorrenze di 'l' in 'Hello, World!' è: " . contaOccorrenze(
 ```
 
 </details>
+
+---
 
 ### Esercizio 60: Suddividere una Stringa in un Array
 

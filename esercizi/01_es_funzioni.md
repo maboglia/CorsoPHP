@@ -18,6 +18,8 @@ echo "La somma di 3 e 7 è: " . somma(3, 7);
 
 </details>
 
+---
+
 ### Esercizio 12: Funzione per il Calcolo del Fattoriale
 
 <details>
@@ -39,6 +41,8 @@ echo "Il fattoriale di 5 è: " . fattoriale(5);
 ```
 
 </details>
+
+---
 
 ### Esercizio 13: Funzione per Contare le Vocali
 
@@ -66,6 +70,8 @@ echo "Il numero di vocali in 'Hello World' è: " . contaVocali('Hello World');
 
 </details>
 
+---
+
 ### Esercizio 14: Funzione per il Massimo Comune Divisore (MCD)
 
 <details>
@@ -90,6 +96,8 @@ echo "Il MCD di 48 e 18 è: " . mcd(48, 18);
 
 </details>
 
+---
+
 ### Esercizio 15: Funzione per Invertire una Stringa
 
 <details>
@@ -108,6 +116,8 @@ echo "La stringa invertita di 'Hello' è: " . invertiStringa('Hello');
 ```
 
 </details>
+
+---
 
 ### Esercizio 16: Funzione per Verificare se un Numero è Primo
 
@@ -136,6 +146,8 @@ echo "Il numero 7 è primo? " . (èPrimo(7) ? "Sì" : "No");
 
 </details>
 
+---
+
 ### Esercizio 17: Funzione per Generare Numeri Casuali
 
 <details>
@@ -160,6 +172,8 @@ echo "Numeri casuali: " . implode(", ", $numeri);
 
 </details>
 
+---
+
 ### Esercizio 18: Funzione per Convertire Temperatura
 
 <details>
@@ -178,6 +192,8 @@ echo "25 gradi Celsius sono " . celsiusToFahrenheit(25) . " gradi Fahrenheit.";
 ```
 
 </details>
+
+---
 
 ### Esercizio 19: Funzione per Calcolare la Media di un Array
 
@@ -200,6 +216,8 @@ echo "La media è: " . media($numeri);
 ```
 
 </details>
+
+---
 
 ### Esercizio 20: Funzione per Trovare il Massimo in un Array
 

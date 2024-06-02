@@ -14,6 +14,8 @@ echo "Data e ora corrente: " . date('Y-m-d H:i:s');
 
 </details>
 
+---
+
 ### Esercizio 42: Differenza tra Due Date
 
 <details>
@@ -36,6 +38,8 @@ echo "Differenza in giorni: " . differenzaDate('2024-05-27', '2024-06-10');
 
 </details>
 
+---
+
 ### Esercizio 43: Aggiungere Giorni a una Data
 
 <details>
@@ -57,6 +61,8 @@ echo "Data dopo 10 giorni: " . aggiungiGiorni('2024-05-27', 10);
 
 </details>
 
+---
+
 ### Esercizio 44: Verificare se un Anno è Bisestile
 
 <details>
@@ -75,6 +81,8 @@ echo "Il 2024 è un anno bisestile? " . (èBisestile(2024) ? "Sì" : "No");
 ```
 
 </details>
+
+---
 
 ### Esercizio 45: Calcolare l'Età
 
@@ -98,6 +106,8 @@ echo "L'età della persona nata il 1990-06-15 è: " . calcolaEtà('1990-06-15') 
 
 </details>
 
+---
+
 ### Esercizio 46: Formattare una Data
 
 <details>
@@ -118,6 +128,8 @@ echo "Data formattata: " . formattaData('2024-05-27');
 
 </details>
 
+---
+
 ### Esercizio 47: Giorno della Settimana
 
 <details>
@@ -137,6 +149,8 @@ echo "Il giorno della settimana per il 2024-05-27 è: " . giornoDellaSettimana('
 ```
 
 </details>
+
+---
 
 ### Esercizio 48: Differenza in Ore tra Due Date
 
@@ -160,6 +174,8 @@ echo "Differenza in ore: " . differenzaOre('2024-05-27 10:00:00', '2024-05-28 15
 
 </details>
 
+---
+
 ### Esercizio 49: Sommare Ore a una Data
 
 <details>
@@ -180,6 +196,8 @@ echo "Data e ora dopo 5 ore: " . aggiungiOre('2024-05-27 10:00:00', 5);
 ```
 
 </details>
+
+---
 
 ### Esercizio 50: Ottenere il Mese e l'Anno Correnti
 

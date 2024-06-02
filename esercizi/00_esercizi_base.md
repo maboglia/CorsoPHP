@@ -14,6 +14,8 @@ echo "Hello, World!";
 
 </details>
 
+---
+
 ### Esercizio 2: Variabili e Operazioni Aritmetiche
 
 <details>
@@ -34,6 +36,8 @@ echo "Quoziente: " . ($a / $b) . "\n";
 ```
 
 </details>
+
+---
 
 ### Esercizio 3: Condizioni
 
@@ -58,6 +62,8 @@ if ($num > 0) {
 
 </details>
 
+---
+
 ### Esercizio 4: Ciclo For
 
 <details>
@@ -74,6 +80,8 @@ for ($i = 1; $i <= 10; $i++) {
 ```
 
 </details>
+
+---
 
 ### Esercizio 5: Ciclo While
 
@@ -94,6 +102,8 @@ while ($i <= 10) {
 
 </details>
 
+---
+
 ### Esercizio 6: Funzioni
 
 <details>
@@ -112,6 +122,8 @@ echo "Il prodotto di 4 e 5 è: " . prodotto(4, 5);
 ```
 
 </details>
+
+---
 
 ### Esercizio 7: Array
 
@@ -132,6 +144,8 @@ foreach ($array as $valore) {
 
 </details>
 
+---
+
 ### Esercizio 8: Array Associativi
 
 <details>
@@ -151,6 +165,8 @@ foreach ($persone as $nome => $eta) {
 
 </details>
 
+---
+
 ### Esercizio 9: Stringhe
 
 <details>
@@ -166,6 +182,8 @@ echo "La lunghezza della stringa è: " . strlen($testo);
 ```
 
 </details>
+
+---
 
 ### Esercizio 10: Gestione dei Moduli
 

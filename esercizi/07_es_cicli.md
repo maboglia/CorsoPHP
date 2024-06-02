@@ -16,6 +16,8 @@ for ($i = 1; $i <= 10; $i++) {
 
 </details>
 
+---
+
 ### Esercizio 2: Stampa i numeri pari da 1 a 20
 
 <details>
@@ -34,6 +36,8 @@ for ($i = 1; $i <= 20; $i++) {
 ```
 
 </details>
+
+---
 
 ### Esercizio 3: Stampa i numeri dispari da 1 a 20
 
@@ -54,6 +58,8 @@ for ($i = 1; $i <= 20; $i++) {
 
 </details>
 
+---
+
 ### Esercizio 4: Somma dei numeri da 1 a 100
 
 <details>
@@ -72,6 +78,8 @@ echo "La somma dei numeri da 1 a 100 è: " . $somma;
 ```
 
 </details>
+
+---
 
 ### Esercizio 5: Fattoriale di un numero
 
@@ -93,6 +101,8 @@ echo "Il fattoriale di $numero è: " . $fattoriale;
 
 </details>
 
+---
+
 ### Esercizio 6: Stampa gli elementi di un array
 
 <details>
@@ -110,6 +120,8 @@ foreach ($array as $elemento) {
 ```
 
 </details>
+
+---
 
 ### Esercizio 7: Somma degli elementi di un array
 
@@ -130,6 +142,8 @@ echo "La somma degli elementi dell'array è: " . $somma;
 ```
 
 </details>
+
+---
 
 ### Esercizio 8: Conta i numeri positivi in un array
 
@@ -153,6 +167,8 @@ echo "Il numero di elementi positivi nell'array è: " . $positivi;
 
 </details>
 
+---
+
 ### Esercizio 9: Stampa una tabella di moltiplicazione
 
 <details>
@@ -172,6 +188,8 @@ for ($i = 1; $i <= 10; $i++) {
 ```
 
 </details>
+
+---
 
 ### Esercizio 10: Genera i primi n numeri della sequenza di Fibonacci
 

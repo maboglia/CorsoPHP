@@ -19,6 +19,8 @@ echo "Il numero 7 è: " . pariDispari(7);
 
 </details>
 
+---
+
 ### Esercizio 32: Calcolare la Radice Quadrata
 
 <details>
@@ -37,6 +39,8 @@ echo "La radice quadrata di 16 è: " . radiceQuadrata(16);
 ```
 
 </details>
+
+---
 
 ### Esercizio 33: Calcolare la Potenza di un Numero
 
@@ -57,6 +61,8 @@ echo "2 elevato alla 3 è: " . potenza(2, 3);
 
 </details>
 
+---
+
 ### Esercizio 34: Convertire un Numero Decimale in Binario
 
 <details>
@@ -75,6 +81,8 @@ echo "Il numero binario di 10 è: " . decimaleBinario(10);
 ```
 
 </details>
+
+---
 
 ### Esercizio 35: Calcolare il Massimo Comune Divisore (MCD)
 
@@ -100,6 +108,8 @@ echo "Il MCD di 56 e 98 è: " . mcd(56, 98);
 
 </details>
 
+---
+
 ### Esercizio 36: Convertire un Numero Decimale in Esadecimale
 
 <details>
@@ -118,6 +128,8 @@ echo "Il numero esadecimale di 255 è: " . decimaleEsadecimale(255);
 ```
 
 </details>
+
+---
 
 ### Esercizio 37: Somma dei Primi N Numeri Naturali
 
@@ -138,6 +150,8 @@ echo "La somma dei primi 10 numeri naturali è: " . sommaNumeriNaturali(10);
 
 </details>
 
+---
+
 ### Esercizio 38: Generare un Numero Casuale in un Intervallo
 
 <details>
@@ -156,6 +170,8 @@ echo "Numero casuale tra 1 e 100: " . numeroCasuale(1, 100);
 ```
 
 </details>
+
+---
 
 ### Esercizio 39: Calcolare il Fattoriale di un Numero
 
@@ -179,6 +195,8 @@ echo "Il fattoriale di 5 è: " . fattoriale(5);
 ```
 
 </details>
+
+---
 
 ### Esercizio 40: Convertire un Numero in una Stringa Formattata
 
