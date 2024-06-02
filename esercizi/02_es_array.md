@@ -1,7 +1,9 @@
 
 ### Esercizio 21: Somma degli Elementi di un Array
-
+<details>
+<summary>
 Scrivi una funzione che accetta un array di numeri e restituisce la somma di tutti gli elementi.
+</summary>
 
 ```php
 <?php
@@ -14,9 +16,13 @@ echo "La somma degli elementi è: " . sommaArray($numeri);
 ?>
 ```
 
-### Esercizio 22: Filtrare i Numeri Pari
+</details>
 
+### Esercizio 22: Filtrare i Numeri Pari
+<details>
+<summary>
 Crea una funzione che accetta un array di numeri e restituisce un nuovo array contenente solo i numeri pari.
+</summary>
 
 ```php
 <?php
@@ -32,9 +38,13 @@ echo "Numeri pari: " . implode(", ", $pari);
 ?>
 ```
 
-### Esercizio 23: Trovare il Minimo e il Massimo
+</details>
 
+### Esercizio 23: Trovare il Minimo e il Massimo
+<details>
+<summary>
 Scrivi una funzione che accetta un array di numeri e restituisce il valore minimo e massimo.
+</summary>
 
 ```php
 <?php
@@ -48,9 +58,13 @@ echo "Minimo: " . $minMax['min'] . ", Massimo: " . $minMax['max'];
 ?>
 ```
 
-### Esercizio 24: Ordinare un Array
+</details>
 
+### Esercizio 24: Ordinare un Array
+<details>
+<summary>
 Crea una funzione che ordina un array di numeri in ordine crescente.
+</summary>
 
 ```php
 <?php
@@ -65,9 +79,13 @@ echo "Array ordinato: " . implode(", ", $ordinati);
 ?>
 ```
 
-### Esercizio 25: Unire Due Array
+</details>
 
+### Esercizio 25: Unire Due Array
+<details>
+<summary>
 Scrivi una funzione che accetta due array e li unisce in un unico array.
+</summary>
 
 ```php
 <?php
@@ -82,9 +100,13 @@ echo "Array unito: " . implode(", ", $uniti);
 ?>
 ```
 
-### Esercizio 26: Rimuovere Duplicati
+</details>
 
+### Esercizio 26: Rimuovere Duplicati
+<details>
+<summary>
 Crea una funzione che accetta un array e rimuove i valori duplicati.
+</summary>
 
 ```php
 <?php
@@ -98,9 +120,13 @@ echo "Array senza duplicati: " . implode(", ", $unici);
 ?>
 ```
 
-### Esercizio 27: Contare le Occorrenze di un Valore
+</details>
 
+### Esercizio 27: Contare le Occorrenze di un Valore
+<details>
+<summary>
 Scrivi una funzione che accetta un array e un valore, e conta quante volte quel valore appare nell'array.
+</summary>
 
 ```php
 <?php
@@ -114,9 +140,13 @@ echo "Il valore 2 appare: " . $conta . " volte";
 ?>
 ```
 
-### Esercizio 28: Invertire un Array
+</details>
 
+### Esercizio 28: Invertire un Array
+<details>
+<summary>
 Crea una funzione che accetta un array e restituisce un nuovo array con l'ordine degli elementi invertito.
+</summary>
 
 ```php
 <?php
@@ -130,9 +160,13 @@ echo "Array invertito: " . implode(", ", $invertiti);
 ?>
 ```
 
-### Esercizio 29: Trasformare una Stringa in un Array
+</details>
 
+### Esercizio 29: Trasformare una Stringa in un Array
+<details>
+<summary>
 Scrivi una funzione che accetta una stringa separata da virgole e la trasforma in un array.
+</summary>
 
 ```php
 <?php
@@ -146,9 +180,13 @@ echo "Array: " . implode(", ", $array);
 ?>
 ```
 
-### Esercizio 30: Calcolare la Lunghezza di un Array
+</details>
 
+### Esercizio 30: Calcolare la Lunghezza di un Array
+<details>
+<summary>
 Crea una funzione che accetta un array e restituisce la sua lunghezza.
+</summary>
 
 ```php
 <?php
@@ -160,4 +198,6 @@ $numeri = array(1, 2, 3, 4, 5);
 echo "La lunghezza dell'array è: " . lunghezzaArray($numeri);
 ?>
 ```
+
+</details>
 
