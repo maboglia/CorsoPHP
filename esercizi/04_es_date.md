@@ -217,3 +217,76 @@ echo "Il mese e l'anno correnti sono: " . meseAnnoCorrente();
 ```
 
 </details>
+
+---
+
+### Esempio codice Iterare tra due date
+
+Scrivere un ciclo `for` in PHP per iterare tra due date consecutive inviate tramite un modulo HTML via POST. 
+
+Questo esempio presuppone che le date siano fornite nel formato `YYYY-MM-DD`.
+
+### Form HTML
+
+Prima di tutto, creiamo un modulo HTML per inviare le date:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Date Range Form</title>
+</head>
+<body>
+    <form method="POST" action="date_loop.php">
+        <label for="start_date">Start Date:</label>
+        <input type="date" id="start_date" name="start_date" required>
+        <br>
+        <label for="end_date">End Date:</label>
+        <input type="date" id="end_date" name="end_date" required>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
+```
+
+### Script PHP (date_loop.php)
+
+Elaborare le date inviate e utilizzare un ciclo `for` per iterare tra di esse:
+
+```php
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Ricevi le date dal modulo POST
+    $startDate = $_POST['start_date'];
+    $endDate = $_POST['end_date'];
+
+    // Converti le stringhe delle date in oggetti DateTime
+    $start = new DateTime($startDate);
+    $end = new DateTime($endDate);
+
+    // Aggiungi un giorno al fine per includere l'ultimo giorno nel ciclo
+    $end->modify('+1 day');
+
+    // Itera tra le due date
+    for ($date = $start; $date < $end; $date->modify('+1 day')) {
+        echo $date->format('Y-m-d') . "<br>";
+    }
+}
+?>
+```
+
+### Spiegazione
+
+1. **Ricezione delle date**: Utilizziamo `$_POST` per ricevere le date inviate dal modulo.
+2. **Conversione delle date**: Le stringhe delle date sono convertite in oggetti `DateTime` per facilitare le operazioni.
+3. **Aggiunta di un giorno**: Poiché l'intervallo dovrebbe essere inclusivo, aggiungiamo un giorno alla data di fine.
+4. **Ciclo `for` tra le date**: Utilizziamo un ciclo `for` per iterare tra le date, incrementando la data corrente di un giorno (`modify('+1 day')`) a ogni iterazione.
+5. **Stampa delle date**: Ogni data nel formato `YYYY-MM-DD` viene stampata.
+
+### Note
+
+- Assicurati che il file PHP (`date_loop.php`) si trovi nello stesso percorso del modulo HTML o modifica l'attributo `action` del modulo per puntare al percorso corretto del file PHP.
+- Verifica che la configurazione del server PHP supporti la ricezione di dati POST e che il modulo HTML e lo script PHP siano correttamente collegati.
+
+
