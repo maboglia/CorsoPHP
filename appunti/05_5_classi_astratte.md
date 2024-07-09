@@ -39,8 +39,11 @@ class Rettangolo extends FiguraGeometrica
 }
 ```
 
+
 Non è possibile istanziare una classe astratta. Servono solo come genitori per le altre classi, dettando in parte la loro attuazione.
-$s = nuova forma(); // errore in fase di compilazione
+
+`$s = nuova forma();` // errore in fase di compilazione
+
 Tuttavia, una classe astratta può ereditare da una classe non astratta (concreta).
 
 ---
@@ -101,3 +104,28 @@ Un'interfaccia non può ereditare da una classe, ma potrebbe ereditare da un'alt
 
 `interface i1 {}`
 `interface i2 extends i1 {`}
+
+## Programmazione funzionale -Lambda
+
+```php
+<?php
+function show_Spanish(int $n, string $m): string
+{
+    return "The number {$n} is called {$m} in Spanish";
+}
+
+function map_Spanish(int $n, string $m): array
+{
+    return [$n => $m];
+}
+
+$a = [1, 2, 3, 4, 5];
+$b = ['uno', 'dos', 'tres', 'cuatro', 'cinco'];
+
+$c = array_map('show_Spanish', $a, $b);
+print_r($c);
+
+$d = array_map('map_Spanish', $a , $b);
+print_r($d);
+?>
+```
