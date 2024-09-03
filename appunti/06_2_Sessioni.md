@@ -143,3 +143,76 @@ PHP permette anche di gestire le sessioni in modo personalizzato, utilizzando ha
 ### Conclusione
 
 La gestione delle sessioni in PHP è uno strumento potente che permette di mantenere lo stato tra diverse richieste HTTP, essenziale per costruire applicazioni web interattive e sicure. È fondamentale capire le migliori pratiche di sicurezza e configurazione per proteggere le informazioni sensibili degli utenti e garantire un'esperienza utente fluida.
+
+---
+
+In una sessione PHP, puoi salvare una vasta gamma di tipi di dati. La superglobale `$_SESSION` è un array associativo che può contenere diversi tipi di valori. Ecco i principali tipi di elementi che puoi salvare in una sessione:
+
+### 1. **Stringhe**
+Le stringhe sono uno dei tipi di dati più comuni memorizzati in sessione, utilizzate per conservare valori come nomi utente, messaggi, token di sicurezza, ecc.
+
+```php
+$_SESSION['username'] = 'MarioRossi';
+$_SESSION['token'] = 'abc123xyz';
+```
+
+### 2. **Numeri Interi e Decimali**
+Puoi memorizzare numeri interi o decimali in una sessione, utili per contatori, punteggi, o valori numerici generali.
+
+```php
+$_SESSION['user_id'] = 42;
+$_SESSION['balance'] = 1234.56;
+```
+
+### 3. **Booleani**
+Valori booleani (`true` o `false`) possono essere utilizzati per tenere traccia dello stato di qualcosa, come se un utente è autenticato o meno.
+
+```php
+$_SESSION['logged_in'] = true;
+$_SESSION['is_admin'] = false;
+```
+
+### 4. **Array**
+Gli array possono essere memorizzati in sessione, permettendo di conservare collezioni di dati correlati. Possono essere array semplici o multidimensionali.
+
+```php
+$_SESSION['cart'] = ['item1', 'item2', 'item3'];
+$_SESSION['user_data'] = [
+    'name' => 'Mario Rossi',
+    'email' => 'mario.rossi@example.com'
+];
+```
+
+### 5. **Oggetti**
+Anche gli oggetti possono essere salvati in una sessione, permettendo di mantenere lo stato di oggetti complessi tra le richieste. È importante notare che se salvi oggetti, devi garantire che le relative classi siano caricate correttamente nelle pagine dove accedi alla sessione.
+
+```php
+class User {
+    public $name;
+    public $email;
+
+    public function __construct($name, $email) {
+        $this->name = $name;
+        $this->email = $email;
+    }
+}
+
+$_SESSION['user'] = new User('Mario Rossi', 'mario.rossi@example.com');
+```
+
+### 6. **Null**
+Puoi anche memorizzare valori `null` in una sessione. Questo può essere utile per indicare uno stato non definito o una mancanza di dati.
+
+```php
+$_SESSION['last_activity'] = null;
+```
+
+### Considerazioni Importanti
+
+- **Dimensione dei dati:** Anche se è possibile salvare molti tipi di dati in sessione, è importante essere consapevoli delle dimensioni dei dati memorizzati, poiché sessioni molto grandi possono rallentare le prestazioni.
+  
+- **Serializzazione:** PHP serializza automaticamente gli array e gli oggetti quando li memorizza nella sessione. Tuttavia, è importante assicurarsi che le classi degli oggetti siano caricate correttamente quando si ripristinano dalla sessione.
+
+- **Sicurezza:** Evita di memorizzare dati sensibili in sessione senza le dovute precauzioni, come crittografia o altre misure di sicurezza.
+
+Salvare diversi tipi di dati in una sessione è molto utile per mantenere lo stato di un'applicazione tra le varie richieste dell'utente, migliorando l'esperienza utente e facilitando la gestione delle informazioni.
