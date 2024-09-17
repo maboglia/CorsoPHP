@@ -1,233 +1,227 @@
-# PHP: OOP
+# **Introduzione alla Programmazione Orientata agli Oggetti (OOP) in PHP**
 
-
-## cosa sono gli oggetti
-
-*codice raggruppato che fa riferimento ad un unico tema*
-
-* astrazione delle strutture di codice
-  * attributi
-  * funzioni (metodi)
-
-ad un livello base, con poche informazioni utilizziamo gli **array** per aggregare le nostre informazioni
-
-gli **oggetti** servono per organizzare e mantenere il codice
-
-* aggiungono chiarezza, riducendo la complessità
-* regole semplici e interazione complessa
-* lasciano maggior spazio ai dati
-* permettono la modularizzazione e la riusabilità del codice
+La **Programmazione Orientata agli Oggetti** (OOP) è un paradigma di programmazione che si concentra sulla creazione di oggetti, che possono contenere dati sotto forma di attributi (proprietà) e comportamenti sotto forma di metodi (funzioni). PHP, a partire dalla versione 5, ha introdotto il supporto completo alla programmazione orientata agli oggetti, rendendola una delle caratteristiche principali per lo sviluppo di applicazioni moderne.
 
 ---
 
-## Oggetti
+### **1. Cos'è una Classe?**
 
-Una classe è un modello utilizzato per creare oggetti. Per definirne uno viene utilizzata la parola chiave class, seguita da un nome e da un blocco di codice. 
+Una **classe** è una struttura che rappresenta un modello o blueprint da cui si possono creare oggetti. In altre parole, una classe definisce proprietà (variabili) e metodi (funzioni) che descrivono il comportamento e le caratteristiche di un oggetto.
 
-La convenzione di denominazione per le classi è maiuscola, il che significa che ogni parola dovrebbe essere inizialmente in maiuscolo.
-
-Il corpo della classe può contenere proprietà e metodi. Le proprietà sono variabili che mantengono lo stato dell'oggetto, mentre i metodi sono funzioni che definiscono ciò che l'oggetto può fare. 
-
-Le proprietà sono anche conosciute come campi o attributi in altre lingue. In PHP, devono avere un livello di accesso esplicito specificato. Di seguito viene utilizzato il livello di accesso public, che consente l'accesso illimitato alla proprietà.
-
-```php
-class Rettangolo
-{
-  public $x, $y;
-  function newArea($a, $b) { return $a * $b; }
-}
-
-```
-
----
-
-Per accedere ai membri dall'interno della classe, viene utilizzata la pseudo variabile $this insieme all'operatore a freccia singola (`->`). La variabile `$this` è un riferimento all'istanza corrente della classe e può essere utilizzata solo all'interno di un contesto di oggetti. Senza di essa, `$x` e `$y` sarebbero visti solo come variabili locali.
-
----
-## Istanziare  un oggetto
-
-Per utilizzare i membri di una classe dall'esterno della classe che la racchiude, è necessario prima creare un oggetto della classe. Questo viene fatto usando la parola chiave `new`, che crea un nuovo oggetto o istanza.
-$r = new Rettangolo(); // oggetto istanziato
-L'oggetto contiene il proprio insieme di proprietà, che possono contenere valori diversi da quelli di altre istanze della classe. Come per le funzioni, gli oggetti di una classe possono essere creati anche se la definizione della classe appare più in basso nel file di script.
-
-```php
-$r = new ClasseDemo(); // ok
-classe ClasseDemo {};
-```
-
----
-
-## Accesso ai membri dell'oggetto
-Per accedere ai membri che appartengono a un oggetto, è necessario l'operatore freccia singola (`->`). Può essere utilizzato per chiamare metodi o assegnare valori a proprietà.
-
-```php
-$r->x = 5;
-$r->y = 10;
-$r->getArea(); // 50
-```
-
-Un altro modo per inizializzare le proprietà consiste nell'utilizzare i valori delle proprietà iniziali.
-
----
-
-## Valori iniziali delle proprietà
-
-Se una proprietà deve avere un valore iniziale, un modo semplice consiste nell'assegnare la proprietà nello stesso momento in cui viene dichiarata. Questo valore iniziale viene quindi impostato al momento della creazione dell'oggetto. Deve essere un'espressione costante. Non può, ad esempio, essere una variabile o un'espressione matematica.
-
-```php
-
-class Rettangolo
-{
-  public $x = 5, $y = 10;
-}
-```
-
----
-
-## Costruttore
-Una classe può avere un costruttore, che è un metodo speciale utilizzato per inizializzare (costruire) l'oggetto. Questo metodo fornisce un modo per inizializzare le proprietà, che non è limitato alle espressioni costanti. In PHP, il costruttore inizia con due caratteri di sottolineatura seguiti dalla parola costrutto. Metodi come questi sono conosciuti come metodi magici.
-```php
-class Rettangolo
-{
-   public $x, $y;
-   function __construct()
-   {
-     $this->x = 5;
-     $this->y = 10;
-     echo "Costruito";
-} }
-```
-
-Quando viene creata una nuova istanza di questa classe, viene chiamato il costruttore, che in questo esempio imposta le proprietà sui valori specificati. 
-
-Si noti che tutti i valori di proprietà iniziali vengono impostati prima dell'esecuzione del costruttore.
-`$r = new Rettangolo(); // "Costruito"`
-
-Poiché questo costruttore non accetta argomenti, le parentesi possono essere opzionalmente omesse.
-`$r = new Rettangolo; // "Costruito"`
-
----
-
-Proprio come qualsiasi altro metodo, il costruttore può avere un elenco di parametri. Può essere utilizzato per impostare i valori delle proprietà sugli argomenti passati al momento della creazione dell'oggetto.
-```php
-class Rettangolo
-{
-   public $x, $y;
-   function __construct($x, $y)
-   {
-     $this->x = $x;
-     $this->y = $y;
-   }
-}
-
-$r = new Rettangolo(5,10);
-```
-
----
-
-## Distruttore
-
-Oltre al costruttore, le classi possono avere anche un distruttore. Questo metodo magico inizia con due trattini bassi seguiti dalla parola distruzione. Viene chiamato non appena non ci sono più riferimenti all'oggetto, prima che l'oggetto venga distrutto dal Garbage Collector di PHP.
-
-```php
-class Rettangolo
-{
-// ...
-   function __destruct() { echo "Distrutto"; }
-}
-```
-
-Per testare il distruttore, la funzione unset può rimuovere manualmente tutti i riferimenti all'oggetto.
-`unset($r); // "Distrutto"`
-
-
----
-
-Se non definirete un costruttore e un distruttore per la vostra classe
-(oggetto), PHP li rimpiazzerà con dei metodi propri di default.
-
-Il costruttore verrà chiamato automaticamente da PHP, ogni volta che verrà
-creato un oggetto (istanza), mentre il distruttore sarà chiamato quando l'oggetto
-verrà distrutto, ossia quando non esiste più alcun riferimento all'oggetto oppure
-alla fine dello script.
-
----
-
-## Confronto di oggetti
-
-Quando si utilizza l'operatore "uguale a" (`==`) sugli oggetti, questi oggetti sono considerati uguali se gli oggetti sono istanze della stessa classe e le loro proprietà hanno gli stessi valori e tipi. Al contrario, l'operatore "strettamente uguale a" (`===`) restituisce true solo se le variabili si riferiscono alla stessa istanza della stessa classe.
-
----
-
-
-## Modificatori di accesso
-
-* **public** - I membri (attributi o metodi) della classe dichiarati public, possono essere utilizzati sia all'interno che all'esterno della classe (`$this->membro` oppure `$oggetto->membro`)
-* **private** - I membri dichiarati private, possono essere utilizzati solo all interno della classe ($this->membro)
-* **protected** - I membri dichiarati protected, possono essere utilizzati solo all'interno delle classi madri e derivate ($this->membro), questo modificatore implica l'ereditarietà
-
----
-
-## getter e setter
-
-In Php sono disponibili i metodi magici `__get and __set`
+#### Sintassi di una Classe in PHP
 
 ```php
 <?php
-class ContoBancario {
-    private $saldo;
+class Automobile {
+    // Proprietà (variabili)
+    public $marca;
+    public $modello;
 
-    public function __get($nomeAttributo) {
-        return $this->$nomeAttributo;
+    // Costruttore
+    public function __construct($marca, $modello) {
+        $this->marca = $marca;
+        $this->modello = $modello;
     }
 
-    public function __set($nomeAttributo, $value) {
-        if ( isset($value) ) $this->$nomeAttributo = $value;
+    // Metodo (funzione)
+    public function dettagliAutomobile() {
+        return "Marca: $this->marca, Modello: $this->modello";
     }
 }
-$mioConto = new ContoBancario();
-$mioConto->saldo = 1000;//setter
-echo $mioConto->saldo;//getter
-
+?>
 ```
 
----
+**Spiegazione**:
 
-
-### Utilizzo delle costanti globali
-
-Con le costanti globali è necessario omettere il simbolo del dollaro $ durante la dichiarazione.
-
-I nomi delle costanti in PHP 5 sono sempre Case Sensitive, ed è buona norma scriverle tutte in maiuscolo per distinguerle immediatamente come costanti, ma non è obbligatorio.
+- **`class Automobile`**: definisce una classe chiamata `Automobile`.
+- **Proprietà**: `$marca` e `$modello` sono variabili che rappresentano gli attributi della classe.
+- **Metodo**: `dettagliAutomobile()` è una funzione che restituisce una descrizione dell'automobile.
+- **Costruttore**: `__construct()` è un metodo speciale che viene chiamato automaticamente quando viene creato un oggetto dalla classe. Serve per inizializzare le proprietà dell'oggetto.
 
 ---
 
-### test.php
+### **2. Cos'è un Oggetto?**
+
+Un **oggetto** è un'istanza di una classe. Quando si crea un oggetto da una classe, si dice che si sta "istanziando" quella classe. Gli oggetti contengono **dati** e possono eseguire **azioni** definite dalla classe da cui derivano.
+
+#### Esempio di Creazione di un Oggetto
 
 ```php
-require once("Taglie.php");
+<?php
+// Creare un oggetto dalla classe Automobile
+$auto = new Automobile("Fiat", "500");
 
-echo Taglie::XL . "";
-
-Taglie::mostraTaglia();
-
+// Chiamare un metodo dell'oggetto
+echo $auto->dettagliAutomobile();  // Output: Marca: Fiat, Modello: 500
+?>
 ```
 
+**Spiegazione**:
+
+- **`new Automobile("Fiat", "500")`**: crea un nuovo oggetto dalla classe `Automobile`, passando i valori per `marca` e `modello` al costruttore.
+- **`$auto->dettagliAutomobile()`**: richiama il metodo `dettagliAutomobile()` dell'oggetto `$auto`.
+
 ---
 
-### autoloader delle classi
+### **3. Proprietà e Metodi**
+
+- **Proprietà**: sono le variabili definite all'interno di una classe. Queste proprietà rappresentano gli attributi dell'oggetto.
+- **Metodi**: sono le funzioni definite all'interno della classe. Questi metodi rappresentano il comportamento che un oggetto può eseguire.
+
+#### Esempio
 
 ```php
+<?php
+class Automobile {
+    public $marca;
+    public $modello;
 
-function includeClassFile($class) {
-    $file = "include/" . strtolower( trim( $class ) ) . ".php";
-    if (file_exists($file)
-    {
-        include $file;
-        return true;
+    public function __construct($marca, $modello) {
+        $this->marca = $marca;
+        $this->modello = $modello;
     }
-    return false;
+
+    public function descrivi() {
+        return "Questa automobile è una $this->marca $this->modello.";
+    }
 }
 
-spl_autoload_register('includeClassFile');
+// Creare un oggetto
+$miaAuto = new Automobile("Tesla", "Model S");
+echo $miaAuto->descrivi();  // Output: Questa automobile è una Tesla Model S.
+?>
 ```
+
+---
+
+### **4. Visibilità delle Proprietà e dei Metodi**
+
+Le **proprietà** e i **metodi** possono avere diverse visibilità:
+
+- **public**: accessibile ovunque (dentro e fuori dalla classe).
+- **private**: accessibile solo all'interno della classe stessa.
+- **protected**: accessibile all'interno della classe e delle sue sottoclassi.
+
+#### Esempio
+
+```php
+<?php
+class Automobile {
+    public $marca;  // Accessibile ovunque
+    private $modello;  // Accessibile solo all'interno della classe
+
+    public function __construct($marca, $modello) {
+        $this->marca = $marca;
+        $this->modello = $modello;
+    }
+
+    // Metodo pubblico che può accedere a una proprietà privata
+    public function descrivi() {
+        return "Marca: $this->marca, Modello: $this->modello";
+    }
+}
+
+$auto = new Automobile("BMW", "X5");
+echo $auto->descrivi();  // Output: Marca: BMW, Modello: X5
+
+// Tentativo di accesso diretto a una proprietà privata: causerebbe un errore
+// echo $auto->modello;  // ERRORE
+?>
+```
+
+**Spiegazione**:
+
+- La proprietà **`$modello`** è privata, quindi non può essere acceduta dall'esterno della classe, ma può essere utilizzata all'interno dei metodi della classe.
+
+---
+
+### **5. Ereditarietà**
+
+L'**ereditarietà** è un concetto fondamentale dell'OOP che consente di creare una nuova classe basata su una classe esistente. La nuova classe eredita le proprietà e i metodi della classe genitore, ma può anche aggiungere o sovrascrivere funzionalità.
+
+#### Esempio
+
+```php
+<?php
+// Classe genitore
+class Veicolo {
+    public $marca;
+
+    public function __construct($marca) {
+        $this->marca = $marca;
+    }
+
+    public function avvia() {
+        return "Il veicolo è avviato.";
+    }
+}
+
+// Classe figlia
+class Automobile extends Veicolo {
+    public $modello;
+
+    public function __construct($marca, $modello) {
+        parent::__construct($marca);  // Chiama il costruttore della classe genitore
+        $this->modello = $modello;
+    }
+
+    public function descrivi() {
+        return "Marca: $this->marca, Modello: $this->modello";
+    }
+}
+
+$miaAuto = new Automobile("Audi", "A4");
+echo $miaAuto->descrivi();  // Output: Marca: Audi, Modello: A4
+echo $miaAuto->avvia();  // Output: Il veicolo è avviato.
+?>
+```
+
+**Spiegazione**:
+
+- **`class Automobile extends Veicolo`**: la classe `Automobile` eredita dalla classe `Veicolo`.
+- **`parent::__construct($marca)`**: richiama il costruttore della classe genitore all'interno del costruttore della classe figlia.
+
+---
+
+### **6. Polimorfismo**
+
+Il **polimorfismo** permette alle classi derivate di sovrascrivere metodi ereditati dalla classe genitore per fornire implementazioni specifiche.
+
+#### Esempio
+
+```php
+<?php
+class Veicolo {
+    public function descrivi() {
+        return "Sono un veicolo.";
+    }
+}
+
+class Automobile extends Veicolo {
+    public function descrivi() {
+        return "Sono un'automobile.";
+    }
+}
+
+$veicolo = new Veicolo();
+echo $veicolo->descrivi();  // Output: Sono un veicolo.
+
+$auto = new Automobile();
+echo $auto->descrivi();  // Output: Sono un'automobile.
+?>
+```
+
+---
+
+### **7. Concetti chiave dell'OOP in PHP**
+
+1. **Incapsulamento**: L'idea di nascondere i dettagli interni di un oggetto e fornire un'interfaccia pubblica per l'interazione.
+2. **Ereditarietà**: Il meccanismo per cui una classe può ereditare proprietà e metodi da un'altra classe.
+3. **Polimorfismo**: Capacità di un metodo di comportarsi diversamente in classi derivate.
+4. **Astrazione**: Fornire una rappresentazione semplificata di un oggetto nascondendo dettagli complessi.
+
+---
+
+### **Conclusione**
+
+La Programmazione Orientata agli Oggetti (OOP) in PHP offre strumenti potenti per creare applicazioni scalabili e manutenibili. Comprendere classi, oggetti, ereditarietà e polimorfismo è essenziale per sviluppare software complessi in modo efficiente.
