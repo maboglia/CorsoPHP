@@ -62,7 +62,7 @@ Ogni dichiarazione in PHP deve terminare con un il punto e virgola.
 Salvate preferibilmente in un file con estensione .php.
 L’impostazione può essere modificata attraverso i file di configurazione del web server
 
-
+---
 
 ## Variabili
 

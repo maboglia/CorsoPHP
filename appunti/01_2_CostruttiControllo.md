@@ -23,12 +23,18 @@ Scelta fra due o più vie alternative (una sì e le altre no)
 if (<espressione>){
     //<statement>
     } //if
+```
+
+```php
 
 if (<espressione>){
     //<statement>
     } //if ... else
 else 
     //<statement>
+```
+
+```php
 
 if (<espressione>){
     //<statement>
@@ -139,6 +145,109 @@ switch (<espressione>){
 
 ---
 
+## PHP8 `match`
+
+In PHP, la funzione `match` è stata introdotta a partire dalla versione **PHP 8** come una nuova espressione simile al tradizionale costrutto `switch`, ma con alcune differenze chiave:
+
+- **Restituisce un valore**: `match` è un'espressione, quindi restituisce direttamente un valore. A differenza di `switch`, non ha bisogno di usare `break` per evitare esecuzioni indesiderate.
+- **Confronto rigoroso**: `match` usa il confronto rigoroso (`===`), il che significa che confronta sia il valore che il tipo.
+- **Semplicità**: `match` è più compatto e leggibile, evitando la necessità di un blocco `break` dopo ogni caso.
+
+### Sintassi di `match`
+
+```php
+$result = match ($variable) {
+    valore1 => azione1,
+    valore2 => azione2,
+    valoreN => azioneN,
+    default => azioneDefault,
+};
+```
+
+### Differenze con `switch`
+- **Nessun bisogno di `break`**: In `match`, ogni condizione esprime direttamente un valore senza la necessità di interrompere manualmente il flusso con `break`.
+- **Confronto rigoroso (`===`)**: A differenza di `switch` che usa il confronto debole (`==`), `match` usa il confronto rigoroso.
+- **Restituisce sempre un valore**: Essendo un'espressione, `match` deve restituire un valore in tutti i casi.
+
+### Esempio di utilizzo di `match`
+
+Ecco un esempio semplice per mostrare la differenza tra `switch` e `match`.
+
+#### Con `switch`
+
+```php
+$valore = 2;
+switch ($valore) {
+    case 1:
+        $risultato = "Uno";
+        break;
+    case 2:
+        $risultato = "Due";
+        break;
+    case 3:
+        $risultato = "Tre";
+        break;
+    default:
+        $risultato = "Non trovato";
+        break;
+}
+
+echo $risultato;  // Output: Due
+```
+
+#### Con `match`
+
+```php
+$valore = 2;
+$risultato = match ($valore) {
+    1 => "Uno",
+    2 => "Due",
+    3 => "Tre",
+    default => "Non trovato",
+};
+
+echo $risultato;  // Output: Due
+```
+
+### Esempio con tipi di dati diversi
+
+Poiché `match` usa il confronto rigoroso, distingue tra tipi di dati:
+
+```php
+$valore = '2';  // stringa
+$risultato = match ($valore) {
+    1 => "Intero 1",
+    2 => "Intero 2",
+    '2' => "Stringa 2",
+    default => "Non trovato",
+};
+
+echo $risultato;  // Output: Stringa 2
+```
+
+### Esempio complesso con espressioni multiple
+
+Puoi anche combinare più valori in un singolo caso di `match`:
+
+```php
+$esito = 'vittoria';
+
+$risultato = match ($esito) {
+    'vittoria', 'successo' => 'Hai vinto!',
+    'sconfitta', 'fallimento' => 'Hai perso!',
+    default => 'Stato sconosciuto',
+};
+
+echo $risultato;  // Output: Hai vinto!
+```
+
+### Vantaggi di `match`
+- **Codice più pulito**: `match` richiede meno righe di codice rispetto a `switch` e rende la logica più leggibile.
+- **Confronto rigoroso**: Elimina il comportamento ambiguo che può derivare dal confronto debole di `switch`.
+- **Obbligo di coprire tutti i casi**: Se non definisci un caso `default` e nessuna delle condizioni viene soddisfatta, PHP lancerà un'eccezione, il che aiuta a evitare bug derivanti da mancate coperture di casi.
+
+---
+
 ## Iterazione - ripetizione - loop
 
 Costrutti per la esecuzione ripetuta di istruzioni
@@ -188,17 +297,3 @@ ottenuto valutando l'espressione.
 
 Si rimanda al [manuale php](http://www.php.net/manual/en/language.control-structures.php) per gli approfondimenti
 
----
-
-## Operatore `null coalescing`
-
-L'operatore `null coalescing (??)` è stato aggiunto in PHP 7 come scorciatoia per il caso comune di utilizzo di un ternario con `isset`. Restituisce il suo primo operando se esiste e non è nullo; in caso contrario, restituisce il suo secondo operando.
-
-```php
-$x = null;
-$nome = $x ?? 'sconosciuto'; // "sconosciuto"
-```
-
-Questa istruzione è equivalente alla seguente operazione ternaria, che utilizza il costrutto isset.
-
-`$nome = oggetto($x) ? $x : 'sconosciuto';`

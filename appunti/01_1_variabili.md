@@ -46,11 +46,13 @@ Le variabili PHP sono solitamente passate per **valore**:
 quando una variabile viene assegnata ad un'altra in realtà viene assegnato ad una variabile **una copia del valore dell'altra**, ma le due variabili identificano comunque due celle di memoria differenti. 
 
 Ad esempio:
+
 ```php
 $var1 = 3;
 $var2 = $var1 //ora $var2 contiene il valore 3
 $var2 = 4 //in questo caso non cambia il valore di $var1 ma solo quello di $var2
 ```
+
 ---
 
 Talvolta, soprattutto per quanto riguarda l'uso di funzioni, è comodo aver due variabili che puntino alla stessa cella di memoria. 

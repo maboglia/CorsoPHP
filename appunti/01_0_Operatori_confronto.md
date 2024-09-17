@@ -423,4 +423,5 @@ $saluto = "Ciao, ";
 $saluto .= "Mondo!";  // Risultato: "Ciao, Mondo!"
 ```
 
+---
 
