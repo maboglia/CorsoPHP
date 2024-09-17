@@ -1,138 +1,191 @@
-# static keyword
+### **La Keyword `static` in PHP OOP**
+
+In PHP, la parola chiave **`static`** è utilizzata in contesto di **programmazione orientata agli oggetti (OOP)** per definire proprietà e metodi che appartengono alla **classe** anziché all'**istanza** della classe. Ciò significa che i membri `static` possono essere utilizzati senza creare un'istanza della classe.
 
 ---
 
-La parola chiave static può essere utilizzata per dichiarare proprietà e metodi a cui è possibile accedere senza dover creare un'istanza della classe. I membri statici (classe) esistono solo in una copia, che appartiene alla classe stessa, mentre i membri di istanza (non statici) vengono creati come nuove copie per ogni nuovo oggetto.
+### **1. Proprietà e Metodi Statici**
 
+- **Proprietà statiche**: sono variabili della classe che sono condivise tra tutte le istanze della classe. Non appartengono a un singolo oggetto, ma alla classe stessa.
+  
+- **Metodi statici**: sono funzioni che possono essere chiamate direttamente sulla classe senza bisogno di istanziare un oggetto. All'interno di un metodo statico, non si può accedere alle proprietà o ai metodi non statici, poiché non esiste un'istanza.
 
-
-
+#### Esempio di proprietà e metodi statici
 
 ```php
-class Cerchio
-{
-  // Membri dell'istanza (uno per oggetto)
-  public $r = 10;
-  function getArea() {}
-  // Membri statici/di classe (solo una copia)
-  static $PI_GRECO = 3.14;
-  static function calcolaArea($a) {}
+<?php
+class Contatore {
+    public static $count = 0;
+
+    public static function incrementa() {
+        self::$count++;
+    }
 }
+
+Contatore::incrementa();  // Incrementa il contatore statico
+Contatore::incrementa();
+echo Contatore::$count;    // Output: 2
+?>
 ```
 
-I metodi statici non possono utilizzare i membri dell'istanza poiché questi metodi non fanno parte di un'istanza. Tuttavia, possono utilizzare altri membri statici.
+**Spiegazione**:
+
+- **`public static $count`**: è una proprietà statica che mantiene il conteggio degli incrementi.
+- **`public static function incrementa()`**: è un metodo statico che incrementa la variabile `$count`.
+- **`Contatore::incrementa()`**: i metodi statici vengono chiamati usando il nome della classe seguito da `::` (operatore di risoluzione di ambito).
 
 ---
 
-## Fare riferimento a membri statici
+### **2. Accesso ai Membri Statici**
 
-A differenza dei membri dell'istanza, non è possibile accedere ai membri statici utilizzando `l'operatore freccia singola (->)`. Invece, per fare riferimento a membri statici all'interno di una classe, al membro deve essere preceduta la parola chiave `self` seguita dall'operatore di risoluzione dell'ambito (`::`). La parola chiave `self` è un alias per il nome della classe, quindi in alternativa è possibile utilizzare il nome effettivo della classe.
+Per accedere a una proprietà o un metodo statico dall'interno della classe stessa, si utilizza la parola chiave **`self`** seguita dall'operatore di risoluzione di ambito `::`.
+
+#### Esempio
 
 ```php
-static function calcolaArea($a)
-{
-    return self::$PI_GRECO * $a * $a;     // ok
-    return Cerchio::$PI_GRECO * $a * $a; // in alternativa si può usare il nome della classe
+<?php
+class Esempio {
+    public static $nome = "PHP";
+
+    public static function saluta() {
+        return "Ciao, " . self::$nome;
+    }
 }
+
+echo Esempio::saluta();  // Output: Ciao, PHP
+?>
+```
+
+**Spiegazione**:
+
+- **`self::$nome`**: accede alla proprietà statica `$nome` all'interno della classe tramite `self::`.
+
+---
+
+### **3. Differenza tra Proprietà Statiche e di Istanza**
+
+- **Proprietà statiche**: esistono una sola volta per la classe e sono condivise tra tutte le istanze della classe.
+- **Proprietà di istanza**: ogni oggetto (istanza) ha una sua copia delle proprietà non statiche.
+
+#### Esempio di differenza
+
+```php
+<?php
+class Persona {
+    public static $numeroPersone = 0;
+    public $nome;
+
+    public function __construct($nome) {
+        $this->nome = $nome;
+        self::$numeroPersone++;
+    }
+}
+
+$p1 = new Persona("Alice");
+$p2 = new Persona("Bob");
+
+echo Persona::$numeroPersone;  // Output: 2 (variabile statica condivisa)
+?>
+```
+
+**Spiegazione**:
+
+- Ogni istanza della classe **`Persona`** ha una sua proprietà `$nome`, ma la proprietà statica `$numeroPersone` è condivisa tra tutte le istanze e viene incrementata ogni volta che viene creato un nuovo oggetto.
+
+---
+
+### **4. Metodi Statici e Ereditarietà**
+
+I **metodi statici** possono essere ereditati dalle classi figlie e possono essere sovrascritti. È anche possibile accedere ai metodi statici della classe padre usando **`parent::`**.
+
+#### Esempio di ereditarietà
+
+```php
+<?php
+class Animale {
+    public static function descrivi() {
+        return "Sono un animale";
+    }
+}
+
+class Cane extends Animale {
+    public static function descrivi() {
+        return "Sono un cane";
+    }
+}
+
+echo Cane::descrivi();   // Output: Sono un cane
+echo Animale::descrivi(); // Output: Sono un animale
+?>
 ```
 
 ---
 
+### **5. Late Static Binding (`static::`)**
 
-La stessa sintassi viene utilizzata per accedere ai membri statici da un metodo di istanza.
-Si noti che, contrariamente ai metodi statici, i metodi di istanza possono utilizzare membri sia statici che di istanza.
+Quando si lavora con classi che estendono altre classi, PHP offre il meccanismo del **late static binding** attraverso la parola chiave `static`. Questa permette di chiamare metodi o proprietà statici della **classe figlia** anche se definiti nella classe padre.
+
+#### Esempio con `static::`
 
 ```php
-function getArea()
-{
-    return self::calcolaArea($this->$r);
+<?php
+class Animale {
+    public static function crea() {
+        return new static();  // Utilizza "late static binding"
+    }
 }
+
+class Gatto extends Animale {
+    public function miagola() {
+        return "Miao!";
+    }
+}
+
+$gatto = Gatto::crea();  // Crea un'istanza di Gatto
+echo $gatto->miagola();  // Output: Miao!
+?>
 ```
+
+**Spiegazione**:
+
+- **`static::`** fa sì che la chiamata `crea()` nella classe **`Gatto`** restituisca un'istanza della classe figlia, anche se il metodo è definito nella classe padre.
 
 ---
 
+### **6. Variabili Statiche all'interno dei Metodi**
 
-Per accedere ai membri statici dall'esterno della classe, è necessario utilizzare il nome della classe, seguito dall'operatore di risoluzione dell'ambito (::).
+All'interno dei metodi (statici e non), è possibile dichiarare variabili **statiche locali**, che mantengono il loro valore tra le diverse chiamate della funzione.
+
+#### Esempio di variabile statica locale
 
 ```php
-
-class Cerchio
-{
-    static $PI_GRECO = 3.14;
-  static function calcolaArea($a)
-  {
-      return self::$PI_GRECO * $a * $a;
-  }
+<?php
+function contatore() {
+    static $count = 0;
+    $count++;
+    echo $count;
 }
-echo Cerchio::$PI_GRECO; // "3.14"
-echo Cerchio::calcolaArea(10); // "314"
+
+contatore();  // Output: 1
+contatore();  // Output: 2
+contatore();  // Output: 3
+?>
 ```
 
-I membri statici possono essere utilizzati senza dover creare un'istanza della classe. 
-Pertanto, i metodi dovrebbero essere dichiarati statici se eseguono una funzione generica indipendentemente dalle variabili di istanza. 
-Allo stesso modo, le proprietà dovrebbero essere dichiarate statiche se è necessaria solo una singola istanza della variabile all'interno del programma.
-Per esempio per attribuire un numero di matricola univoco a ciascun oggetto.
+**Spiegazione**:
+
+- **`static $count`**: questa variabile mantiene il suo valore tra una chiamata e l'altra della funzione.
 
 ---
 
-## Variabili static
+### **Vantaggi dell'uso di `static`**
 
-Le variabili locali possono essere dichiarate statiche per fare in modo che la funzione ricordi il suo valore. Tale variabile statica esiste solo nell'ambito della funzione locale, ma non perde il suo valore al termine della funzione. Questo può essere utilizzato per contare il numero di volte in cui viene chiamata una funzione, ad esempio.
-
-```php
-function contatoreStatico()
-{
-    static $val = 0;
-  echo $val++;
-}
-contatoreStatico(); // "0"
-contatoreStatico(); // "1"
-contatoreStatico(); // "2"
-```
+1. **Risparmio di risorse**: poiché le proprietà e i metodi statici non necessitano di creare istanze della classe, possono essere utilizzati per definire costanti, configurazioni o metodi utility.
+2. **Modularità**: metodi statici possono essere usati per scrivere funzioni generiche o helper che non dipendono dallo stato dell'oggetto.
+3. **Efficienza**: nei casi in cui le istanze non sono necessarie, l'uso di metodi statici può migliorare le prestazioni.
 
 ---
 
+### **Conclusione**
 
-Il valore iniziale assegnato a una variabile statica viene impostato una sola volta. Le proprietà statiche possono essere inizializzate solo con una costante; ma **NON** con un'espressione, con un'altra variabile o con un valore restituito da una funzione.
-
-La parola chiave self è un alias per il nome della classe della classe che la racchiude. Ciò significa che la parola chiave fa riferimento alla sua classe che la racchiude anche quando viene chiamata dal contesto di una classe figlia.
-
-```php
-class ClasseBase
-{
-    protected static $val = 'classe base';
-  public static function getVal()
-  {
-      return self::$val;
-  }
-}
-class ClasseDerivata extends ClasseBase
-{
-    protected static $val = 'classe derivata (figlia)';
-}
-echo ClasseDerivata::getVal(); // "classe base"
-```
-
----
-
-
-Per ottenere il riferimento alla classe per valutare la classe chiamante effettiva, è necessario utilizzare la parola chiave static invece della parola chiave self. Questa funzionalità è denominata `late static bindings` ed è stata aggiunta in PHP 5.3.
-
-```php
-class ClasseBase
-{
-  protected static $val = 'classe base';
-  public static function getLateStaticBinding()
-  {
-    return static::$val;
-  }
-}
-```
-
-```php
-class ClasseDerivata extends ClasseBase
-{
-  protected static $val = 'classe derivata (figlia)';
-}
-echo ClasseDerivata::getLateStaticBinding(); // "classe derivata (figlia)"
-```
+La keyword **`static`** in PHP consente di definire proprietà e metodi che appartengono alla **classe stessa** e non alle sue istanze. Questo è utile per definire metodi utilitari, variabili condivise o costanti di configurazione che non cambiano tra diverse istanze. I metodi statici possono essere ereditati e supportano il **late static binding**, che consente comportamenti flessibili e dinamici tra classi genitore e figlie.
