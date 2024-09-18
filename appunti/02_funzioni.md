@@ -123,24 +123,71 @@ echo sommaTotale(1, 2, 3, 4);  // Output: 10
 
 ### **6. Funzioni Anonime e Lambda**
 
-Le **funzioni anonime** (o **lambda**) sono funzioni senza nome, che possono essere assegnate a variabili o passate come argomenti ad altre funzioni.
+In PHP, una **funzione anonima** (o **lambda**) è una funzione che non ha un nome e può essere assegnata a una variabile o passata come argomento ad altre funzioni. Queste funzioni sono particolarmente utili quando hai bisogno di una funzione temporanea o di una funzione da passare a una chiamata come callback.
 
-#### Esempio di funzione anonima
+Ecco un semplice esempio di una lambda in PHP:
 
 ```php
-<?php
-$saluta = function($nome) {
-    return "Ciao, $nome!";
+// Definire una funzione anonima e assegnarla a una variabile
+$somma = function($a, $b) {
+    return $a + $b;
 };
 
-echo $saluta("Luigi");  // Output: Ciao, Luigi!
-?>
+// Chiamare la funzione tramite la variabile
+echo $somma(2, 3);  // Output: 5
 ```
 
-**Spiegazione**:
+In questo caso, la funzione anonima prende due parametri `$a` e `$b`, somma i loro valori e restituisce il risultato. La funzione è assegnata alla variabile `$somma`, e successivamente può essere chiamata come se fosse una normale funzione.
 
-- La funzione anonima è assegnata alla variabile `$saluta`.
-- Quando `$saluta("Luigi")` viene chiamata, la funzione anonima viene eseguita.
+### Passare una lambda come callback
+
+Un altro caso comune di utilizzo delle funzioni anonime in PHP è passare una lambda come **callback** a funzioni come `array_map()` o `array_filter()`. Ecco un esempio:
+
+```php
+// Usare una funzione anonima come callback per array_map
+$numeri = [1, 2, 3, 4, 5];
+
+$quadrati = array_map(function($n) {
+    return $n * $n;
+}, $numeri);
+
+print_r($quadrati);  // Output: Array ( [0] => 1 [1] => 4 [2] => 9 [3] => 16 [4] => 25 )
+```
+
+In questo esempio, la funzione anonima viene passata a `array_map()`, che applica la funzione a ogni elemento dell'array `$numeri`, restituendo un nuovo array con i quadrati dei numeri.
+
+### arrow function
+
+In PHP 7.4 è stata introdotta una sintassi abbreviata per le funzioni anonime chiamata **arrow function** (o **lambda con `fn:`**). Questa nuova sintassi rende il codice più conciso e automaticamente cattura le variabili dall'ambito esterno senza dover utilizzare la parola chiave `use`. Le **arrow functions** utilizzano la sintassi `fn` invece di `function`.
+
+Ecco un esempio di utilizzo di una **lambda** con `fn`:
+
+```php
+// Definire una arrow function che somma due numeri
+$somma = fn($a, $b) => $a + $b;
+
+// Chiamare la arrow function
+echo $somma(2, 3);  // Output: 5
+```
+
+Come puoi vedere, la sintassi è molto più compatta rispetto alle funzioni anonime tradizionali. La funzione `fn($a, $b) => $a + $b` è un'**arrow function** che restituisce la somma di `$a` e `$b`.
+
+### Passare una arrow function come callback
+
+Le arrow functions sono particolarmente utili quando si lavora con funzioni che accettano callback, come `array_map()` o `array_filter()`:
+
+```php
+// Usare una arrow function come callback per array_map
+$numeri = [1, 2, 3, 4, 5];
+
+$quadrati = array_map(fn($n) => $n * $n, $numeri);
+
+print_r($quadrati);  // Output: Array ( [0] => 1 [1] => 4 [2] => 9 [3] => 16 [4] => 25 )
+```
+
+In questo esempio, la **arrow function** `fn($n) => $n * $n` viene passata a `array_map()`, che applica la funzione a ogni elemento dell'array `$numeri` per ottenere un nuovo array con i quadrati dei numeri.
+
+Le **arrow functions** sono ideali per funzioni semplici e monoespressione, rendendo il codice più pulito e leggibile
 
 ---
 
