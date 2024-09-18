@@ -196,7 +196,7 @@ Ecco l'elenco delle funzioni organizzato in tabelle:
 | [arsort()](http://php.net/manual/en/function.arsort.php) | Ordina un array in ordine inverso e mantiene l'associazione dell'indice. |
 | [asort()](http://php.net/manual/en/function.asort.php) | Ordina un array e mantiene l'associazione dell'indice. |
 | [compact()](http://php.net/manual/en/function.compact.php) | Crea un array contenente le variabili e i loro valori. |
-| [count()](http://php.net/manual/en/function.count.php) | Conta gli elementi in un array o le proprietà in un og
+| [count()](http://php.net/manual/en/function.count.php) | Conta gli elementi in un array o le proprietà in un oggetto|
 |[current()](http://php.net/manual/en/function.current.php) | Restituisce l'elemento corrente in un array. |
 |[each()](http://php.net/manual/en/function.each.php) | Restituisce la coppia chiave e valore corrente da un array. |
 |[end()](http://php.net/manual/en/function.end.php) | Imposta il puntatore interno di un array al suo ultimo elemento. |
