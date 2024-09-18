@@ -1,15 +1,53 @@
 
-
-
+## class Articolo
 
 ```php
 <?php
 
-    //1
-    // include '../src/forme/Triangolo.php';
-    // include '../src/forme/Articolo.php';
+namespace App\models;
 
-//2
+class Articolo {
+    
+    public function print() :void {
+        echo 'funge';
+    }
+
+}
+
+```
+
+
+## class Triangolo
+
+```php
+<?php
+
+namespace App\forme;
+
+class Triangolo{
+
+    public function __construct(private float $b, private float $h){
+        // $this->b = $b;
+        //$this->h = $h;
+    }
+
+    function getArea() : float {
+        return ($this->b*$this->h)/2;
+    }
+
+}
+```
+
+
+```php
+
+<?php
+
+//1 include/require
+// include '../src/forme/Triangolo.php';
+// include '../src/forme/Articolo.php';
+
+//2 spla_autoloac
 // spl_autoload_register(function ($class)  {
 
 //     $file = str_replace('\\', '/',$class) . '.php';
@@ -19,7 +57,7 @@
 // });
 
 
-//3
+//3 composer
 require_once __DIR__.'/../vendor/autoload.php';
 
 
@@ -40,4 +78,27 @@ $article = new Articolo();
 var_dump($article);
 var_dump($article->print());
 
+```
+
+## composer autoload
+
+```json
+{
+    "name": "corso-php",
+    "description": "corso php",
+    "type": "project",
+    "license": "mit",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "maboglia",
+            "email": "mauro.bogliaccino@gmail.com"
+        }
+    ],
+    "require": {}
+}
 ```
