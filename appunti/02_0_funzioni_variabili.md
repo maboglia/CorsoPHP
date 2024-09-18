@@ -40,7 +40,6 @@ funzione, __ora è una istruzione__. In questa veste non ritorna alcun valore, e
 valore dalla funzione unset() produce un errore di parsing.
 
 ---
-Ecco la trasformazione in tabelle delle liste di funzioni PHP.
 
 ### Elenco funzioni 1
 
