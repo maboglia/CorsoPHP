@@ -40,50 +40,57 @@ funzione, __ora è una istruzione__. In questa veste non ritorna alcun valore, e
 valore dalla funzione unset() produce un errore di parsing.
 
 ---
+Ecco la trasformazione in tabelle delle liste di funzioni PHP.
 
-## Elenco funzioni
+### Elenco funzioni 1
 
-* [boolval "Ottieni il valore booleano di una variabile"](http://www.php.net/manual/en/function.boolval.php)
-* [debug_zval_dump "Scarica una rappresentazione di stringa di un valore zend interno nell'output"](http://www.php.net/manual/en/function.debug-zval-dump.php)
-* [doubleval "Alias di floatval"](http://www.php.net/manual/en/function.doubleval.php)
-* [vuoto "Determina se una variabile è vuota"](http://www.php.net/manual/en/function.empty.php)
-* [floatval "Ottieni il valore float di una variabile"](http://www.php.net/manual/en/function.floatval.php)
-* [get_defined_vars "Restituisce un array di tutte le variabili definite"](http://www.php.net/manual/en/function.get-defined-vars.php)
-* [get_resource_type "Restituisce il tipo di risorsa"](http://www.php.net/manual/en/function.get-resource-type.php)
-* [gettype "Ottieni il tipo di una variabile"](http://www.php.net/manual/en/function.gettype.php)
-* [import_request_variables "Importa variabili GET/POST/Cookie nell'ambito globale"](http://www.php.net/manual/en/function.import-request-variables.php)
-
----
-
-## Elenco funzioni 2
-
-* [intval "Ottieni il valore intero di una variabile"](http://www.php.net/manual/en/function.intval.php)
-* [is_array "Trova se una variabile è un array"](http://www.php.net/manual/en/function.is-array.php)
-* [is_bool "Scopri se una variabile è booleana"](http://www.php.net/manual/en/function.is-bool.php)
-* [is_callable "Verifica che il contenuto di una variabile possa essere chiamato come funzione"](http://www.php.net/manual/en/function.is-callable.php)
-* [is_double "Alias di is_float"](http://www.php.net/manual/en/function.is-double.php)
-* [is_float "Trova se il tipo di una variabile è float"](http://www.php.net/manual/en/function.is-float.php)
-* [is_int "Trova se il tipo di una variabile è intero"](http://www.php.net/manual/en/function.is-int.php)
-* [is_integer "Alias di is_int"](http://www.php.net/manual/en/function.is-integer.php)
-* [is_long "Alias di is_int"](http://www.php.net/manual/en/function.is-long.php)
-* [is_null "Trova se una variabile è NULL"](http://www.php.net/manual/en/function.is-null.php)
-* [is_numeric "Trova se una variabile è un numero o una stringa numerica"](http://www.php.net/manual/en/function.is-numeric.php)
-* [is_object "Trova se una variabile è un oggetto"](http://www.php.net/manual/en/function.is-object.php)
-* [is_real "Alias di is_float"](http://www.php.net/manual/en/function.is-real.php)
-* [is_resource "Trova se una variabile è una risorsa"](http://www.php.net/manual/en/function.is-resource.php)
-* [is_scalar "Trova se una variabile è uno scalare"](http://www.php.net/manual/en/function.is-scalar.php)
-* [is_string "Trova se il tipo di una variabile è stringa"](http://www.php.net/manual/en/function.is-string.php)
+| Nome funzione | Descrizione |
+|---------------|-------------|
+| [boolval](http://www.php.net/manual/en/function.boolval.php) | Ottieni il valore booleano di una variabile |
+| [debug_zval_dump](http://www.php.net/manual/en/function.debug-zval-dump.php) | Scarica una rappresentazione di stringa di un valore zend interno nell'output |
+| [doubleval](http://www.php.net/manual/en/function.doubleval.php) | Alias di floatval |
+| [empty](http://www.php.net/manual/en/function.empty.php) | Determina se una variabile è vuota |
+| [floatval](http://www.php.net/manual/en/function.floatval.php) | Ottieni il valore float di una variabile |
+| [get_defined_vars](http://www.php.net/manual/en/function.get-defined-vars.php) | Restituisce un array di tutte le variabili definite |
+| [get_resource_type](http://www.php.net/manual/en/function.get-resource-type.php) | Restituisce il tipo di risorsa |
+| [gettype](http://www.php.net/manual/en/function.gettype.php) | Ottieni il tipo di una variabile |
+| [import_request_variables](http://www.php.net/manual/en/function.import-request-variables.php) | Importa variabili GET/POST/Cookie nell'ambito globale |
 
 ---
 
-## Elenco funzioni 3
+### Elenco funzioni 2
 
-* [isset "Determina se una variabile è impostata e non è NULL"](http://www.php.net/manual/en/function.isset.php)
-* [print_r "Stampa informazioni leggibili su una variabile"](http://www.php.net/manual/en/function.print-r.php)
-* [serialize "Genera una rappresentazione memorizzabile di un valore"](http://www.php.net/manual/en/function.serialize.php)
-* [settype "Imposta il tipo di una variabile"](http://www.php.net/manual/en/function.settype.php)
-* [strval "Ottieni valore stringa di una variabile"](http://www.php.net/manual/en/function.strval.php)
-* [unserialize "Crea un valore PHP da una rappresentazione memorizzata"](http://www.php.net/manual/en/function.unserialize.php)
-* [unset "Annulla l'impostazione di una determinata variabile"](http://www.php.net/manual/en/function.unset.php)
-* [var_dump "Scarica informazioni su una variabile"](http://www.php.net/manual/en/function.var-dump.php)
-* [var_export "Emette o restituisce una rappresentazione di stringa analizzabile di una variabile"](http://www.php.net/manual/en/function.var-export.php)
+| Nome funzione | Descrizione |
+|---------------|-------------|
+| [intval](http://www.php.net/manual/en/function.intval.php) | Ottieni il valore intero di una variabile |
+| [is_array](http://www.php.net/manual/en/function.is-array.php) | Trova se una variabile è un array |
+| [is_bool](http://www.php.net/manual/en/function.is-bool.php) | Scopri se una variabile è booleana |
+| [is_callable](http://www.php.net/manual/en/function.is-callable.php) | Verifica che il contenuto di una variabile possa essere chiamato come funzione |
+| [is_double](http://www.php.net/manual/en/function.is-double.php) | Alias di is_float |
+| [is_float](http://www.php.net/manual/en/function.is-float.php) | Trova se il tipo di una variabile è float |
+| [is_int](http://www.php.net/manual/en/function.is-int.php) | Trova se il tipo di una variabile è intero |
+| [is_integer](http://www.php.net/manual/en/function.is-integer.php) | Alias di is_int |
+| [is_long](http://www.php.net/manual/en/function.is-long.php) | Alias di is_int |
+| [is_null](http://www.php.net/manual/en/function.is-null.php) | Trova se una variabile è NULL |
+| [is_numeric](http://www.php.net/manual/en/function.is-numeric.php) | Trova se una variabile è un numero o una stringa numerica |
+| [is_object](http://www.php.net/manual/en/function.is-object.php) | Trova se una variabile è un oggetto |
+| [is_real](http://www.php.net/manual/en/function.is-real.php) | Alias di is_float |
+| [is_resource](http://www.php.net/manual/en/function.is-resource.php) | Trova se una variabile è una risorsa |
+| [is_scalar](http://www.php.net/manual/en/function.is-scalar.php) | Trova se una variabile è uno scalare |
+| [is_string](http://www.php.net/manual/en/function.is-string.php) | Trova se il tipo di una variabile è stringa |
+
+---
+
+### Elenco funzioni 3
+
+| Nome funzione | Descrizione |
+|---------------|-------------|
+| [isset](http://www.php.net/manual/en/function.isset.php) | Determina se una variabile è impostata e non è NULL |
+| [print_r](http://www.php.net/manual/en/function.print-r.php) | Stampa informazioni leggibili su una variabile |
+| [serialize](http://www.php.net/manual/en/function.serialize.php) | Genera una rappresentazione memorizzabile di un valore |
+| [settype](http://www.php.net/manual/en/function.settype.php) | Imposta il tipo di una variabile |
+| [strval](http://www.php.net/manual/en/function.strval.php) | Ottieni valore stringa di una variabile |
+| [unserialize](http://www.php.net/manual/en/function.unserialize.php) | Crea un valore PHP da una rappresentazione memorizzata |
+| [unset](http://www.php.net/manual/en/function.unset.php) | Annulla l'impostazione di una determinata variabile |
+| [var_dump](http://www.php.net/manual/en/function.var-dump.php) | Scarica informazioni su una variabile |
+| [var_export](http://www.php.net/manual/en/function.var-export.php) | Emette o restituisce una rappresentazione di stringa analizzabile di una variabile |
