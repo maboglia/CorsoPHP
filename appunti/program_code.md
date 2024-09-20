@@ -5,12 +5,20 @@ paginate: true
 backgroundColor: #fff
 backgroundImage: url('https://marp.app/assets/hero-background.svg')
 marp: true
+[appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/)
+
 ---
 ![logo](./its.png)
 
 # Corso PHP
 
+[appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/00_1_introduzione.md)
+
 ---
+
+## Stato di avanzamento del linguaggio e storia di php 
+
+[appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/01_7_Storia.md)
 
 ---
 
@@ -23,6 +31,8 @@ Le variabili in PHP sono identificate da un `$` seguito dal nome, mentre le cost
 define("PI", 3.14); // Costante
 $radius = 5;        // Variabile
 ```
+
+[appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/01_1_variabili.md)
 
 ---
 
@@ -38,6 +48,8 @@ $string = "Hello, World!";  // String
 $array = [1, 2, 3];         // Array
 ```
 
+[appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/01_0_Operatori_confronto.md)
+
 ---
 
 #### **Valori Booleani**
@@ -52,6 +64,8 @@ if ($isTrue) {
 }
 ```
 
+[appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/01_0_Operatori_confronto.md)
+
 ---
 
 #### **Numeri Interi**
@@ -64,6 +78,8 @@ $octal = 052;     // Base ottale
 $hex = 0x2A;      // Base esadecimale
 ```
 
+[appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/01_0_Operatori_confronto.md)
+
 ---
 
 #### **Numeri in Virgola Mobile**
@@ -74,6 +90,8 @@ I numeri in virgola mobile (o numeri decimali) rappresentano numeri con una part
 $float = 3.14;
 echo $float * 2; // Output: 6.28
 ```
+
+[appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/01_0_Operatori_confronto.md)
 
 ---
 
@@ -86,6 +104,8 @@ $string = "PHP";
 echo strlen($string);  // Output: 3
 echo str_replace("P", "J", $string);  // Output: JHJ
 ```
+
+[appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/01_4_stringhe.md)
 
 ---
 
@@ -100,6 +120,8 @@ if (is_null($variable)) {
 }
 ```
 
+[appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/01_0_Operatori_confronto.md)
+
 ---
 
 #### **Liste e Arrays**
@@ -111,6 +133,8 @@ $array = ["apple", "banana", "cherry"];
 echo $array[1];  // Output: banana
 ```
 
+[appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/03_array.md)
+
 ---
 
 #### **Espressioni**
@@ -120,6 +144,8 @@ Un'espressione in PHP è tutto ciò che restituisce un valore, come operazioni m
 ```php
 $result = 5 + 3;  // L'espressione restituisce 8
 ```
+
+[appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/01_0_Operatori_confronto.md)
 
 ---
 
@@ -133,6 +159,8 @@ $b = 10;
 echo $a + $b;  // Operatore aritmetico
 echo $a == $b; // Operatore di confronto
 ```
+
+[appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/01_0_Operatori_confronto.md)
 
 ---
 
@@ -151,6 +179,8 @@ if ($score >= 90) {
 }
 ```
 
+[appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/01_2_CostruttiControllo.md)
+
 ---
 
 #### **Cicli (foreach, for, do, while)**
@@ -163,6 +193,8 @@ foreach ($fruits as $fruit) {
     echo $fruit . " ";
 }
 ```
+
+[appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/01_2_CostruttiControllo.md)
 
 ---
 
@@ -185,6 +217,8 @@ switch ($day) {
 }
 ```
 
+[appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/01_2_CostruttiControllo.md)
+
 ---
 
 #### **Corrispondenza (match)**
@@ -200,6 +234,8 @@ echo match ($day) {
 };
 ```
 
+[appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/01_2_CostruttiControllo.md)
+
 ---
 
 #### **Return, Declare, Goto**
@@ -212,6 +248,8 @@ function sum($a, $b) {
 }
 ```
 
+[appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/01_2_CostruttiControllo.md)
+
 ---
 
 #### **Includere altri Scripts**
@@ -221,6 +259,8 @@ PHP consente di includere file esterni usando `include` o `require`, utili per o
 ```php
 include 'header.php';
 ```
+
+[appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/04_importare_file.md)
 
 ---
 
@@ -235,6 +275,8 @@ function greet($name) {
 greet("John");
 ```
 
+[appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/02_funzioni.md)
+
 ---
 
 #### **Parametri e Argomenti**
@@ -247,6 +289,8 @@ function add($a, $b) {
 }
 echo add(3, 4);  // Output: 7
 ```
+
+[appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/02_funzioni.md)
 
 ---
 
@@ -263,6 +307,8 @@ function test() {
 }
 ```
 
+[appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/01_1_variabili.md)
+
 ---
 
 #### **Tipologie di Funzioni**
@@ -277,6 +323,8 @@ function square($n) {
 echo square(4);  // Output: 16
 ```
 
+[appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/02_funzioni.md)
+
 ---
 
 #### **Funzioni degli Array**
@@ -288,6 +336,8 @@ $array = [1, 2, 3, 4, 5];
 array_push($array, 6);
 print_r($array);  // Output: Array ( [0] => 1 [1] => 2 [2] => 3 [3] => 4 [4] => 5 [5] => 6 )
 ```
+
+[appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/02_1_funzioni_array.md)
 
 ---
 
@@ -301,6 +351,8 @@ $content = fread($file, filesize("test.txt"));
 fclose($file);
 ```
 
+[appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/02_3_funzioni_filesystem.md)
+
 ---
 
 #### **Date, ore e fusi orari**
@@ -311,6 +363,8 @@ PHP gestisce date e ore tramite la classe `DateTime` e le funzioni `date()` e `s
 date_default_timezone_set('Europe/Rome');
 echo date('Y-m-d H:i:s');
 ```
+
+[appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/02_2_funzioni_tempo.md)
 
 ---
 
@@ -326,6 +380,8 @@ try {
 }
 ```
 
+[appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/)
+
 ---
 
 #### **Configurazione del file php.ini**
@@ -337,6 +393,8 @@ Modifica `php.ini` per impostare, ad esempio, il limite di memoria:
 ```ini
 memory_limit = 128M
 ```
+
+[appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/)
 
 ---
 
@@ -350,6 +408,8 @@ Aggiungi nel file `.htaccess`:
 php_value upload_max_filesize 10M
 ```
 
+[appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/)
+
 ---
 
 #### **Sviluppare con Docker**
@@ -360,6 +420,8 @@ Docker permette di creare ambienti di sviluppo consistenti e isolati. Si può ut
 docker run -d -p 8080:80 -v $(pwd):/var/www/html php:7.4-apache
 ```
 
+[appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/00_0_docker.md)
+
 ---
 
 #### **Integrazione di Composer**
@@ -369,6 +431,8 @@ Composer è un gestore di dipendenze per PHP che permette di includere librerie 
 ```bash
 composer require guzzlehttp/guzzle
 ```
+
+[appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/00_0_composer.md)
 
 ---
 
@@ -385,6 +449,8 @@ class Person {
 }
 ```
 
+[appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/05_OOP.md)
+
 ---
 
 #### **Classi ed Oggetti**
@@ -400,6 +466,8 @@ $myCar = new Car();
 $myCar->color = "Red";
 ```
 
+[appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/05_OOP.md)
+
 ---
 
 #### **Promozione dei Parametri del Costruttore**
@@ -412,6 +480,8 @@ class Point {
 }
 ```
 
+[appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/05_8_PromozioneParametriCostruttore.md)
+
 ---
 
 #### **Operatore a Protezione dei Valori Nulli**
@@ -422,6 +492,8 @@ L'operatore nullsafe (`?->`) in PHP 8 consente di evitare errori quando si acced
 $person = null;
 echo $person?->name;
 ```
+
+[appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/)
 
 ---
 
@@ -438,6 +510,8 @@ class Helper {
 }
 ```
 
+[appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/01_3_namepsace.md)
+
 ---
 
 #### **Caricamento Automatico**
@@ -449,6 +523,8 @@ spl_autoload_register(function ($class_name) {
     include $class_name . '.php';
 });
 ```
+
+[appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/02_6_autoload.md)
 
 ---
 
@@ -462,6 +538,8 @@ class Math {
 }
 echo Math::PI;
 ```
+
+[appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/)
 
 ---
 
@@ -479,6 +557,8 @@ class Counter {
 Counter::increment();
 echo Counter::$count;
 ```
+
+[appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/05_1_static.md)
 
 ---
 
@@ -499,6 +579,8 @@ class BankAccount {
 }
 ```
 
+[appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/05_OOP.md)
+
 ---
 
 #### **Classi Astratte e Metodi Astratti**
@@ -517,6 +599,8 @@ class Dog extends Animal {
 }
 ```
 
+[appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/05_5_classi_astratte.md)
+
 ---
 
 #### **Interfacce e Polimorfismo**
@@ -534,6 +618,8 @@ class Car implements Vehicle {
     }
 }
 ```
+
+[appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/05_3_polimorfismo.md)
 
 ---
 
@@ -556,6 +642,8 @@ class Dog extends Animal {
 }
 ```
 
+[appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/05_2_ereditarieta.md)
+
 ---
 
 #### **Ereditarietà Multipla tramite Traits**
@@ -577,6 +665,8 @@ $app = new Application();
 $app->log("Starting application");
 ```
 
+[appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/08_02_Trait.md)
+
 ---
 
 #### **Classi Anonime**
@@ -593,6 +683,8 @@ $greeting = new class {
 $greeting->sayHello();
 ```
 
+[appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/05_7_stdClass.md)
+
 ---
 
 #### **Metodi Magici**
@@ -607,3 +699,5 @@ class Person {
     }
 }
 ```
+
+[appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/05_6_magic_methods.md)
