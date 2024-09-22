@@ -236,6 +236,9 @@ echo match ($day) {
 
 [appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/01_2_CostruttiControllo.md)
 
+[codice](https://github.com/maboglia/CorsoPHP/blob/master/esempi/079match.md)
+
+
 ---
 
 #### **Return, Declare, Goto**
