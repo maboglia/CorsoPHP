@@ -112,26 +112,6 @@ echo'La frase che hai inserito è corretta<br>'; }
 SET PATH=%PATH%;C:\your\wamp\path\php
 
 
-## Passaggio di parametri per riferimento
-<?php
-function aggiungi_qualcosa(&$string)
-{
-$string .= 'e qualche altra cosa.';
-}
-$str = 'Questa è una stringa, ';
-aggiungi_qualcosa($str);
-echo $str;
-// l'output sarà 'Questa è una stringa, e qualche altra cosa.'
-?>
-
-## Utilizzo dei parametri default in una funzione
-<?php
-function fare_pizza($pizza = "margherita")
-{
-return "Vuoi una pizza $pizza.\n";
-}
-echo fare_pizza();
-echo fare_pizza("napoletana");
 
 ## tips_ioprogrammo PHP
 
@@ -250,35 +230,6 @@ else
 {
 return false;
 }
-}
-?>
-```
-
-### LEGGERE IN MODO SEMPLICE UN FILE XML
-
-```php
-<?
-//stringa xml
-$xml_string="<?xml version='1.0'?>
-<users>
-<user id='398'>
-<nome>Pippo</nome>
-<email>pippo@dominio.com</nome>
-</user>
-<user id='867'>
-<nome>Pluto</nome>
-<email>pluto@dominio.com</nome>
-</user>
-</users>";
-// carico l'xml con simplexml
-$xml = simplexml_load_string($xml_string);
-// loop attraverso ogni nodo del file
-foreach ($xml->user as $user){
-// accesso agli attributi del nodo
-echo $user['id'], ' ';
-// i subnodi sono disponibili tramite l'operatore '->'
-echo $user->nome, ' ';
-echo $user->email, '<br />';
 }
 ?>
 ```
