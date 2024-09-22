@@ -1,4 +1,4 @@
-# php://input
+# legge il contenuto del flusso con `php://input`
 
 La funzione `json_decode(file_get_contents("php://input"), true)` è una combinazione di due funzioni PHP, `file_get_contents` e `json_decode`, che viene utilizzata comunemente nelle API REST per leggere e decodificare i dati JSON ricevuti in una richiesta HTTP.
 
