@@ -1,21 +1,6 @@
 # PHP
 
-<!-- TOC -->
-
-- [PHP](#php)
-    - [Individuare il sistema operativo del web server](#individuare-il-sistema-operativo-del-web-server)
-    - [Upload di immagini. Ecco la classe!](#upload-di-immagini-ecco-la-classe)
-    - [Creare una form per scrivere file di testo](#creare-una-form-per-scrivere-file-di-testo)
-    - [Generare un file captcha](#generare-un-file-captcha)
-    - [Windows set variabile ambiente php](#windows-set-variabile-ambiente-php)
-    - [Passaggio di parametri per riferimento](#passaggio-di-parametri-per-riferimento)
-    - [Utilizzo dei parametri default in una funzione](#utilizzo-dei-parametri-default-in-una-funzione)
-        - [SCEGLIERE UN COLORE HTML IN MANIERA RANDOM](#scegliere-un-colore-html-in-maniera-random)
-        - [REDIRIGERE UNA PAGINA SENZA USARE I META HTML](#redirigere-una-pagina-senza-usare-i-meta-html)
-        - [DISTRUGGERE UNA DIRECTORY E IL SUO CONTENUTO](#distruggere-una-directory-e-il-suo-contenuto)
-        - [LEGGERE IN MODO SEMPLICE UN FILE XML](#leggere-in-modo-semplice-un-file-xml)
-
-<!-- /TOC -->
+<!-- TOC -->autoauto- [PHP](#php)auto    - [Individuare il sistema operativo del web server](#individuare-il-sistema-operativo-del-web-server)auto    - [Upload di immagini](#upload-di-immagini)auto    - [Creare una form per scrivere file di testo](#creare-una-form-per-scrivere-file-di-testo)auto    - [Generare un file captcha](#generare-un-file-captcha)auto    - [Windows set variabile ambiente php](#windows-set-variabile-ambiente-php)auto    - [Passaggio di parametri per riferimento](#passaggio-di-parametri-per-riferimento)auto    - [Utilizzo dei parametri default in una funzione](#utilizzo-dei-parametri-default-in-una-funzione)auto    - [tips_ioprogrammo PHP](#tips_ioprogrammo-php)auto        - [SCRIVERE IN UN FILE DI TESTO E PERMETTERNE IL DOWNLOAD](#scrivere-in-un-file-di-testo-e-permetterne-il-download)auto        - [VISUALIZZARE UN MENU SELECT CON I DATI DI UN ARRAY](#visualizzare-un-menu-select-con-i-dati-di-un-array)auto        - [SCEGLIERE UN COLORE HTML IN MANIERA RANDOM](#scegliere-un-colore-html-in-maniera-random)auto        - [REDIRIGERE UNA PAGINA SENZA USARE I META HTML](#redirigere-una-pagina-senza-usare-i-meta-html)auto        - [DISTRUGGERE UNA DIRECTORY E IL SUO CONTENUTO](#distruggere-una-directory-e-il-suo-contenuto)auto        - [LEGGERE IN MODO SEMPLICE UN FILE XML](#leggere-in-modo-semplice-un-file-xml)autoauto<!-- /TOC -->
 
 ## Individuare il sistema operativo del web server
 
@@ -32,7 +17,7 @@ return $os; }
 echo serverOS(); ?>
 ```
 
-## Upload di immagini. Ecco la classe!
+## Upload di immagini
 
 ```php
 <?php
@@ -203,7 +188,8 @@ $numeroRandom = rand(0 , 15);
 switch ($numeroRandom) {
 case 10: $numeroRandom = 'A'; break;
 case 11: $numeroRandom = 'B'; break;
-case 12: $numeroRandom = 'C'; break;case 13: $numeroRandom = 'D'; break;
+case 12: $numeroRandom = 'C'; break;
+case 13: $numeroRandom = 'D'; break;
 case 14: $numeroRandom = 'E'; break;
 case 15: $numeroRandom = 'F'; break;
 }
@@ -215,7 +201,7 @@ $colore = coloreRandom();
 echo '<span style="color:'.$colore.'">Colore random: '.$colore.'
 </span>';
 ?>
-ALTERNARE I COLORI DI RIGO NEI RISULTATI DI UNA
+
 ```
 
 
