@@ -5,9 +5,8 @@ paginate: true
 backgroundColor: #fff
 backgroundImage: url('https://marp.app/assets/hero-background.svg')
 marp: true
-[appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/)
-
 ---
+
 ![logo](./its.png)
 
 # Corso PHP
@@ -16,7 +15,7 @@ marp: true
 
 ---
 
-## Stato di avanzamento del linguaggio e storia di php 
+## La "storia" di PHP e lo stato di avanzamento del linguaggio
 
 [appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/01_7_Storia.md)
 
@@ -33,6 +32,7 @@ $radius = 5;        // Variabile
 ```
 
 [appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/01_1_variabili.md)
+[codice](https://github.com/maboglia/CorsoPHP/blob/master/esempi/010constants.md)
 
 ---
 
@@ -65,6 +65,7 @@ if ($isTrue) {
 ```
 
 [appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/01_0_Operatori_confronto.md)
+[codice](https://github.com/maboglia/CorsoPHP/blob/master/esempi/030booleans.md)
 
 ---
 
@@ -79,6 +80,7 @@ $hex = 0x2A;      // Base esadecimale
 ```
 
 [appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/01_0_Operatori_confronto.md)
+[codice](https://github.com/maboglia/CorsoPHP/blob/master/esempi/020integers.md)
 
 ---
 
@@ -92,6 +94,7 @@ echo $float * 2; // Output: 6.28
 ```
 
 [appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/01_0_Operatori_confronto.md)
+[codice](https://github.com/maboglia/CorsoPHP/blob/master/esempi/025floats.md)
 
 ---
 
@@ -106,6 +109,7 @@ echo str_replace("P", "J", $string);  // Output: JHJ
 ```
 
 [appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/01_4_stringhe.md)
+[codice](https://github.com/maboglia/CorsoPHP/blob/master/esempi/050strings.md)
 
 ---
 
@@ -121,6 +125,7 @@ if (is_null($variable)) {
 ```
 
 [appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/01_0_Operatori_confronto.md)
+[codice](https://github.com/maboglia/CorsoPHP/blob/master/esempi/035null.md)
 
 ---
 
@@ -134,6 +139,7 @@ echo $array[1];  // Output: banana
 ```
 
 [appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/03_array.md)
+[codice](https://github.com/maboglia/CorsoPHP/blob/master/esempi/060arrays.md)
 
 ---
 
@@ -161,6 +167,7 @@ echo $a == $b; // Operatore di confronto
 ```
 
 [appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/01_0_Operatori_confronto.md)
+[codice](https://github.com/maboglia/CorsoPHP/blob/master/esempi/015operators.md)
 
 ---
 
@@ -180,6 +187,7 @@ if ($score >= 90) {
 ```
 
 [appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/01_2_CostruttiControllo.md)
+[codice](https://github.com/maboglia/CorsoPHP/blob/master/esempi/040logical.md)
 
 ---
 
@@ -195,6 +203,8 @@ foreach ($fruits as $fruit) {
 ```
 
 [appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/01_2_CostruttiControllo.md)
+[codice](https://github.com/maboglia/CorsoPHP/blob/master/esempi/055whileloops.md)
+[codice](https://github.com/maboglia/CorsoPHP/blob/master/esempi/070forloops.md)
 
 ---
 
@@ -218,6 +228,7 @@ switch ($day) {
 ```
 
 [appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/01_2_CostruttiControllo.md)
+[codice](https://github.com/maboglia/CorsoPHP/blob/master/esempi/078switch.md)
 
 ---
 
@@ -249,6 +260,7 @@ function sum($a, $b) {
 ```
 
 [appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/01_2_CostruttiControllo.md)
+[codice](https://github.com/maboglia/CorsoPHP/blob/master/esempi/140includes.md)
 
 ---
 
@@ -261,6 +273,7 @@ include 'header.php';
 ```
 
 [appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/04_importare_file.md)
+[codice](https://github.com/maboglia/CorsoPHP/blob/master/esempi/140includes.md)
 
 ---
 
@@ -276,6 +289,7 @@ greet("John");
 ```
 
 [appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/02_funzioni.md)
+[codice](https://github.com/maboglia/CorsoPHP/blob/master/esempi/090functions_defining.md)
 
 ---
 
@@ -291,6 +305,7 @@ echo add(3, 4);  // Output: 7
 ```
 
 [appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/02_funzioni.md)
+[codice](https://github.com/maboglia/CorsoPHP/blob/master/esempi/100functions_arguments.md)
 
 ---
 
@@ -308,6 +323,7 @@ function test() {
 ```
 
 [appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/01_1_variabili.md)
+[codice](https://github.com/maboglia/CorsoPHP/blob/master/esempi/095functions_scope.md)
 
 ---
 
@@ -324,6 +340,7 @@ echo square(4);  // Output: 16
 ```
 
 [appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/02_funzioni.md)
+[codice](https://github.com/maboglia/CorsoPHP/blob/master/esempi/110functions_returnvalues.md)
 
 ---
 
@@ -338,6 +355,7 @@ print_r($array);  // Output: Array ( [0] => 1 [1] => 2 [2] => 3 [3] => 4 [4] => 
 ```
 
 [appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/02_1_funzioni_array.md)
+[codice](https://github.com/maboglia/CorsoPHP/blob/master/esempi/125array_functions.md)
 
 ---
 
@@ -511,6 +529,7 @@ class Helper {
 ```
 
 [appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/01_3_namepsace.md)
+[codice](https://github.com/maboglia/CorsoPHP/blob/master/esempi/160_namespace.md)
 
 ---
 

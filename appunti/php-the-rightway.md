@@ -1,3 +1,13 @@
+![logo](./its.png)
+
+# Corso PHP
+
+---
+
+## PHP the right way 
+
+(estratto dal documento omonimo reperibile in rete)
+
 Le basi
 =======
 
@@ -126,10 +136,6 @@ Stringhe
 --------
 
 ### Concatenamento
-
-*   If your line extends beyond the recommended line length (120 characters), consider concatenating your line
-*   For readability it is best to use concatenation operators over concatenating assignment operators
-*   While within the original scope of the variable, indent when concatenation uses a new line
     
 *   Se la tua linea eccede la lunghezza raccomandata (120 caratteri), considera il concatenamento
 *   Per leggibilità è meglio usare gli operatori di concatenamento invece che gli operatori concatenanti di assegnazione
