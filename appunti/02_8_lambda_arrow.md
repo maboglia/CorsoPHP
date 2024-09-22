@@ -1,3 +1,5 @@
+# Funzioni anonime, funzioni lambda, arrow-functions
+
 In PHP, le **funzioni lambda** sono sinonimo di **funzioni anonime**. Si tratta di funzioni che non hanno un nome e possono essere utilizzate in linea, assegnate a variabili, passate come argomenti a funzioni o restituite da altre funzioni. Sono introdotte in PHP a partire dalla versione 5.3, insieme al concetto di **chiusure**.
 
 Una funzione lambda in PHP è creata utilizzando la parola chiave `function` senza specificare un nome per la funzione. Ecco un esempio di una lambda in PHP:
