@@ -50,7 +50,7 @@ Tuttavia, una classe astratta può ereditare da una classe non astratta (concret
 
 ## Classi astratte e interfacce
 
-Le classi astratte sono per molti versi simili alle interfacce. Entrambi possono definire le firme dei membri che le classi che ne derivano devono implementare e nessuna di esse può essere istanziata. 
+Le classi astratte sono per molti versi simili alle interfacce. Entrambe possono definire le firme dei membri che le classi che ne derivano devono implementare e nessuna di esse può essere istanziata. 
 
 Le differenze principali sono, in primo luogo, che la classe astratta può contenere membri non astratti, mentre l'interfaccia no. 
 
