@@ -404,7 +404,7 @@ Modifica `php.ini` per impostare, ad esempio, il limite di memoria:
 memory_limit = 128M
 ```
 
-[appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/)
+[appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/00_config_php_ini.md)
 
 ---
 
@@ -418,7 +418,8 @@ Aggiungi nel file `.htaccess`:
 php_value upload_max_filesize 10M
 ```
 
-[appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/)
+[apache](https://github.com/maboglia/CorsoPHP/blob/master/appunti/00_config_apache.md)
+[htaccess](https://github.com/maboglia/CorsoPHP/blob/master/appunti/00_htaccess.md)
 
 ---
 
@@ -503,7 +504,7 @@ $person = null;
 echo $person?->name;
 ```
 
-[appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/)
+[appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/010_0_null_coalescens.md)
 
 ---
 
@@ -550,7 +551,7 @@ class Math {
 echo Math::PI;
 ```
 
-[appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/)
+[appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/05_10.classi_costanti.md)
 
 ---
 
@@ -694,7 +695,7 @@ $greeting = new class {
 $greeting->sayHello();
 ```
 
-[appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/05_7_stdClass.md)
+[appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/05_11_classi_anonime.md)
 
 ---
 
@@ -712,3 +713,190 @@ class Person {
 ```
 
 [appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/05_6_magic_methods.md)
+
+---
+
+Ecco una panoramica dei vari argomenti con una breve spiegazione e un piccolo esempio introduttivo per ciascuno.
+
+---
+
+#### **Programmazione per il web**
+La programmazione per il web riguarda lo sviluppo di applicazioni o siti web utilizzando linguaggi di scripting lato server come PHP. PHP consente di generare contenuti dinamici, interagire con i database e gestire le richieste HTTP (GET e POST).
+
+**Esempio:**
+```php
+<?php
+echo "Benvenuti nel sito web dinamico!";
+?>
+```
+
+---
+
+#### **Gestione dei dati in GET e POST**
+I metodi GET e POST vengono utilizzati per inviare dati dal client al server. `GET` trasmette i dati nell'URL, mentre `POST` li invia nel corpo della richiesta, utile per gestire dati sensibili o lunghi.
+
+**Esempio:**
+```php
+// GET: url?nome=Mario
+echo $_GET['nome']; // Output: Mario
+
+// POST (da un form HTML)
+echo $_POST['nome'];
+```
+
+---
+
+#### **Upload di file tramite FORM**
+Con PHP è possibile caricare file tramite moduli HTML. La gestione del caricamento avviene con la variabile superglobale `$_FILES`.
+
+**Esempio:**
+```html
+<form action="upload.php" method="POST" enctype="multipart/form-data">
+    <input type="file" name="fileCaricato">
+    <button type="submit">Carica</button>
+</form>
+```
+**upload.php:**
+```php
+if (move_uploaded_file($_FILES['fileCaricato']['tmp_name'], 'uploads/' . $_FILES['fileCaricato']['name'])) {
+    echo "File caricato con successo!";
+}
+```
+
+---
+
+#### **Utilizzo di Cookie e Sessioni**
+I **cookie** sono piccoli file salvati sul client che memorizzano dati persistenti, mentre le **sessioni** memorizzano dati temporanei sul server per ogni utente.
+
+**Esempio Cookie:**
+```php
+setcookie("nome", "Mario", time() + 3600);  // Scade dopo 1 ora
+echo $_COOKIE['nome'];  // Output: Mario
+```
+
+**Esempio Sessione:**
+```php
+session_start();
+$_SESSION['utente'] = 'Mario';
+echo $_SESSION['utente'];  // Output: Mario
+```
+
+---
+
+#### **Web API REST in JSON**
+Le API REST forniscono un'interfaccia per comunicare con altre applicazioni. I dati vengono spesso trasferiti nel formato JSON.
+
+**Esempio API REST che restituisce JSON:**
+```php
+header('Content-Type: application/json');
+$risposta = ['stato' => 'successo', 'messaggio' => 'Dati ricevuti'];
+echo json_encode($risposta);
+```
+
+---
+
+#### **Accesso ai dati**
+L'accesso ai dati implica leggere e scrivere dati provenienti da file, database o altre sorgenti di dati. In PHP, si possono usare tecniche come l'input/output dei file e le query ai database per gestire i dati.
+
+**Esempio Lettura file:**
+```php
+$contenuto = file_get_contents('dati.txt');
+echo $contenuto;
+```
+
+---
+
+#### **Gestione dei file**
+PHP permette di manipolare file: aprirli, modificarli, leggerli o cancellarli.
+
+**Esempio Scrittura su file:**
+```php
+$file = fopen("dati.txt", "w");
+fwrite($file, "Ciao, mondo!");
+fclose($file);
+```
+
+---
+
+#### **Accesso ai database (utilizzo di PDO)**
+**PDO (PHP Data Objects)** è un'interfaccia che permette di interagire con diversi database in modo sicuro e flessibile.
+
+**Esempio Connessione con PDO:**
+```php
+$pdo = new PDO('mysql:host=localhost;dbname=test', 'username', 'password');
+$statement = $pdo->query("SELECT * FROM utenti");
+$utenti = $statement->fetchAll();
+```
+
+---
+
+#### **Gestione dei progetti in PHP**
+La gestione dei progetti in PHP include l'organizzazione del codice, la configurazione di ambienti di sviluppo, e l'uso di strumenti per la gestione delle dipendenze e del codice sorgente (es. Composer, Git).
+
+---
+
+#### **Autoloading delle classi e utilizzo di Composer**
+L'autoloading carica automaticamente le classi quando vengono richieste, evitando l'inclusione manuale con `require`. **Composer** è uno strumento per la gestione delle dipendenze in PHP.
+
+**Esempio di autoloading con Composer:**
+```bash
+composer init
+composer require monolog/monolog
+```
+```php
+require 'vendor/autoload.php';
+```
+
+---
+
+#### **Unit Test con PHPUnit**
+**PHPUnit** è un framework per i test unitari in PHP che permette di verificare la correttezza del codice.
+
+**Esempio test:**
+```php
+use PHPUnit\Framework\TestCase;
+
+class TestUtente extends TestCase {
+    public function testNome() {
+        $utente = new Utente("Mario");
+        $this->assertEquals("Mario", $utente->getNome());
+    }
+}
+```
+
+---
+
+#### **Architetture MVC con esempi di sviluppo**
+Il pattern **MVC (Model-View-Controller)** separa la logica dell'applicazione (Model), la presentazione (View), e la gestione delle richieste (Controller).
+
+**Esempio semplice di MVC:**
+```php
+// Model
+class Utente {
+    public function getNome() {
+        return "Mario";
+    }
+}
+
+// Controller
+class UtenteController {
+    public function mostraNome() {
+        $utente = new Utente();
+        include "view.php";
+    }
+}
+
+// View (view.php)
+echo $utente->getNome();
+```
+
+---
+
+#### **La connessione al database (MySQLi, PDO)**
+PHP offre due modi principali per connettersi a un database MySQL: **MySQLi** e **PDO**.
+
+**Esempio connessione con MySQLi:**
+```php
+$conn = new mysqli('localhost', 'username', 'password', 'database');
+```
+

@@ -247,6 +247,9 @@ echo match ($day) {
 
 [appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/01_2_CostruttiControllo.md)
 
+[codice](https://github.com/maboglia/CorsoPHP/blob/master/esempi/079match.md)
+
+
 ---
 
 #### **Return, Declare, Goto**
@@ -412,7 +415,7 @@ Modifica `php.ini` per impostare, ad esempio, il limite di memoria:
 memory_limit = 128M
 ```
 
-[appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/)
+[appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/00_config_php_ini.md)
 
 ---
 
@@ -426,7 +429,8 @@ Aggiungi nel file `.htaccess`:
 php_value upload_max_filesize 10M
 ```
 
-[appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/)
+[apache](https://github.com/maboglia/CorsoPHP/blob/master/appunti/00_config_apache.md)
+[htaccess](https://github.com/maboglia/CorsoPHP/blob/master/appunti/00_htaccess.md)
 
 ---
 
@@ -511,7 +515,7 @@ $person = null;
 echo $person?->name;
 ```
 
-[appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/)
+[appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/010_0_null_coalescens.md)
 
 ---
 
@@ -558,7 +562,7 @@ class Math {
 echo Math::PI;
 ```
 
-[appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/)
+[appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/05_10.classi_costanti.md)
 
 ---
 
@@ -702,7 +706,7 @@ $greeting = new class {
 $greeting->sayHello();
 ```
 
-[appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/05_7_stdClass.md)
+[appunti](https://github.com/maboglia/CorsoPHP/blob/master/appunti/05_11_classi_anonime.md)
 
 ---
 
