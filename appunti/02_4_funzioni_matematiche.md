@@ -1,41 +1,5 @@
 # FUNZIONI MATEMATICHE
 
-* `number abs ( mixed numero )`
-Restituisce il valore assoluto di un numero.
-
-* `mixed max ( number arg1, number arg2 [, number ...] )`
-
-* `mixed max ( array numbers [, array ...] )`
-
-* `max() `
-restituisce il numericamente più grande dei valori dati come parametro.
-
-* `mixed min ( number arg1, number arg2 [, number ...] )`
-
-* `mixed min ( array numbers [, array ...] )`
-
-* `min() restituisce il numericamente più piccolo dei valori dati come parametro.`
-
-* `float pow ( float base, float esp )`
-
----
-
-Restituisce base elevato alla potenza di esp. Se possibile, questa funzione restituisce un integer.
-Nota: Il PHP non può gestire valori negativi per bases.
-
-* `int rand ( [int min, int max] )`
-
-Se chiamata senza i parametri opzionali min, max, rand() restituisce un valore pseudo casuale
-compreso fra 0 e RAND_MAX. Se ad esempio si desidera un numero casuale compreso fra 5 e 15
-(inclusi) usare rand (5, 15).
-
-* `double round ( double val [, int precisione] )`
-Restituisce il valore arrotondato di val con la precisione specificata (numero di cifre dopo il punto
-decimale). precisione può anche essere negativa o zero (predefinito).
-
----
-
-
 ### Elenco Funzioni Matematiche
 
 | Funzione | Descrizione |
@@ -53,14 +17,6 @@ decimale). precisione può anche essere negativa o zero (predefinito).
 | [ceil()](http://php.net/manual/en/function.ceil.php) | Restituisce il valore di un numero arrotondato per eccesso all'intero più vicino. |
 | [cos()](http://php.net/manual/en/function.cos.php) | Restituisce il coseno di un numero. |
 | [cosh()](http://php.net/manual/en/function.cosh.php) | Restituisce il coseno iperbolico di un numero. |
----
-
-Ecco la tabella con le funzioni matematiche aggiuntive:
-
-### Elenco Funzioni 2
-
-| Funzione | Descrizione |
-|----------|-------------|
 | [decbin()](http://php.net/manual/en/function.decbin.php) | Converte un numero decimale in un numero binario. |
 | [dechex()](http://php.net/manual/en/function.dechex.php) | Converte un numero decimale in un numero esadecimale. |
 | [decoct()](http://php.net/manual/en/function.decoct.php) | Converte un numero decimale in un numero ottale. |
@@ -79,15 +35,6 @@ Ecco la tabella con le funzioni matematiche aggiuntive:
 | [log()](http://php.net/manual/en/function.log.php) | Restituisce il logaritmo naturale (in base E) di un numero. |
 | [log10()](http://php.net/manual/en/function.log10.php) | Restituisce il logaritmo in base 10 di un numero. |
 | [log1p()](http://php.net/manual/en/function.log1p.php) | Restituisce log(1+numero). |
-
----
-
-Ecco la tabella con le funzioni di manipolazione delle stringhe e di crittografia:
-
-### Elenco Funzioni 3
-
-| Funzione | Descrizione |
-|----------|-------------|
 | [addcslashes()](http://php.net/manual/en/function.addcslashes.php) | Restituisce una stringa con barre rovesciate davanti ai caratteri specificati. |
 | [addslashes()](http://php.net/manual/en/function.addslashes.php) | Restituisce una stringa con barre rovesciate davanti a caratteri predefiniti. |
 | [bin2hex()](http://php.net/manual/en/function.bin2hex.php) | Converte una stringa di caratteri ASCII in valori esadecimali. |
