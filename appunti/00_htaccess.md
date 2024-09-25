@@ -206,3 +206,99 @@ In questo esempio, la dimensione massima per l'upload di file è impostata su 10
 ### Conclusione
 
 Il file `.htaccess` è un potente strumento per personalizzare il comportamento di Apache a livello di directory. Offre flessibilità per gestire reindirizzamenti, sicurezza, cache, compressione e molto altro senza dover modificare la configurazione globale del server. È particolarmente utile in ambienti di hosting condiviso, dove non si ha accesso diretto ai file di configurazione principali di Apache.
+
+---
+
+## Esempio
+
+```text
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [QSA,L]
+```
+
+Il file `.htaccess` è utilizzato per configurare a livello di directory il comportamento del server web Apache. Le istruzioni che hai fornito fanno parte di una configurazione comune per gestire le richieste di URL tramite un unico file di front controller, spesso usato in applicazioni PHP che seguono l'architettura MVC.
+
+### **Spiegazione delle Istruzioni**
+
+#### **1. `RewriteEngine On`**
+
+Questa direttiva abilita il modulo di riscrittura (`mod_rewrite`) di Apache. Il modulo permette di riscrivere gli URL in base a regole definite, consentendo la creazione di URL "puliti" e l'instradamento delle richieste a specifici script PHP.
+
+#### **2. `RewriteCond %{REQUEST_FILENAME} !-f`**
+
+Questa è una **condizione di riscrittura** che viene valutata prima della regola successiva (`RewriteRule`). La condizione controlla se il file richiesto **non** esiste fisicamente sul server.
+
+- **`%{REQUEST_FILENAME}`** rappresenta il percorso completo del file richiesto.
+- **`!-f`** significa "se non esiste un file fisico". Quindi, questa condizione è vera solo se il file specificato nell'URL non esiste.
+
+#### **3. `RewriteCond %{REQUEST_FILENAME} !-d`**
+
+Simile alla condizione precedente, ma controlla se la richiesta non corrisponde a una directory.
+
+- **`%{REQUEST_FILENAME}`** rappresenta il percorso completo della directory richiesta.
+- **`!-d`** significa "se non esiste una directory fisica". Questa condizione è vera solo se la directory specificata nell'URL non esiste.
+
+#### **4. `RewriteRule ^(.*)$ index.php [QSA,L]`**
+
+Questa è la regola di riscrittura vera e propria. Dice ad Apache come riscrivere l'URL quando le condizioni precedenti sono soddisfatte.
+
+- **`^(.*)$`**: Questo è un'espressione regolare che cattura qualsiasi stringa dopo il nome del dominio. `^(.*)$` corrisponde a qualsiasi URL.
+- **`index.php`**: Se la richiesta non corrisponde a un file o a una directory esistente, la richiesta viene riscritta per essere gestita da `index.php`.
+- **`[QSA,L]`**:
+  - **`QSA`** (Query String Append): Se nell'URL originale era presente una query string (es. `?id=123`), questa viene mantenuta e aggiunta alla query string di destinazione.
+  - **`L`** (Last): Indica che questa è l'ultima regola da applicare. Una volta applicata questa regola, Apache non considera ulteriori regole di riscrittura.
+
+### **Cosa fa il codice nel contesto MVC?**
+
+Queste regole sono comunemente usate in applicazioni MVC per inviare tutte le richieste a un singolo punto di ingresso (`index.php`), che funge da front controller.
+
+- **Gestione centralizzata**: In un'applicazione MVC, tutte le richieste (ad esempio `https://tuosito.com/prodotti/dettaglio/5`) vengono reindirizzate a `index.php`. Da lì, il codice PHP può analizzare l'URL, caricare il controller e l'azione corretti, e infine restituire la risposta appropriata.
+  
+- **URL puliti**: L'uso di `.htaccess` consente di creare URL puliti e user-friendly, senza estensioni di file o parametri query string visibili.
+
+### **Esempio di Flusso:**
+
+1. L'utente richiede `https://tuosito.com/prodotti/dettaglio/5`.
+2. Apache controlla se il file o la directory corrispondente esistono fisicamente:
+   - Se esistono, Apache serve il file o la directory.
+   - Se non esistono, Apache riscrive l'URL per essere gestito da `index.php`.
+3. `index.php` riceve la richiesta e decide come elaborarla (ad esempio, potrebbe estrarre il controller `prodotti`, l'azione `dettaglio`, e l'ID `5` per visualizzare un prodotto specifico).
+
+---
+
+L'istruzione `Options -Indexes` nel file `.htaccess` viene utilizzata per disabilitare l'indicizzazione delle directory su un server web Apache.
+
+### **Spiegazione di `Options -Indexes`**
+
+- **`Options`**: Questa direttiva configura varie opzioni per la directory in cui è posizionata o per le sue sottodirectory.
+
+- **`-Indexes`**: Il segno meno `-` disabilita un'opzione specifica, in questo caso `Indexes`.
+
+#### **Cosa fa `Indexes`?**
+
+Quando l'opzione `Indexes` è attivata, Apache permette l'elenco dei file contenuti in una directory se non esiste un file di indice (come `index.php`, `index.html`, ecc.) in quella directory.
+
+Se un utente tenta di accedere a una directory del sito web, ad esempio `https://tuosito.com/uploads/`, e non c'è un file di indice, il server mostra un elenco di tutti i file contenuti in quella directory.
+
+#### **Effetto di `Options -Indexes`**
+
+Impostando `Options -Indexes`, si disabilita questa funzionalità. Questo significa che se un utente tenta di accedere a una directory che non ha un file di indice, invece di vedere l'elenco dei file, riceverà un errore "403 Forbidden". Questo è utile per motivi di sicurezza, poiché impedisce agli utenti di esplorare direttamente la struttura delle directory del server, proteggendo così i file sensibili.
+
+### **Esempio di Comportamento**
+
+- **Senza `Options -Indexes`:**
+  - L'utente accede a `https://tuosito.com/uploads/`.
+  - Se non c'è un file `index.html` o `index.php` nella directory, il server mostra l'elenco di tutti i file presenti.
+
+- **Con `Options -Indexes`:**
+  - L'utente accede a `https://tuosito.com/uploads/`.
+  - Se non c'è un file di indice, il server restituisce un errore "403 Forbidden", impedendo la visualizzazione dei file.
+
+### **Motivi per Utilizzare `Options -Indexes`**
+
+- **Sicurezza**: Previene l'esposizione non autorizzata di file all'interno delle directory.
+- **Controllo**: Permette di mantenere il controllo su quali file vengono mostrati agli utenti e come.
+  
+Utilizzare `Options -Indexes` è una buona pratica per migliorare la sicurezza di un sito web, specialmente in directory che potrebbero contenere file riservati o sensibili.
