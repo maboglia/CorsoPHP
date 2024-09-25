@@ -1,3 +1,5 @@
+# Classi built-in
+
 In PHP 8, ci sono diverse classi built-in che offrono funzionalità pronte all'uso. Ecco alcune delle più importanti:
 
 1. **String**: PHP ha molte funzioni per manipolare stringhe, come `strlen()`, `strpos()`, `substr()`, e le funzioni della classe `Stringable` che possono essere utilizzate con oggetti.
