@@ -1,335 +1,164 @@
-# Array
+### Scheda Informativa sugli Array in PHP
 
-Anche Php prevede la struttura dati array come altri linguaggi, ma rispetto alle tipiche
-proprietà che ritroviamo ad es negli array in Java esistono sostanziali differenze.
+Gli **array** in PHP sono strutture di dati flessibili che possono contenere una collezione di valori, identificabili tramite **chiavi**. PHP supporta diverse tipologie di array, inclusi array indicizzati, associativi e multidimensionali.
 
-In php un array è una variabile che permette di associare valori a chiavi.
+#### Tipologie di Array:
 
-Le chiavi possono essere di tipo integer o string.
+1. **Array indicizzati**:
+   - Gli elementi sono indicizzati da chiavi numeriche intere.
+   - Indice automatico: Se non viene specificato, PHP assegna un indice crescente.
+   - Esempio:
+     ```php
+     $numeri = [1, 2, 3, 4];
+     ```
 
----
+2. **Array associativi**:
+   - Gli elementi sono indicizzati da chiavi personalizzate (stringhe).
+   - Utili per rappresentare coppie chiave-valore.
+   - Esempio:
+     ```php
+     $persona = [
+         "nome" => "Mario",
+         "età" => 25,
+         "città" => "Roma"
+     ];
+     ```
 
-## Chiavi di tipo integer
+3. **Array multidimensionali**:
+   - Un array che contiene altri array come elementi.
+   - Permette di creare strutture complesse come matrici o tabelle.
+   - Esempio:
+     ```php
+     $matrice = [
+         [1, 2, 3],
+         [4, 5, 6],
+         [7, 8, 9]
+     ];
+     ```
 
-Nel caso di chiavi di tipo integer ritroviamo proprietà simili a quelle note in Java, si veda
-l'esempio:
+#### Funzioni principali sugli Array in PHP:
 
+| **Funzione**            | **Descrizione**                                                                                   |
+|-------------------------|---------------------------------------------------------------------------------------------------|
+| `array()`               | Crea un array.                                                                                    |
+| `count()`               | Restituisce il numero di elementi di un array.                                                     |
+| `array_merge()`         | Unisce due o più array.                                                                           |
+| `array_push()`          | Aggiunge uno o più elementi alla fine di un array.                                                 |
+| `array_pop()`           | Rimuove e restituisce l'ultimo elemento di un array.                                               |
+| `array_shift()`         | Rimuove e restituisce il primo elemento di un array.                                               |
+| `array_unshift()`       | Aggiunge uno o più elementi all'inizio di un array.                                                |
+| `array_key_exists()`    | Verifica se una data chiave esiste in un array.                                                   |
+| `in_array()`            | Controlla se un valore esiste in un array.                                                        |
+| `array_keys()`          | Restituisce tutte le chiavi di un array.                                                          |
+| `array_values()`        | Restituisce tutti i valori di un array.                                                           |
+| `array_search()`        | Cerca un valore specifico in un array e restituisce la chiave corrispondente.                     |
+| `array_reverse()`       | Inverte l'ordine degli elementi di un array.                                                      |
+| `array_slice()`         | Estrae una porzione di un array.                                                                  |
+| `array_splice()`        | Rimuove una porzione di un array e la sostituisce con altri elementi.                             |
+| `sort()`                | Ordina un array in ordine crescente.                                                              |
+| `rsort()`               | Ordina un array in ordine decrescente.                                                            |
+| `asort()`               | Ordina un array associativo mantenendo le chiavi, in ordine crescente in base ai valori.          |
+| `ksort()`               | Ordina un array associativo in base alle chiavi.                                                  |
+| `array_map()`           | Applica una funzione a tutti gli elementi di un array.                                             |
+| `array_filter()`        | Filtra gli elementi di un array utilizzando una funzione di callback.                              |
+| `array_reduce()`        | Riduce un array a un singolo valore utilizzando una funzione di callback.                          |
+| `array_sum()`           | Restituisce la somma dei valori di un array.                                                      |
+| `array_unique()`        | Rimuove i valori duplicati da un array.                                                           |
+
+#### Dichiarazione e Accesso agli Elementi:
+
+- **Creazione di un array**:
+  ```php
+  $frutta = ["mela", "banana", "pera"];
+  ```
+
+- **Accesso agli elementi**:
+  Gli elementi dell'array possono essere acceduti tramite l'indice o la chiave.
+  ```php
+  echo $frutta[1]; // banana
+  ```
+
+- **Aggiunta di elementi**:
+  ```php
+  $frutta[] = "arancia"; // Aggiunge alla fine dell'array
+  ```
+
+#### Loop sugli Array:
+
+Gli array in PHP possono essere percorsi utilizzando diversi tipi di cicli, il più comune è `foreach`.
+
+- **Ciclo `foreach`**:
+  ```php
+  foreach ($frutta as $frutto) {
+      echo $frutto;
+  }
+  ```
+
+- **Ciclo `foreach` su array associativo**:
+  ```php
+  foreach ($persona as $chiave => $valore) {
+      echo "$chiave: $valore";
+  }
+  ```
+
+#### Array Multidimensionali:
+
+Gli array multidimensionali possono essere percorsi utilizzando cicli annidati.
+
+Esempio:
 ```php
-$a[0]='Mario';
-$a[1]='Antonio';
-. . .
-$a[99]='Luisa';
-```
-
-in cui l'array $a ha indice numerico da 0 a 99, ogni elemento di $a contiene una stringa.
-
----
-
-Sarà possibile accedere direttamente a un singolo elemento specificandone l'indice
-numerico, es
-
-```php
-echo $a[12];
-//o prevedere un ciclo per iterare su tutti gli elementi
-for ($i=0;$i<100;$i++){
-echo $a[$i].”\n”;// oppure echo ”{$a[$i]}\n”;
-}
-```
-
-Esiste un'altra importante proprietà sui valori che vedremo nel seguito.
-
----
-
-## Chiavi di tipo string
-
-La 'vera' natura degli array in php è di essere __associativi__, in cui i valori sono associati a chiavi e non sono incasellati in un elenco posizionale.
-
-```php
-$nome['Rossi']='Mario';
-$nome['Verdi']='Antonio';
-. . .
-$nome['Bianchi']='Luisa';
-```
-
-si perde ogni riferimento posizionale per legare direttamente a ogni cognome il suo nome,
-quindi si pone l'accento sul significato dei dati più che al vincolo della struttura.
-
----
-
-Quindi alla domanda su qual è il nome di Bianchi si può rispondere con
-
-`echo $nome['Bianchi'];`
-
-Diventa meno immediato pensare a come realizzare una iterazione su ogni elemento di un
-array di questo tipo, non esiste più un indica numerico che assume valori fra due estremi
-noti.
-
-Per questo è previsto un costrutto specifico, foreach.
-
----
-
-## Foreach
-
-Questo costrutto prevede due forme sintattiche.
-
-### Sintassi array-valore
-
-`foreach (<array_expression> as <variabileValore>) <statement>`
-
-### Permette di iterare su tutti i valori presenti nell'array, es
-
-```php
-foreach ($nome as $n) {
-echo $n.”\n”; // oppure echo ”$n\n”;
-}
-```
-
-In questo modo si otterranno tutti i valori (i nomi) ma non si hanno informazioni sulle chiavi
-(nel nostro dcaso i cognomi).
-
-Per questo esiste l'altra forma sintattica.
-
----
-
-### Sintassi array-chiave-valore
-
-```php
-foreach (<array_expression> as <variabChiave> => <variabValore>)
-<statement>
-```
-
-In questo caso l'iterazione fornisce oltra al valore corrente anche la relativa chiave
-corrente. Es:
-
-```php
-foreach ($nome as $c => $n) {
-echo ”$n $c\n”;
-}
-```
-
----
-
-Il costrutto foreach può essere usato su qualunque array, anche quelli con chiave
-numerica, es:
-
-```php
-foreach ($a as $n) {
-echo $n.”\n”; // oppure echo ”$n\n”;
-}
-```
-
-e ancora:
-
-```php
-foreach ($a as $c => $n) {
-echo ”$n $c\n”;
-}
-```
-
-La chiave qui è un numero, non più la stringa di cognome.
-
----
-
-## Proprietà associativa
-
-In php l'array è associativo. Il caso di array a chiave numerica è un caso particolare che
-rientra nella condizione generale, per cui possiamo avere array con indice numerico 'con
-buchi' e in cui la posizione non è correlata al valore numerico dell'indice.
-
-Esempio 'con buco':
-
-```php
-$a[0]='Mario';
-$a[1]='Antonio';
-$a[99]='Luisa';
-foreach ($a as $key => $value) {
-echo "$key $value\n";
-}
-```
-
----
-
-Esempio in ordine 'casuale':
-
-```php
-$a[0]='Mario';
-$a[99]='Luisa';
-$a[1]='Antonio';
-foreach ($a as $key => $value) {
-echo "$key $value\n";
-}
-```
-
----
-
-Esempio con indici che non partono da 0:
-
-```php
-$a[10]='Mario';
-$a[11]='Antonio';
-$a[99]='Luisa';
-foreach ($a as $key => $value) {
-echo "$key $value\n";
-}
-```
-
-Posso comunque iterare per indice solo se i valori sono contigui:
-
-```php
-$a[10]='Mario';
-$a[11]='Antonio';
-$a[12]='Luisa';
-for ($i=10;$i<13;$i++) {
-echo "$i {$a[$i]}\n";
-}
-```
-
----
-
-In caso di 'buchi':
-
-```php
-$a[10]='Mario';
-$a[11]='Antonio';
-$a[22]='Luisa';
-for ($i=10;$i<23;$i++) {
-echo "$i {$a[$i]}\n";
-}
-```
-
-Mentre il foreach fa emergere solo i dati 'reali':
-
-```php
-$a[10]='Mario';
-$a[11]='Antonio';
-$a[22]='Luisa';
-```
-
-```php
-foreach ($a as $key => $value) {
-echo "$key $value\n";
-```
-
----
-
-## I valori eterogenei
-
-Altra proprietà che distingue gli array Php da quelli Java è che il valore presente negli
-elementi non deve necessariamente essere dello stesso tipo per tutti, cade dunque il
-vincolo di omogeneità.
-
-Es:
-
-```php
-$a[0]='Mario';
-$a[1]='Rossi';
-$a[2]=1.85;
-$a[3]=true;
-$a[4]=10;
-foreach ($a as $key => $value) {
-echo "$key $value\n";
-}
-```
-
-e ancora:
-
-```php
-$a['nome']='Mario';
-$a['cognome']='Rossi';
-$a['altezza']=1.85;
-$a['coniugato']=true;
-$a['dita nelle mani']=10;
-foreach ($a as $key => $value) {
-echo "$key $value\n";
-}
-```
-
----
-
-## Funzione print_r
-
-Comoda per visualizzare in modo compatto i dati di un array. Tipica applicazione è finalizzata al debug.
-
-Es.
-
-```php
-$a['nome']='Mario';
-$a['cognome']='Rossi';
-$a['altezza']=1.85;
-$a['coniugato']=true;
-$a['dita nelle mani']=10;
-print_r($a);
-```
-
----
-
-## Funzione array()
-
-Consente di istanziare un array.
-
-Se priva di parametri restituisce un array vuoto, cioè privo di elementi, es:
-
-`$a=array();`
-
-In questo modo la variabile $a è riconosciuta come array, ache se priva di dati.
-
-Se la funzione array riceve un elenco di parametri nella forma
-`array(vl1,val2,val3,.., valN9`
-
-li considera elementi da inserire nell'array, p.es:
-
-`$a=array('Mario','Rossi',1.85,true,10);`
-equivale a
-
-```php
-$a[0]='Mario';
-$a[1]='Rossi';
-$a[2]=1.85;
-$a[3]=true;
-$a[4]=10;
-```
-
----
-
-Infine i parametri passati possono avere la forma chiave=>valore:
-`array(k1=>v1, k2=>v2, k3=>v3,..., kN=>vN)`
-in questo caso verrà costruito un array associativo.
-Ad es:
-
-```php
-$a=array('nome'=>'Mario','cognome'=>'Rossi','altezza'=>1.85,'coniugato'=>true,'dita delle mani'=>10);
-```
-
-equivale a
-
-```php
-$a['nome']='Mario';
-$a['cognome']='Rossi';
-$a['altezza']=1.85;
-$a['coniugato']=true;
-$a['dita nelle mani']=10;
-```
-
----
-
-## Costruzione di array in stile JSON
-
-Con la versione 5.4 di PHP è stato introdotto la possibilità di definire un array anche con la scrittura semplificata prevista dal formato JSON, per cui il seguente array
-
-```php
-$a = array(
-array(1,2),
-array(3,4),
-);
-```
-
-può essere costruito anche in questo modo:
-
-```php
-$a = [
-[1, 2],
-[3, 4],
+$matrice = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
 ];
+
+foreach ($matrice as $riga) {
+    foreach ($riga as $valore) {
+        echo $valore . " ";
+    }
+}
 ```
 
-Si noti che in entrambi gli esempi la virgola finale prima dell'ultima parentesi non ha funzione di separatore e può essere omessa, ma offre una pratica semplificazione di editing quando si vogliano aggiungere/rimuovere valori nell'array: tutti gli elementi sono seguiti da virgola, dal primo all'ultimo.
+#### Funzioni Avanzate sugli Array:
+
+- **`array_map()`**: Applica una funzione a ogni elemento di un array.
+  ```php
+  $numeri = [1, 2, 3];
+  $quadrati = array_map(fn($n) => $n * $n, $numeri);
+  ```
+
+- **`array_filter()`**: Filtra gli elementi di un array usando una funzione di callback.
+  ```php
+  $numeri = [1, 2, 3, 4, 5];
+  $numeri_pari = array_filter($numeri, fn($n) => $n % 2 == 0);
+  ```
+
+- **`array_reduce()`**: Riduce un array a un singolo valore.
+  ```php
+  $numeri = [1, 2, 3, 4];
+  $somma = array_reduce($numeri, fn($carry, $item) => $carry + $item, 0);
+  ```
+
+#### Caratteristiche degli Array in PHP:
+
+- **Tipizzazione debole**: PHP permette array misti, ovvero array che possono contenere diversi tipi di dati (interi, stringhe, ecc.).
+- **Dinamici**: Gli array in PHP non richiedono una dimensione fissa e possono crescere o ridursi dinamicamente.
+- **Chiavi automatiche**: PHP assegna automaticamente chiavi numeriche incrementali quando gli elementi vengono aggiunti senza specificare una chiave.
+
+### Esempio Completo:
+
+```php
+$auto = [
+    "marca" => "Toyota",
+    "modello" => "Corolla",
+    "anno" => 2020,
+    "caratteristiche" => [
+        "colore" => "rosso",
+        "potenza" => "120 CV"
+    ]
+];
+
+echo $auto["marca"];  // Toyota
+echo $auto["caratteristiche"]["colore"];  // rosso
+```
