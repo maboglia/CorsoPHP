@@ -1,6 +1,5 @@
 # STORIA DI PHP
 
-Ecco la versione aggiornata del testo:
 L'8 giugno 1995, il danese **Rasmus Lerdorf** invia un messaggio in un newsgroup annunciando il rilascio di un "set di piccoli binari scritti in C", che chiamò **PHP 1.0**. Inizialmente, PHP stava per "**Personal Home Page**". Le funzioni di **PHP 1.0** erano piuttosto limitate: permetteva di registrare gli accessi a un sito, tracciando anche i referrer, eseguire inclusioni server-side, mostrare gli utenti connessi e proteggere una pagina con una password.
 
 Nelle versioni successive, Lerdorf aggiunse il supporto per le query SQL in mSQL (un precursore di MySQL) e la disponibilità di un wrapper CGI chiamato FI ("Form Interpreter", o "Interprete di Form"). Entro la fine del 1995, PHP iniziò a guadagnare popolarità e venne rinominato in **PHP/FI**, grazie soprattutto alla capacità di integrare il codice PHP direttamente nelle pagine HTML.
