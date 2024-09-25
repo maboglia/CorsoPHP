@@ -1,8 +1,4 @@
-Ecco una versione migliorata del post, con un tono più fluido, una maggiore chiarezza e qualche dettaglio aggiuntivo:
-
----
-
-### Programmazione Funzionale in PHP
+# Programmazione Funzionale in PHP
 
 PHP supporta pienamente le **funzioni di prima classe**, permettendo di assegnare funzioni a variabili, passarle come argomenti ad altre funzioni, e persino restituirle come risultato. Questo rende possibile implementare **funzioni di ordine superiore**, ovvero funzioni che accettano o restituiscono altre funzioni, come quelle che si trovano nei paradigmi funzionali.
 
@@ -79,6 +75,3 @@ Le chiusure possono essere estremamente utili in scenari come la **validazione d
 - [RFC di PHP sulle chiusure](https://wiki.php.net/rfc/closures)
 - [Invocazione dinamica delle funzioni con `call_user_func_array()`](https://www.php.net/manual/it/function.call-user-func-array.php)
 
----
-
-Con questi miglioramenti, il post risulta più dettagliato, strutturato e coinvolgente per chi desidera comprendere meglio la programmazione funzionale in PHP.
