@@ -1,9 +1,5 @@
 # Polimorfismo e interfacce
 
-Ecco una versione migliorata e aggiornata del post sul polimorfismo, con esempi più chiari e dettagliati:
-
----
-
 # Il Polimorfismo in PHP
 
 Il **polimorfismo** è uno dei concetti fondamentali della programmazione orientata agli oggetti (OOP), e rappresenta la capacità di un metodo di adattarsi a diversi tipi di dati, pur mantenendo un'interfaccia comune. Questo è possibile grazie all'ereditarietà e alla possibilità di sovrascrivere i metodi nelle classi derivate.
@@ -117,6 +113,7 @@ echo calcolaArea($cerchio);    // Output: 28.27
 ```
 
 ### Dettagli
+
 In questo esempio, l'interfaccia `Forma` definisce il metodo `area()`, che viene implementato sia da `Rettangolo` che da `Cerchio`. Grazie al **polimorfismo parametrico**, la funzione `calcolaArea()` può operare su qualsiasi tipo di oggetto che implementi l'interfaccia `Forma`, indipendentemente dal fatto che sia un rettangolo o un cerchio.
 
 ---
@@ -156,10 +153,6 @@ PHP 8 ha introdotto nuove funzionalità che migliorano l'uso del polimorfismo:
 ## Conclusione
 
 Il polimorfismo è un concetto potente che rende il codice più flessibile, riutilizzabile e mantenibile. Permette di trattare oggetti di classi diverse in modo uniforme, facilitando l'espansione delle funzionalità del programma senza modificare il codice esistente. Grazie alle nuove funzionalità introdotte in PHP 8, come i **Union Types** e il **match**, PHP supporta ancora meglio il polimorfismo sia per inclusione che parametrico.
-
----
-
-Ecco una versione migliorata e aggiornata del post sulle interfacce in PHP, con esempi più chiari e dettagliati, tenendo conto delle novità introdotte da PHP 8:
 
 ---
 
