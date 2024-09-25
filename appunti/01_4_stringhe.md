@@ -176,3 +176,7 @@ echo htmlspecialchars($input);  // Output: &lt;script&gt;alert('Hacked!');&lt;/s
 ## Conclusioni
 
 Le stringhe in PHP 8 offrono una vasta gamma di funzioni potenti e flessibili per la manipolazione del testo. Con l'introduzione di nuove funzioni come `str_contains()` e `str_starts_with()`, insieme ai miglioramenti generali delle performance, PHP 8 rende ancora più semplice e efficiente lavorare con stringhe. Conoscere le funzioni giuste può rendere il codice più pulito, sicuro e performante.
+
+---
+
+[Funzioni per gestire le stringhe](02_5_funzioni_stringhe.md)
