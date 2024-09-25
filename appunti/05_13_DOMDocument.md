@@ -1,3 +1,5 @@
+# La classe `DOMDocument`
+
 La classe `DOMDocument` in PHP è utilizzata per lavorare con documenti XML e HTML. Ti permette di creare, manipolare e analizzare documenti in modo programmatico. Ecco una panoramica di come funziona:
 
 ### Creazione di un Documento
