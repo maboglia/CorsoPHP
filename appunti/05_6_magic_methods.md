@@ -129,11 +129,7 @@ Questi metodi magici offrono un controllo avanzato sul comportamento degli ogget
 
 ---
 
----
-
 ### esempi
-
-Certamente! Ecco un esempio di codice per ciascuno dei metodi magici che hai menzionato:
 
 ---
 
