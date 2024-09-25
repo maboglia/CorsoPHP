@@ -237,6 +237,8 @@ Questo esempio fornisce un'implementazione semplice di un'app RESTful con PHP 8,
 
 ---
 
+## Spiegazione .htaccess
+
 Il file `.htaccess` è utilizzato per configurare a livello di directory il comportamento del server web Apache. Le istruzioni che hai fornito fanno parte di una configurazione comune per gestire le richieste di URL tramite un unico file di front controller, spesso usato in applicazioni PHP che seguono l'architettura MVC.
 
 ### **Spiegazione delle Istruzioni**
