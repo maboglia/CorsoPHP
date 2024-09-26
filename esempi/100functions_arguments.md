@@ -108,3 +108,5 @@ say_hello_to($name);
 #### Considerazioni Finali
 
 Utilizzando gli argomenti delle funzioni, è possibile rendere le funzioni più flessibili e riutilizzabili, consentendo loro di lavorare con una vasta gamma di input. Assicurarsi di definire i parametri delle funzioni in base alle necessità del codice e di utilizzare argomenti significativi per mantenere il codice chiaro e comprensibile.
+
+- [named arguments](../appunti/02_10_named_arguments.md)

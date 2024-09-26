@@ -1,4 +1,4 @@
-Per implementare un carrello della spesa utilizzando sessioni PHP, seguiremo i passaggi seguenti:
+# Carrello della spesa utilizzando sessioni PHP
 
 ### Step 1: Configurazione dell'Ambiente
 Assicurati di avere un server PHP funzionante (come XAMPP, WAMP, o un server web live).
