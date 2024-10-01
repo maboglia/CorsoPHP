@@ -1,3 +1,5 @@
+# Cookies in PHP: esempio pratico
+
 L'esempio seguente mostra come utilizzare i cookie in PHP sia lato backend che frontend. Sul backend, imposteremo un cookie per tracciare l'ultima visita dell'utente. Sul frontend, mostreremo un avviso informando l'utente della presenza dei cookie.
 
 ### Struttura dei File

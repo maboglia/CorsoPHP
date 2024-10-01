@@ -1,6 +1,6 @@
 # Galleria di immagini in PHP 
 
-che legge automaticamente le immagini da una directory sul server e le visualizza sulla pagina web, segui questi passaggi:
+Sviluppa un "Galleria di immagini" in PHP che legge automaticamente le immagini da una directory sul server e le visualizza sulla pagina web, segui questi passaggi:
 
 ### Step 1: Configurazione dell'Ambiente
 Assicurati di avere un server PHP funzionante (come XAMPP, WAMP, o un server web live).
