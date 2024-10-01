@@ -185,8 +185,6 @@ L'indicazione dei tipi di dato in PHP permette di scrivere codice più robusto e
 
 ---
 
----
-
 ### **Operatori in PHP 8**
 
 Gli operatori sono simboli che eseguono operazioni su variabili o valori. PHP include diversi tipi di operatori: aritmetici, di confronto, logici, di assegnazione, ecc. In PHP 8 sono stati introdotti o migliorati alcuni operatori chiave che andremo a spiegare nel dettaglio.

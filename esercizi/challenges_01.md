@@ -94,7 +94,7 @@ print_r(findMissingNumbers($arr));
 ?>
 ```
 
-### Crea un modulo HTML e accetta il nome utente e visualizza il nome
+### Crea un modulo HTML: accetta il nome utente e visualizza il nome
 
 ```php
 <!-- form.html -->
