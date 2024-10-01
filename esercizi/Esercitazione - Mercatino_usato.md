@@ -1,4 +1,4 @@
-### Esercitazione PHP: Mercatino Online dell'Usato
+# Esercitazione PHP: Mercatino Online dell'Usato
 
 #### **Obiettivo**
 
