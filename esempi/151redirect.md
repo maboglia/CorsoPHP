@@ -38,4 +38,57 @@ Se il valore di "logged_in" è "1", viene reindirizzato alla pagina "basic.html"
 	</body>
 </html>
 ```
+
 Questo codice PHP gestisce il reindirizzamento a una nuova pagina in base al valore del parametro "logged_in" passato nell'URL. Se il valore di "logged_in" è "1", viene reindirizzato alla pagina "basic.html", altrimenti viene reindirizzato a "http://www.example.com". La funzione `redirect_to()` è utilizzata per eseguire il reindirizzamento, utilizzando l'header "Location".
+
+## First_page
+
+```html
+
+<html lang="en">
+ <head>
+  <title>First Page</title>
+ </head>
+ <body>
+  
+  <?php $link_name = "Second Page"; ?>
+  <?php $id = 5; ?>
+  <?php $company = "Johnson & Johnson"; ?>
+  
+  <a href="second_page.php?id=<?php echo $id; ?>&company=<?php echo rawurlencode($company); ?>"><?php echo $link_name; ?></a>
+
+ </body>
+</html>
+
+```
+
+
+## Second_page
+
+```html
+
+<html lang="en">
+ <head>
+  <title>Second Page</title>
+ </head>
+ <body>
+
+  <pre>
+   <?php
+    // print_r($_GET);
+   ?>
+  </pre>
+
+  <?php
+   $id = $_GET['id'];
+   echo $id;  
+  ?>
+  <br />
+  <?php
+   $company = $_GET['company'];
+   echo $company;  
+  ?>
+  
+ </body>
+</html>
+```

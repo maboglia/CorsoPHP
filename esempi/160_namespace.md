@@ -47,7 +47,7 @@ class Triangolo{
 // include '../src/forme/Triangolo.php';
 // include '../src/forme/Articolo.php';
 
-//2 spla_autoloac
+//2 spl_autoload
 // spl_autoload_register(function ($class)  {
 
 //     $file = str_replace('\\', '/',$class) . '.php';
