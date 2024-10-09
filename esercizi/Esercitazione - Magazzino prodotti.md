@@ -36,13 +36,13 @@ Il progetto sarà organizzato con la seguente struttura:
                 create.php
             /user
                 login.php
+        /config
+            database.php
+            routes.php
     /public
         index.php
         /uploads
             /products
-    /config
-        database.php
-        routes.php
     /api
         products.php
     /vendor

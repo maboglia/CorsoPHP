@@ -1,5 +1,4 @@
-
-## Metti in pratica
+# File upload con PHP
 
 L'esempio seguente mostra come implementare un sistema di upload di foto di prodotti in PHP utilizzando la programmazione orientata agli oggetti (OOP) e le funzionalità introdotte in PHP 8.
 
