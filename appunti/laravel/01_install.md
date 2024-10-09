@@ -116,3 +116,43 @@ Se tutto è configurato correttamente, dovresti vedere la schermata di benvenuto
 ### Conclusione
 
 L'installazione di Laravel è semplice e veloce, grazie al supporto di Composer e agli strumenti integrati che offre. Con Laravel, puoi iniziare subito a sviluppare applicazioni web, sfruttando la sua vasta gamma di funzionalità e il potente ecosistema che lo accompagna.
+
+---
+
+In Composer, l'opzione `--prefer-dist` viene utilizzata durante l'installazione dei pacchetti per preferire l'installazione del pacchetto come un archivio pre-compilato (di solito un file `.zip` o `.tar`) chiamato **distribution** (abbreviato come **dist**) piuttosto che clonare direttamente il repository Git del pacchetto, che è chiamato **source**.
+
+### Differenza tra `dist` e `source`
+
+1. **Dist (distribution)**:
+   - Un pacchetto **dist** è una versione pre-compilata del pacchetto che contiene solo i file necessari per eseguire il codice, senza informazioni di controllo di versione.
+   - Viene distribuito come un archivio compresso (ZIP, TAR, ecc.).
+   - Viene scaricato direttamente da una fonte affidabile, come Packagist o un'altra repository remota.
+   - È più veloce da scaricare e da installare, in quanto non contiene la cronologia dei commit o altre informazioni extra che normalmente si trovano in un repository Git.
+
+2. **Source**:
+   - Un pacchetto **source** include l'intero repository Git (o altro sistema di controllo di versione) del progetto, con tutta la cronologia dei commit, rami, tag, ecc.
+   - Composer lo clona direttamente dal repository Git, Mercurial, Subversion, ecc.
+   - Questo tipo di installazione è più lento perché prevede il download di tutto il repository.
+   - È utile se hai bisogno di modificare il pacchetto o visualizzare la cronologia del repository.
+
+### Quando usare `--prefer-dist`?
+
+- **Default**: Composer, di default, usa `dist` per installare i pacchetti, se disponibili. Tuttavia, quando si specifica `--prefer-dist`, si sta dicendo esplicitamente a Composer di preferire l'installazione della versione **dist** anche se il pacchetto è disponibile come **source**.
+  
+- **Scenario tipico**: `--prefer-dist` è ideale per ambienti di produzione, dove si desidera un'installazione più veloce e non c'è bisogno di clonare il repository completo, perché non si intende lavorare direttamente sul codice del pacchetto.
+
+### Quando usare `--prefer-source`?
+
+- Se si desidera lavorare sul pacchetto, ad esempio per eseguire debugging o sviluppare su di esso, `--prefer-source` può essere utile perché consente di avere accesso completo al repository Git, inclusa la cronologia e i rami.
+
+### Esempio di utilizzo:
+
+```bash
+composer install --prefer-dist
+```
+
+Questo comando forzerà Composer a installare tutti i pacchetti disponibili come **dist** (archivi compressi) piuttosto che clonare i repository Git.
+
+In sintesi:
+- **Dist**: Installazione più leggera e veloce, ideale per produzione.
+- **Source**: Clona l'intero repository, utile per sviluppo o debugging.
