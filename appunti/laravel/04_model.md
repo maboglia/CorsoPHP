@@ -269,3 +269,75 @@ $allProducts = Product::withTrashed()->get();
 ### Conclusione
 
 I modelli in Laravel, grazie a Eloquent, forniscono un modo molto semplice e potente per interagire con il database. La struttura e la flessibilità di Eloquent ti permettono di definire relazioni complesse, query riutilizzabili e persino di manipolare i dati con eventi e accessors/mutators. Con queste funzionalità, puoi costruire applicazioni robuste e scalabili mantenendo il codice pulito e leggibile.
+
+---
+
+## Focus su `$fillable`
+
+In Laravel, la proprietà `$fillable` all'interno di un modello (Model) viene utilizzata per definire quali attributi possono essere "riempiti" in massa (mass assignment), cioè quali campi del modello possono essere assegnati direttamente quando si esegue un'operazione come `create()` o `update()` con un array di dati.
+
+### Cos'è il **mass assignment**?
+Il **mass assignment** si riferisce alla possibilità di assegnare in modo rapido un intero array di dati a un modello, piuttosto che dover assegnare manualmente ogni attributo uno per uno.
+
+Esempio di mass assignment:
+
+```php
+$utente = User::create([
+    'name' => 'Mario Rossi',
+    'email' => 'mario.rossi@example.com',
+    'password' => bcrypt('password123')
+]);
+```
+
+In questo esempio, l'intero array con `name`, `email` e `password` viene passato direttamente al modello tramite `create()`, e Laravel assegna automaticamente i valori ai campi corrispondenti nel database.
+
+### Scopo di `$fillable`
+La proprietà `$fillable` serve a proteggere il modello dagli attacchi di **mass assignment vulnerability**, in cui un utente malintenzionato potrebbe inviare campi non autorizzati tramite una richiesta (come campi che l'utente non dovrebbe poter modificare, ad esempio il ruolo dell'utente o il suo stato amministrativo).
+
+Quando definisci `$fillable`, stai dichiarando esplicitamente quali campi possono essere popolati tramite mass assignment.
+
+### Esempio:
+
+```php
+class User extends Model
+{
+    // Attributi che possono essere popolati tramite mass assignment
+    protected $fillable = ['name', 'email', 'password'];
+}
+```
+
+In questo esempio, Laravel permetterà solo il riempimento di `name`, `email` e `password` quando si utilizza mass assignment (es. `create()` o `update()`).
+
+### Come funziona?
+Se provi a eseguire un mass assignment per un attributo non elencato in `$fillable`, Laravel bloccherà l'operazione e non popolerà quell'attributo. Ad esempio, se nel modello `User` provi a passare un campo come `is_admin` che non è nella lista `$fillable`, l'assegnazione di quell'attributo sarà ignorata:
+
+```php
+// Non funziona perché 'is_admin' non è presente in $fillable
+User::create([
+    'name' => 'Mario Rossi',
+    'email' => 'mario.rossi@example.com',
+    'password' => bcrypt('password123'),
+    'is_admin' => true  // Ignorato
+]);
+```
+
+### Differenza tra `$fillable` e `$guarded`
+
+- **$fillable**: Elenca esplicitamente gli attributi che **possono** essere assegnati in massa.
+- **$guarded**: Al contrario, elenca gli attributi che **non possono** essere assegnati in massa. Se usi `$guarded = ['*']`, stai dicendo che nessun attributo può essere assegnato in massa, bloccando completamente l'operazione.
+
+Esempio con `$guarded`:
+
+```php
+class User extends Model
+{
+    // Attributi che non possono essere popolati tramite mass assignment
+    protected $guarded = ['is_admin'];
+}
+```
+
+In questo caso, qualsiasi tentativo di assegnare `is_admin` in massa verrà bloccato, mentre gli altri campi non elencati saranno autorizzati.
+
+### Riassunto:
+- **$fillable** protegge il modello dal mass assignment non autorizzato, specificando quali campi possono essere riempiti in massa.
+- È una misura di sicurezza importante, specialmente per evitare che campi sensibili vengano modificati dagli utenti in modo non intenzionale o dannoso.
