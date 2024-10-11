@@ -1,7 +1,5 @@
 
-php artisan make:controller UserController
-
-Certo! Ecco un esercitazione dettagliata per creare un’applicazione Laravel che mostra una pagina di bandiere (flag) degli stati. Seguendo questi passaggi, potrai costruire un semplice sistema CRUD per gestire le bandiere.
+# Flags
 
 ### 1. Creazione del Progetto Laravel
 
@@ -170,7 +168,3 @@ Crea una vista per mostrare le bandiere. Crea un file in `resources/views/flags/
 ### 15. Testa l’Applicazione
 
 Visita `http://127.0.0.1:8000/flags` nel tuo browser. Dovresti vedere l’elenco delle bandiere che hai inserito nel seeder.
-
-### Conclusione
-
-Hai creato un'applicazione Laravel che visualizza le bandiere degli stati! Puoi ora espandere l'applicazione aggiungendo funzionalità come l’aggiunta, la modifica e la cancellazione delle bandiere. Buon lavoro!
