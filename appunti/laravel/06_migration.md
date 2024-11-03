@@ -156,7 +156,7 @@ Durante lo sviluppo, potresti voler **resettare** il database completamente o **
 
 ### 7. **Seeder: Popolare il Database**
 
-Oltre alle migration, Laravel offre gli **Seeder** per popolare il database con dati iniziali o di prova. Puoi creare un Seeder con il comando:
+Oltre alle migration, Laravel offre i **Seeder** per popolare il database con dati iniziali o di prova. Puoi creare un Seeder con il comando:
 
 ```bash
 php artisan make:seeder UsersTableSeeder
@@ -196,6 +196,8 @@ php artisan db:seed
 ---
 
 ### 8. **Faker e Factory**
+
+- (Vedi sotto scheda sulle factory)
 
 Laravel offre anche un potente strumento per generare dati finti attraverso le **Factory**. Queste possono essere utilizzate insieme ai seeder per popolare il database con dati realistici durante lo sviluppo e i test.
 
@@ -238,3 +240,103 @@ class UsersTableSeeder extends Seeder
 ### Conclusione
 
 Le migration di Laravel semplificano la gestione e l'evoluzione della struttura del database, rendendo il processo più sicuro e riproducibile. Con l'integrazione delle factory e dei seeder, è facile popolare il database con dati di prova, migliorando la fase di sviluppo e test dell'applicazione.
+
+---
+
+### factory
+
+In Laravel, una **factory** è uno strumento che semplifica la generazione di dati fittizi per i test e per il riempimento del database (seeding). Grazie alle factory, puoi creare istanze di modelli con dati casuali o predefiniti, risparmiando tempo e mantenendo il codice pulito.
+
+Ecco come funziona una factory in Laravel:
+
+1. **Creazione di una Factory**:
+   Per creare una nuova factory, puoi usare il comando Artisan:
+
+   ```bash
+   php artisan make:factory NomeModelloFactory
+   ```
+
+   Questo genererà un file di factory nella cartella `database/factories`. Se il modello esiste già, puoi specificarlo con il parametro `--model`, così:
+
+   ```bash
+   php artisan make:factory NomeModelloFactory --model=NomeModello
+   ```
+
+2. **Definizione della Factory**:
+   Nel file generato, troverai il metodo `definition()`, dove puoi definire i campi e i loro valori fittizi. Laravel usa la libreria **Faker** per generare dati casuali (come nomi, email, numeri, ecc.). Ecco un esempio di factory per un modello `User`:
+
+   ```php
+   use Illuminate\Database\Eloquent\Factories\Factory;
+
+   class UserFactory extends Factory
+   {
+       protected $model = \App\Models\User::class;
+
+       public function definition()
+       {
+           return [
+               'name' => $this->faker->name,
+               'email' => $this->faker->unique()->safeEmail,
+               'password' => bcrypt('password'),
+               'remember_token' => Str::random(10),
+           ];
+       }
+   }
+   ```
+
+3. **Utilizzo della Factory**:
+   Una volta definita la factory, puoi utilizzarla per creare istanze del modello:
+
+   - **Creare una singola istanza senza salvarla nel database**:
+
+     ```php
+     $user = User::factory()->make();
+     ```
+
+   - **Creare una singola istanza e salvarla nel database**:
+
+     ```php
+     $user = User::factory()->create();
+     ```
+
+   - **Creare più istanze e salvarle nel database**:
+
+     ```php
+     $users = User::factory()->count(5)->create();
+     ```
+
+4. **Factory States**:
+   Le **states** sono configurazioni alternative di una factory. Ad esempio, se vuoi creare utenti con ruoli specifici (es. admin), puoi definire uno state nella factory:
+
+   ```php
+   public function admin()
+   {
+       return $this->state([
+           'role' => 'admin',
+       ]);
+   }
+   ```
+
+   Poi puoi applicare questo state quando crei un'istanza:
+
+   ```php
+   $adminUser = User::factory()->admin()->create();
+   ```
+
+5. **Seeding**:
+   Puoi usare le factory anche per popolare il database in fase di seeding. Apri il seeder (`DatabaseSeeder.php`) e usa la factory:
+
+   ```php
+   public function run()
+   {
+       User::factory()->count(50)->create();
+   }
+   ```
+
+   Infine, puoi lanciare i seeder con:
+
+   ```bash
+   php artisan db:seed
+   ```
+
+Le factory rendono il testing e il seeding molto più efficienti, specialmente nei progetti in cui è necessario generare molti dati.
