@@ -1,9 +1,4 @@
-Ottima scelta! 🔥  
-Adesso vediamo come creare **Comandi Personalizzati** con **PHP CLI** 🔌 direttamente da terminale, proprio come fanno i framework tipo **Laravel Artisan** o **Symfony Console**.
-
----
-
-### 📌 Creazione di Comandi Personalizzati in PHP CLI
+# 📌 Creazione di Comandi Personalizzati in PHP CLI
 In questo capitolo approfondiamo:
 1. Cos'è un comando personalizzato
 2. Struttura base
