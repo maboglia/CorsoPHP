@@ -65,3 +65,184 @@ ore)**
 39. Deploy su un hosting web  
 
 ---
+
+Perfetto! Ecco la **parte teorica del corso** suddivisa per moduli.  
+
+---
+
+# **Modulo 1: Introduzione a PHP**  
+
+### **Cos'è PHP e come funziona?**  
+PHP (Hypertext Preprocessor) è un linguaggio di programmazione lato server utilizzato per lo sviluppo web. Permette di generare pagine dinamiche interagendo con database e altri servizi.  
+
+**Caratteristiche principali:**  
+- Open-source e gratuito  
+- Supportato dalla maggior parte dei server web  
+- Facilmente integrabile con HTML e database come MySQL  
+- Compatibile con vari sistemi operativi (Windows, Linux, macOS)  
+
+### **Installazione di PHP, Apache e MySQL**  
+Per eseguire PHP in locale, puoi installare:  
+- **XAMPP** (Windows, macOS, Linux)  
+- **MAMP** (macOS)  
+- **LAMP** (Linux)  
+
+Dopo l’installazione, crea un file `index.php` nella cartella `htdocs` (XAMPP) e scrivi:  
+```php
+<?php
+  echo "Ciao, mondo!";
+?>
+```  
+Apri il browser e vai su `http://localhost/index.php` per vedere il risultato.  
+
+---
+
+# **Modulo 2: Strutture di Controllo**  
+
+### **Variabili e Tipi di Dati**  
+PHP è debolmente tipizzato, il che significa che le variabili non hanno bisogno di una dichiarazione esplicita del tipo.  
+```php
+$nome = "Mario";  // Stringa
+$eta = 30;        // Intero
+$prezzo = 19.99;  // Float
+$online = true;   // Booleano
+$array = [1, 2, 3]; // Array
+```  
+
+### **Condizioni e Cicli**  
+```php
+// IF-ELSE
+$eta = 18;
+if ($eta >= 18) {
+    echo "Sei maggiorenne.";
+} else {
+    echo "Sei minorenne.";
+}
+
+// FOR LOOP
+for ($i = 0; $i < 5; $i++) {
+    echo "Numero: $i ";
+}
+
+// FOREACH LOOP
+$nomi = ["Luca", "Giulia", "Marco"];
+foreach ($nomi as $nome) {
+    echo $nome;
+}
+```
+
+---
+
+# **Modulo 3: Programmazione Orientata agli Oggetti (OOP)**  
+
+### **Creazione di Classi e Oggetti**  
+```php
+class Persona {
+    public $nome;
+    public $eta;
+
+    public function __construct($nome, $eta) {
+        $this->nome = $nome;
+        $this->eta = $eta;
+    }
+
+    public function saluta() {
+        return "Ciao, mi chiamo $this->nome e ho $this->eta anni.";
+    }
+}
+
+$persona1 = new Persona("Mario", 25);
+echo $persona1->saluta();
+```
+
+---
+
+# **Modulo 4: Lavorare con i Database**  
+
+### **Connessione a MySQL con PDO**  
+```php
+try {
+    $pdo = new PDO("mysql:host=localhost;dbname=miodatabase", "root", "");
+    echo "Connessione riuscita!";
+} catch (PDOException $e) {
+    echo "Errore: " . $e->getMessage();
+}
+```
+
+### **Eseguire Query (CRUD)**  
+```php
+// INSERIRE DATI
+$sql = "INSERT INTO utenti (nome, email) VALUES ('Mario', 'mario@email.com')";
+$pdo->exec($sql);
+
+// LEGGERE DATI
+$query = $pdo->query("SELECT * FROM utenti");
+while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
+    echo $row['nome'] . " - " . $row['email'];
+}
+```
+
+---
+
+# **Modulo 5: Gestione delle Form e Sicurezza**  
+
+### **Gestire Form HTML con PHP**  
+```php
+<form method="POST" action="process.php">
+    Nome: <input type="text" name="nome">
+    <input type="submit" value="Invia">
+</form>
+```
+**Nel file `process.php`:**  
+```php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nome = htmlspecialchars($_POST['nome']);
+    echo "Ciao, $nome!";
+}
+```
+
+### **Sicurezza: Prevenire SQL Injection**  
+Utilizzare query preparate:  
+```php
+$stmt = $pdo->prepare("INSERT INTO utenti (nome, email) VALUES (:nome, :email)");
+$stmt->execute(['nome' => $nome, 'email' => $email]);
+```
+
+---
+
+# **Modulo 6: PHP Avanzato**  
+
+### **Creazione di un'API REST**  
+```php
+header("Content-Type: application/json");
+$risposta = ["messaggio" => "Benvenuto nella mia API!"];
+echo json_encode($risposta);
+```
+
+### **Utilizzo di cURL per chiamare API esterne**  
+```php
+$ch = curl_init("https://api.example.com/data");
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+$response = curl_exec($ch);
+curl_close($ch);
+$data = json_decode($response, true);
+```
+
+### **Gestione degli errori con le eccezioni**  
+```php
+try {
+    $result = 10 / 0;
+} catch (Exception $e) {
+    echo "Errore: " . $e->getMessage();
+}
+```
+
+---
+
+# **Modulo 7: Progetto Finale**  
+Creazione di un'app con:  
+✅ Autenticazione utente  
+✅ Gestione database  
+✅ Dashboard con statistiche  
+
+---
