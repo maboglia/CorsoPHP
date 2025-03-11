@@ -10,6 +10,8 @@ Le **funzioni** in PHP sono blocchi di codice che possono essere riutilizzati pe
 
 In PHP, una funzione viene definita utilizzando la parola chiave `function`, seguita dal nome della funzione e dalle parentesi che possono contenere i parametri.
 
+---
+
 #### Esempio di dichiarazione base
 
 ```php
@@ -22,6 +24,8 @@ saluta();  // Output: Ciao, mondo!
 ?>
 ```
 
+---
+
 **Spiegazione**:
 
 - `function saluta() { ... }`: definisce una funzione chiamata `saluta`.
@@ -32,6 +36,8 @@ saluta();  // Output: Ciao, mondo!
 ### **2. Parametri delle Funzioni**
 
 Le funzioni possono accettare dei **parametri** che rappresentano valori di input che la funzione utilizzerà per eseguire le operazioni.
+
+---
 
 #### Esempio con parametri
 
@@ -45,6 +51,8 @@ salutaUtente("Alice");  // Output: Ciao, Alice!
 ?>
 ```
 
+---
+
 **Spiegazione**:
 
 - La funzione `salutaUtente($nome)` accetta un parametro `$nome`, che viene utilizzato all'interno del messaggio di saluto.
@@ -55,6 +63,8 @@ salutaUtente("Alice");  // Output: Ciao, Alice!
 ### **3. Valori di Default per i Parametri**
 
 Puoi assegnare un **valore predefinito** ai parametri, nel caso in cui la funzione venga chiamata senza passare argomenti.
+
+---
 
 #### Esempio con valore di default
 
@@ -68,6 +78,8 @@ salutaUtente();  // Output: Ciao, Ospite!
 ?>
 ```
 
+---
+
 **Spiegazione**:
 
 - Se la funzione `salutaUtente()` viene chiamata senza argomenti, il parametro `$nome` assumerà il valore di default "Ospite".
@@ -77,6 +89,8 @@ salutaUtente();  // Output: Ciao, Ospite!
 ### **4. Restituire un Valore con `return`**
 
 Una funzione può restituire un valore utilizzando la parola chiave **`return`**. Questo valore può essere salvato in una variabile o utilizzato direttamente.
+
+---
 
 #### Esempio con `return`
 
@@ -91,6 +105,8 @@ echo $resultato;  // Output: 15
 ?>
 ```
 
+---
+
 **Spiegazione**:
 
 - La funzione `somma($a, $b)` somma due numeri e restituisce il risultato con `return`.
@@ -101,6 +117,8 @@ echo $resultato;  // Output: 15
 ### **5. Funzioni con Parametri Variabili (`...`)**
 
 In PHP, è possibile definire una funzione che accetta un numero variabile di parametri utilizzando l'operatore `...` (spread operator).
+
+---
 
 #### Esempio con parametri variabili
 
@@ -114,6 +132,8 @@ echo sommaTotale(1, 2, 3, 4);  // Output: 10
 ?>
 ```
 
+---
+
 **Spiegazione**:
 
 - La funzione `sommaTotale(...$numeri)` accetta un numero indefinito di argomenti e li tratta come un array.
@@ -124,6 +144,8 @@ echo sommaTotale(1, 2, 3, 4);  // Output: 10
 ### **6. Funzioni Anonime e Lambda**
 
 In PHP, una **funzione anonima** (o **lambda**) è una funzione che non ha un nome e può essere assegnata a una variabile o passata come argomento ad altre funzioni. Queste funzioni sono particolarmente utili quando hai bisogno di una funzione temporanea o di una funzione da passare a una chiamata come callback.
+
+---
 
 Ecco un semplice esempio di una lambda in PHP:
 
@@ -138,6 +160,8 @@ echo $somma(2, 3);  // Output: 5
 ```
 
 In questo caso, la funzione anonima prende due parametri `$a` e `$b`, somma i loro valori e restituisce il risultato. La funzione è assegnata alla variabile `$somma`, e successivamente può essere chiamata come se fosse una normale funzione.
+
+---
 
 ### Passare una lambda come callback
 
@@ -156,6 +180,8 @@ print_r($quadrati);  // Output: Array ( [0] => 1 [1] => 4 [2] => 9 [3] => 16 [4]
 
 In questo esempio, la funzione anonima viene passata a `array_map()`, che applica la funzione a ogni elemento dell'array `$numeri`, restituendo un nuovo array con i quadrati dei numeri.
 
+---
+
 ### arrow function
 
 In PHP 7.4 è stata introdotta una sintassi abbreviata per le funzioni anonime chiamata **arrow function** (o **lambda con `fn:`**). Questa nuova sintassi rende il codice più conciso e automaticamente cattura le variabili dall'ambito esterno senza dover utilizzare la parola chiave `use`. Le **arrow functions** utilizzano la sintassi `fn` invece di `function`.
@@ -171,6 +197,9 @@ echo $somma(2, 3);  // Output: 5
 ```
 
 Come puoi vedere, la sintassi è molto più compatta rispetto alle funzioni anonime tradizionali. La funzione `fn($a, $b) => $a + $b` è un'**arrow function** che restituisce la somma di `$a` e `$b`.
+
+---
+
 
 ### Passare una arrow function come callback
 
@@ -195,6 +224,8 @@ Le **arrow functions** sono ideali per funzioni semplici e monoespressione, rend
 
 Le **funzioni ricorsive** sono funzioni che si richiamano all'interno della loro definizione. Sono utili per risolvere problemi che possono essere divisi in sotto-problemi simili.
 
+---
+
 #### Esempio di funzione ricorsiva (fattoriale)
 
 ```php
@@ -210,6 +241,8 @@ echo fattoriale(5);  // Output: 120
 ?>
 ```
 
+---
+
 **Spiegazione**:
 
 - La funzione `fattoriale($n)` chiama se stessa finché `$n` non raggiunge 1. Questo permette di calcolare il fattoriale di un numero.
@@ -220,6 +253,8 @@ echo fattoriale(5);  // Output: 120
 
 PHP include una vasta gamma di **funzioni predefinite** per eseguire operazioni comuni, come la manipolazione delle stringhe, la gestione degli array, operazioni matematiche e altro.
 
+---
+
 #### Esempio di funzioni predefinite
 
 ```php
@@ -228,6 +263,8 @@ echo strtoupper("ciao!");  // Output: CIAO!
 echo count([1, 2, 3, 4]);  // Output: 4
 ?>
 ```
+
+---
 
 **Spiegazione**:
 
@@ -239,6 +276,8 @@ echo count([1, 2, 3, 4]);  // Output: 4
 ### **9. Funzioni Come Argomenti (Callback)**
 
 In PHP, è possibile passare funzioni come argomenti ad altre funzioni. Questo si chiama **callback**.
+
+---
 
 #### Esempio di callback
 
@@ -254,6 +293,8 @@ eseguiCallback(function() {
 ?>
 ```
 
+---
+
 **Spiegazione**:
 
 - La funzione `eseguiCallback()` accetta una funzione come parametro e la esegue.
@@ -265,7 +306,11 @@ eseguiCallback(function() {
 
 Le funzioni in PHP sono uno degli strumenti fondamentali per scrivere codice organizzato e riutilizzabile. Attraverso l'uso di parametri, valori di ritorno, funzioni anonime e callback, puoi modularizzare il tuo codice e migliorare la sua manutenibilità.
 
+---
+
 ## Le funzioni tipizzate
+
+---
 
 ### **Funzioni con Indicazione del Tipo in PHP 7+ e 8**
 
@@ -276,6 +321,8 @@ L'indicazione del tipo garantisce maggiore **sicurezza** e **leggibilità** del 
 ---
 
 ### **Sintassi base delle funzioni con tipizzazione**
+
+---
 
 #### Esempio di funzione con tipi di argomenti e tipo di ritorno
 
@@ -288,6 +335,8 @@ function somma(int $a, int $b): int {
 echo somma(5, 10);  // Output: 15
 ?>
 ```
+
+---
 
 **Spiegazione**:
 
@@ -305,6 +354,8 @@ PHP supporta diversi tipi di dati per la tipizzazione delle funzioni:
 - **Tipi scalari**: `int`, `float`, `string`, `bool`
 - **Tipi complessi**: `array`, `object`, `callable`, `iterable`
 - **Tipi speciali**: `void`, `mixed`, `null`, `false`
+
+---
 
 #### Esempio con vari tipi di argomenti
 
@@ -325,6 +376,8 @@ echo descriviOggetto("Lampada", 45.99);
 
 A partire da PHP 7, è possibile indicare anche il tipo di ritorno della funzione, usando `: <tipo>`. Se la funzione non restituisce il tipo corretto, verrà generato un errore.
 
+---
+
 #### Esempio
 
 ```php
@@ -343,6 +396,8 @@ echo getPrezzo();  // Output: 99.99
 
 PHP 8 ha introdotto i **tipi unione**, che permettono di specificare più di un tipo per un parametro o per il valore di ritorno di una funzione. Questo è utile quando una funzione può accettare o restituire più di un tipo di dato.
 
+---
+
 #### Esempio di tipo unione
 
 ```php
@@ -355,6 +410,8 @@ echo sommaNumeri(5, 10.5);  // Output: 15.5
 ?>
 ```
 
+---
+
 **Spiegazione**:
 
 - **`int|float`**: indica che i parametri `$a` e `$b` possono essere di tipo **int** o **float**. Lo stesso vale per il tipo di ritorno.
@@ -364,6 +421,8 @@ echo sommaNumeri(5, 10.5);  // Output: 15.5
 ### **Tipi di ritorno `void` e `mixed`**
 
 - **`void`**: indica che la funzione non deve restituire alcun valore.
+
+---
 
 #### Esempio di funzione `void`
 
@@ -378,6 +437,8 @@ stampaMessaggio("Ciao, PHP!");  // Output: Ciao, PHP!
 ```
 
 - **`mixed`**: indica che la funzione può restituire **qualsiasi tipo** di dato (introdotto in PHP 8).
+
+---
 
 #### Esempio con `mixed`
 
@@ -397,6 +458,8 @@ echo somma(5.5, 4.5);  // Output: 10
 ### **Utilizzo dei Tipi di Oggetto**
 
 È possibile specificare che un parametro deve essere un'istanza di una determinata classe o di un'interfaccia.
+
+---
 
 #### Esempio con tipo oggetto
 

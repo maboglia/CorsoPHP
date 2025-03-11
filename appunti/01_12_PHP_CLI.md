@@ -85,8 +85,6 @@ Premi **Invio** e vedrai il risultato.
 
 ---
 
----
-
 ## 📌 **Leggere Input dalla Console**
 
 ### Metodo 1: readline()
@@ -134,8 +132,6 @@ La somma è: 30
 
 ---
 
----
-
 ## 🔥 **Leggere Argomenti dalla Linea di Comando**
 
 PHP permette di passare **argomenti** alla riga di comando usando la variabile globale `$argv`.
@@ -178,8 +174,6 @@ echo "Numero di argomenti: $argc\n";
 
 ---
 
----
-
 ## 🔑 **Input Multiplo con Loop**
 
 Leggere più input con un ciclo:
@@ -191,8 +185,6 @@ while (true) {
     echo "Hai inserito: $input\n";
 }
 ```
-
----
 
 ---
 
@@ -232,8 +224,6 @@ Ciao, Luca!
 
 ---
 
----
-
 ## 🔥 Automatizzare Task con Cron Job
 
 PHP da linea di comando è molto utile per i **cron job**.
@@ -264,8 +254,6 @@ Questo script eseguirà il backup ogni ora e scriverà il log nel file **backup.
 
 ---
 
----
-
 ## 📌 Funzioni Utili in CLI
 
 | Funzione        | Descrizione                      |
@@ -275,8 +263,6 @@ Questo script eseguirà il backup ogni ora e scriverà il log nel file **backup.
 | `exec()`       | Esegue comandi shell |
 | `system()`     | Stampa direttamente l'output di comandi shell |
 | `passthru()`   | Esegue un comando shell e restituisce l'output |
-
----
 
 ---
 
@@ -291,8 +277,6 @@ echo "\033[31mQuesto testo è rosso!\033[0m\n";
 
 ---
 
----
-
 ## 🔑 Conclusione
 
 PHP CLI è uno strumento potente che ti permette di creare:
@@ -301,12 +285,3 @@ PHP CLI è uno strumento potente che ti permette di creare:
 - Comandi personalizzati
 - Applicazioni di console
 - Backup automatici
-
----
-
-### Quale metodo vuoi approfondire?
-
-1. Interazione con File System
-2. Automazione con cron job
-3. Creazione di comandi personalizzati
-4. Connessione a Database da Console
