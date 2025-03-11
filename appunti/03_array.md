@@ -4,7 +4,15 @@ Gli **array** in PHP sono strutture di dati flessibili che possono contenere una
 
 #### Tipologie di Array:
 
-1. **Array indicizzati**:
+In PHP, esistono **tre tipi principali di array**:  
+
+1. **Array indicizzati** – Gli elementi sono memorizzati con chiavi numeriche (es. `$arr = [10, 20, 30];`).  
+2. **Array associativi** – Utilizzano chiavi personalizzate (es. `$arr = ["nome" => "Mario", "età" => 25];`).  
+3. **Array multidimensionali** – Contengono altri array come elementi (es. `$arr = [[1, 2], [3, 4]];`).
+
+---
+
+4. **Array indicizzati**:
    - Gli elementi sono indicizzati da chiavi numeriche intere.
    - Indice automatico: Se non viene specificato, PHP assegna un indice crescente.
    - Esempio:
@@ -12,7 +20,9 @@ Gli **array** in PHP sono strutture di dati flessibili che possono contenere una
      $numeri = [1, 2, 3, 4];
      ```
 
-2. **Array associativi**:
+---
+
+5. **Array associativi**:
    - Gli elementi sono indicizzati da chiavi personalizzate (stringhe).
    - Utili per rappresentare coppie chiave-valore.
    - Esempio:
@@ -24,7 +34,9 @@ Gli **array** in PHP sono strutture di dati flessibili che possono contenere una
      ];
      ```
 
-3. **Array multidimensionali**:
+---
+
+6. **Array multidimensionali**:
    - Un array che contiene altri array come elementi.
    - Permette di creare strutture complesse come matrici o tabelle.
    - Esempio:
@@ -35,6 +47,8 @@ Gli **array** in PHP sono strutture di dati flessibili che possono contenere una
          [7, 8, 9]
      ];
      ```
+
+---
 
 #### Funzioni principali sugli Array in PHP:
 
@@ -65,6 +79,8 @@ Gli **array** in PHP sono strutture di dati flessibili che possono contenere una
 | `array_sum()`           | Restituisce la somma dei valori di un array.                                                      |
 | `array_unique()`        | Rimuove i valori duplicati da un array.                                                           |
 
+---
+
 #### Dichiarazione e Accesso agli Elementi:
 
 - **Creazione di un array**:
@@ -83,6 +99,8 @@ Gli **array** in PHP sono strutture di dati flessibili che possono contenere una
   $frutta[] = "arancia"; // Aggiunge alla fine dell'array
   ```
 
+---
+
 #### Loop sugli Array:
 
 Gli array in PHP possono essere percorsi utilizzando diversi tipi di cicli, il più comune è `foreach`.
@@ -94,12 +112,16 @@ Gli array in PHP possono essere percorsi utilizzando diversi tipi di cicli, il p
   }
   ```
 
+---
+
 - **Ciclo `foreach` su array associativo**:
   ```php
   foreach ($persona as $chiave => $valore) {
       echo "$chiave: $valore";
   }
   ```
+
+---
 
 #### Array Multidimensionali:
 
@@ -119,6 +141,8 @@ foreach ($matrice as $riga) {
     }
 }
 ```
+
+---
 
 #### Funzioni Avanzate sugli Array:
 
@@ -140,11 +164,15 @@ foreach ($matrice as $riga) {
   $somma = array_reduce($numeri, fn($carry, $item) => $carry + $item, 0);
   ```
 
+---
+
 #### Caratteristiche degli Array in PHP:
 
 - **Tipizzazione debole**: PHP permette array misti, ovvero array che possono contenere diversi tipi di dati (interi, stringhe, ecc.).
 - **Dinamici**: Gli array in PHP non richiedono una dimensione fissa e possono crescere o ridursi dinamicamente.
 - **Chiavi automatiche**: PHP assegna automaticamente chiavi numeriche incrementali quando gli elementi vengono aggiunti senza specificare una chiave.
+
+---
 
 ### Esempio Completo:
 
