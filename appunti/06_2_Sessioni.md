@@ -293,3 +293,40 @@ $_SESSION['last_activity'] = null;
 - **Sicurezza:** Evita di memorizzare dati sensibili in sessione senza le dovute precauzioni, come crittografia o altre misure di sicurezza.
 
 Salvare diversi tipi di dati in una sessione è molto utile per mantenere lo stato di un'applicazione tra le varie richieste dell'utente, migliorando l'esperienza utente e facilitando la gestione delle informazioni.
+
+---
+
+
+### Esempio
+
+Ecco un esempio di pagina PHP che mostra la data e l'ora dell'ultimo accesso del visitatore al sito:
+
+```php
+<?php
+// Avvio della sessione per memorizzare i dati dell'ultimo accesso
+session_start();
+
+// Verifica se è stata memorizzata la data e l'ora dell'ultimo accesso
+if(isset($_SESSION['ultimo_accesso'])) {
+    $ultimo_accesso = $_SESSION['ultimo_accesso'];
+    echo "Ultimo accesso: $ultimo_accesso";
+} else {
+    echo "Benvenuto, questo è il tuo primo accesso!";
+}
+
+// Aggiornamento della data e dell'ora dell'ultimo accesso
+$_SESSION['ultimo_accesso'] = date("d-m-Y H:i:s");
+?>
+```
+
+In questo script:
+
+1. Avviamo una sessione PHP utilizzando `session_start()` per poter memorizzare i dati dell'ultimo accesso del visitatore.
+
+2. Verifichiamo se è stata memorizzata la data e l'ora dell'ultimo accesso. Se sì, recuperiamo e visualizziamo questa informazione.
+
+3. Se non è stata memorizzata la data e l'ora dell'ultimo accesso (ad esempio, se è il primo accesso del visitatore), mostriamo un messaggio di benvenuto.
+
+4. Aggiorniamo la data e l'ora dell'ultimo accesso con l'istruzione `$_SESSION['ultimo_accesso'] = date("d-m-Y H:i:s");`. Questo assicura che ogni volta che il visitatore accede alla pagina, la data e l'ora dell'ultimo accesso vengano aggiornate.
+
+Ricorda che questo script funzionerà correttamente solo se il supporto per le sessioni PHP è abilitato sul server. Assicurati inoltre di includere questo script in ogni pagina del tuo sito dove desideri monitorare l'ultimo accesso del visitatore.

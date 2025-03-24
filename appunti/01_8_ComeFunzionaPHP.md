@@ -61,3 +61,30 @@ Esempio di modifica del mime type:
 ```
 
 Con queste funzionalità, PHP si rivela uno strumento potente per lo sviluppo di applicazioni web complesse, flessibili e dinamiche.
+
+---
+
+### **Istruzioni di esempio:**  
+
+#### **Costrutti:**  
+
+- **echo** → Stampare un valore  
+- **print** → Stampare una stringa  
+- **exit** → Stampare un messaggio e terminare il programma  
+- **die** → Alias di `exit`  
+- **return** → Termina una funzione e restituisce il controllo allo scope chiamante, oppure, se chiamato nello scope globale, termina il programma  
+
+#### **Inclusione di file:**  
+
+- **include** → Include un file ed esegue il codice contenuto. Se il file non può essere letto, viene generato un avviso (`warning`).  
+- **require** → Include un file ed esegue il codice contenuto. Se il file non può essere letto, viene generato un errore fatale.  
+- **include_once** → Include un file ed esegue il codice contenuto, ma garantisce che il file non venga incluso più volte.  
+- **require_once** → Come `include_once`, ma genera un errore fatale invece di un avviso se il file non può essere letto.  
+
+#### **Altri costrutti:**  
+
+- **eval** → Valuta l'argomento come codice PHP e influisce sullo scope chiamante.  
+- **empty** → Restituisce un valore booleano a seconda che la variabile sia vuota o meno. Le variabili vuote includono: `null`, stringhe vuote, array senza elementi, valori numerici `0`, stringa `'0'` e `false`.  
+- **isset** → Restituisce `true` se la variabile è stata impostata, altrimenti `false`.  
+- **unset** → Cancella una variabile.  
+- **list** → Assegna più variabili contemporaneamente da un array.
